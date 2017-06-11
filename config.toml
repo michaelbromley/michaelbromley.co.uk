@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-gb"
+title = "Blog v3"
+theme = "terminal"
+
+[Params]
+  Author = "Michael Bromley"
+
