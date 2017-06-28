@@ -24,7 +24,8 @@ I have a large client-side JavaScript app. I like to modularise my app as much a
 
 Consider a hypothetical calendar widget. The folder structure might look like this:
 
-<pre>app/
+```text
+app/
  |-common/
  |    |-components/
  |          |-calendarWidget/
@@ -35,24 +36,26 @@ Consider a hypothetical calendar widget. The folder structure might look like th
  ...
  |-styles/
      |-main.less
-</pre>
+```
 
 In order to include the styles in `calendarWidget.less` in my `main.less`, I could of course write:
 
-<pre>// main.less
+```css
+// main.less
 @import "../common/components/calendarWidget/calendarWidget"
-</pre>
+```
 
 However, when the number of components in my app grows, this method becomes a pain to maintain:
 
-<pre>// main.less
+```css
+// main.less
 @import "../common/components/calendarWidget/calendarWidget"
 @import "../common/components/navbar/navbar"
 @import "../common/components/searchBox/searchBox"
 @import "../projects/projectList/projectList"
 @import "../admin/optionsPanel/optionsPanel"
 // etc.
-</pre>
+```
 
 The <a href="https://github.com/plus3network/gulp-less" target="_blank">gulp-less</a> plugin I use in my build does offer a &#8220;paths&#8221; option which allows me to specify where to look for imports, but that just shifts the housekeeping from the `main.less` into `gulpfile.js`.
 
@@ -62,15 +65,17 @@ I wanted some way to use my Gulp build to scan the folder tree and automatically
 
 <a href="https://github.com/klei/gulp-inject" target="_blank">Gulp-inject</a> is a plugin commonly used to auto-inject css and JavaScript files into an HTML document. However, it can also be used to inject anything into anything else. This means we can use it to inject `@import` statements into our `main.less`:
 
-<pre>// main.less
+```css
+// main.less
 /* inject:imports */
 /* endinject */
 
 body {
 //... rest of the file
-</pre>
+```
 
-<pre>// gulpfile.js
+```JavaScript
+// gulpfile.js
 var gulp = require('gulp'),
     less = require('gulp-less'),
     inject = require('gulp-inject');
@@ -92,7 +97,7 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(gulp.dest('build/styles'));
 });
-</pre>
+```
 
 To explain what is happening above: We add some custom &#8220;inject&#8221; annotations to the top of our `main.less` file, which match up to the `starttag` and `endtag` definitions in the gulp task. The gulp task then pipes the `main.less` file to the gulp-inject plugin, which scans the entire `src/` folder recursively for any .less files, and injects any it finds, complete with correct path, into the `main.less` file. We then pipe the modified `main.less` to the gulp-less plugin, which is then able to pull in all the imported Less files and build our CSS file.
 
@@ -110,8 +115,9 @@ There is scope to make it more sophisticated (to support, for example, the vario
 
 In doing further research I came across this Less plugin: <a href="https://github.com/just-boris/less-plugin-glob" target="_blank">less-plugin-glob</a>. This allows you to use globs in your imports like so:
 
-<pre>@import "common/**";
+```css
+@import "common/**";
 @import "themes/**";
-</pre>
+```
 
-I&#8217;ve not tested it out but it looks very promising and may well be a more straightforward way to handle this than the gulp-inject method.
+I've not tested it out but it looks very promising and may well be a more straightforward way to handle this than the gulp-inject method.

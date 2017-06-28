@@ -1,0 +1,61 @@
+@import "variables";
+
+
+$transition-time: 0.4s;
+
+.float-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#main-nav {
+  flex-grow: 1;
+  margin: 0 auto;
+  z-index: 10;
+  ul {
+    font-size: 1.5em;
+    @media (min-width: $screen-medium) {
+      font-size: 2em;
+    }
+    list-style-type: none;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 0;
+    transition: font-size $transition-time;
+    li {
+      color: #999;
+      font-family: $console-font;
+      line-height: 1.2em;
+      display: block;
+      padding: 0 5px;
+      @media (min-width: $screen-medium) {
+        padding: 0 30px;
+      }
+      box-sizing: border-box;
+      a {
+        &:before {
+          transition: color 0.3s;
+          color: #999;
+          content: '#';
+        }
+        &.selected:before {
+          color: #333;
+        }
+      }
+    }
+  }
+  transition: right $transition-time, width $transition-time $transition-time;
+  ul li.home-link {
+    display: block;
+  }
+}
+
+.social-links {
+  margin-left: 30px;
+  small {
+    color: $colour-text-deemphasize;
+  }
+}

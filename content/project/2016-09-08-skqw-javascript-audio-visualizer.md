@@ -1,7 +1,7 @@
 ---
 title: 'SKQW: JavaScript Audio Visualizer'
 author: michael-bromley
-type: post
+type: project
 date: 2016-09-08T12:08:31+00:00
 url: /547/skqw-javascript-audio-visualizer
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Horizonal.js
 author: michael-bromley
-type: post
+type: project
 date: 2014-09-19T10:23:21+00:00
 url: /222/horizonal-js
 categories:

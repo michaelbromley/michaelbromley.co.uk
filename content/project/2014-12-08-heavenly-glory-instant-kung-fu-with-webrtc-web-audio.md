@@ -1,7 +1,7 @@
 ---
 title: 'Heavenly Glory: Instant Kung Fu with WebRTC + Web Audio'
 author: michael-bromley
-type: post
+type: project
 date: 2014-12-08T08:12:38+00:00
 url: /313/heavenly-glory-instant-kung-fu-with-webrtc-web-audio
 categories:

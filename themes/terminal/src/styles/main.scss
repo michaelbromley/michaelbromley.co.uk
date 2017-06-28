@@ -1,5 +1,114 @@
+@import "variables";
+
+@import "menu";
+@import "blog";
+@import "icons";
+
 body {
-  h1 {
-    color: red;
+  background: $colour-main-view-bg;
+  font-family: $copy-font;
+}
+
+#container {
+  display: flex;
+}
+
+#header {
+  @media (min-width: $screen-medium) {
+    width: 300px;
+    position: relative;
+    height: auto;
+  }
+
+  position: fixed;
+  display: flex;
+}
+
+#main {
+  @media (min-width: $screen-medium) {
+    flex-grow: 1;
+    max-width: calc(100vw - 300px);
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $console-font;
+  font-weight: normal;
+}
+
+
+h1 {
+  @media (min-width: $screen-medium) {
+    font-size: 2.2em;
+  }
+}
+
+h2 {
+  @media (min-width: $screen-medium) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  @media (min-width: $screen-medium) {
+    font-size: 1.6em;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code:not(.language-*) {
+  border: 1px solid #dfdfdf;
+  padding: 1px 3px;
+  background-color: #f0f0f0;
+}
+
+
+p, li {
+  line-height: 1.5em;
+  font-family: $copy-font;
+}
+
+blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 10px;
+}
+
+.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: $colour-a-link;
+}
+a:hover {
+  color: $colour-a-hover;
+}
+
+.page-content {
+  animation: fadeIn 0.6s;
+}
+
+.page-header {
+  font-size: 3em;
+  margin-top: 25px;
+}
+
+p.lead {
+  font-size: 24px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

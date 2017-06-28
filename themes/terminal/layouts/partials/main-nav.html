@@ -1,0 +1,24 @@
+<header id="header">
+    <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+    <div class="float-container">
+        <nav id="main-nav">
+            <ul>
+                {{ $page := . }}
+                {{ range .Site.Menus.main }}
+                {{ $is := $page.IsMenuCurrent "main" . }}
+                {{ $has := $page.HasMenuCurrent "main" . }}
+                <li>
+                    <a class="main-nav-link {{ if or $is $has }}selected{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        <div class="social-links">
+            <ul class="no-bullet">
+                <li><a href="https://twitter.com/michlbrmly" target="_blank" title="Follow me on Twitter"><i class="icon-twitter"></i> @michlbrmly</a></li>
+                <li><a href="https://github.com/michaelbromley/" target="_blank" title="Check out my GitHub repos"><i class="icon-github"></i> michaelbromley</a></li>
+                <li><small>&copy; 2017 Michael Bromley</small></li>
+            </ul>
+        </div>
+    </div>
+</header>

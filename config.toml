@@ -6,3 +6,29 @@ theme = "terminal"
 [Params]
   Author = "Michael Bromley"
 
+[menu]
+  [[menu.main]]
+  identifier = "home"
+  name       = "Home"
+  url        = "/"
+  weight     = 1
+  [[menu.main]]
+  identifier = "blog"
+  name       = "Blog"
+  url        = "/blog/"
+  weight     = 2
+  [[menu.main]]
+  identifier = "project"
+  name       = "Projects"
+  url        = "/project/"
+  weight     = 3
+  [[menu.main]]
+  identifier = "about"
+  name       = "About"
+  url        = "/about/"
+  weight     = 4
+  [[menu.main]]
+  identifier = "contact"
+  name       = "Contact"
+  url        = "/contact/"
+  weight     = 5

@@ -39,8 +39,10 @@ We are going to take a simple example: we want to build a timer which has a _sta
 
 Here is what our SimpleTimer logic looks like:
 
-<pre>export class SimpleTimer {
 
+~~~JavaScript
+export class SimpleTimer {
+ 
   running: boolean = false;
   time: number = 0;
   
@@ -70,9 +72,7 @@ Here is what our SimpleTimer logic looks like:
     } 
   };
 }
-</pre>
-
-&nbsp;
+~~~
 
 ## How Not To Do It
 

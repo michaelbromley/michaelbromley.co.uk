@@ -1,7 +1,7 @@
 ---
 title: CSS Space Shooter
 author: michael-bromley
-type: post
+type: project
 date: 2014-11-09T16:58:27+00:00
 url: /293/css-space-shooter
 categories:

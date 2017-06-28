@@ -1,0 +1,12 @@
+{{ if . }}
+<ul class="tags">
+    <li class="tag-icon">
+        <i class="icon-tags"></i>
+    </li>
+    {{ range . }}
+    <li>
+        <a>{{ . }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
