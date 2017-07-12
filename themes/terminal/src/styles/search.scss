@@ -1,0 +1,114 @@
+@import "variables";
+
+$terminal-bg-color: rgba(20, 20, 20, 0.95);
+$terminal-text-color: #aaa;
+
+@mixin search-font-size() {
+  font-size: 18px;
+  @media (min-width: $screen-medium) {
+    font-size: 26px;
+  }
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-left: 10px;
+  text-align: right;
+  font-family: $console-font;
+  @include search-font-size();
+  button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 32px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .search-modal {
+    position: fixed;
+    background-color: $terminal-bg-color;
+    overflow: hidden;
+    width: 80vw;
+    height: 50vh;
+    left: 10vw;
+    top: 5vh;
+    @media (min-width: $screen-medium) {
+      top: 25vh;
+    }
+    z-index: 100;
+    box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s 0s;
+    &.display {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s, visibility 0s;
+    }
+  }
+  .search-input {
+    flex-grow: 1;
+    padding: 16px;
+    background-color: transparent;
+    display: flex;
+    overflow: hidden;
+    .dollar {
+      color: $terminal-text-color;
+    }
+    input {
+      font-family: $console-font;
+      position: relative;
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      color: $terminal-text-color;
+      @include search-font-size();
+      margin-left: 10px;
+      flex-grow: 1;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  transition: opacity 1.5s;
+  opacity: 1;
+
+  .search-suggestions {
+    position: absolute;
+    text-align: left;
+    ul {
+      margin: 0;
+      padding-right: 20px;
+      padding-left: 16px;
+      list-style-type: none;
+      color: $terminal-text-color;
+      @include search-font-size();
+      li {
+        font-family: $console-font;
+        a {
+          color: $terminal-text-color;
+        }
+        &:before {
+          content: '>';
+          margin-right: 10px;
+          color: darken($terminal-text-color, 40%);
+        }
+        &.selected,
+        &:hover {
+          a {
+            color: lighten($terminal-text-color, 20%);
+          }
+          &:before {
+            color: $colour-a-link;
+          }
+        }
+      }
+    }
+    //display: none;
+  }
+}

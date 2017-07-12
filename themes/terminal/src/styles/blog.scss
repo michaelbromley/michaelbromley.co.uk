@@ -1,7 +1,13 @@
 @import "variables";
 
-.post-list {
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.post-list {
   position: relative;
+  padding: 0;
 }
 
 .post-list-row {
@@ -96,4 +102,24 @@ ul.tags {
 
 .article-meta {
   margin-top: -20px;
+}
+
+figure {
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  box-shadow: $box-shadow;
+  h4 {
+    margin: 5px;
+    font-family: $copy-font;
+    color: $colour-text-deemphasize;
+  }
+}
+
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

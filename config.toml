@@ -6,6 +6,10 @@ theme = "terminal"
 [Params]
   Author = "Michael Bromley"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [menu]
   [[menu.main]]
   identifier = "home"

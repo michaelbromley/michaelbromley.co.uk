@@ -1,7 +1,51 @@
 @import "variables";
 
-
 $transition-time: 0.4s;
+
+
+.mobile-menu-button {
+  @media (min-width: $screen-medium) {
+    display: none;
+  }
+
+  font-size: 32px;
+  position: fixed;
+  z-index: 50;
+  left: 8px;
+  top: 30px;
+  color: $colour-a-link;
+  cursor: pointer;
+
+  .open-button.hidden,
+  .close-button.hidden {
+    display: none;
+  }
+}
+
+#nav-pane {
+  display: flex;
+  background: transparentize($colour-main-view-bg, 0.05);
+  z-index: 1;
+
+  @media (min-width: $screen-medium) {
+    width: 25%;
+    position: relative;
+    height: auto;
+  }
+  @media (max-width: $screen-medium-below) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100vw);
+    transition: transform 0.3s;
+    justify-content: center;
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
 
 .float-container {
   position: fixed;
@@ -15,10 +59,7 @@ $transition-time: 0.4s;
   margin: 0 auto;
   z-index: 10;
   ul {
-    font-size: 1.5em;
-    @media (min-width: $screen-medium) {
-      font-size: 2em;
-    }
+    font-size: 2rem;
     list-style-type: none;
     height: 50px;
     margin-top: 25px;
@@ -57,5 +98,9 @@ $transition-time: 0.4s;
   margin-left: 30px;
   small {
     color: $colour-text-deemphasize;
+  }
+  @media (max-width: $screen-medium-below) {
+    margin-left: 0;
+    text-align: center;
   }
 }

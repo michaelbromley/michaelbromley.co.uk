@@ -2,32 +2,30 @@
 
 @import "menu";
 @import "blog";
+@import "search";
 @import "icons";
 
 body {
   background: $colour-main-view-bg;
   font-family: $copy-font;
+  margin: 0;
+  @media (max-width: $screen-medium-below) {
+    font-size: 0.85em;
+  }
 }
 
 #container {
   display: flex;
 }
 
-#header {
-  @media (min-width: $screen-medium) {
-    width: 300px;
-    position: relative;
-    height: auto;
-  }
-
-  position: fixed;
-  display: flex;
-}
-
 #main {
+  max-width: 100%;
   @media (min-width: $screen-medium) {
     flex-grow: 1;
     max-width: calc(100vw - 300px);
+  }
+  @media (max-width: $screen-medium-below) {
+    margin-left: 37px;
   }
 }
 

@@ -1,12 +1,15 @@
 // colours
 $colour-a-link: #6680d1;
 $colour-a-hover: #3b9597;
-$colour-text-deemphasize: #777;
+$colour-text-deemphasize: #666;
 $colour-text-content: #444;
 $colour-main-view-bg: #eee;
+
+$box-shadow: 0px 4px 8px -5px rgba(0, 0, 0, 0.54);
 
 // fonts
 $console-font: 'Inconsolata', Consolas, monaco, monospace, courier;
 $copy-font: 'Open Sans', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
 
-$screen-medium: 48em;
+$screen-medium: 780px;
+$screen-medium-below: 779px;

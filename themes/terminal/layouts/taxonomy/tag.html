@@ -4,14 +4,13 @@
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
         <section class="archives-wrap">
-            <div class="archive-tag-wrap">
-                <span class="archive-tag">#{{ .Title }}</span>
-            </div>
-            <div class="archives">
+            <h1 class="page-header">Posts tagged with "{{ .Title }}"</h1>
+            <ul class="post-list">
                 {{ range .Paginator.Pages }}
-                {{ partial "li.html" . }}
+                    {{ partial "blog-list-item.html" . }}
                 {{ end }}
-            </div></section>
+            </ul>
+        </section>
         {{ partial "pagination.html" . }}
     </section>
 </div>

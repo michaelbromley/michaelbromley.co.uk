@@ -5,7 +5,7 @@
     </li>
     {{ range . }}
     <li>
-        <a>{{ . }}</a>
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>
     </li>
     {{ end }}
 </ul>

@@ -1,0 +1,19 @@
+<div class="search-container">
+    <button class="search-button">
+        <i class="icon-search"></i>
+    </button>
+
+    <div class="search-modal">
+        <div class="search-input">
+            <span class="dollar">$ </span>
+            <input type="text">
+        </div>
+        <div class="search-suggestions">
+            <ul>
+                {{ range . }}
+                <li class="suggestion" data-url="{{ .RelPermalink }}">{{ .Title }}</li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>

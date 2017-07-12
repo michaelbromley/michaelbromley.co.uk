@@ -49,11 +49,10 @@ gulp.task('sass', function () {
 
     return merge(app, vendor)
         .pipe(concat('style.css'))
-        //.pipe(rename('style.css'))
         .pipe(gulp.dest(path.join(themeDest, 'css')));
 });
 
 gulp.task('watch', function () {
     gulp.watch(path.join(themeSrc, 'styles/*.scss'), ['sass']);
-    gulp.watch(path.join(themeSrc, 'scripts/*.js'), compile(true));
+    gulp.watch(path.join(themeSrc, 'scripts/*.js'), () => compile(true));
 });
