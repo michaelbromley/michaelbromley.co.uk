@@ -2,8 +2,11 @@ const DISPLAY_CLASS = 'display';
 const KeyCode = {
     UP: 38,
     DOWN: 40,
-    ENTER: 13
-}
+    ENTER: 13,
+    ESCAPE: 27,
+    S: 83,
+    FORWARDSLASH: 191
+};
 
 export function initSearch() {
 
@@ -21,26 +24,21 @@ export function initSearch() {
 
     renderSuggestions([]);
 
-    searchButton.addEventListener('click', () => {
-        if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {
-            searchModal.classList.add(DISPLAY_CLASS);
-            input.focus();
+    document.addEventListener('keydown', e => {
+        if (e.keyCode === KeyCode.S || e.keyCode === KeyCode.FORWARDSLASH) {
+            if (e.target.tagName !== 'INPUT') {
+                e.preventDefault();
+                openModal();
+            }
         }
-    });
-
-    input.addEventListener('blur', () => {
-        searchModal.classList.remove(DISPLAY_CLASS);
-        closing = true;
-        setTimeout(() => closing = false, 500);
-        reset();
-    });
-
+    })
+    searchButton.addEventListener('click', openModal);
+    input.addEventListener('blur', closeModal);
     input.addEventListener('input', e => {
         suggestions = filterSuggestions(e.target.value, suggestionsList);
         selectedIndex = -1;
         renderSuggestions(suggestions, selectedIndex);
     });
-
     input.addEventListener('keydown', e => {
         switch (e.keyCode) {
             case KeyCode.UP:
@@ -59,9 +57,26 @@ export function initSearch() {
                     return;
                 }
                 break;
+            case KeyCode.ESCAPE:
+                input.blur();
+                break;
         }
         renderSuggestions(suggestions, selectedIndex);
     });
+
+    function openModal() {
+        if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {
+            searchModal.classList.add(DISPLAY_CLASS);
+            input.focus();
+        }
+    }
+
+    function closeModal() {
+        searchModal.classList.remove(DISPLAY_CLASS);
+        closing = true;
+        setTimeout(() => closing = false, 500);
+        reset();
+    }
 
     function reset() {
         input.value = '';

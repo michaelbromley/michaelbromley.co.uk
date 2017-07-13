@@ -1,0 +1,28 @@
+[data-type-effect] {
+  visibility: hidden;
+}
+
+.type-effect-caret {
+  display: inline-block;
+  width: 3px;
+  margin-bottom: -2px;
+  margin-left: 3px;
+  margin-right: -4px;
+  height: 16px;
+  animation: caret-blink 0.8s infinite;
+}
+
+@keyframes caret-blink {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
