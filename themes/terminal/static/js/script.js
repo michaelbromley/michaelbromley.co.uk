@@ -789,6 +789,296 @@ Prism.languages.js = Prism.languages.javascript;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+var _menu = require('./menu');
+
+var _search = require('./search');
+
+var _typeEffect = require('./type-effect');
+
 window.Prism = require('prismjs');
 
-},{"prismjs":1}]},{},[2])//# sourceMappingURL=script.js.map
+
+window.addEventListener('load', function () {
+    (0, _menu.initMenu)();
+    (0, _search.initSearch)();
+    (0, _typeEffect.initTypeEffect)();
+});
+
+},{"./menu":3,"./search":4,"./type-effect":5,"prismjs":1}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.initMenu = initMenu;
+var open = false;
+
+function initMenu() {
+    var container = document.querySelector('#nav-pane');
+    var toggleButton = document.querySelector('.mobile-menu-button');
+    var openButton = document.querySelector('.open-button');
+    var closeButton = document.querySelector('.close-button');
+
+    applyClasses();
+
+    toggleButton.addEventListener('click', function () {
+        open = !open;
+        applyClasses();
+    });
+
+    function applyClasses() {
+        if (open) {
+            openButton.classList.add('hidden');
+            closeButton.classList.remove('hidden');
+            container.classList.add('open');
+        } else {
+            openButton.classList.remove('hidden');
+            closeButton.classList.add('hidden');
+            container.classList.remove('open');
+        }
+    }
+}
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.initSearch = initSearch;
+var DISPLAY_CLASS = 'display';
+var KeyCode = {
+    UP: 38,
+    DOWN: 40,
+    ENTER: 13,
+    ESCAPE: 27,
+    S: 83,
+    FORWARDSLASH: 191
+};
+
+function initSearch() {
+
+    var searchButton = document.querySelector('.search-button');
+    var searchModal = document.querySelector('.search-modal');
+    if (!searchModal) {
+        return;
+    }
+    var input = searchModal.querySelector('input[type="text"]');
+    var suggestionsList = getAllSuggestions();
+    var closing = false;
+    var suggestions = [];
+    var selectedIndex = -1;
+
+    renderSuggestions([]);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.keyCode === KeyCode.S || e.keyCode === KeyCode.FORWARDSLASH) {
+            if (e.target.tagName !== 'INPUT') {
+                e.preventDefault();
+                openModal();
+            }
+        }
+    });
+    searchButton.addEventListener('click', openModal);
+    input.addEventListener('blur', closeModal);
+    input.addEventListener('input', function (e) {
+        suggestions = filterSuggestions(e.target.value, suggestionsList);
+        selectedIndex = -1;
+        renderSuggestions(suggestions, selectedIndex);
+    });
+    input.addEventListener('keydown', function (e) {
+        switch (e.keyCode) {
+            case KeyCode.UP:
+                selectedIndex = selectedIndex === 0 ? suggestions.length - 1 : selectedIndex - 1;
+                e.preventDefault();
+                break;
+            case KeyCode.DOWN:
+                selectedIndex = selectedIndex === suggestions.length - 1 ? 0 : selectedIndex + 1;
+                e.preventDefault();
+                break;
+            case KeyCode.ENTER:
+                var selected = document.querySelector('.search-suggestions li.selected a');
+                if (selected) {
+                    selected.click();
+                    reset();
+                    return;
+                }
+                break;
+            case KeyCode.ESCAPE:
+                input.blur();
+                break;
+        }
+        renderSuggestions(suggestions, selectedIndex);
+    });
+
+    function openModal() {
+        if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {
+            searchModal.classList.add(DISPLAY_CLASS);
+            input.focus();
+        }
+    }
+
+    function closeModal() {
+        searchModal.classList.remove(DISPLAY_CLASS);
+        closing = true;
+        setTimeout(function () {
+            return closing = false;
+        }, 500);
+        reset();
+    }
+
+    function reset() {
+        input.value = '';
+        suggestions = [];
+        selectedIndex = -1;
+        renderSuggestions(suggestions, selectedIndex);
+    }
+}
+
+/**
+ * Returns a list of all suggestions.
+ *
+ * @returns {Array.<{title: string, url: string}>}
+ */
+function getAllSuggestions() {
+    return Array.from(document.querySelectorAll('.suggestion')).map(function (el) {
+        return {
+            title: el.textContent,
+            url: el.dataset['url']
+        };
+    });
+}
+
+/**
+ * Filter suggestions based on the query.
+ *
+ * @param {string} query
+ * @param {string[]} allSuggestions
+ * @return {Array.<{title: string, url: string}>}
+ */
+function filterSuggestions(query, allSuggestions) {
+    var normalizedQuery = query.trim().toLowerCase();
+    if (normalizedQuery === '') {
+        return [];
+    }
+    var matches = function matches(s) {
+        return s.title.toLowerCase().indexOf(normalizedQuery) !== -1;
+    };
+    return allSuggestions.filter(matches).slice(0, 5);
+}
+
+/**
+ *
+ * @param {string} query
+ * @param {string[]} suggestions
+ */
+function renderSuggestions(suggestions, selectedIndex) {
+    var list = document.querySelector('.search-suggestions > ul');
+    removeAllChildren(list);
+    suggestions.map(createListItem).forEach(function (li, index) {
+        if (index === selectedIndex) {
+            li.classList.add('selected');
+        }
+        list.appendChild(li);
+    });
+}
+
+/**
+ * Removes all children from a node
+ * @param {HTMLElement} node
+ */
+function removeAllChildren(node) {
+    while (node.hasChildNodes()) {
+        node.removeChild(node.lastChild);
+    }
+}
+
+/**
+ * Returns an li element with the given text as innerText, and a link to the suggestion url.
+ *
+ * @param {string} suggestion.title
+ * @param {string} suggestion.url
+ * @returns {HTMLLIElement}
+ */
+function createListItem(suggestion) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = suggestion.url;
+    a.innerText = suggestion.title;
+    li.appendChild(a);
+    return li;
+}
+
+},{}],5:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.initTypeEffect = initTypeEffect;
+var DELAY = 30;
+
+function initTypeEffect() {
+    var headers = Array.from(document.querySelectorAll('[data-type-effect]'));
+    headers.forEach(typeEffect);
+}
+
+function typeEffect(el) {
+    var chars = el.textContent.split('');
+
+    var _el$getBoundingClient = el.getBoundingClientRect(),
+        height = _el$getBoundingClient.height,
+        width = _el$getBoundingClient.width;
+
+    el.textContent = '';
+    el.style.height = height + 'px';
+    el.style.width = width + 'px';
+    el.style.visibility = 'visible';
+    var typeTarget = addTypeTarget(el);
+    var caret = addCaret(el);
+
+    function typeNextChar() {
+        var nextChar = chars.shift();
+        typeTarget.textContent = typeTarget.textContent + nextChar;
+        if (0 < chars.length) {
+            setTimeout(typeNextChar, DELAY);
+        } else {
+            removeCaret(caret);
+            el.style.height = 'initial';
+            el.style.width = 'initial';
+        }
+    }
+    typeNextChar();
+}
+
+function addTypeTarget(el) {
+    var typeTarget = document.createElement('span');
+    el.appendChild(typeTarget);
+    return typeTarget;
+}
+
+function addCaret(el) {
+    var height = parseInt(window.getComputedStyle(el)['font-size']);
+    height -= 4;
+    var backgroundColor = window.getComputedStyle(el)['color'];
+    var width = Math.ceil(height * 0.05);
+    var marginBottom = Math.ceil(height * -0.1);
+    var caret = document.createElement('span');
+    caret.classList.add('type-effect-caret');
+    caret.style.height = height + 'px';
+    caret.style.width = width + 'px';
+    caret.style.backgroundColor = backgroundColor;
+    caret.style.marginBottom = marginBottom + 'px';
+    el.appendChild(caret);
+    return caret;
+}
+
+function removeCaret(caret) {
+    if (caret) {
+        setTimeout(function () {
+            return caret.parentNode.removeChild(caret);
+        }, 2000);
+    }
+}
+
+},{}]},{},[2])//# sourceMappingURL=script.js.map
