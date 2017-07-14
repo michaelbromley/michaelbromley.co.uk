@@ -24,7 +24,8 @@ I found <a href="http://www.scratchapixel.com/lessons/3d-advanced-lessons/noise-
 
 Here is the code. I can&#8217;t take credit for the algorithm, I pretty much just ported it from the article referenced above. To understand what the code is doing, read the article. It&#8217;s a good read.
 
-<pre>var Simple1DNoise = function() {
+```JavaScript
+var Simple1DNoise = function() {
     var MAX_VERTICES = 256;
     var MAX_VERTICES_MASK = MAX_VERTICES -1;
     var amplitude = 1;
@@ -73,7 +74,7 @@ Here is the code. I can&#8217;t take credit for the algorithm, I pretty much jus
         }
     };
 };
-</pre>
+```
 
 ## How to use it
 

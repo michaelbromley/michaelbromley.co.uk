@@ -1,1084 +1,125 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\treturn this;\r\n})();\r\n\r\ntry {\r\n\t// This works if eval is allowed (see CSP)\r\n\tg = g || Function(\"return this\")() || (1,eval)(\"this\");\r\n} catch(e) {\r\n\t// This works if the window reference is available\r\n\tif(typeof window === \"object\")\r\n\t\tg = window;\r\n}\r\n\r\n// g can still be undefined, but nothing to do about it...\r\n// We return undefined, instead of nothing here, so it's\r\n// easier to handle this case. if(!global) { ...}\r\n\r\nmodule.exports = g;\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vKHdlYnBhY2spL2J1aWxkaW4vZ2xvYmFsLmpzPzM2OTgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsQ0FBQzs7QUFFRDtBQUNBO0FBQ0E7QUFDQSxDQUFDO0FBQ0Q7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLDRDQUE0Qzs7QUFFNUMiLCJmaWxlIjoiMC5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBnO1xyXG5cclxuLy8gVGhpcyB3b3JrcyBpbiBub24tc3RyaWN0IG1vZGVcclxuZyA9IChmdW5jdGlvbigpIHtcclxuXHRyZXR1cm4gdGhpcztcclxufSkoKTtcclxuXHJcbnRyeSB7XHJcblx0Ly8gVGhpcyB3b3JrcyBpZiBldmFsIGlzIGFsbG93ZWQgKHNlZSBDU1ApXHJcblx0ZyA9IGcgfHwgRnVuY3Rpb24oXCJyZXR1cm4gdGhpc1wiKSgpIHx8ICgxLGV2YWwpKFwidGhpc1wiKTtcclxufSBjYXRjaChlKSB7XHJcblx0Ly8gVGhpcyB3b3JrcyBpZiB0aGUgd2luZG93IHJlZmVyZW5jZSBpcyBhdmFpbGFibGVcclxuXHRpZih0eXBlb2Ygd2luZG93ID09PSBcIm9iamVjdFwiKVxyXG5cdFx0ZyA9IHdpbmRvdztcclxufVxyXG5cclxuLy8gZyBjYW4gc3RpbGwgYmUgdW5kZWZpbmVkLCBidXQgbm90aGluZyB0byBkbyBhYm91dCBpdC4uLlxyXG4vLyBXZSByZXR1cm4gdW5kZWZpbmVkLCBpbnN0ZWFkIG9mIG5vdGhpbmcgaGVyZSwgc28gaXQnc1xyXG4vLyBlYXNpZXIgdG8gaGFuZGxlIHRoaXMgY2FzZS4gaWYoIWdsb2JhbCkgeyAuLi59XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IGc7XHJcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vICh3ZWJwYWNrKS9idWlsZGluL2dsb2JhbC5qc1xuLy8gbW9kdWxlIGlkID0gMFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///0\n");
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu__ = __webpack_require__(6);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__search__ = __webpack_require__(7);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type_effect__ = __webpack_require__(8);\n__webpack_require__(2);\r\n__webpack_require__(3);\r\n__webpack_require__(4);\r\n\r\n\r\n\r\n\r\n\r\nwindow.addEventListener('load', () => {\r\n    Object(__WEBPACK_IMPORTED_MODULE_0__menu__[\"a\" /* initMenu */])();\r\n    Object(__WEBPACK_IMPORTED_MODULE_1__search__[\"a\" /* initSearch */])();\r\n    Object(__WEBPACK_IMPORTED_MODULE_2__type_effect__[\"a\" /* initTypeEffect */])();\r\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZXMvdGVybWluYWwvc3JjL3NjcmlwdHMvbWFpbi5qcz85NTg5Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBO0FBQ0E7O0FBRWlCO0FBQ0U7QUFDSTs7QUFFdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxDQUFDIiwiZmlsZSI6IjEuanMiLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCdwcmlzbWpzL3RoZW1lcy9wcmlzbS5jc3MnKTtcclxucmVxdWlyZSgnLi4vc3R5bGVzL21haW4uc2NzcycpO1xyXG5yZXF1aXJlKCdwcmlzbWpzJyk7XHJcblxyXG5pbXBvcnQge2luaXRNZW51fSBmcm9tICcuL21lbnUnO1xyXG5pbXBvcnQge2luaXRTZWFyY2h9IGZyb20gJy4vc2VhcmNoJztcclxuaW1wb3J0IHtpbml0VHlwZUVmZmVjdH0gZnJvbSAnLi90eXBlLWVmZmVjdCc7XHJcblxyXG53aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignbG9hZCcsICgpID0+IHtcclxuICAgIGluaXRNZW51KCk7XHJcbiAgICBpbml0U2VhcmNoKCk7XHJcbiAgICBpbml0VHlwZUVmZmVjdCgpO1xyXG59KTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3RoZW1lcy90ZXJtaW5hbC9zcmMvc2NyaXB0cy9tYWluLmpzXG4vLyBtb2R1bGUgaWQgPSAxXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///1\n");
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcHJpc21qcy90aGVtZXMvcHJpc20uY3NzPzg4OGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMi5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luXG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9ub2RlX21vZHVsZXMvcHJpc21qcy90aGVtZXMvcHJpc20uY3NzXG4vLyBtb2R1bGUgaWQgPSAyXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///2\n");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZXMvdGVybWluYWwvc3JjL3N0eWxlcy9tYWluLnNjc3M/OGNkZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3RoZW1lcy90ZXJtaW5hbC9zcmMvc3R5bGVzL21haW4uc2Nzc1xuLy8gbW9kdWxlIGlkID0gM1xuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///3\n");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/* WEBPACK VAR INJECTION */(function(global) {module.exports = global[\"Prism\"] = __webpack_require__(5);\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcHJpc21qcy9wcmlzbS5qcz85OWY3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHdHIiwiZmlsZSI6IjQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IGdsb2JhbFtcIlByaXNtXCJdID0gcmVxdWlyZShcIi0hLlxcXFxwcmlzbS5qc1wiKTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL25vZGVfbW9kdWxlcy9wcmlzbWpzL3ByaXNtLmpzXG4vLyBtb2R1bGUgaWQgPSA0XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///4\n");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/* WEBPACK VAR INJECTION */(function(global) {\n/* **********************************************\n     Begin prism-core.js\n********************************************** */\n\nvar _self = (typeof window !== 'undefined')\n\t? window   // if in browser\n\t: (\n\t\t(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)\n\t\t? self // if in worker\n\t\t: {}   // if in node js\n\t);\n\n/**\n * Prism: Lightweight, robust, elegant syntax highlighting\n * MIT license http://www.opensource.org/licenses/mit-license.php/\n * @author Lea Verou http://lea.verou.me\n */\n\nvar Prism = (function(){\n\n// Private helper vars\nvar lang = /\\blang(?:uage)?-(\\w+)\\b/i;\nvar uniqueId = 0;\n\nvar _ = _self.Prism = {\n\tutil: {\n\t\tencode: function (tokens) {\n\t\t\tif (tokens instanceof Token) {\n\t\t\t\treturn new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);\n\t\t\t} else if (_.util.type(tokens) === 'Array') {\n\t\t\t\treturn tokens.map(_.util.encode);\n\t\t\t} else {\n\t\t\t\treturn tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\\u00a0/g, ' ');\n\t\t\t}\n\t\t},\n\n\t\ttype: function (o) {\n\t\t\treturn Object.prototype.toString.call(o).match(/\\[object (\\w+)\\]/)[1];\n\t\t},\n\n\t\tobjId: function (obj) {\n\t\t\tif (!obj['__id']) {\n\t\t\t\tObject.defineProperty(obj, '__id', { value: ++uniqueId });\n\t\t\t}\n\t\t\treturn obj['__id'];\n\t\t},\n\n\t\t// Deep clone a language definition (e.g. to extend it)\n\t\tclone: function (o) {\n\t\t\tvar type = _.util.type(o);\n\n\t\t\tswitch (type) {\n\t\t\t\tcase 'Object':\n\t\t\t\t\tvar clone = {};\n\n\t\t\t\t\tfor (var key in o) {\n\t\t\t\t\t\tif (o.hasOwnProperty(key)) {\n\t\t\t\t\t\t\tclone[key] = _.util.clone(o[key]);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\treturn clone;\n\n\t\t\t\tcase 'Array':\n\t\t\t\t\t// Check for existence for IE8\n\t\t\t\t\treturn o.map && o.map(function(v) { return _.util.clone(v); });\n\t\t\t}\n\n\t\t\treturn o;\n\t\t}\n\t},\n\n\tlanguages: {\n\t\textend: function (id, redef) {\n\t\t\tvar lang = _.util.clone(_.languages[id]);\n\n\t\t\tfor (var key in redef) {\n\t\t\t\tlang[key] = redef[key];\n\t\t\t}\n\n\t\t\treturn lang;\n\t\t},\n\n\t\t/**\n\t\t * Insert a token before another token in a language literal\n\t\t * As this needs to recreate the object (we cannot actually insert before keys in object literals),\n\t\t * we cannot just provide an object, we need anobject and a key.\n\t\t * @param inside The key (or language id) of the parent\n\t\t * @param before The key to insert before. If not provided, the function appends instead.\n\t\t * @param insert Object with the key/value pairs to insert\n\t\t * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.\n\t\t */\n\t\tinsertBefore: function (inside, before, insert, root) {\n\t\t\troot = root || _.languages;\n\t\t\tvar grammar = root[inside];\n\n\t\t\tif (arguments.length == 2) {\n\t\t\t\tinsert = arguments[1];\n\n\t\t\t\tfor (var newToken in insert) {\n\t\t\t\t\tif (insert.hasOwnProperty(newToken)) {\n\t\t\t\t\t\tgrammar[newToken] = insert[newToken];\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\treturn grammar;\n\t\t\t}\n\n\t\t\tvar ret = {};\n\n\t\t\tfor (var token in grammar) {\n\n\t\t\t\tif (grammar.hasOwnProperty(token)) {\n\n\t\t\t\t\tif (token == before) {\n\n\t\t\t\t\t\tfor (var newToken in insert) {\n\n\t\t\t\t\t\t\tif (insert.hasOwnProperty(newToken)) {\n\t\t\t\t\t\t\t\tret[newToken] = insert[newToken];\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tret[token] = grammar[token];\n\t\t\t\t}\n\t\t\t}\n\n\t\t\t// Update references in other language definitions\n\t\t\t_.languages.DFS(_.languages, function(key, value) {\n\t\t\t\tif (value === root[inside] && key != inside) {\n\t\t\t\t\tthis[key] = ret;\n\t\t\t\t}\n\t\t\t});\n\n\t\t\treturn root[inside] = ret;\n\t\t},\n\n\t\t// Traverse a language definition with Depth First Search\n\t\tDFS: function(o, callback, type, visited) {\n\t\t\tvisited = visited || {};\n\t\t\tfor (var i in o) {\n\t\t\t\tif (o.hasOwnProperty(i)) {\n\t\t\t\t\tcallback.call(o, i, o[i], type || i);\n\n\t\t\t\t\tif (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {\n\t\t\t\t\t\tvisited[_.util.objId(o[i])] = true;\n\t\t\t\t\t\t_.languages.DFS(o[i], callback, null, visited);\n\t\t\t\t\t}\n\t\t\t\t\telse if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {\n\t\t\t\t\t\tvisited[_.util.objId(o[i])] = true;\n\t\t\t\t\t\t_.languages.DFS(o[i], callback, i, visited);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\tplugins: {},\n\n\thighlightAll: function(async, callback) {\n\t\tvar env = {\n\t\t\tcallback: callback,\n\t\t\tselector: 'code[class*=\"language-\"], [class*=\"language-\"] code, code[class*=\"lang-\"], [class*=\"lang-\"] code'\n\t\t};\n\n\t\t_.hooks.run(\"before-highlightall\", env);\n\n\t\tvar elements = env.elements || document.querySelectorAll(env.selector);\n\n\t\tfor (var i=0, element; element = elements[i++];) {\n\t\t\t_.highlightElement(element, async === true, env.callback);\n\t\t}\n\t},\n\n\thighlightElement: function(element, async, callback) {\n\t\t// Find language\n\t\tvar language, grammar, parent = element;\n\n\t\twhile (parent && !lang.test(parent.className)) {\n\t\t\tparent = parent.parentNode;\n\t\t}\n\n\t\tif (parent) {\n\t\t\tlanguage = (parent.className.match(lang) || [,''])[1].toLowerCase();\n\t\t\tgrammar = _.languages[language];\n\t\t}\n\n\t\t// Set language on the element, if not present\n\t\telement.className = element.className.replace(lang, '').replace(/\\s+/g, ' ') + ' language-' + language;\n\n\t\t// Set language on the parent, for styling\n\t\tparent = element.parentNode;\n\n\t\tif (/pre/i.test(parent.nodeName)) {\n\t\t\tparent.className = parent.className.replace(lang, '').replace(/\\s+/g, ' ') + ' language-' + language;\n\t\t}\n\n\t\tvar code = element.textContent;\n\n\t\tvar env = {\n\t\t\telement: element,\n\t\t\tlanguage: language,\n\t\t\tgrammar: grammar,\n\t\t\tcode: code\n\t\t};\n\n\t\t_.hooks.run('before-sanity-check', env);\n\n\t\tif (!env.code || !env.grammar) {\n\t\t\tif (env.code) {\n\t\t\t\tenv.element.textContent = env.code;\n\t\t\t}\n\t\t\t_.hooks.run('complete', env);\n\t\t\treturn;\n\t\t}\n\n\t\t_.hooks.run('before-highlight', env);\n\n\t\tif (async && _self.Worker) {\n\t\t\tvar worker = new Worker(_.filename);\n\n\t\t\tworker.onmessage = function(evt) {\n\t\t\t\tenv.highlightedCode = evt.data;\n\n\t\t\t\t_.hooks.run('before-insert', env);\n\n\t\t\t\tenv.element.innerHTML = env.highlightedCode;\n\n\t\t\t\tcallback && callback.call(env.element);\n\t\t\t\t_.hooks.run('after-highlight', env);\n\t\t\t\t_.hooks.run('complete', env);\n\t\t\t};\n\n\t\t\tworker.postMessage(JSON.stringify({\n\t\t\t\tlanguage: env.language,\n\t\t\t\tcode: env.code,\n\t\t\t\timmediateClose: true\n\t\t\t}));\n\t\t}\n\t\telse {\n\t\t\tenv.highlightedCode = _.highlight(env.code, env.grammar, env.language);\n\n\t\t\t_.hooks.run('before-insert', env);\n\n\t\t\tenv.element.innerHTML = env.highlightedCode;\n\n\t\t\tcallback && callback.call(element);\n\n\t\t\t_.hooks.run('after-highlight', env);\n\t\t\t_.hooks.run('complete', env);\n\t\t}\n\t},\n\n\thighlight: function (text, grammar, language) {\n\t\tvar tokens = _.tokenize(text, grammar);\n\t\treturn Token.stringify(_.util.encode(tokens), language);\n\t},\n\n\ttokenize: function(text, grammar, language) {\n\t\tvar Token = _.Token;\n\n\t\tvar strarr = [text];\n\n\t\tvar rest = grammar.rest;\n\n\t\tif (rest) {\n\t\t\tfor (var token in rest) {\n\t\t\t\tgrammar[token] = rest[token];\n\t\t\t}\n\n\t\t\tdelete grammar.rest;\n\t\t}\n\n\t\ttokenloop: for (var token in grammar) {\n\t\t\tif(!grammar.hasOwnProperty(token) || !grammar[token]) {\n\t\t\t\tcontinue;\n\t\t\t}\n\n\t\t\tvar patterns = grammar[token];\n\t\t\tpatterns = (_.util.type(patterns) === \"Array\") ? patterns : [patterns];\n\n\t\t\tfor (var j = 0; j < patterns.length; ++j) {\n\t\t\t\tvar pattern = patterns[j],\n\t\t\t\t\tinside = pattern.inside,\n\t\t\t\t\tlookbehind = !!pattern.lookbehind,\n\t\t\t\t\tgreedy = !!pattern.greedy,\n\t\t\t\t\tlookbehindLength = 0,\n\t\t\t\t\talias = pattern.alias;\n\n\t\t\t\tif (greedy && !pattern.pattern.global) {\n\t\t\t\t\t// Without the global flag, lastIndex won't work\n\t\t\t\t\tvar flags = pattern.pattern.toString().match(/[imuy]*$/)[0];\n\t\t\t\t\tpattern.pattern = RegExp(pattern.pattern.source, flags + \"g\");\n\t\t\t\t}\n\n\t\t\t\tpattern = pattern.pattern || pattern;\n\n\t\t\t\t// Don’t cache length as it changes during the loop\n\t\t\t\tfor (var i=0, pos = 0; i<strarr.length; pos += strarr[i].length, ++i) {\n\n\t\t\t\t\tvar str = strarr[i];\n\n\t\t\t\t\tif (strarr.length > text.length) {\n\t\t\t\t\t\t// Something went terribly wrong, ABORT, ABORT!\n\t\t\t\t\t\tbreak tokenloop;\n\t\t\t\t\t}\n\n\t\t\t\t\tif (str instanceof Token) {\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\n\t\t\t\t\tpattern.lastIndex = 0;\n\n\t\t\t\t\tvar match = pattern.exec(str),\n\t\t\t\t\t    delNum = 1;\n\n\t\t\t\t\t// Greedy patterns can override/remove up to two previously matched tokens\n\t\t\t\t\tif (!match && greedy && i != strarr.length - 1) {\n\t\t\t\t\t\tpattern.lastIndex = pos;\n\t\t\t\t\t\tmatch = pattern.exec(text);\n\t\t\t\t\t\tif (!match) {\n\t\t\t\t\t\t\tbreak;\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tvar from = match.index + (lookbehind ? match[1].length : 0),\n\t\t\t\t\t\t    to = match.index + match[0].length,\n\t\t\t\t\t\t    k = i,\n\t\t\t\t\t\t    p = pos;\n\n\t\t\t\t\t\tfor (var len = strarr.length; k < len && p < to; ++k) {\n\t\t\t\t\t\t\tp += strarr[k].length;\n\t\t\t\t\t\t\t// Move the index i to the element in strarr that is closest to from\n\t\t\t\t\t\t\tif (from >= p) {\n\t\t\t\t\t\t\t\t++i;\n\t\t\t\t\t\t\t\tpos = p;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\t/*\n\t\t\t\t\t\t * If strarr[i] is a Token, then the match starts inside another Token, which is invalid\n\t\t\t\t\t\t * If strarr[k - 1] is greedy we are in conflict with another greedy pattern\n\t\t\t\t\t\t */\n\t\t\t\t\t\tif (strarr[i] instanceof Token || strarr[k - 1].greedy) {\n\t\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\t// Number of tokens to delete and replace with the new match\n\t\t\t\t\t\tdelNum = k - i;\n\t\t\t\t\t\tstr = text.slice(pos, p);\n\t\t\t\t\t\tmatch.index -= pos;\n\t\t\t\t\t}\n\n\t\t\t\t\tif (!match) {\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\n\t\t\t\t\tif(lookbehind) {\n\t\t\t\t\t\tlookbehindLength = match[1].length;\n\t\t\t\t\t}\n\n\t\t\t\t\tvar from = match.index + lookbehindLength,\n\t\t\t\t\t    match = match[0].slice(lookbehindLength),\n\t\t\t\t\t    to = from + match.length,\n\t\t\t\t\t    before = str.slice(0, from),\n\t\t\t\t\t    after = str.slice(to);\n\n\t\t\t\t\tvar args = [i, delNum];\n\n\t\t\t\t\tif (before) {\n\t\t\t\t\t\targs.push(before);\n\t\t\t\t\t}\n\n\t\t\t\t\tvar wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias, match, greedy);\n\n\t\t\t\t\targs.push(wrapped);\n\n\t\t\t\t\tif (after) {\n\t\t\t\t\t\targs.push(after);\n\t\t\t\t\t}\n\n\t\t\t\t\tArray.prototype.splice.apply(strarr, args);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn strarr;\n\t},\n\n\thooks: {\n\t\tall: {},\n\n\t\tadd: function (name, callback) {\n\t\t\tvar hooks = _.hooks.all;\n\n\t\t\thooks[name] = hooks[name] || [];\n\n\t\t\thooks[name].push(callback);\n\t\t},\n\n\t\trun: function (name, env) {\n\t\t\tvar callbacks = _.hooks.all[name];\n\n\t\t\tif (!callbacks || !callbacks.length) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tfor (var i=0, callback; callback = callbacks[i++];) {\n\t\t\t\tcallback(env);\n\t\t\t}\n\t\t}\n\t}\n};\n\nvar Token = _.Token = function(type, content, alias, matchedStr, greedy) {\n\tthis.type = type;\n\tthis.content = content;\n\tthis.alias = alias;\n\t// Copy of the full string this token was created from\n\tthis.length = (matchedStr || \"\").length|0;\n\tthis.greedy = !!greedy;\n};\n\nToken.stringify = function(o, language, parent) {\n\tif (typeof o == 'string') {\n\t\treturn o;\n\t}\n\n\tif (_.util.type(o) === 'Array') {\n\t\treturn o.map(function(element) {\n\t\t\treturn Token.stringify(element, language, o);\n\t\t}).join('');\n\t}\n\n\tvar env = {\n\t\ttype: o.type,\n\t\tcontent: Token.stringify(o.content, language, parent),\n\t\ttag: 'span',\n\t\tclasses: ['token', o.type],\n\t\tattributes: {},\n\t\tlanguage: language,\n\t\tparent: parent\n\t};\n\n\tif (env.type == 'comment') {\n\t\tenv.attributes['spellcheck'] = 'true';\n\t}\n\n\tif (o.alias) {\n\t\tvar aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];\n\t\tArray.prototype.push.apply(env.classes, aliases);\n\t}\n\n\t_.hooks.run('wrap', env);\n\n\tvar attributes = Object.keys(env.attributes).map(function(name) {\n\t\treturn name + '=\"' + (env.attributes[name] || '').replace(/\"/g, '&quot;') + '\"';\n\t}).join(' ');\n\n\treturn '<' + env.tag + ' class=\"' + env.classes.join(' ') + '\"' + (attributes ? ' ' + attributes : '') + '>' + env.content + '</' + env.tag + '>';\n\n};\n\nif (!_self.document) {\n\tif (!_self.addEventListener) {\n\t\t// in Node.js\n\t\treturn _self.Prism;\n\t}\n \t// In worker\n\t_self.addEventListener('message', function(evt) {\n\t\tvar message = JSON.parse(evt.data),\n\t\t    lang = message.language,\n\t\t    code = message.code,\n\t\t    immediateClose = message.immediateClose;\n\n\t\t_self.postMessage(_.highlight(code, _.languages[lang], lang));\n\t\tif (immediateClose) {\n\t\t\t_self.close();\n\t\t}\n\t}, false);\n\n\treturn _self.Prism;\n}\n\n//Get current script and highlight\nvar script = document.currentScript || [].slice.call(document.getElementsByTagName(\"script\")).pop();\n\nif (script) {\n\t_.filename = script.src;\n\n\tif (document.addEventListener && !script.hasAttribute('data-manual')) {\n\t\tif(document.readyState !== \"loading\") {\n\t\t\tif (window.requestAnimationFrame) {\n\t\t\t\twindow.requestAnimationFrame(_.highlightAll);\n\t\t\t} else {\n\t\t\t\twindow.setTimeout(_.highlightAll, 16);\n\t\t\t}\n\t\t}\n\t\telse {\n\t\t\tdocument.addEventListener('DOMContentLoaded', _.highlightAll);\n\t\t}\n\t}\n}\n\nreturn _self.Prism;\n\n})();\n\nif (typeof module !== 'undefined' && module.exports) {\n\tmodule.exports = Prism;\n}\n\n// hack for components to work correctly in node.js\nif (typeof global !== 'undefined') {\n\tglobal.Prism = Prism;\n}\n\n\n/* **********************************************\n     Begin prism-markup.js\n********************************************** */\n\nPrism.languages.markup = {\n\t'comment': /<!--[\\w\\W]*?-->/,\n\t'prolog': /<\\?[\\w\\W]+?\\?>/,\n\t'doctype': /<!DOCTYPE[\\w\\W]+?>/i,\n\t'cdata': /<!\\[CDATA\\[[\\w\\W]*?]]>/i,\n\t'tag': {\n\t\tpattern: /<\\/?(?!\\d)[^\\s>\\/=$<]+(?:\\s+[^\\s>\\/=]+(?:=(?:(\"|')(?:\\\\\\1|\\\\?(?!\\1)[\\w\\W])*\\1|[^\\s'\">=]+))?)*\\s*\\/?>/i,\n\t\tinside: {\n\t\t\t'tag': {\n\t\t\t\tpattern: /^<\\/?[^\\s>\\/]+/i,\n\t\t\t\tinside: {\n\t\t\t\t\t'punctuation': /^<\\/?/,\n\t\t\t\t\t'namespace': /^[^\\s>\\/:]+:/\n\t\t\t\t}\n\t\t\t},\n\t\t\t'attr-value': {\n\t\t\t\tpattern: /=(?:('|\")[\\w\\W]*?(\\1)|[^\\s>]+)/i,\n\t\t\t\tinside: {\n\t\t\t\t\t'punctuation': /[=>\"']/\n\t\t\t\t}\n\t\t\t},\n\t\t\t'punctuation': /\\/?>/,\n\t\t\t'attr-name': {\n\t\t\t\tpattern: /[^\\s>\\/]+/,\n\t\t\t\tinside: {\n\t\t\t\t\t'namespace': /^[^\\s>\\/:]+:/\n\t\t\t\t}\n\t\t\t}\n\n\t\t}\n\t},\n\t'entity': /&#?[\\da-z]{1,8};/i\n};\n\n// Plugin to make entity title show the real entity, idea by Roman Komarov\nPrism.hooks.add('wrap', function(env) {\n\n\tif (env.type === 'entity') {\n\t\tenv.attributes['title'] = env.content.replace(/&amp;/, '&');\n\t}\n});\n\nPrism.languages.xml = Prism.languages.markup;\nPrism.languages.html = Prism.languages.markup;\nPrism.languages.mathml = Prism.languages.markup;\nPrism.languages.svg = Prism.languages.markup;\n\n\n/* **********************************************\n     Begin prism-css.js\n********************************************** */\n\nPrism.languages.css = {\n\t'comment': /\\/\\*[\\w\\W]*?\\*\\//,\n\t'atrule': {\n\t\tpattern: /@[\\w-]+?.*?(;|(?=\\s*\\{))/i,\n\t\tinside: {\n\t\t\t'rule': /@[\\w-]+/\n\t\t\t// See rest below\n\t\t}\n\t},\n\t'url': /url\\((?:([\"'])(\\\\(?:\\r\\n|[\\w\\W])|(?!\\1)[^\\\\\\r\\n])*\\1|.*?)\\)/i,\n\t'selector': /[^\\{\\}\\s][^\\{\\};]*?(?=\\s*\\{)/,\n\t'string': {\n\t\tpattern: /(\"|')(\\\\(?:\\r\\n|[\\w\\W])|(?!\\1)[^\\\\\\r\\n])*\\1/,\n\t\tgreedy: true\n\t},\n\t'property': /(\\b|\\B)[\\w-]+(?=\\s*:)/i,\n\t'important': /\\B!important\\b/i,\n\t'function': /[-a-z0-9]+(?=\\()/i,\n\t'punctuation': /[(){};:]/\n};\n\nPrism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);\n\nif (Prism.languages.markup) {\n\tPrism.languages.insertBefore('markup', 'tag', {\n\t\t'style': {\n\t\t\tpattern: /(<style[\\w\\W]*?>)[\\w\\W]*?(?=<\\/style>)/i,\n\t\t\tlookbehind: true,\n\t\t\tinside: Prism.languages.css,\n\t\t\talias: 'language-css'\n\t\t}\n\t});\n\t\n\tPrism.languages.insertBefore('inside', 'attr-value', {\n\t\t'style-attr': {\n\t\t\tpattern: /\\s*style=(\"|').*?\\1/i,\n\t\t\tinside: {\n\t\t\t\t'attr-name': {\n\t\t\t\t\tpattern: /^\\s*style/i,\n\t\t\t\t\tinside: Prism.languages.markup.tag.inside\n\t\t\t\t},\n\t\t\t\t'punctuation': /^\\s*=\\s*['\"]|['\"]\\s*$/,\n\t\t\t\t'attr-value': {\n\t\t\t\t\tpattern: /.+/i,\n\t\t\t\t\tinside: Prism.languages.css\n\t\t\t\t}\n\t\t\t},\n\t\t\talias: 'language-css'\n\t\t}\n\t}, Prism.languages.markup.tag);\n}\n\n/* **********************************************\n     Begin prism-clike.js\n********************************************** */\n\nPrism.languages.clike = {\n\t'comment': [\n\t\t{\n\t\t\tpattern: /(^|[^\\\\])\\/\\*[\\w\\W]*?\\*\\//,\n\t\t\tlookbehind: true\n\t\t},\n\t\t{\n\t\t\tpattern: /(^|[^\\\\:])\\/\\/.*/,\n\t\t\tlookbehind: true\n\t\t}\n\t],\n\t'string': {\n\t\tpattern: /([\"'])(\\\\(?:\\r\\n|[\\s\\S])|(?!\\1)[^\\\\\\r\\n])*\\1/,\n\t\tgreedy: true\n\t},\n\t'class-name': {\n\t\tpattern: /((?:\\b(?:class|interface|extends|implements|trait|instanceof|new)\\s+)|(?:catch\\s+\\())[a-z0-9_\\.\\\\]+/i,\n\t\tlookbehind: true,\n\t\tinside: {\n\t\t\tpunctuation: /(\\.|\\\\)/\n\t\t}\n\t},\n\t'keyword': /\\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\\b/,\n\t'boolean': /\\b(true|false)\\b/,\n\t'function': /[a-z0-9_]+(?=\\()/i,\n\t'number': /\\b-?(?:0x[\\da-f]+|\\d*\\.?\\d+(?:e[+-]?\\d+)?)\\b/i,\n\t'operator': /--?|\\+\\+?|!=?=?|<=?|>=?|==?=?|&&?|\\|\\|?|\\?|\\*|\\/|~|\\^|%/,\n\t'punctuation': /[{}[\\];(),.:]/\n};\n\n\n/* **********************************************\n     Begin prism-javascript.js\n********************************************** */\n\nPrism.languages.javascript = Prism.languages.extend('clike', {\n\t'keyword': /\\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\\b/,\n\t'number': /\\b-?(0x[\\dA-Fa-f]+|0b[01]+|0o[0-7]+|\\d*\\.?\\d+([Ee][+-]?\\d+)?|NaN|Infinity)\\b/,\n\t// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)\n\t'function': /[_$a-zA-Z\\xA0-\\uFFFF][_$a-zA-Z0-9\\xA0-\\uFFFF]*(?=\\()/i,\n\t'operator': /--?|\\+\\+?|!=?=?|<=?|>=?|==?=?|&&?|\\|\\|?|\\?|\\*\\*?|\\/|~|\\^|%|\\.{3}/\n});\n\nPrism.languages.insertBefore('javascript', 'keyword', {\n\t'regex': {\n\t\tpattern: /(^|[^/])\\/(?!\\/)(\\[.+?]|\\\\.|[^/\\\\\\r\\n])+\\/[gimyu]{0,5}(?=\\s*($|[\\r\\n,.;})]))/,\n\t\tlookbehind: true,\n\t\tgreedy: true\n\t}\n});\n\nPrism.languages.insertBefore('javascript', 'string', {\n\t'template-string': {\n\t\tpattern: /`(?:\\\\\\\\|\\\\?[^\\\\])*?`/,\n\t\tgreedy: true,\n\t\tinside: {\n\t\t\t'interpolation': {\n\t\t\t\tpattern: /\\$\\{[^}]+\\}/,\n\t\t\t\tinside: {\n\t\t\t\t\t'interpolation-punctuation': {\n\t\t\t\t\t\tpattern: /^\\$\\{|\\}$/,\n\t\t\t\t\t\talias: 'punctuation'\n\t\t\t\t\t},\n\t\t\t\t\trest: Prism.languages.javascript\n\t\t\t\t}\n\t\t\t},\n\t\t\t'string': /[\\s\\S]+/\n\t\t}\n\t}\n});\n\nif (Prism.languages.markup) {\n\tPrism.languages.insertBefore('markup', 'tag', {\n\t\t'script': {\n\t\t\tpattern: /(<script[\\w\\W]*?>)[\\w\\W]*?(?=<\\/script>)/i,\n\t\t\tlookbehind: true,\n\t\t\tinside: Prism.languages.javascript,\n\t\t\talias: 'language-javascript'\n\t\t}\n\t});\n}\n\nPrism.languages.js = Prism.languages.javascript;\n\n/* **********************************************\n     Begin prism-file-highlight.js\n********************************************** */\n\n(function () {\n\tif (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {\n\t\treturn;\n\t}\n\n\tself.Prism.fileHighlight = function() {\n\n\t\tvar Extensions = {\n\t\t\t'js': 'javascript',\n\t\t\t'py': 'python',\n\t\t\t'rb': 'ruby',\n\t\t\t'ps1': 'powershell',\n\t\t\t'psm1': 'powershell',\n\t\t\t'sh': 'bash',\n\t\t\t'bat': 'batch',\n\t\t\t'h': 'c',\n\t\t\t'tex': 'latex'\n\t\t};\n\n\t\tif(Array.prototype.forEach) { // Check to prevent error in IE8\n\t\t\tArray.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {\n\t\t\t\tvar src = pre.getAttribute('data-src');\n\n\t\t\t\tvar language, parent = pre;\n\t\t\t\tvar lang = /\\blang(?:uage)?-(?!\\*)(\\w+)\\b/i;\n\t\t\t\twhile (parent && !lang.test(parent.className)) {\n\t\t\t\t\tparent = parent.parentNode;\n\t\t\t\t}\n\n\t\t\t\tif (parent) {\n\t\t\t\t\tlanguage = (pre.className.match(lang) || [, ''])[1];\n\t\t\t\t}\n\n\t\t\t\tif (!language) {\n\t\t\t\t\tvar extension = (src.match(/\\.(\\w+)$/) || [, ''])[1];\n\t\t\t\t\tlanguage = Extensions[extension] || extension;\n\t\t\t\t}\n\n\t\t\t\tvar code = document.createElement('code');\n\t\t\t\tcode.className = 'language-' + language;\n\n\t\t\t\tpre.textContent = '';\n\n\t\t\t\tcode.textContent = 'Loading…';\n\n\t\t\t\tpre.appendChild(code);\n\n\t\t\t\tvar xhr = new XMLHttpRequest();\n\n\t\t\t\txhr.open('GET', src, true);\n\n\t\t\t\txhr.onreadystatechange = function () {\n\t\t\t\t\tif (xhr.readyState == 4) {\n\n\t\t\t\t\t\tif (xhr.status < 400 && xhr.responseText) {\n\t\t\t\t\t\t\tcode.textContent = xhr.responseText;\n\n\t\t\t\t\t\t\tPrism.highlightElement(code);\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse if (xhr.status >= 400) {\n\t\t\t\t\t\t\tcode.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse {\n\t\t\t\t\t\t\tcode.textContent = '✖ Error: File does not exist or is empty';\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t};\n\n\t\t\t\txhr.send(null);\n\t\t\t});\n\t\t}\n\n\t};\n\n\tdocument.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);\n\n})();\n\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcHJpc21qcy9wcmlzbS5qcz8zODQ3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE1BQU07QUFDTjs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0EsSUFBSTtBQUNKLHNDQUFzQyxzQkFBc0I7QUFDNUQ7QUFDQSxHQUFHOztBQUVIO0FBQ0E7QUFDQSxHQUFHOztBQUVIO0FBQ0E7QUFDQSx3Q0FBd0Msb0JBQW9CO0FBQzVEO0FBQ0E7QUFDQSxHQUFHOztBQUVIO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0Esd0NBQXdDLHdCQUF3QixFQUFFO0FBQ2xFOztBQUVBO0FBQ0E7QUFDQSxFQUFFOztBQUVGO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxHQUFHOztBQUVIO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTs7QUFFSjtBQUNBLEdBQUc7O0FBRUg7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxFQUFFO0FBQ0YsWUFBWTs7QUFFWjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBOztBQUVBLHdCQUF3Qix5QkFBeUI7QUFDakQ7QUFDQTtBQUNBLEVBQUU7O0FBRUY7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBOztBQUVBOztBQUVBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLEVBQUU7O0FBRUY7QUFDQTtBQUNBO0FBQ0EsRUFBRTs7QUFFRjtBQUNBOztBQUVBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQSxrQkFBa0IscUJBQXFCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0EsMEJBQTBCLGlCQUFpQjs7QUFFM0M7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsbUNBQW1DLG1CQUFtQjtBQUN0RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsRUFBRTs7QUFFRjtBQUNBLFNBQVM7O0FBRVQ7QUFDQTs7QUFFQTs7QUFFQTtBQUNBLEdBQUc7O0FBRUg7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEsMEJBQTBCLDJCQUEyQjtBQUNyRDtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0I7QUFDaEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBLHlFQUF5RTtBQUN6RSxFQUFFOztBQUVGOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxFQUFFOztBQUVGO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUEsQ0FBQzs7QUFFRDtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxFQUFFO0FBQ0YsdUJBQXVCLEtBQUs7QUFDNUI7O0FBRUE7QUFDQTs7QUFFQTtBQUNBLHNEQUFzRDtBQUN0RDtBQUNBLENBQUM7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSx5QkFBeUIsU0FBUztBQUNsQztBQUNBO0FBQ0E7QUFDQTtBQUNBLEVBQUU7QUFDRjtBQUNBLGtCQUFrQixFQUFFLE9BQU8sR0FBRyxXQUFXO0FBQ3pDO0FBQ0E7QUFDQTtBQUNBLEVBQUU7QUFDRjtBQUNBO0FBQ0E7QUFDQSx1QkFBdUI7QUFDdkI7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEVBQUU7O0FBRUY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0EsRUFBRTtBQUNGOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxFQUFFO0FBQ0Y7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsRUFBRTtBQUNGO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxvQkFBb0IsSUFBSTtBQUN4Qjs7O0FBR0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSw0RUFBNEUsRUFBRTtBQUM5RSxDQUFDOztBQUVEO0FBQ0E7QUFDQSw4REFBOEQsSUFBSSxrQkFBa0I7QUFDcEY7QUFDQTtBQUNBO0FBQ0EsQ0FBQzs7QUFFRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0IsR0FBRyxJQUFJO0FBQ3pCO0FBQ0E7QUFDQSxxQkFBcUIsR0FBRztBQUN4QjtBQUNBLE1BQU07QUFDTjtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBLENBQUM7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEVBQUU7QUFDRjs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSwrQkFBK0I7QUFDL0I7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBOztBQUVBOztBQUVBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLElBQUk7QUFDSjs7QUFFQTs7QUFFQTs7QUFFQSxDQUFDIiwiZmlsZSI6IjUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8qICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKipcbiAgICAgQmVnaW4gcHJpc20tY29yZS5qc1xuKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiAqL1xuXG52YXIgX3NlbGYgPSAodHlwZW9mIHdpbmRvdyAhPT0gJ3VuZGVmaW5lZCcpXG5cdD8gd2luZG93ICAgLy8gaWYgaW4gYnJvd3NlclxuXHQ6IChcblx0XHQodHlwZW9mIFdvcmtlckdsb2JhbFNjb3BlICE9PSAndW5kZWZpbmVkJyAmJiBzZWxmIGluc3RhbmNlb2YgV29ya2VyR2xvYmFsU2NvcGUpXG5cdFx0PyBzZWxmIC8vIGlmIGluIHdvcmtlclxuXHRcdDoge30gICAvLyBpZiBpbiBub2RlIGpzXG5cdCk7XG5cbi8qKlxuICogUHJpc206IExpZ2h0d2VpZ2h0LCByb2J1c3QsIGVsZWdhbnQgc3ludGF4IGhpZ2hsaWdodGluZ1xuICogTUlUIGxpY2Vuc2UgaHR0cDovL3d3dy5vcGVuc291cmNlLm9yZy9saWNlbnNlcy9taXQtbGljZW5zZS5waHAvXG4gKiBAYXV0aG9yIExlYSBWZXJvdSBodHRwOi8vbGVhLnZlcm91Lm1lXG4gKi9cblxudmFyIFByaXNtID0gKGZ1bmN0aW9uKCl7XG5cbi8vIFByaXZhdGUgaGVscGVyIHZhcnNcbnZhciBsYW5nID0gL1xcYmxhbmcoPzp1YWdlKT8tKFxcdyspXFxiL2k7XG52YXIgdW5pcXVlSWQgPSAwO1xuXG52YXIgXyA9IF9zZWxmLlByaXNtID0ge1xuXHR1dGlsOiB7XG5cdFx0ZW5jb2RlOiBmdW5jdGlvbiAodG9rZW5zKSB7XG5cdFx0XHRpZiAodG9rZW5zIGluc3RhbmNlb2YgVG9rZW4pIHtcblx0XHRcdFx0cmV0dXJuIG5ldyBUb2tlbih0b2tlbnMudHlwZSwgXy51dGlsLmVuY29kZSh0b2tlbnMuY29udGVudCksIHRva2Vucy5hbGlhcyk7XG5cdFx0XHR9IGVsc2UgaWYgKF8udXRpbC50eXBlKHRva2VucykgPT09ICdBcnJheScpIHtcblx0XHRcdFx0cmV0dXJuIHRva2Vucy5tYXAoXy51dGlsLmVuY29kZSk7XG5cdFx0XHR9IGVsc2Uge1xuXHRcdFx0XHRyZXR1cm4gdG9rZW5zLnJlcGxhY2UoLyYvZywgJyZhbXA7JykucmVwbGFjZSgvPC9nLCAnJmx0OycpLnJlcGxhY2UoL1xcdTAwYTAvZywgJyAnKTtcblx0XHRcdH1cblx0XHR9LFxuXG5cdFx0dHlwZTogZnVuY3Rpb24gKG8pIHtcblx0XHRcdHJldHVybiBPYmplY3QucHJvdG90eXBlLnRvU3RyaW5nLmNhbGwobykubWF0Y2goL1xcW29iamVjdCAoXFx3KylcXF0vKVsxXTtcblx0XHR9LFxuXG5cdFx0b2JqSWQ6IGZ1bmN0aW9uIChvYmopIHtcblx0XHRcdGlmICghb2JqWydfX2lkJ10pIHtcblx0XHRcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KG9iaiwgJ19faWQnLCB7IHZhbHVlOiArK3VuaXF1ZUlkIH0pO1xuXHRcdFx0fVxuXHRcdFx0cmV0dXJuIG9ialsnX19pZCddO1xuXHRcdH0sXG5cblx0XHQvLyBEZWVwIGNsb25lIGEgbGFuZ3VhZ2UgZGVmaW5pdGlvbiAoZS5nLiB0byBleHRlbmQgaXQpXG5cdFx0Y2xvbmU6IGZ1bmN0aW9uIChvKSB7XG5cdFx0XHR2YXIgdHlwZSA9IF8udXRpbC50eXBlKG8pO1xuXG5cdFx0XHRzd2l0Y2ggKHR5cGUpIHtcblx0XHRcdFx0Y2FzZSAnT2JqZWN0Jzpcblx0XHRcdFx0XHR2YXIgY2xvbmUgPSB7fTtcblxuXHRcdFx0XHRcdGZvciAodmFyIGtleSBpbiBvKSB7XG5cdFx0XHRcdFx0XHRpZiAoby5oYXNPd25Qcm9wZXJ0eShrZXkpKSB7XG5cdFx0XHRcdFx0XHRcdGNsb25lW2tleV0gPSBfLnV0aWwuY2xvbmUob1trZXldKTtcblx0XHRcdFx0XHRcdH1cblx0XHRcdFx0XHR9XG5cblx0XHRcdFx0XHRyZXR1cm4gY2xvbmU7XG5cblx0XHRcdFx0Y2FzZSAnQXJyYXknOlxuXHRcdFx0XHRcdC8vIENoZWNrIGZvciBleGlzdGVuY2UgZm9yIElFOFxuXHRcdFx0XHRcdHJldHVybiBvLm1hcCAmJiBvLm1hcChmdW5jdGlvbih2KSB7IHJldHVybiBfLnV0aWwuY2xvbmUodik7IH0pO1xuXHRcdFx0fVxuXG5cdFx0XHRyZXR1cm4gbztcblx0XHR9XG5cdH0sXG5cblx0bGFuZ3VhZ2VzOiB7XG5cdFx0ZXh0ZW5kOiBmdW5jdGlvbiAoaWQsIHJlZGVmKSB7XG5cdFx0XHR2YXIgbGFuZyA9IF8udXRpbC5jbG9uZShfLmxhbmd1YWdlc1tpZF0pO1xuXG5cdFx0XHRmb3IgKHZhciBrZXkgaW4gcmVkZWYpIHtcblx0XHRcdFx0bGFuZ1trZXldID0gcmVkZWZba2V5XTtcblx0XHRcdH1cblxuXHRcdFx0cmV0dXJuIGxhbmc7XG5cdFx0fSxcblxuXHRcdC8qKlxuXHRcdCAqIEluc2VydCBhIHRva2VuIGJlZm9yZSBhbm90aGVyIHRva2VuIGluIGEgbGFuZ3VhZ2UgbGl0ZXJhbFxuXHRcdCAqIEFzIHRoaXMgbmVlZHMgdG8gcmVjcmVhdGUgdGhlIG9iamVjdCAod2UgY2Fubm90IGFjdHVhbGx5IGluc2VydCBiZWZvcmUga2V5cyBpbiBvYmplY3QgbGl0ZXJhbHMpLFxuXHRcdCAqIHdlIGNhbm5vdCBqdXN0IHByb3ZpZGUgYW4gb2JqZWN0LCB3ZSBuZWVkIGFub2JqZWN0IGFuZCBhIGtleS5cblx0XHQgKiBAcGFyYW0gaW5zaWRlIFRoZSBrZXkgKG9yIGxhbmd1YWdlIGlkKSBvZiB0aGUgcGFyZW50XG5cdFx0ICogQHBhcmFtIGJlZm9yZSBUaGUga2V5IHRvIGluc2VydCBiZWZvcmUuIElmIG5vdCBwcm92aWRlZCwgdGhlIGZ1bmN0aW9uIGFwcGVuZHMgaW5zdGVhZC5cblx0XHQgKiBAcGFyYW0gaW5zZXJ0IE9iamVjdCB3aXRoIHRoZSBrZXkvdmFsdWUgcGFpcnMgdG8gaW5zZXJ0XG5cdFx0ICogQHBhcmFtIHJvb3QgVGhlIG9iamVjdCB0aGF0IGNvbnRhaW5zIGBpbnNpZGVgLiBJZiBlcXVhbCB0byBQcmlzbS5sYW5ndWFnZXMsIGl0IGNhbiBiZSBvbWl0dGVkLlxuXHRcdCAqL1xuXHRcdGluc2VydEJlZm9yZTogZnVuY3Rpb24gKGluc2lkZSwgYmVmb3JlLCBpbnNlcnQsIHJvb3QpIHtcblx0XHRcdHJvb3QgPSByb290IHx8IF8ubGFuZ3VhZ2VzO1xuXHRcdFx0dmFyIGdyYW1tYXIgPSByb290W2luc2lkZV07XG5cblx0XHRcdGlmIChhcmd1bWVudHMubGVuZ3RoID09IDIpIHtcblx0XHRcdFx0aW5zZXJ0ID0gYXJndW1lbnRzWzFdO1xuXG5cdFx0XHRcdGZvciAodmFyIG5ld1Rva2VuIGluIGluc2VydCkge1xuXHRcdFx0XHRcdGlmIChpbnNlcnQuaGFzT3duUHJvcGVydHkobmV3VG9rZW4pKSB7XG5cdFx0XHRcdFx0XHRncmFtbWFyW25ld1Rva2VuXSA9IGluc2VydFtuZXdUb2tlbl07XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9XG5cblx0XHRcdFx0cmV0dXJuIGdyYW1tYXI7XG5cdFx0XHR9XG5cblx0XHRcdHZhciByZXQgPSB7fTtcblxuXHRcdFx0Zm9yICh2YXIgdG9rZW4gaW4gZ3JhbW1hcikge1xuXG5cdFx0XHRcdGlmIChncmFtbWFyLmhhc093blByb3BlcnR5KHRva2VuKSkge1xuXG5cdFx0XHRcdFx0aWYgKHRva2VuID09IGJlZm9yZSkge1xuXG5cdFx0XHRcdFx0XHRmb3IgKHZhciBuZXdUb2tlbiBpbiBpbnNlcnQpIHtcblxuXHRcdFx0XHRcdFx0XHRpZiAoaW5zZXJ0Lmhhc093blByb3BlcnR5KG5ld1Rva2VuKSkge1xuXHRcdFx0XHRcdFx0XHRcdHJldFtuZXdUb2tlbl0gPSBpbnNlcnRbbmV3VG9rZW5dO1xuXHRcdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0fVxuXG5cdFx0XHRcdFx0cmV0W3Rva2VuXSA9IGdyYW1tYXJbdG9rZW5dO1xuXHRcdFx0XHR9XG5cdFx0XHR9XG5cblx0XHRcdC8vIFVwZGF0ZSByZWZlcmVuY2VzIGluIG90aGVyIGxhbmd1YWdlIGRlZmluaXRpb25zXG5cdFx0XHRfLmxhbmd1YWdlcy5ERlMoXy5sYW5ndWFnZXMsIGZ1bmN0aW9uKGtleSwgdmFsdWUpIHtcblx0XHRcdFx0aWYgKHZhbHVlID09PSByb290W2luc2lkZV0gJiYga2V5ICE9IGluc2lkZSkge1xuXHRcdFx0XHRcdHRoaXNba2V5XSA9IHJldDtcblx0XHRcdFx0fVxuXHRcdFx0fSk7XG5cblx0XHRcdHJldHVybiByb290W2luc2lkZV0gPSByZXQ7XG5cdFx0fSxcblxuXHRcdC8vIFRyYXZlcnNlIGEgbGFuZ3VhZ2UgZGVmaW5pdGlvbiB3aXRoIERlcHRoIEZpcnN0IFNlYXJjaFxuXHRcdERGUzogZnVuY3Rpb24obywgY2FsbGJhY2ssIHR5cGUsIHZpc2l0ZWQpIHtcblx0XHRcdHZpc2l0ZWQgPSB2aXNpdGVkIHx8IHt9O1xuXHRcdFx0Zm9yICh2YXIgaSBpbiBvKSB7XG5cdFx0XHRcdGlmIChvLmhhc093blByb3BlcnR5KGkpKSB7XG5cdFx0XHRcdFx0Y2FsbGJhY2suY2FsbChvLCBpLCBvW2ldLCB0eXBlIHx8IGkpO1xuXG5cdFx0XHRcdFx0aWYgKF8udXRpbC50eXBlKG9baV0pID09PSAnT2JqZWN0JyAmJiAhdmlzaXRlZFtfLnV0aWwub2JqSWQob1tpXSldKSB7XG5cdFx0XHRcdFx0XHR2aXNpdGVkW18udXRpbC5vYmpJZChvW2ldKV0gPSB0cnVlO1xuXHRcdFx0XHRcdFx0Xy5sYW5ndWFnZXMuREZTKG9baV0sIGNhbGxiYWNrLCBudWxsLCB2aXNpdGVkKTtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0ZWxzZSBpZiAoXy51dGlsLnR5cGUob1tpXSkgPT09ICdBcnJheScgJiYgIXZpc2l0ZWRbXy51dGlsLm9iaklkKG9baV0pXSkge1xuXHRcdFx0XHRcdFx0dmlzaXRlZFtfLnV0aWwub2JqSWQob1tpXSldID0gdHJ1ZTtcblx0XHRcdFx0XHRcdF8ubGFuZ3VhZ2VzLkRGUyhvW2ldLCBjYWxsYmFjaywgaSwgdmlzaXRlZCk7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9XG5cdFx0XHR9XG5cdFx0fVxuXHR9LFxuXHRwbHVnaW5zOiB7fSxcblxuXHRoaWdobGlnaHRBbGw6IGZ1bmN0aW9uKGFzeW5jLCBjYWxsYmFjaykge1xuXHRcdHZhciBlbnYgPSB7XG5cdFx0XHRjYWxsYmFjazogY2FsbGJhY2ssXG5cdFx0XHRzZWxlY3RvcjogJ2NvZGVbY2xhc3MqPVwibGFuZ3VhZ2UtXCJdLCBbY2xhc3MqPVwibGFuZ3VhZ2UtXCJdIGNvZGUsIGNvZGVbY2xhc3MqPVwibGFuZy1cIl0sIFtjbGFzcyo9XCJsYW5nLVwiXSBjb2RlJ1xuXHRcdH07XG5cblx0XHRfLmhvb2tzLnJ1bihcImJlZm9yZS1oaWdobGlnaHRhbGxcIiwgZW52KTtcblxuXHRcdHZhciBlbGVtZW50cyA9IGVudi5lbGVtZW50cyB8fCBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKGVudi5zZWxlY3Rvcik7XG5cblx0XHRmb3IgKHZhciBpPTAsIGVsZW1lbnQ7IGVsZW1lbnQgPSBlbGVtZW50c1tpKytdOykge1xuXHRcdFx0Xy5oaWdobGlnaHRFbGVtZW50KGVsZW1lbnQsIGFzeW5jID09PSB0cnVlLCBlbnYuY2FsbGJhY2spO1xuXHRcdH1cblx0fSxcblxuXHRoaWdobGlnaHRFbGVtZW50OiBmdW5jdGlvbihlbGVtZW50LCBhc3luYywgY2FsbGJhY2spIHtcblx0XHQvLyBGaW5kIGxhbmd1YWdlXG5cdFx0dmFyIGxhbmd1YWdlLCBncmFtbWFyLCBwYXJlbnQgPSBlbGVtZW50O1xuXG5cdFx0d2hpbGUgKHBhcmVudCAmJiAhbGFuZy50ZXN0KHBhcmVudC5jbGFzc05hbWUpKSB7XG5cdFx0XHRwYXJlbnQgPSBwYXJlbnQucGFyZW50Tm9kZTtcblx0XHR9XG5cblx0XHRpZiAocGFyZW50KSB7XG5cdFx0XHRsYW5ndWFnZSA9IChwYXJlbnQuY2xhc3NOYW1lLm1hdGNoKGxhbmcpIHx8IFssJyddKVsxXS50b0xvd2VyQ2FzZSgpO1xuXHRcdFx0Z3JhbW1hciA9IF8ubGFuZ3VhZ2VzW2xhbmd1YWdlXTtcblx0XHR9XG5cblx0XHQvLyBTZXQgbGFuZ3VhZ2Ugb24gdGhlIGVsZW1lbnQsIGlmIG5vdCBwcmVzZW50XG5cdFx0ZWxlbWVudC5jbGFzc05hbWUgPSBlbGVtZW50LmNsYXNzTmFtZS5yZXBsYWNlKGxhbmcsICcnKS5yZXBsYWNlKC9cXHMrL2csICcgJykgKyAnIGxhbmd1YWdlLScgKyBsYW5ndWFnZTtcblxuXHRcdC8vIFNldCBsYW5ndWFnZSBvbiB0aGUgcGFyZW50LCBmb3Igc3R5bGluZ1xuXHRcdHBhcmVudCA9IGVsZW1lbnQucGFyZW50Tm9kZTtcblxuXHRcdGlmICgvcHJlL2kudGVzdChwYXJlbnQubm9kZU5hbWUpKSB7XG5cdFx0XHRwYXJlbnQuY2xhc3NOYW1lID0gcGFyZW50LmNsYXNzTmFtZS5yZXBsYWNlKGxhbmcsICcnKS5yZXBsYWNlKC9cXHMrL2csICcgJykgKyAnIGxhbmd1YWdlLScgKyBsYW5ndWFnZTtcblx0XHR9XG5cblx0XHR2YXIgY29kZSA9IGVsZW1lbnQudGV4dENvbnRlbnQ7XG5cblx0XHR2YXIgZW52ID0ge1xuXHRcdFx0ZWxlbWVudDogZWxlbWVudCxcblx0XHRcdGxhbmd1YWdlOiBsYW5ndWFnZSxcblx0XHRcdGdyYW1tYXI6IGdyYW1tYXIsXG5cdFx0XHRjb2RlOiBjb2RlXG5cdFx0fTtcblxuXHRcdF8uaG9va3MucnVuKCdiZWZvcmUtc2FuaXR5LWNoZWNrJywgZW52KTtcblxuXHRcdGlmICghZW52LmNvZGUgfHwgIWVudi5ncmFtbWFyKSB7XG5cdFx0XHRpZiAoZW52LmNvZGUpIHtcblx0XHRcdFx0ZW52LmVsZW1lbnQudGV4dENvbnRlbnQgPSBlbnYuY29kZTtcblx0XHRcdH1cblx0XHRcdF8uaG9va3MucnVuKCdjb21wbGV0ZScsIGVudik7XG5cdFx0XHRyZXR1cm47XG5cdFx0fVxuXG5cdFx0Xy5ob29rcy5ydW4oJ2JlZm9yZS1oaWdobGlnaHQnLCBlbnYpO1xuXG5cdFx0aWYgKGFzeW5jICYmIF9zZWxmLldvcmtlcikge1xuXHRcdFx0dmFyIHdvcmtlciA9IG5ldyBXb3JrZXIoXy5maWxlbmFtZSk7XG5cblx0XHRcdHdvcmtlci5vbm1lc3NhZ2UgPSBmdW5jdGlvbihldnQpIHtcblx0XHRcdFx0ZW52LmhpZ2hsaWdodGVkQ29kZSA9IGV2dC5kYXRhO1xuXG5cdFx0XHRcdF8uaG9va3MucnVuKCdiZWZvcmUtaW5zZXJ0JywgZW52KTtcblxuXHRcdFx0XHRlbnYuZWxlbWVudC5pbm5lckhUTUwgPSBlbnYuaGlnaGxpZ2h0ZWRDb2RlO1xuXG5cdFx0XHRcdGNhbGxiYWNrICYmIGNhbGxiYWNrLmNhbGwoZW52LmVsZW1lbnQpO1xuXHRcdFx0XHRfLmhvb2tzLnJ1bignYWZ0ZXItaGlnaGxpZ2h0JywgZW52KTtcblx0XHRcdFx0Xy5ob29rcy5ydW4oJ2NvbXBsZXRlJywgZW52KTtcblx0XHRcdH07XG5cblx0XHRcdHdvcmtlci5wb3N0TWVzc2FnZShKU09OLnN0cmluZ2lmeSh7XG5cdFx0XHRcdGxhbmd1YWdlOiBlbnYubGFuZ3VhZ2UsXG5cdFx0XHRcdGNvZGU6IGVudi5jb2RlLFxuXHRcdFx0XHRpbW1lZGlhdGVDbG9zZTogdHJ1ZVxuXHRcdFx0fSkpO1xuXHRcdH1cblx0XHRlbHNlIHtcblx0XHRcdGVudi5oaWdobGlnaHRlZENvZGUgPSBfLmhpZ2hsaWdodChlbnYuY29kZSwgZW52LmdyYW1tYXIsIGVudi5sYW5ndWFnZSk7XG5cblx0XHRcdF8uaG9va3MucnVuKCdiZWZvcmUtaW5zZXJ0JywgZW52KTtcblxuXHRcdFx0ZW52LmVsZW1lbnQuaW5uZXJIVE1MID0gZW52LmhpZ2hsaWdodGVkQ29kZTtcblxuXHRcdFx0Y2FsbGJhY2sgJiYgY2FsbGJhY2suY2FsbChlbGVtZW50KTtcblxuXHRcdFx0Xy5ob29rcy5ydW4oJ2FmdGVyLWhpZ2hsaWdodCcsIGVudik7XG5cdFx0XHRfLmhvb2tzLnJ1bignY29tcGxldGUnLCBlbnYpO1xuXHRcdH1cblx0fSxcblxuXHRoaWdobGlnaHQ6IGZ1bmN0aW9uICh0ZXh0LCBncmFtbWFyLCBsYW5ndWFnZSkge1xuXHRcdHZhciB0b2tlbnMgPSBfLnRva2VuaXplKHRleHQsIGdyYW1tYXIpO1xuXHRcdHJldHVybiBUb2tlbi5zdHJpbmdpZnkoXy51dGlsLmVuY29kZSh0b2tlbnMpLCBsYW5ndWFnZSk7XG5cdH0sXG5cblx0dG9rZW5pemU6IGZ1bmN0aW9uKHRleHQsIGdyYW1tYXIsIGxhbmd1YWdlKSB7XG5cdFx0dmFyIFRva2VuID0gXy5Ub2tlbjtcblxuXHRcdHZhciBzdHJhcnIgPSBbdGV4dF07XG5cblx0XHR2YXIgcmVzdCA9IGdyYW1tYXIucmVzdDtcblxuXHRcdGlmIChyZXN0KSB7XG5cdFx0XHRmb3IgKHZhciB0b2tlbiBpbiByZXN0KSB7XG5cdFx0XHRcdGdyYW1tYXJbdG9rZW5dID0gcmVzdFt0b2tlbl07XG5cdFx0XHR9XG5cblx0XHRcdGRlbGV0ZSBncmFtbWFyLnJlc3Q7XG5cdFx0fVxuXG5cdFx0dG9rZW5sb29wOiBmb3IgKHZhciB0b2tlbiBpbiBncmFtbWFyKSB7XG5cdFx0XHRpZighZ3JhbW1hci5oYXNPd25Qcm9wZXJ0eSh0b2tlbikgfHwgIWdyYW1tYXJbdG9rZW5dKSB7XG5cdFx0XHRcdGNvbnRpbnVlO1xuXHRcdFx0fVxuXG5cdFx0XHR2YXIgcGF0dGVybnMgPSBncmFtbWFyW3Rva2VuXTtcblx0XHRcdHBhdHRlcm5zID0gKF8udXRpbC50eXBlKHBhdHRlcm5zKSA9PT0gXCJBcnJheVwiKSA/IHBhdHRlcm5zIDogW3BhdHRlcm5zXTtcblxuXHRcdFx0Zm9yICh2YXIgaiA9IDA7IGogPCBwYXR0ZXJucy5sZW5ndGg7ICsraikge1xuXHRcdFx0XHR2YXIgcGF0dGVybiA9IHBhdHRlcm5zW2pdLFxuXHRcdFx0XHRcdGluc2lkZSA9IHBhdHRlcm4uaW5zaWRlLFxuXHRcdFx0XHRcdGxvb2tiZWhpbmQgPSAhIXBhdHRlcm4ubG9va2JlaGluZCxcblx0XHRcdFx0XHRncmVlZHkgPSAhIXBhdHRlcm4uZ3JlZWR5LFxuXHRcdFx0XHRcdGxvb2tiZWhpbmRMZW5ndGggPSAwLFxuXHRcdFx0XHRcdGFsaWFzID0gcGF0dGVybi5hbGlhcztcblxuXHRcdFx0XHRpZiAoZ3JlZWR5ICYmICFwYXR0ZXJuLnBhdHRlcm4uZ2xvYmFsKSB7XG5cdFx0XHRcdFx0Ly8gV2l0aG91dCB0aGUgZ2xvYmFsIGZsYWcsIGxhc3RJbmRleCB3b24ndCB3b3JrXG5cdFx0XHRcdFx0dmFyIGZsYWdzID0gcGF0dGVybi5wYXR0ZXJuLnRvU3RyaW5nKCkubWF0Y2goL1tpbXV5XSokLylbMF07XG5cdFx0XHRcdFx0cGF0dGVybi5wYXR0ZXJuID0gUmVnRXhwKHBhdHRlcm4ucGF0dGVybi5zb3VyY2UsIGZsYWdzICsgXCJnXCIpO1xuXHRcdFx0XHR9XG5cblx0XHRcdFx0cGF0dGVybiA9IHBhdHRlcm4ucGF0dGVybiB8fCBwYXR0ZXJuO1xuXG5cdFx0XHRcdC8vIERvbuKAmXQgY2FjaGUgbGVuZ3RoIGFzIGl0IGNoYW5nZXMgZHVyaW5nIHRoZSBsb29wXG5cdFx0XHRcdGZvciAodmFyIGk9MCwgcG9zID0gMDsgaTxzdHJhcnIubGVuZ3RoOyBwb3MgKz0gc3RyYXJyW2ldLmxlbmd0aCwgKytpKSB7XG5cblx0XHRcdFx0XHR2YXIgc3RyID0gc3RyYXJyW2ldO1xuXG5cdFx0XHRcdFx0aWYgKHN0cmFyci5sZW5ndGggPiB0ZXh0Lmxlbmd0aCkge1xuXHRcdFx0XHRcdFx0Ly8gU29tZXRoaW5nIHdlbnQgdGVycmlibHkgd3JvbmcsIEFCT1JULCBBQk9SVCFcblx0XHRcdFx0XHRcdGJyZWFrIHRva2VubG9vcDtcblx0XHRcdFx0XHR9XG5cblx0XHRcdFx0XHRpZiAoc3RyIGluc3RhbmNlb2YgVG9rZW4pIHtcblx0XHRcdFx0XHRcdGNvbnRpbnVlO1xuXHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdHBhdHRlcm4ubGFzdEluZGV4ID0gMDtcblxuXHRcdFx0XHRcdHZhciBtYXRjaCA9IHBhdHRlcm4uZXhlYyhzdHIpLFxuXHRcdFx0XHRcdCAgICBkZWxOdW0gPSAxO1xuXG5cdFx0XHRcdFx0Ly8gR3JlZWR5IHBhdHRlcm5zIGNhbiBvdmVycmlkZS9yZW1vdmUgdXAgdG8gdHdvIHByZXZpb3VzbHkgbWF0Y2hlZCB0b2tlbnNcblx0XHRcdFx0XHRpZiAoIW1hdGNoICYmIGdyZWVkeSAmJiBpICE9IHN0cmFyci5sZW5ndGggLSAxKSB7XG5cdFx0XHRcdFx0XHRwYXR0ZXJuLmxhc3RJbmRleCA9IHBvcztcblx0XHRcdFx0XHRcdG1hdGNoID0gcGF0dGVybi5leGVjKHRleHQpO1xuXHRcdFx0XHRcdFx0aWYgKCFtYXRjaCkge1xuXHRcdFx0XHRcdFx0XHRicmVhaztcblx0XHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdFx0dmFyIGZyb20gPSBtYXRjaC5pbmRleCArIChsb29rYmVoaW5kID8gbWF0Y2hbMV0ubGVuZ3RoIDogMCksXG5cdFx0XHRcdFx0XHQgICAgdG8gPSBtYXRjaC5pbmRleCArIG1hdGNoWzBdLmxlbmd0aCxcblx0XHRcdFx0XHRcdCAgICBrID0gaSxcblx0XHRcdFx0XHRcdCAgICBwID0gcG9zO1xuXG5cdFx0XHRcdFx0XHRmb3IgKHZhciBsZW4gPSBzdHJhcnIubGVuZ3RoOyBrIDwgbGVuICYmIHAgPCB0bzsgKytrKSB7XG5cdFx0XHRcdFx0XHRcdHAgKz0gc3RyYXJyW2tdLmxlbmd0aDtcblx0XHRcdFx0XHRcdFx0Ly8gTW92ZSB0aGUgaW5kZXggaSB0byB0aGUgZWxlbWVudCBpbiBzdHJhcnIgdGhhdCBpcyBjbG9zZXN0IHRvIGZyb21cblx0XHRcdFx0XHRcdFx0aWYgKGZyb20gPj0gcCkge1xuXHRcdFx0XHRcdFx0XHRcdCsraTtcblx0XHRcdFx0XHRcdFx0XHRwb3MgPSBwO1xuXHRcdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHR9XG5cblx0XHRcdFx0XHRcdC8qXG5cdFx0XHRcdFx0XHQgKiBJZiBzdHJhcnJbaV0gaXMgYSBUb2tlbiwgdGhlbiB0aGUgbWF0Y2ggc3RhcnRzIGluc2lkZSBhbm90aGVyIFRva2VuLCB3aGljaCBpcyBpbnZhbGlkXG5cdFx0XHRcdFx0XHQgKiBJZiBzdHJhcnJbayAtIDFdIGlzIGdyZWVkeSB3ZSBhcmUgaW4gY29uZmxpY3Qgd2l0aCBhbm90aGVyIGdyZWVkeSBwYXR0ZXJuXG5cdFx0XHRcdFx0XHQgKi9cblx0XHRcdFx0XHRcdGlmIChzdHJhcnJbaV0gaW5zdGFuY2VvZiBUb2tlbiB8fCBzdHJhcnJbayAtIDFdLmdyZWVkeSkge1xuXHRcdFx0XHRcdFx0XHRjb250aW51ZTtcblx0XHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdFx0Ly8gTnVtYmVyIG9mIHRva2VucyB0byBkZWxldGUgYW5kIHJlcGxhY2Ugd2l0aCB0aGUgbmV3IG1hdGNoXG5cdFx0XHRcdFx0XHRkZWxOdW0gPSBrIC0gaTtcblx0XHRcdFx0XHRcdHN0ciA9IHRleHQuc2xpY2UocG9zLCBwKTtcblx0XHRcdFx0XHRcdG1hdGNoLmluZGV4IC09IHBvcztcblx0XHRcdFx0XHR9XG5cblx0XHRcdFx0XHRpZiAoIW1hdGNoKSB7XG5cdFx0XHRcdFx0XHRjb250aW51ZTtcblx0XHRcdFx0XHR9XG5cblx0XHRcdFx0XHRpZihsb29rYmVoaW5kKSB7XG5cdFx0XHRcdFx0XHRsb29rYmVoaW5kTGVuZ3RoID0gbWF0Y2hbMV0ubGVuZ3RoO1xuXHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdHZhciBmcm9tID0gbWF0Y2guaW5kZXggKyBsb29rYmVoaW5kTGVuZ3RoLFxuXHRcdFx0XHRcdCAgICBtYXRjaCA9IG1hdGNoWzBdLnNsaWNlKGxvb2tiZWhpbmRMZW5ndGgpLFxuXHRcdFx0XHRcdCAgICB0byA9IGZyb20gKyBtYXRjaC5sZW5ndGgsXG5cdFx0XHRcdFx0ICAgIGJlZm9yZSA9IHN0ci5zbGljZSgwLCBmcm9tKSxcblx0XHRcdFx0XHQgICAgYWZ0ZXIgPSBzdHIuc2xpY2UodG8pO1xuXG5cdFx0XHRcdFx0dmFyIGFyZ3MgPSBbaSwgZGVsTnVtXTtcblxuXHRcdFx0XHRcdGlmIChiZWZvcmUpIHtcblx0XHRcdFx0XHRcdGFyZ3MucHVzaChiZWZvcmUpO1xuXHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdHZhciB3cmFwcGVkID0gbmV3IFRva2VuKHRva2VuLCBpbnNpZGU/IF8udG9rZW5pemUobWF0Y2gsIGluc2lkZSkgOiBtYXRjaCwgYWxpYXMsIG1hdGNoLCBncmVlZHkpO1xuXG5cdFx0XHRcdFx0YXJncy5wdXNoKHdyYXBwZWQpO1xuXG5cdFx0XHRcdFx0aWYgKGFmdGVyKSB7XG5cdFx0XHRcdFx0XHRhcmdzLnB1c2goYWZ0ZXIpO1xuXHRcdFx0XHRcdH1cblxuXHRcdFx0XHRcdEFycmF5LnByb3RvdHlwZS5zcGxpY2UuYXBwbHkoc3RyYXJyLCBhcmdzKTtcblx0XHRcdFx0fVxuXHRcdFx0fVxuXHRcdH1cblxuXHRcdHJldHVybiBzdHJhcnI7XG5cdH0sXG5cblx0aG9va3M6IHtcblx0XHRhbGw6IHt9LFxuXG5cdFx0YWRkOiBmdW5jdGlvbiAobmFtZSwgY2FsbGJhY2spIHtcblx0XHRcdHZhciBob29rcyA9IF8uaG9va3MuYWxsO1xuXG5cdFx0XHRob29rc1tuYW1lXSA9IGhvb2tzW25hbWVdIHx8IFtdO1xuXG5cdFx0XHRob29rc1tuYW1lXS5wdXNoKGNhbGxiYWNrKTtcblx0XHR9LFxuXG5cdFx0cnVuOiBmdW5jdGlvbiAobmFtZSwgZW52KSB7XG5cdFx0XHR2YXIgY2FsbGJhY2tzID0gXy5ob29rcy5hbGxbbmFtZV07XG5cblx0XHRcdGlmICghY2FsbGJhY2tzIHx8ICFjYWxsYmFja3MubGVuZ3RoKSB7XG5cdFx0XHRcdHJldHVybjtcblx0XHRcdH1cblxuXHRcdFx0Zm9yICh2YXIgaT0wLCBjYWxsYmFjazsgY2FsbGJhY2sgPSBjYWxsYmFja3NbaSsrXTspIHtcblx0XHRcdFx0Y2FsbGJhY2soZW52KTtcblx0XHRcdH1cblx0XHR9XG5cdH1cbn07XG5cbnZhciBUb2tlbiA9IF8uVG9rZW4gPSBmdW5jdGlvbih0eXBlLCBjb250ZW50LCBhbGlhcywgbWF0Y2hlZFN0ciwgZ3JlZWR5KSB7XG5cdHRoaXMudHlwZSA9IHR5cGU7XG5cdHRoaXMuY29udGVudCA9IGNvbnRlbnQ7XG5cdHRoaXMuYWxpYXMgPSBhbGlhcztcblx0Ly8gQ29weSBvZiB0aGUgZnVsbCBzdHJpbmcgdGhpcyB0b2tlbiB3YXMgY3JlYXRlZCBmcm9tXG5cdHRoaXMubGVuZ3RoID0gKG1hdGNoZWRTdHIgfHwgXCJcIikubGVuZ3RofDA7XG5cdHRoaXMuZ3JlZWR5ID0gISFncmVlZHk7XG59O1xuXG5Ub2tlbi5zdHJpbmdpZnkgPSBmdW5jdGlvbihvLCBsYW5ndWFnZSwgcGFyZW50KSB7XG5cdGlmICh0eXBlb2YgbyA9PSAnc3RyaW5nJykge1xuXHRcdHJldHVybiBvO1xuXHR9XG5cblx0aWYgKF8udXRpbC50eXBlKG8pID09PSAnQXJyYXknKSB7XG5cdFx0cmV0dXJuIG8ubWFwKGZ1bmN0aW9uKGVsZW1lbnQpIHtcblx0XHRcdHJldHVybiBUb2tlbi5zdHJpbmdpZnkoZWxlbWVudCwgbGFuZ3VhZ2UsIG8pO1xuXHRcdH0pLmpvaW4oJycpO1xuXHR9XG5cblx0dmFyIGVudiA9IHtcblx0XHR0eXBlOiBvLnR5cGUsXG5cdFx0Y29udGVudDogVG9rZW4uc3RyaW5naWZ5KG8uY29udGVudCwgbGFuZ3VhZ2UsIHBhcmVudCksXG5cdFx0dGFnOiAnc3BhbicsXG5cdFx0Y2xhc3NlczogWyd0b2tlbicsIG8udHlwZV0sXG5cdFx0YXR0cmlidXRlczoge30sXG5cdFx0bGFuZ3VhZ2U6IGxhbmd1YWdlLFxuXHRcdHBhcmVudDogcGFyZW50XG5cdH07XG5cblx0aWYgKGVudi50eXBlID09ICdjb21tZW50Jykge1xuXHRcdGVudi5hdHRyaWJ1dGVzWydzcGVsbGNoZWNrJ10gPSAndHJ1ZSc7XG5cdH1cblxuXHRpZiAoby5hbGlhcykge1xuXHRcdHZhciBhbGlhc2VzID0gXy51dGlsLnR5cGUoby5hbGlhcykgPT09ICdBcnJheScgPyBvLmFsaWFzIDogW28uYWxpYXNdO1xuXHRcdEFycmF5LnByb3RvdHlwZS5wdXNoLmFwcGx5KGVudi5jbGFzc2VzLCBhbGlhc2VzKTtcblx0fVxuXG5cdF8uaG9va3MucnVuKCd3cmFwJywgZW52KTtcblxuXHR2YXIgYXR0cmlidXRlcyA9IE9iamVjdC5rZXlzKGVudi5hdHRyaWJ1dGVzKS5tYXAoZnVuY3Rpb24obmFtZSkge1xuXHRcdHJldHVybiBuYW1lICsgJz1cIicgKyAoZW52LmF0dHJpYnV0ZXNbbmFtZV0gfHwgJycpLnJlcGxhY2UoL1wiL2csICcmcXVvdDsnKSArICdcIic7XG5cdH0pLmpvaW4oJyAnKTtcblxuXHRyZXR1cm4gJzwnICsgZW52LnRhZyArICcgY2xhc3M9XCInICsgZW52LmNsYXNzZXMuam9pbignICcpICsgJ1wiJyArIChhdHRyaWJ1dGVzID8gJyAnICsgYXR0cmlidXRlcyA6ICcnKSArICc+JyArIGVudi5jb250ZW50ICsgJzwvJyArIGVudi50YWcgKyAnPic7XG5cbn07XG5cbmlmICghX3NlbGYuZG9jdW1lbnQpIHtcblx0aWYgKCFfc2VsZi5hZGRFdmVudExpc3RlbmVyKSB7XG5cdFx0Ly8gaW4gTm9kZS5qc1xuXHRcdHJldHVybiBfc2VsZi5QcmlzbTtcblx0fVxuIFx0Ly8gSW4gd29ya2VyXG5cdF9zZWxmLmFkZEV2ZW50TGlzdGVuZXIoJ21lc3NhZ2UnLCBmdW5jdGlvbihldnQpIHtcblx0XHR2YXIgbWVzc2FnZSA9IEpTT04ucGFyc2UoZXZ0LmRhdGEpLFxuXHRcdCAgICBsYW5nID0gbWVzc2FnZS5sYW5ndWFnZSxcblx0XHQgICAgY29kZSA9IG1lc3NhZ2UuY29kZSxcblx0XHQgICAgaW1tZWRpYXRlQ2xvc2UgPSBtZXNzYWdlLmltbWVkaWF0ZUNsb3NlO1xuXG5cdFx0X3NlbGYucG9zdE1lc3NhZ2UoXy5oaWdobGlnaHQoY29kZSwgXy5sYW5ndWFnZXNbbGFuZ10sIGxhbmcpKTtcblx0XHRpZiAoaW1tZWRpYXRlQ2xvc2UpIHtcblx0XHRcdF9zZWxmLmNsb3NlKCk7XG5cdFx0fVxuXHR9LCBmYWxzZSk7XG5cblx0cmV0dXJuIF9zZWxmLlByaXNtO1xufVxuXG4vL0dldCBjdXJyZW50IHNjcmlwdCBhbmQgaGlnaGxpZ2h0XG52YXIgc2NyaXB0ID0gZG9jdW1lbnQuY3VycmVudFNjcmlwdCB8fCBbXS5zbGljZS5jYWxsKGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKFwic2NyaXB0XCIpKS5wb3AoKTtcblxuaWYgKHNjcmlwdCkge1xuXHRfLmZpbGVuYW1lID0gc2NyaXB0LnNyYztcblxuXHRpZiAoZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lciAmJiAhc2NyaXB0Lmhhc0F0dHJpYnV0ZSgnZGF0YS1tYW51YWwnKSkge1xuXHRcdGlmKGRvY3VtZW50LnJlYWR5U3RhdGUgIT09IFwibG9hZGluZ1wiKSB7XG5cdFx0XHRpZiAod2luZG93LnJlcXVlc3RBbmltYXRpb25GcmFtZSkge1xuXHRcdFx0XHR3aW5kb3cucmVxdWVzdEFuaW1hdGlvbkZyYW1lKF8uaGlnaGxpZ2h0QWxsKTtcblx0XHRcdH0gZWxzZSB7XG5cdFx0XHRcdHdpbmRvdy5zZXRUaW1lb3V0KF8uaGlnaGxpZ2h0QWxsLCAxNik7XG5cdFx0XHR9XG5cdFx0fVxuXHRcdGVsc2Uge1xuXHRcdFx0ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIF8uaGlnaGxpZ2h0QWxsKTtcblx0XHR9XG5cdH1cbn1cblxucmV0dXJuIF9zZWxmLlByaXNtO1xuXG59KSgpO1xuXG5pZiAodHlwZW9mIG1vZHVsZSAhPT0gJ3VuZGVmaW5lZCcgJiYgbW9kdWxlLmV4cG9ydHMpIHtcblx0bW9kdWxlLmV4cG9ydHMgPSBQcmlzbTtcbn1cblxuLy8gaGFjayBmb3IgY29tcG9uZW50cyB0byB3b3JrIGNvcnJlY3RseSBpbiBub2RlLmpzXG5pZiAodHlwZW9mIGdsb2JhbCAhPT0gJ3VuZGVmaW5lZCcpIHtcblx0Z2xvYmFsLlByaXNtID0gUHJpc207XG59XG5cblxuLyogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxuICAgICBCZWdpbiBwcmlzbS1tYXJrdXAuanNcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiogKi9cblxuUHJpc20ubGFuZ3VhZ2VzLm1hcmt1cCA9IHtcblx0J2NvbW1lbnQnOiAvPCEtLVtcXHdcXFddKj8tLT4vLFxuXHQncHJvbG9nJzogLzxcXD9bXFx3XFxXXSs/XFw/Pi8sXG5cdCdkb2N0eXBlJzogLzwhRE9DVFlQRVtcXHdcXFddKz8+L2ksXG5cdCdjZGF0YSc6IC88IVxcW0NEQVRBXFxbW1xcd1xcV10qP11dPi9pLFxuXHQndGFnJzoge1xuXHRcdHBhdHRlcm46IC88XFwvPyg/IVxcZClbXlxccz5cXC89JDxdKyg/OlxccytbXlxccz5cXC89XSsoPzo9KD86KFwifCcpKD86XFxcXFxcMXxcXFxcPyg/IVxcMSlbXFx3XFxXXSkqXFwxfFteXFxzJ1wiPj1dKykpPykqXFxzKlxcLz8+L2ksXG5cdFx0aW5zaWRlOiB7XG5cdFx0XHQndGFnJzoge1xuXHRcdFx0XHRwYXR0ZXJuOiAvXjxcXC8/W15cXHM+XFwvXSsvaSxcblx0XHRcdFx0aW5zaWRlOiB7XG5cdFx0XHRcdFx0J3B1bmN0dWF0aW9uJzogL148XFwvPy8sXG5cdFx0XHRcdFx0J25hbWVzcGFjZSc6IC9eW15cXHM+XFwvOl0rOi9cblx0XHRcdFx0fVxuXHRcdFx0fSxcblx0XHRcdCdhdHRyLXZhbHVlJzoge1xuXHRcdFx0XHRwYXR0ZXJuOiAvPSg/OignfFwiKVtcXHdcXFddKj8oXFwxKXxbXlxccz5dKykvaSxcblx0XHRcdFx0aW5zaWRlOiB7XG5cdFx0XHRcdFx0J3B1bmN0dWF0aW9uJzogL1s9PlwiJ10vXG5cdFx0XHRcdH1cblx0XHRcdH0sXG5cdFx0XHQncHVuY3R1YXRpb24nOiAvXFwvPz4vLFxuXHRcdFx0J2F0dHItbmFtZSc6IHtcblx0XHRcdFx0cGF0dGVybjogL1teXFxzPlxcL10rLyxcblx0XHRcdFx0aW5zaWRlOiB7XG5cdFx0XHRcdFx0J25hbWVzcGFjZSc6IC9eW15cXHM+XFwvOl0rOi9cblx0XHRcdFx0fVxuXHRcdFx0fVxuXG5cdFx0fVxuXHR9LFxuXHQnZW50aXR5JzogLyYjP1tcXGRhLXpdezEsOH07L2lcbn07XG5cbi8vIFBsdWdpbiB0byBtYWtlIGVudGl0eSB0aXRsZSBzaG93IHRoZSByZWFsIGVudGl0eSwgaWRlYSBieSBSb21hbiBLb21hcm92XG5QcmlzbS5ob29rcy5hZGQoJ3dyYXAnLCBmdW5jdGlvbihlbnYpIHtcblxuXHRpZiAoZW52LnR5cGUgPT09ICdlbnRpdHknKSB7XG5cdFx0ZW52LmF0dHJpYnV0ZXNbJ3RpdGxlJ10gPSBlbnYuY29udGVudC5yZXBsYWNlKC8mYW1wOy8sICcmJyk7XG5cdH1cbn0pO1xuXG5QcmlzbS5sYW5ndWFnZXMueG1sID0gUHJpc20ubGFuZ3VhZ2VzLm1hcmt1cDtcblByaXNtLmxhbmd1YWdlcy5odG1sID0gUHJpc20ubGFuZ3VhZ2VzLm1hcmt1cDtcblByaXNtLmxhbmd1YWdlcy5tYXRobWwgPSBQcmlzbS5sYW5ndWFnZXMubWFya3VwO1xuUHJpc20ubGFuZ3VhZ2VzLnN2ZyA9IFByaXNtLmxhbmd1YWdlcy5tYXJrdXA7XG5cblxuLyogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxuICAgICBCZWdpbiBwcmlzbS1jc3MuanNcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiogKi9cblxuUHJpc20ubGFuZ3VhZ2VzLmNzcyA9IHtcblx0J2NvbW1lbnQnOiAvXFwvXFwqW1xcd1xcV10qP1xcKlxcLy8sXG5cdCdhdHJ1bGUnOiB7XG5cdFx0cGF0dGVybjogL0BbXFx3LV0rPy4qPyg7fCg/PVxccypcXHspKS9pLFxuXHRcdGluc2lkZToge1xuXHRcdFx0J3J1bGUnOiAvQFtcXHctXSsvXG5cdFx0XHQvLyBTZWUgcmVzdCBiZWxvd1xuXHRcdH1cblx0fSxcblx0J3VybCc6IC91cmxcXCgoPzooW1wiJ10pKFxcXFwoPzpcXHJcXG58W1xcd1xcV10pfCg/IVxcMSlbXlxcXFxcXHJcXG5dKSpcXDF8Lio/KVxcKS9pLFxuXHQnc2VsZWN0b3InOiAvW15cXHtcXH1cXHNdW15cXHtcXH07XSo/KD89XFxzKlxceykvLFxuXHQnc3RyaW5nJzoge1xuXHRcdHBhdHRlcm46IC8oXCJ8JykoXFxcXCg/OlxcclxcbnxbXFx3XFxXXSl8KD8hXFwxKVteXFxcXFxcclxcbl0pKlxcMS8sXG5cdFx0Z3JlZWR5OiB0cnVlXG5cdH0sXG5cdCdwcm9wZXJ0eSc6IC8oXFxifFxcQilbXFx3LV0rKD89XFxzKjopL2ksXG5cdCdpbXBvcnRhbnQnOiAvXFxCIWltcG9ydGFudFxcYi9pLFxuXHQnZnVuY3Rpb24nOiAvWy1hLXowLTldKyg/PVxcKCkvaSxcblx0J3B1bmN0dWF0aW9uJzogL1soKXt9OzpdL1xufTtcblxuUHJpc20ubGFuZ3VhZ2VzLmNzc1snYXRydWxlJ10uaW5zaWRlLnJlc3QgPSBQcmlzbS51dGlsLmNsb25lKFByaXNtLmxhbmd1YWdlcy5jc3MpO1xuXG5pZiAoUHJpc20ubGFuZ3VhZ2VzLm1hcmt1cCkge1xuXHRQcmlzbS5sYW5ndWFnZXMuaW5zZXJ0QmVmb3JlKCdtYXJrdXAnLCAndGFnJywge1xuXHRcdCdzdHlsZSc6IHtcblx0XHRcdHBhdHRlcm46IC8oPHN0eWxlW1xcd1xcV10qPz4pW1xcd1xcV10qPyg/PTxcXC9zdHlsZT4pL2ksXG5cdFx0XHRsb29rYmVoaW5kOiB0cnVlLFxuXHRcdFx0aW5zaWRlOiBQcmlzbS5sYW5ndWFnZXMuY3NzLFxuXHRcdFx0YWxpYXM6ICdsYW5ndWFnZS1jc3MnXG5cdFx0fVxuXHR9KTtcblx0XG5cdFByaXNtLmxhbmd1YWdlcy5pbnNlcnRCZWZvcmUoJ2luc2lkZScsICdhdHRyLXZhbHVlJywge1xuXHRcdCdzdHlsZS1hdHRyJzoge1xuXHRcdFx0cGF0dGVybjogL1xccypzdHlsZT0oXCJ8JykuKj9cXDEvaSxcblx0XHRcdGluc2lkZToge1xuXHRcdFx0XHQnYXR0ci1uYW1lJzoge1xuXHRcdFx0XHRcdHBhdHRlcm46IC9eXFxzKnN0eWxlL2ksXG5cdFx0XHRcdFx0aW5zaWRlOiBQcmlzbS5sYW5ndWFnZXMubWFya3VwLnRhZy5pbnNpZGVcblx0XHRcdFx0fSxcblx0XHRcdFx0J3B1bmN0dWF0aW9uJzogL15cXHMqPVxccypbJ1wiXXxbJ1wiXVxccyokLyxcblx0XHRcdFx0J2F0dHItdmFsdWUnOiB7XG5cdFx0XHRcdFx0cGF0dGVybjogLy4rL2ksXG5cdFx0XHRcdFx0aW5zaWRlOiBQcmlzbS5sYW5ndWFnZXMuY3NzXG5cdFx0XHRcdH1cblx0XHRcdH0sXG5cdFx0XHRhbGlhczogJ2xhbmd1YWdlLWNzcydcblx0XHR9XG5cdH0sIFByaXNtLmxhbmd1YWdlcy5tYXJrdXAudGFnKTtcbn1cblxuLyogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxuICAgICBCZWdpbiBwcmlzbS1jbGlrZS5qc1xuKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiAqL1xuXG5QcmlzbS5sYW5ndWFnZXMuY2xpa2UgPSB7XG5cdCdjb21tZW50JzogW1xuXHRcdHtcblx0XHRcdHBhdHRlcm46IC8oXnxbXlxcXFxdKVxcL1xcKltcXHdcXFddKj9cXCpcXC8vLFxuXHRcdFx0bG9va2JlaGluZDogdHJ1ZVxuXHRcdH0sXG5cdFx0e1xuXHRcdFx0cGF0dGVybjogLyhefFteXFxcXDpdKVxcL1xcLy4qLyxcblx0XHRcdGxvb2tiZWhpbmQ6IHRydWVcblx0XHR9XG5cdF0sXG5cdCdzdHJpbmcnOiB7XG5cdFx0cGF0dGVybjogLyhbXCInXSkoXFxcXCg/OlxcclxcbnxbXFxzXFxTXSl8KD8hXFwxKVteXFxcXFxcclxcbl0pKlxcMS8sXG5cdFx0Z3JlZWR5OiB0cnVlXG5cdH0sXG5cdCdjbGFzcy1uYW1lJzoge1xuXHRcdHBhdHRlcm46IC8oKD86XFxiKD86Y2xhc3N8aW50ZXJmYWNlfGV4dGVuZHN8aW1wbGVtZW50c3x0cmFpdHxpbnN0YW5jZW9mfG5ldylcXHMrKXwoPzpjYXRjaFxccytcXCgpKVthLXowLTlfXFwuXFxcXF0rL2ksXG5cdFx0bG9va2JlaGluZDogdHJ1ZSxcblx0XHRpbnNpZGU6IHtcblx0XHRcdHB1bmN0dWF0aW9uOiAvKFxcLnxcXFxcKS9cblx0XHR9XG5cdH0sXG5cdCdrZXl3b3JkJzogL1xcYihpZnxlbHNlfHdoaWxlfGRvfGZvcnxyZXR1cm58aW58aW5zdGFuY2VvZnxmdW5jdGlvbnxuZXd8dHJ5fHRocm93fGNhdGNofGZpbmFsbHl8bnVsbHxicmVha3xjb250aW51ZSlcXGIvLFxuXHQnYm9vbGVhbic6IC9cXGIodHJ1ZXxmYWxzZSlcXGIvLFxuXHQnZnVuY3Rpb24nOiAvW2EtejAtOV9dKyg/PVxcKCkvaSxcblx0J251bWJlcic6IC9cXGItPyg/OjB4W1xcZGEtZl0rfFxcZCpcXC4/XFxkKyg/OmVbKy1dP1xcZCspPylcXGIvaSxcblx0J29wZXJhdG9yJzogLy0tP3xcXCtcXCs/fCE9Pz0/fDw9P3w+PT98PT0/PT98JiY/fFxcfFxcfD98XFw/fFxcKnxcXC98fnxcXF58JS8sXG5cdCdwdW5jdHVhdGlvbic6IC9be31bXFxdOygpLC46XS9cbn07XG5cblxuLyogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxuICAgICBCZWdpbiBwcmlzbS1qYXZhc2NyaXB0LmpzXG4qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqICovXG5cblByaXNtLmxhbmd1YWdlcy5qYXZhc2NyaXB0ID0gUHJpc20ubGFuZ3VhZ2VzLmV4dGVuZCgnY2xpa2UnLCB7XG5cdCdrZXl3b3JkJzogL1xcYihhc3xhc3luY3xhd2FpdHxicmVha3xjYXNlfGNhdGNofGNsYXNzfGNvbnN0fGNvbnRpbnVlfGRlYnVnZ2VyfGRlZmF1bHR8ZGVsZXRlfGRvfGVsc2V8ZW51bXxleHBvcnR8ZXh0ZW5kc3xmaW5hbGx5fGZvcnxmcm9tfGZ1bmN0aW9ufGdldHxpZnxpbXBsZW1lbnRzfGltcG9ydHxpbnxpbnN0YW5jZW9mfGludGVyZmFjZXxsZXR8bmV3fG51bGx8b2Z8cGFja2FnZXxwcml2YXRlfHByb3RlY3RlZHxwdWJsaWN8cmV0dXJufHNldHxzdGF0aWN8c3VwZXJ8c3dpdGNofHRoaXN8dGhyb3d8dHJ5fHR5cGVvZnx2YXJ8dm9pZHx3aGlsZXx3aXRofHlpZWxkKVxcYi8sXG5cdCdudW1iZXInOiAvXFxiLT8oMHhbXFxkQS1GYS1mXSt8MGJbMDFdK3wwb1swLTddK3xcXGQqXFwuP1xcZCsoW0VlXVsrLV0/XFxkKyk/fE5hTnxJbmZpbml0eSlcXGIvLFxuXHQvLyBBbGxvdyBmb3IgYWxsIG5vbi1BU0NJSSBjaGFyYWN0ZXJzIChTZWUgaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2EvMjAwODQ0NClcblx0J2Z1bmN0aW9uJzogL1tfJGEtekEtWlxceEEwLVxcdUZGRkZdW18kYS16QS1aMC05XFx4QTAtXFx1RkZGRl0qKD89XFwoKS9pLFxuXHQnb3BlcmF0b3InOiAvLS0/fFxcK1xcKz98IT0/PT98PD0/fD49P3w9PT89P3wmJj98XFx8XFx8P3xcXD98XFwqXFwqP3xcXC98fnxcXF58JXxcXC57M30vXG59KTtcblxuUHJpc20ubGFuZ3VhZ2VzLmluc2VydEJlZm9yZSgnamF2YXNjcmlwdCcsICdrZXl3b3JkJywge1xuXHQncmVnZXgnOiB7XG5cdFx0cGF0dGVybjogLyhefFteL10pXFwvKD8hXFwvKShcXFsuKz9dfFxcXFwufFteL1xcXFxcXHJcXG5dKStcXC9bZ2lteXVdezAsNX0oPz1cXHMqKCR8W1xcclxcbiwuO30pXSkpLyxcblx0XHRsb29rYmVoaW5kOiB0cnVlLFxuXHRcdGdyZWVkeTogdHJ1ZVxuXHR9XG59KTtcblxuUHJpc20ubGFuZ3VhZ2VzLmluc2VydEJlZm9yZSgnamF2YXNjcmlwdCcsICdzdHJpbmcnLCB7XG5cdCd0ZW1wbGF0ZS1zdHJpbmcnOiB7XG5cdFx0cGF0dGVybjogL2AoPzpcXFxcXFxcXHxcXFxcP1teXFxcXF0pKj9gLyxcblx0XHRncmVlZHk6IHRydWUsXG5cdFx0aW5zaWRlOiB7XG5cdFx0XHQnaW50ZXJwb2xhdGlvbic6IHtcblx0XHRcdFx0cGF0dGVybjogL1xcJFxce1tefV0rXFx9Lyxcblx0XHRcdFx0aW5zaWRlOiB7XG5cdFx0XHRcdFx0J2ludGVycG9sYXRpb24tcHVuY3R1YXRpb24nOiB7XG5cdFx0XHRcdFx0XHRwYXR0ZXJuOiAvXlxcJFxce3xcXH0kLyxcblx0XHRcdFx0XHRcdGFsaWFzOiAncHVuY3R1YXRpb24nXG5cdFx0XHRcdFx0fSxcblx0XHRcdFx0XHRyZXN0OiBQcmlzbS5sYW5ndWFnZXMuamF2YXNjcmlwdFxuXHRcdFx0XHR9XG5cdFx0XHR9LFxuXHRcdFx0J3N0cmluZyc6IC9bXFxzXFxTXSsvXG5cdFx0fVxuXHR9XG59KTtcblxuaWYgKFByaXNtLmxhbmd1YWdlcy5tYXJrdXApIHtcblx0UHJpc20ubGFuZ3VhZ2VzLmluc2VydEJlZm9yZSgnbWFya3VwJywgJ3RhZycsIHtcblx0XHQnc2NyaXB0Jzoge1xuXHRcdFx0cGF0dGVybjogLyg8c2NyaXB0W1xcd1xcV10qPz4pW1xcd1xcV10qPyg/PTxcXC9zY3JpcHQ+KS9pLFxuXHRcdFx0bG9va2JlaGluZDogdHJ1ZSxcblx0XHRcdGluc2lkZTogUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQsXG5cdFx0XHRhbGlhczogJ2xhbmd1YWdlLWphdmFzY3JpcHQnXG5cdFx0fVxuXHR9KTtcbn1cblxuUHJpc20ubGFuZ3VhZ2VzLmpzID0gUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQ7XG5cbi8qICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKipcbiAgICAgQmVnaW4gcHJpc20tZmlsZS1oaWdobGlnaHQuanNcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiogKi9cblxuKGZ1bmN0aW9uICgpIHtcblx0aWYgKHR5cGVvZiBzZWxmID09PSAndW5kZWZpbmVkJyB8fCAhc2VsZi5QcmlzbSB8fCAhc2VsZi5kb2N1bWVudCB8fCAhZG9jdW1lbnQucXVlcnlTZWxlY3Rvcikge1xuXHRcdHJldHVybjtcblx0fVxuXG5cdHNlbGYuUHJpc20uZmlsZUhpZ2hsaWdodCA9IGZ1bmN0aW9uKCkge1xuXG5cdFx0dmFyIEV4dGVuc2lvbnMgPSB7XG5cdFx0XHQnanMnOiAnamF2YXNjcmlwdCcsXG5cdFx0XHQncHknOiAncHl0aG9uJyxcblx0XHRcdCdyYic6ICdydWJ5Jyxcblx0XHRcdCdwczEnOiAncG93ZXJzaGVsbCcsXG5cdFx0XHQncHNtMSc6ICdwb3dlcnNoZWxsJyxcblx0XHRcdCdzaCc6ICdiYXNoJyxcblx0XHRcdCdiYXQnOiAnYmF0Y2gnLFxuXHRcdFx0J2gnOiAnYycsXG5cdFx0XHQndGV4JzogJ2xhdGV4J1xuXHRcdH07XG5cblx0XHRpZihBcnJheS5wcm90b3R5cGUuZm9yRWFjaCkgeyAvLyBDaGVjayB0byBwcmV2ZW50IGVycm9yIGluIElFOFxuXHRcdFx0QXJyYXkucHJvdG90eXBlLnNsaWNlLmNhbGwoZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgncHJlW2RhdGEtc3JjXScpKS5mb3JFYWNoKGZ1bmN0aW9uIChwcmUpIHtcblx0XHRcdFx0dmFyIHNyYyA9IHByZS5nZXRBdHRyaWJ1dGUoJ2RhdGEtc3JjJyk7XG5cblx0XHRcdFx0dmFyIGxhbmd1YWdlLCBwYXJlbnQgPSBwcmU7XG5cdFx0XHRcdHZhciBsYW5nID0gL1xcYmxhbmcoPzp1YWdlKT8tKD8hXFwqKShcXHcrKVxcYi9pO1xuXHRcdFx0XHR3aGlsZSAocGFyZW50ICYmICFsYW5nLnRlc3QocGFyZW50LmNsYXNzTmFtZSkpIHtcblx0XHRcdFx0XHRwYXJlbnQgPSBwYXJlbnQucGFyZW50Tm9kZTtcblx0XHRcdFx0fVxuXG5cdFx0XHRcdGlmIChwYXJlbnQpIHtcblx0XHRcdFx0XHRsYW5ndWFnZSA9IChwcmUuY2xhc3NOYW1lLm1hdGNoKGxhbmcpIHx8IFssICcnXSlbMV07XG5cdFx0XHRcdH1cblxuXHRcdFx0XHRpZiAoIWxhbmd1YWdlKSB7XG5cdFx0XHRcdFx0dmFyIGV4dGVuc2lvbiA9IChzcmMubWF0Y2goL1xcLihcXHcrKSQvKSB8fCBbLCAnJ10pWzFdO1xuXHRcdFx0XHRcdGxhbmd1YWdlID0gRXh0ZW5zaW9uc1tleHRlbnNpb25dIHx8IGV4dGVuc2lvbjtcblx0XHRcdFx0fVxuXG5cdFx0XHRcdHZhciBjb2RlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnY29kZScpO1xuXHRcdFx0XHRjb2RlLmNsYXNzTmFtZSA9ICdsYW5ndWFnZS0nICsgbGFuZ3VhZ2U7XG5cblx0XHRcdFx0cHJlLnRleHRDb250ZW50ID0gJyc7XG5cblx0XHRcdFx0Y29kZS50ZXh0Q29udGVudCA9ICdMb2FkaW5n4oCmJztcblxuXHRcdFx0XHRwcmUuYXBwZW5kQ2hpbGQoY29kZSk7XG5cblx0XHRcdFx0dmFyIHhociA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpO1xuXG5cdFx0XHRcdHhoci5vcGVuKCdHRVQnLCBzcmMsIHRydWUpO1xuXG5cdFx0XHRcdHhoci5vbnJlYWR5c3RhdGVjaGFuZ2UgPSBmdW5jdGlvbiAoKSB7XG5cdFx0XHRcdFx0aWYgKHhoci5yZWFkeVN0YXRlID09IDQpIHtcblxuXHRcdFx0XHRcdFx0aWYgKHhoci5zdGF0dXMgPCA0MDAgJiYgeGhyLnJlc3BvbnNlVGV4dCkge1xuXHRcdFx0XHRcdFx0XHRjb2RlLnRleHRDb250ZW50ID0geGhyLnJlc3BvbnNlVGV4dDtcblxuXHRcdFx0XHRcdFx0XHRQcmlzbS5oaWdobGlnaHRFbGVtZW50KGNvZGUpO1xuXHRcdFx0XHRcdFx0fVxuXHRcdFx0XHRcdFx0ZWxzZSBpZiAoeGhyLnN0YXR1cyA+PSA0MDApIHtcblx0XHRcdFx0XHRcdFx0Y29kZS50ZXh0Q29udGVudCA9ICfinJYgRXJyb3IgJyArIHhoci5zdGF0dXMgKyAnIHdoaWxlIGZldGNoaW5nIGZpbGU6ICcgKyB4aHIuc3RhdHVzVGV4dDtcblx0XHRcdFx0XHRcdH1cblx0XHRcdFx0XHRcdGVsc2Uge1xuXHRcdFx0XHRcdFx0XHRjb2RlLnRleHRDb250ZW50ID0gJ+KcliBFcnJvcjogRmlsZSBkb2VzIG5vdCBleGlzdCBvciBpcyBlbXB0eSc7XG5cdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHR9O1xuXG5cdFx0XHRcdHhoci5zZW5kKG51bGwpO1xuXHRcdFx0fSk7XG5cdFx0fVxuXG5cdH07XG5cblx0ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIHNlbGYuUHJpc20uZmlsZUhpZ2hsaWdodCk7XG5cbn0pKCk7XG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL25vZGVfbW9kdWxlcy9wcmlzbWpzL3ByaXNtLmpzXG4vLyBtb2R1bGUgaWQgPSA1XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///5\n");
 
-/* **********************************************
-     Begin prism-core.js
-********************************************** */
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var _self = typeof window !== 'undefined' ? window // if in browser
-: typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope ? self // if in worker
-: {} // if in node js
-;
+"use strict";
+eval("/* harmony export (immutable) */ __webpack_exports__[\"a\"] = initMenu;\nlet open = false;\r\n\r\nfunction initMenu() {\r\n    const container = document.querySelector('#nav-pane');\r\n    const toggleButton = document.querySelector('.mobile-menu-button');\r\n    const openButton = document.querySelector('.open-button');\r\n    const closeButton = document.querySelector('.close-button');\r\n\r\n    applyClasses();\r\n\r\n    toggleButton.addEventListener('click', () => {\r\n        open = !open;\r\n        applyClasses();\r\n    });\r\n\r\n    function applyClasses() {\r\n        if (open) {\r\n            openButton.classList.add('hidden');\r\n            closeButton.classList.remove('hidden');\r\n            container.classList.add('open');\r\n        } else {\r\n            openButton.classList.remove('hidden');\r\n            closeButton.classList.add('hidden');\r\n            container.classList.remove('open');\r\n        }\r\n    }\r\n}\r\n\r\n\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZXMvdGVybWluYWwvc3JjL3NjcmlwdHMvbWVudS5qcz81ZDdjIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwiZmlsZSI6IjYuanMiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgb3BlbiA9IGZhbHNlO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGluaXRNZW51KCkge1xyXG4gICAgY29uc3QgY29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI25hdi1wYW5lJyk7XHJcbiAgICBjb25zdCB0b2dnbGVCdXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcubW9iaWxlLW1lbnUtYnV0dG9uJyk7XHJcbiAgICBjb25zdCBvcGVuQnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLm9wZW4tYnV0dG9uJyk7XHJcbiAgICBjb25zdCBjbG9zZUJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5jbG9zZS1idXR0b24nKTtcclxuXHJcbiAgICBhcHBseUNsYXNzZXMoKTtcclxuXHJcbiAgICB0b2dnbGVCdXR0b24uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7XHJcbiAgICAgICAgb3BlbiA9ICFvcGVuO1xyXG4gICAgICAgIGFwcGx5Q2xhc3NlcygpO1xyXG4gICAgfSk7XHJcblxyXG4gICAgZnVuY3Rpb24gYXBwbHlDbGFzc2VzKCkge1xyXG4gICAgICAgIGlmIChvcGVuKSB7XHJcbiAgICAgICAgICAgIG9wZW5CdXR0b24uY2xhc3NMaXN0LmFkZCgnaGlkZGVuJyk7XHJcbiAgICAgICAgICAgIGNsb3NlQnV0dG9uLmNsYXNzTGlzdC5yZW1vdmUoJ2hpZGRlbicpO1xyXG4gICAgICAgICAgICBjb250YWluZXIuY2xhc3NMaXN0LmFkZCgnb3BlbicpO1xyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIG9wZW5CdXR0b24uY2xhc3NMaXN0LnJlbW92ZSgnaGlkZGVuJyk7XHJcbiAgICAgICAgICAgIGNsb3NlQnV0dG9uLmNsYXNzTGlzdC5hZGQoJ2hpZGRlbicpO1xyXG4gICAgICAgICAgICBjb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZSgnb3BlbicpO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxufVxyXG5cclxuXHJcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vdGhlbWVzL3Rlcm1pbmFsL3NyYy9zY3JpcHRzL21lbnUuanNcbi8vIG1vZHVsZSBpZCA9IDZcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///6\n");
 
-/**
- * Prism: Lightweight, robust, elegant syntax highlighting
- * MIT license http://www.opensource.org/licenses/mit-license.php/
- * @author Lea Verou http://lea.verou.me
- */
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var Prism = function () {
+"use strict";
+eval("/* harmony export (immutable) */ __webpack_exports__[\"a\"] = initSearch;\nconst DISPLAY_CLASS = 'display';\r\nconst KeyCode = {\r\n    UP: 38,\r\n    DOWN: 40,\r\n    ENTER: 13,\r\n    ESCAPE: 27,\r\n    S: 83,\r\n    FORWARDSLASH: 191\r\n};\r\n\r\nfunction initSearch() {\r\n\r\n    const searchButton = document.querySelector('.search-button');\r\n    const searchModal = document.querySelector('.search-modal');\r\n    if (!searchModal) {\r\n        return;\r\n    }\r\n    const input = searchModal.querySelector('input[type=\"text\"]');\r\n    const suggestionsList = getAllSuggestions();\r\n    let closing = false;\r\n    let suggestions = [];\r\n    let selectedIndex = -1;\r\n\r\n\r\n    renderSuggestions([]);\r\n\r\n    document.addEventListener('keydown', e => {\r\n        if (e.keyCode === KeyCode.S || e.keyCode === KeyCode.FORWARDSLASH) {\r\n            if (e.target.tagName !== 'INPUT') {\r\n                e.preventDefault();\r\n                openModal();\r\n            }\r\n        }\r\n    })\r\n    searchButton.addEventListener('click', openModal);\r\n    input.addEventListener('blur', closeModal);\r\n    input.addEventListener('input', e => {\r\n        suggestions = filterSuggestions(e.target.value, suggestionsList);\r\n        selectedIndex = -1;\r\n        renderSuggestions(suggestions, selectedIndex);\r\n    });\r\n    input.addEventListener('keydown', e => {\r\n        switch (e.keyCode) {\r\n            case KeyCode.UP:\r\n                selectedIndex = selectedIndex === 0 ? suggestions.length - 1 : selectedIndex - 1;\r\n                e.preventDefault();\r\n                break;\r\n            case KeyCode.DOWN:\r\n                selectedIndex = selectedIndex === (suggestions.length - 1) ? 0 : selectedIndex + 1;\r\n                e.preventDefault();\r\n                break;\r\n            case KeyCode.ENTER:\r\n                const selected = document.querySelector('.search-suggestions li.selected a');\r\n                if (selected) {\r\n                    selected.click();\r\n                    reset();\r\n                    return;\r\n                }\r\n                break;\r\n            case KeyCode.ESCAPE:\r\n                input.blur();\r\n                break;\r\n        }\r\n        renderSuggestions(suggestions, selectedIndex);\r\n    });\r\n\r\n    function openModal() {\r\n        if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {\r\n            searchModal.classList.add(DISPLAY_CLASS);\r\n            input.focus();\r\n        }\r\n    }\r\n\r\n    function closeModal() {\r\n        searchModal.classList.remove(DISPLAY_CLASS);\r\n        closing = true;\r\n        setTimeout(() => closing = false, 500);\r\n        reset();\r\n    }\r\n\r\n    function reset() {\r\n        input.value = '';\r\n        suggestions = [];\r\n        selectedIndex = -1;\r\n        renderSuggestions(suggestions, selectedIndex);\r\n    }\r\n}\r\n\r\n/**\r\n * Returns a list of all suggestions.\r\n *\r\n * @returns {Array.<{title: string, url: string}>}\r\n */\r\nfunction getAllSuggestions() {\r\n    return Array.from(document.querySelectorAll('.suggestion'))\r\n        .map(el => {\r\n            return {\r\n                title: el.textContent,\r\n                url: el.dataset['url']\r\n            };\r\n        });\r\n}\r\n\r\n/**\r\n * Filter suggestions based on the query.\r\n *\r\n * @param {string} query\r\n * @param {string[]} allSuggestions\r\n * @return {Array.<{title: string, url: string}>}\r\n */\r\nfunction filterSuggestions(query, allSuggestions) {\r\n    const normalizedQuery = query.trim().toLowerCase();\r\n    if (normalizedQuery === '') {\r\n        return [];\r\n    }\r\n    const matches = s => s.title.toLowerCase().indexOf(normalizedQuery) !== -1;\r\n    return allSuggestions\r\n        .filter(matches)\r\n        .slice(0, 5);\r\n}\r\n\r\n/**\r\n *\r\n * @param {string} query\r\n * @param {string[]} suggestions\r\n */\r\nfunction renderSuggestions(suggestions, selectedIndex) {\r\n    const list = document.querySelector('.search-suggestions > ul');\r\n    removeAllChildren(list);\r\n    suggestions\r\n        .map(createListItem)\r\n        .forEach((li, index) => {\r\n            if (index === selectedIndex) {\r\n                li.classList.add('selected');\r\n            }\r\n            list.appendChild(li);\r\n        });\r\n}\r\n\r\n/**\r\n * Removes all children from a node\r\n * @param {HTMLElement} node\r\n */\r\nfunction removeAllChildren(node) {\r\n    while(node.hasChildNodes()) {\r\n        node.removeChild(node.lastChild);\r\n    }\r\n}\r\n\r\n/**\r\n * Returns an li element with the given text as innerText, and a link to the suggestion url.\r\n *\r\n * @param {string} suggestion.title\r\n * @param {string} suggestion.url\r\n * @returns {HTMLLIElement}\r\n */\r\nfunction createListItem(suggestion) {\r\n    const li = document.createElement('li');\r\n    const a = document.createElement('a');\r\n    a.href = suggestion.url;\r\n    a.innerText = suggestion.title;\r\n    li.appendChild(a);\r\n    return li;\r\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZXMvdGVybWluYWwvc3JjL3NjcmlwdHMvc2VhcmNoLmpzP2QxZWYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLGFBQWEsUUFBUSwyQkFBMkI7QUFDaEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLE9BQU87QUFDbEIsV0FBVyxTQUFTO0FBQ3BCLFlBQVksUUFBUSwyQkFBMkI7QUFDL0M7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsU0FBUztBQUNwQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUOztBQUVBO0FBQ0E7QUFDQSxXQUFXLFlBQVk7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsYUFBYTtBQUNiO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiI3LmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgRElTUExBWV9DTEFTUyA9ICdkaXNwbGF5JztcclxuY29uc3QgS2V5Q29kZSA9IHtcclxuICAgIFVQOiAzOCxcclxuICAgIERPV046IDQwLFxyXG4gICAgRU5URVI6IDEzLFxyXG4gICAgRVNDQVBFOiAyNyxcclxuICAgIFM6IDgzLFxyXG4gICAgRk9SV0FSRFNMQVNIOiAxOTFcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBpbml0U2VhcmNoKCkge1xyXG5cclxuICAgIGNvbnN0IHNlYXJjaEJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5zZWFyY2gtYnV0dG9uJyk7XHJcbiAgICBjb25zdCBzZWFyY2hNb2RhbCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5zZWFyY2gtbW9kYWwnKTtcclxuICAgIGlmICghc2VhcmNoTW9kYWwpIHtcclxuICAgICAgICByZXR1cm47XHJcbiAgICB9XHJcbiAgICBjb25zdCBpbnB1dCA9IHNlYXJjaE1vZGFsLnF1ZXJ5U2VsZWN0b3IoJ2lucHV0W3R5cGU9XCJ0ZXh0XCJdJyk7XHJcbiAgICBjb25zdCBzdWdnZXN0aW9uc0xpc3QgPSBnZXRBbGxTdWdnZXN0aW9ucygpO1xyXG4gICAgbGV0IGNsb3NpbmcgPSBmYWxzZTtcclxuICAgIGxldCBzdWdnZXN0aW9ucyA9IFtdO1xyXG4gICAgbGV0IHNlbGVjdGVkSW5kZXggPSAtMTtcclxuXHJcblxyXG4gICAgcmVuZGVyU3VnZ2VzdGlvbnMoW10pO1xyXG5cclxuICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ2tleWRvd24nLCBlID0+IHtcclxuICAgICAgICBpZiAoZS5rZXlDb2RlID09PSBLZXlDb2RlLlMgfHwgZS5rZXlDb2RlID09PSBLZXlDb2RlLkZPUldBUkRTTEFTSCkge1xyXG4gICAgICAgICAgICBpZiAoZS50YXJnZXQudGFnTmFtZSAhPT0gJ0lOUFVUJykge1xyXG4gICAgICAgICAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xyXG4gICAgICAgICAgICAgICAgb3Blbk1vZGFsKCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9KVxyXG4gICAgc2VhcmNoQnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgb3Blbk1vZGFsKTtcclxuICAgIGlucHV0LmFkZEV2ZW50TGlzdGVuZXIoJ2JsdXInLCBjbG9zZU1vZGFsKTtcclxuICAgIGlucHV0LmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JywgZSA9PiB7XHJcbiAgICAgICAgc3VnZ2VzdGlvbnMgPSBmaWx0ZXJTdWdnZXN0aW9ucyhlLnRhcmdldC52YWx1ZSwgc3VnZ2VzdGlvbnNMaXN0KTtcclxuICAgICAgICBzZWxlY3RlZEluZGV4ID0gLTE7XHJcbiAgICAgICAgcmVuZGVyU3VnZ2VzdGlvbnMoc3VnZ2VzdGlvbnMsIHNlbGVjdGVkSW5kZXgpO1xyXG4gICAgfSk7XHJcbiAgICBpbnB1dC5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgZSA9PiB7XHJcbiAgICAgICAgc3dpdGNoIChlLmtleUNvZGUpIHtcclxuICAgICAgICAgICAgY2FzZSBLZXlDb2RlLlVQOlxyXG4gICAgICAgICAgICAgICAgc2VsZWN0ZWRJbmRleCA9IHNlbGVjdGVkSW5kZXggPT09IDAgPyBzdWdnZXN0aW9ucy5sZW5ndGggLSAxIDogc2VsZWN0ZWRJbmRleCAtIDE7XHJcbiAgICAgICAgICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAgICAgICAgICAgICBicmVhaztcclxuICAgICAgICAgICAgY2FzZSBLZXlDb2RlLkRPV046XHJcbiAgICAgICAgICAgICAgICBzZWxlY3RlZEluZGV4ID0gc2VsZWN0ZWRJbmRleCA9PT0gKHN1Z2dlc3Rpb25zLmxlbmd0aCAtIDEpID8gMCA6IHNlbGVjdGVkSW5kZXggKyAxO1xyXG4gICAgICAgICAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xyXG4gICAgICAgICAgICAgICAgYnJlYWs7XHJcbiAgICAgICAgICAgIGNhc2UgS2V5Q29kZS5FTlRFUjpcclxuICAgICAgICAgICAgICAgIGNvbnN0IHNlbGVjdGVkID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLnNlYXJjaC1zdWdnZXN0aW9ucyBsaS5zZWxlY3RlZCBhJyk7XHJcbiAgICAgICAgICAgICAgICBpZiAoc2VsZWN0ZWQpIHtcclxuICAgICAgICAgICAgICAgICAgICBzZWxlY3RlZC5jbGljaygpO1xyXG4gICAgICAgICAgICAgICAgICAgIHJlc2V0KCk7XHJcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgYnJlYWs7XHJcbiAgICAgICAgICAgIGNhc2UgS2V5Q29kZS5FU0NBUEU6XHJcbiAgICAgICAgICAgICAgICBpbnB1dC5ibHVyKCk7XHJcbiAgICAgICAgICAgICAgICBicmVhaztcclxuICAgICAgICB9XHJcbiAgICAgICAgcmVuZGVyU3VnZ2VzdGlvbnMoc3VnZ2VzdGlvbnMsIHNlbGVjdGVkSW5kZXgpO1xyXG4gICAgfSk7XHJcblxyXG4gICAgZnVuY3Rpb24gb3Blbk1vZGFsKCkge1xyXG4gICAgICAgIGlmICghc2VhcmNoTW9kYWwuY2xhc3NMaXN0LmNvbnRhaW5zKERJU1BMQVlfQ0xBU1MpICYmICFjbG9zaW5nKSB7XHJcbiAgICAgICAgICAgIHNlYXJjaE1vZGFsLmNsYXNzTGlzdC5hZGQoRElTUExBWV9DTEFTUyk7XHJcbiAgICAgICAgICAgIGlucHV0LmZvY3VzKCk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIGZ1bmN0aW9uIGNsb3NlTW9kYWwoKSB7XHJcbiAgICAgICAgc2VhcmNoTW9kYWwuY2xhc3NMaXN0LnJlbW92ZShESVNQTEFZX0NMQVNTKTtcclxuICAgICAgICBjbG9zaW5nID0gdHJ1ZTtcclxuICAgICAgICBzZXRUaW1lb3V0KCgpID0+IGNsb3NpbmcgPSBmYWxzZSwgNTAwKTtcclxuICAgICAgICByZXNldCgpO1xyXG4gICAgfVxyXG5cclxuICAgIGZ1bmN0aW9uIHJlc2V0KCkge1xyXG4gICAgICAgIGlucHV0LnZhbHVlID0gJyc7XHJcbiAgICAgICAgc3VnZ2VzdGlvbnMgPSBbXTtcclxuICAgICAgICBzZWxlY3RlZEluZGV4ID0gLTE7XHJcbiAgICAgICAgcmVuZGVyU3VnZ2VzdGlvbnMoc3VnZ2VzdGlvbnMsIHNlbGVjdGVkSW5kZXgpO1xyXG4gICAgfVxyXG59XHJcblxyXG4vKipcclxuICogUmV0dXJucyBhIGxpc3Qgb2YgYWxsIHN1Z2dlc3Rpb25zLlxyXG4gKlxyXG4gKiBAcmV0dXJucyB7QXJyYXkuPHt0aXRsZTogc3RyaW5nLCB1cmw6IHN0cmluZ30+fVxyXG4gKi9cclxuZnVuY3Rpb24gZ2V0QWxsU3VnZ2VzdGlvbnMoKSB7XHJcbiAgICByZXR1cm4gQXJyYXkuZnJvbShkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcuc3VnZ2VzdGlvbicpKVxyXG4gICAgICAgIC5tYXAoZWwgPT4ge1xyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgdGl0bGU6IGVsLnRleHRDb250ZW50LFxyXG4gICAgICAgICAgICAgICAgdXJsOiBlbC5kYXRhc2V0Wyd1cmwnXVxyXG4gICAgICAgICAgICB9O1xyXG4gICAgICAgIH0pO1xyXG59XHJcblxyXG4vKipcclxuICogRmlsdGVyIHN1Z2dlc3Rpb25zIGJhc2VkIG9uIHRoZSBxdWVyeS5cclxuICpcclxuICogQHBhcmFtIHtzdHJpbmd9IHF1ZXJ5XHJcbiAqIEBwYXJhbSB7c3RyaW5nW119IGFsbFN1Z2dlc3Rpb25zXHJcbiAqIEByZXR1cm4ge0FycmF5Ljx7dGl0bGU6IHN0cmluZywgdXJsOiBzdHJpbmd9Pn1cclxuICovXHJcbmZ1bmN0aW9uIGZpbHRlclN1Z2dlc3Rpb25zKHF1ZXJ5LCBhbGxTdWdnZXN0aW9ucykge1xyXG4gICAgY29uc3Qgbm9ybWFsaXplZFF1ZXJ5ID0gcXVlcnkudHJpbSgpLnRvTG93ZXJDYXNlKCk7XHJcbiAgICBpZiAobm9ybWFsaXplZFF1ZXJ5ID09PSAnJykge1xyXG4gICAgICAgIHJldHVybiBbXTtcclxuICAgIH1cclxuICAgIGNvbnN0IG1hdGNoZXMgPSBzID0+IHMudGl0bGUudG9Mb3dlckNhc2UoKS5pbmRleE9mKG5vcm1hbGl6ZWRRdWVyeSkgIT09IC0xO1xyXG4gICAgcmV0dXJuIGFsbFN1Z2dlc3Rpb25zXHJcbiAgICAgICAgLmZpbHRlcihtYXRjaGVzKVxyXG4gICAgICAgIC5zbGljZSgwLCA1KTtcclxufVxyXG5cclxuLyoqXHJcbiAqXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBxdWVyeVxyXG4gKiBAcGFyYW0ge3N0cmluZ1tdfSBzdWdnZXN0aW9uc1xyXG4gKi9cclxuZnVuY3Rpb24gcmVuZGVyU3VnZ2VzdGlvbnMoc3VnZ2VzdGlvbnMsIHNlbGVjdGVkSW5kZXgpIHtcclxuICAgIGNvbnN0IGxpc3QgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcuc2VhcmNoLXN1Z2dlc3Rpb25zID4gdWwnKTtcclxuICAgIHJlbW92ZUFsbENoaWxkcmVuKGxpc3QpO1xyXG4gICAgc3VnZ2VzdGlvbnNcclxuICAgICAgICAubWFwKGNyZWF0ZUxpc3RJdGVtKVxyXG4gICAgICAgIC5mb3JFYWNoKChsaSwgaW5kZXgpID0+IHtcclxuICAgICAgICAgICAgaWYgKGluZGV4ID09PSBzZWxlY3RlZEluZGV4KSB7XHJcbiAgICAgICAgICAgICAgICBsaS5jbGFzc0xpc3QuYWRkKCdzZWxlY3RlZCcpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGxpc3QuYXBwZW5kQ2hpbGQobGkpO1xyXG4gICAgICAgIH0pO1xyXG59XHJcblxyXG4vKipcclxuICogUmVtb3ZlcyBhbGwgY2hpbGRyZW4gZnJvbSBhIG5vZGVcclxuICogQHBhcmFtIHtIVE1MRWxlbWVudH0gbm9kZVxyXG4gKi9cclxuZnVuY3Rpb24gcmVtb3ZlQWxsQ2hpbGRyZW4obm9kZSkge1xyXG4gICAgd2hpbGUobm9kZS5oYXNDaGlsZE5vZGVzKCkpIHtcclxuICAgICAgICBub2RlLnJlbW92ZUNoaWxkKG5vZGUubGFzdENoaWxkKTtcclxuICAgIH1cclxufVxyXG5cclxuLyoqXHJcbiAqIFJldHVybnMgYW4gbGkgZWxlbWVudCB3aXRoIHRoZSBnaXZlbiB0ZXh0IGFzIGlubmVyVGV4dCwgYW5kIGEgbGluayB0byB0aGUgc3VnZ2VzdGlvbiB1cmwuXHJcbiAqXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBzdWdnZXN0aW9uLnRpdGxlXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBzdWdnZXN0aW9uLnVybFxyXG4gKiBAcmV0dXJucyB7SFRNTExJRWxlbWVudH1cclxuICovXHJcbmZ1bmN0aW9uIGNyZWF0ZUxpc3RJdGVtKHN1Z2dlc3Rpb24pIHtcclxuICAgIGNvbnN0IGxpID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnbGknKTtcclxuICAgIGNvbnN0IGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdhJyk7XHJcbiAgICBhLmhyZWYgPSBzdWdnZXN0aW9uLnVybDtcclxuICAgIGEuaW5uZXJUZXh0ID0gc3VnZ2VzdGlvbi50aXRsZTtcclxuICAgIGxpLmFwcGVuZENoaWxkKGEpO1xyXG4gICAgcmV0dXJuIGxpO1xyXG59XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi90aGVtZXMvdGVybWluYWwvc3JjL3NjcmlwdHMvc2VhcmNoLmpzXG4vLyBtb2R1bGUgaWQgPSA3XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///7\n");
 
-	// Private helper vars
-	var lang = /\blang(?:uage)?-(\w+)\b/i;
-	var uniqueId = 0;
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-	var _ = _self.Prism = {
-		util: {
-			encode: function encode(tokens) {
-				if (tokens instanceof Token) {
-					return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
-				} else if (_.util.type(tokens) === 'Array') {
-					return tokens.map(_.util.encode);
-				} else {
-					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
-				}
-			},
+"use strict";
+eval("/* harmony export (immutable) */ __webpack_exports__[\"a\"] = initTypeEffect;\nconst DELAY = 30;\r\n\r\nfunction initTypeEffect() {\r\n    const headers = Array.from(document.querySelectorAll('[data-type-effect]'));\r\n    headers.forEach(typeEffect)\r\n}\r\n\r\nfunction typeEffect(el) {\r\n    const chars = el.textContent.split('');\r\n    const { height, width } = el.getBoundingClientRect();\r\n    el.textContent = '';\r\n    el.style.height = `${height}px`;\r\n    el.style.width = `${width}px`;\r\n    el.style.visibility = 'visible';\r\n    const typeTarget = addTypeTarget(el);\r\n    const caret = addCaret(el);\r\n\r\n    function typeNextChar() {\r\n        const nextChar = chars.shift();\r\n        typeTarget.textContent = typeTarget.textContent + nextChar;\r\n        if (0 < chars.length) {\r\n            setTimeout(typeNextChar, DELAY);\r\n        } else {\r\n            removeCaret(caret);\r\n            el.style.height = `initial`;\r\n            el.style.width = `initial`;\r\n        }\r\n    }\r\n    typeNextChar();\r\n}\r\n\r\nfunction addTypeTarget(el) {\r\n    const typeTarget = document.createElement('span');\r\n    el.appendChild(typeTarget);\r\n    return typeTarget;\r\n}\r\n\r\nfunction addCaret(el) {\r\n    let height = parseInt(window.getComputedStyle(el)['font-size']);\r\n    height -= 4;\r\n    const backgroundColor = window.getComputedStyle(el)['color'];\r\n    const width = Math.ceil(height * 0.05);\r\n    const marginBottom = Math.ceil(height * -0.1);\r\n    const caret = document.createElement('span');\r\n    caret.classList.add('type-effect-caret');\r\n    caret.style.height = `${height}px`;\r\n    caret.style.width = `${width}px`;\r\n    caret.style.backgroundColor = backgroundColor;\r\n    caret.style.marginBottom = `${marginBottom}px`;\r\n    el.appendChild(caret);\r\n    return caret;\r\n}\r\n\r\nfunction removeCaret(caret) {\r\n    if (caret) {\r\n        setTimeout(() => caret.parentNode.removeChild(caret), 2000);\r\n    }\r\n}\r\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi90aGVtZXMvdGVybWluYWwvc3JjL3NjcmlwdHMvdHlwZS1lZmZlY3QuanM/NzU3MSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUFBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSxXQUFXLGdCQUFnQjtBQUMzQjtBQUNBLHlCQUF5QixPQUFPO0FBQ2hDLHdCQUF3QixNQUFNO0FBQzlCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDRCQUE0QixPQUFPO0FBQ25DLDJCQUEyQixNQUFNO0FBQ2pDO0FBQ0Esa0NBQWtDLGFBQWE7QUFDL0M7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IERFTEFZID0gMzA7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gaW5pdFR5cGVFZmZlY3QoKSB7XHJcbiAgICBjb25zdCBoZWFkZXJzID0gQXJyYXkuZnJvbShkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdbZGF0YS10eXBlLWVmZmVjdF0nKSk7XHJcbiAgICBoZWFkZXJzLmZvckVhY2godHlwZUVmZmVjdClcclxufVxyXG5cclxuZnVuY3Rpb24gdHlwZUVmZmVjdChlbCkge1xyXG4gICAgY29uc3QgY2hhcnMgPSBlbC50ZXh0Q29udGVudC5zcGxpdCgnJyk7XHJcbiAgICBjb25zdCB7IGhlaWdodCwgd2lkdGggfSA9IGVsLmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpO1xyXG4gICAgZWwudGV4dENvbnRlbnQgPSAnJztcclxuICAgIGVsLnN0eWxlLmhlaWdodCA9IGAke2hlaWdodH1weGA7XHJcbiAgICBlbC5zdHlsZS53aWR0aCA9IGAke3dpZHRofXB4YDtcclxuICAgIGVsLnN0eWxlLnZpc2liaWxpdHkgPSAndmlzaWJsZSc7XHJcbiAgICBjb25zdCB0eXBlVGFyZ2V0ID0gYWRkVHlwZVRhcmdldChlbCk7XHJcbiAgICBjb25zdCBjYXJldCA9IGFkZENhcmV0KGVsKTtcclxuXHJcbiAgICBmdW5jdGlvbiB0eXBlTmV4dENoYXIoKSB7XHJcbiAgICAgICAgY29uc3QgbmV4dENoYXIgPSBjaGFycy5zaGlmdCgpO1xyXG4gICAgICAgIHR5cGVUYXJnZXQudGV4dENvbnRlbnQgPSB0eXBlVGFyZ2V0LnRleHRDb250ZW50ICsgbmV4dENoYXI7XHJcbiAgICAgICAgaWYgKDAgPCBjaGFycy5sZW5ndGgpIHtcclxuICAgICAgICAgICAgc2V0VGltZW91dCh0eXBlTmV4dENoYXIsIERFTEFZKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZW1vdmVDYXJldChjYXJldCk7XHJcbiAgICAgICAgICAgIGVsLnN0eWxlLmhlaWdodCA9IGBpbml0aWFsYDtcclxuICAgICAgICAgICAgZWwuc3R5bGUud2lkdGggPSBgaW5pdGlhbGA7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgdHlwZU5leHRDaGFyKCk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIGFkZFR5cGVUYXJnZXQoZWwpIHtcclxuICAgIGNvbnN0IHR5cGVUYXJnZXQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzcGFuJyk7XHJcbiAgICBlbC5hcHBlbmRDaGlsZCh0eXBlVGFyZ2V0KTtcclxuICAgIHJldHVybiB0eXBlVGFyZ2V0O1xyXG59XHJcblxyXG5mdW5jdGlvbiBhZGRDYXJldChlbCkge1xyXG4gICAgbGV0IGhlaWdodCA9IHBhcnNlSW50KHdpbmRvdy5nZXRDb21wdXRlZFN0eWxlKGVsKVsnZm9udC1zaXplJ10pO1xyXG4gICAgaGVpZ2h0IC09IDQ7XHJcbiAgICBjb25zdCBiYWNrZ3JvdW5kQ29sb3IgPSB3aW5kb3cuZ2V0Q29tcHV0ZWRTdHlsZShlbClbJ2NvbG9yJ107XHJcbiAgICBjb25zdCB3aWR0aCA9IE1hdGguY2VpbChoZWlnaHQgKiAwLjA1KTtcclxuICAgIGNvbnN0IG1hcmdpbkJvdHRvbSA9IE1hdGguY2VpbChoZWlnaHQgKiAtMC4xKTtcclxuICAgIGNvbnN0IGNhcmV0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc3BhbicpO1xyXG4gICAgY2FyZXQuY2xhc3NMaXN0LmFkZCgndHlwZS1lZmZlY3QtY2FyZXQnKTtcclxuICAgIGNhcmV0LnN0eWxlLmhlaWdodCA9IGAke2hlaWdodH1weGA7XHJcbiAgICBjYXJldC5zdHlsZS53aWR0aCA9IGAke3dpZHRofXB4YDtcclxuICAgIGNhcmV0LnN0eWxlLmJhY2tncm91bmRDb2xvciA9IGJhY2tncm91bmRDb2xvcjtcclxuICAgIGNhcmV0LnN0eWxlLm1hcmdpbkJvdHRvbSA9IGAke21hcmdpbkJvdHRvbX1weGA7XHJcbiAgICBlbC5hcHBlbmRDaGlsZChjYXJldCk7XHJcbiAgICByZXR1cm4gY2FyZXQ7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIHJlbW92ZUNhcmV0KGNhcmV0KSB7XHJcbiAgICBpZiAoY2FyZXQpIHtcclxuICAgICAgICBzZXRUaW1lb3V0KCgpID0+IGNhcmV0LnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQoY2FyZXQpLCAyMDAwKTtcclxuICAgIH1cclxufVxyXG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3RoZW1lcy90ZXJtaW5hbC9zcmMvc2NyaXB0cy90eXBlLWVmZmVjdC5qc1xuLy8gbW9kdWxlIGlkID0gOFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///8\n");
 
-			type: function type(o) {
-				return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
-			},
-
-			objId: function objId(obj) {
-				if (!obj['__id']) {
-					Object.defineProperty(obj, '__id', { value: ++uniqueId });
-				}
-				return obj['__id'];
-			},
-
-			// Deep clone a language definition (e.g. to extend it)
-			clone: function clone(o) {
-				var type = _.util.type(o);
-
-				switch (type) {
-					case 'Object':
-						var clone = {};
-
-						for (var key in o) {
-							if (o.hasOwnProperty(key)) {
-								clone[key] = _.util.clone(o[key]);
-							}
-						}
-
-						return clone;
-
-					case 'Array':
-						// Check for existence for IE8
-						return o.map && o.map(function (v) {
-							return _.util.clone(v);
-						});
-				}
-
-				return o;
-			}
-		},
-
-		languages: {
-			extend: function extend(id, redef) {
-				var lang = _.util.clone(_.languages[id]);
-
-				for (var key in redef) {
-					lang[key] = redef[key];
-				}
-
-				return lang;
-			},
-
-			/**
-    * Insert a token before another token in a language literal
-    * As this needs to recreate the object (we cannot actually insert before keys in object literals),
-    * we cannot just provide an object, we need anobject and a key.
-    * @param inside The key (or language id) of the parent
-    * @param before The key to insert before. If not provided, the function appends instead.
-    * @param insert Object with the key/value pairs to insert
-    * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
-    */
-			insertBefore: function insertBefore(inside, before, insert, root) {
-				root = root || _.languages;
-				var grammar = root[inside];
-
-				if (arguments.length == 2) {
-					insert = arguments[1];
-
-					for (var newToken in insert) {
-						if (insert.hasOwnProperty(newToken)) {
-							grammar[newToken] = insert[newToken];
-						}
-					}
-
-					return grammar;
-				}
-
-				var ret = {};
-
-				for (var token in grammar) {
-
-					if (grammar.hasOwnProperty(token)) {
-
-						if (token == before) {
-
-							for (var newToken in insert) {
-
-								if (insert.hasOwnProperty(newToken)) {
-									ret[newToken] = insert[newToken];
-								}
-							}
-						}
-
-						ret[token] = grammar[token];
-					}
-				}
-
-				// Update references in other language definitions
-				_.languages.DFS(_.languages, function (key, value) {
-					if (value === root[inside] && key != inside) {
-						this[key] = ret;
-					}
-				});
-
-				return root[inside] = ret;
-			},
-
-			// Traverse a language definition with Depth First Search
-			DFS: function DFS(o, callback, type, visited) {
-				visited = visited || {};
-				for (var i in o) {
-					if (o.hasOwnProperty(i)) {
-						callback.call(o, i, o[i], type || i);
-
-						if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
-							visited[_.util.objId(o[i])] = true;
-							_.languages.DFS(o[i], callback, null, visited);
-						} else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
-							visited[_.util.objId(o[i])] = true;
-							_.languages.DFS(o[i], callback, i, visited);
-						}
-					}
-				}
-			}
-		},
-		plugins: {},
-
-		highlightAll: function highlightAll(async, callback) {
-			var env = {
-				callback: callback,
-				selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
-			};
-
-			_.hooks.run("before-highlightall", env);
-
-			var elements = env.elements || document.querySelectorAll(env.selector);
-
-			for (var i = 0, element; element = elements[i++];) {
-				_.highlightElement(element, async === true, env.callback);
-			}
-		},
-
-		highlightElement: function highlightElement(element, async, callback) {
-			// Find language
-			var language,
-			    grammar,
-			    parent = element;
-
-			while (parent && !lang.test(parent.className)) {
-				parent = parent.parentNode;
-			}
-
-			if (parent) {
-				language = (parent.className.match(lang) || [, ''])[1].toLowerCase();
-				grammar = _.languages[language];
-			}
-
-			// Set language on the element, if not present
-			element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-
-			// Set language on the parent, for styling
-			parent = element.parentNode;
-
-			if (/pre/i.test(parent.nodeName)) {
-				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-			}
-
-			var code = element.textContent;
-
-			var env = {
-				element: element,
-				language: language,
-				grammar: grammar,
-				code: code
-			};
-
-			_.hooks.run('before-sanity-check', env);
-
-			if (!env.code || !env.grammar) {
-				if (env.code) {
-					env.element.textContent = env.code;
-				}
-				_.hooks.run('complete', env);
-				return;
-			}
-
-			_.hooks.run('before-highlight', env);
-
-			if (async && _self.Worker) {
-				var worker = new Worker(_.filename);
-
-				worker.onmessage = function (evt) {
-					env.highlightedCode = evt.data;
-
-					_.hooks.run('before-insert', env);
-
-					env.element.innerHTML = env.highlightedCode;
-
-					callback && callback.call(env.element);
-					_.hooks.run('after-highlight', env);
-					_.hooks.run('complete', env);
-				};
-
-				worker.postMessage(JSON.stringify({
-					language: env.language,
-					code: env.code,
-					immediateClose: true
-				}));
-			} else {
-				env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
-
-				_.hooks.run('before-insert', env);
-
-				env.element.innerHTML = env.highlightedCode;
-
-				callback && callback.call(element);
-
-				_.hooks.run('after-highlight', env);
-				_.hooks.run('complete', env);
-			}
-		},
-
-		highlight: function highlight(text, grammar, language) {
-			var tokens = _.tokenize(text, grammar);
-			return Token.stringify(_.util.encode(tokens), language);
-		},
-
-		tokenize: function tokenize(text, grammar, language) {
-			var Token = _.Token;
-
-			var strarr = [text];
-
-			var rest = grammar.rest;
-
-			if (rest) {
-				for (var token in rest) {
-					grammar[token] = rest[token];
-				}
-
-				delete grammar.rest;
-			}
-
-			tokenloop: for (var token in grammar) {
-				if (!grammar.hasOwnProperty(token) || !grammar[token]) {
-					continue;
-				}
-
-				var patterns = grammar[token];
-				patterns = _.util.type(patterns) === "Array" ? patterns : [patterns];
-
-				for (var j = 0; j < patterns.length; ++j) {
-					var pattern = patterns[j],
-					    inside = pattern.inside,
-					    lookbehind = !!pattern.lookbehind,
-					    greedy = !!pattern.greedy,
-					    lookbehindLength = 0,
-					    alias = pattern.alias;
-
-					if (greedy && !pattern.pattern.global) {
-						// Without the global flag, lastIndex won't work
-						var flags = pattern.pattern.toString().match(/[imuy]*$/)[0];
-						pattern.pattern = RegExp(pattern.pattern.source, flags + "g");
-					}
-
-					pattern = pattern.pattern || pattern;
-
-					// Don’t cache length as it changes during the loop
-					for (var i = 0, pos = 0; i < strarr.length; pos += strarr[i].length, ++i) {
-
-						var str = strarr[i];
-
-						if (strarr.length > text.length) {
-							// Something went terribly wrong, ABORT, ABORT!
-							break tokenloop;
-						}
-
-						if (str instanceof Token) {
-							continue;
-						}
-
-						pattern.lastIndex = 0;
-
-						var match = pattern.exec(str),
-						    delNum = 1;
-
-						// Greedy patterns can override/remove up to two previously matched tokens
-						if (!match && greedy && i != strarr.length - 1) {
-							pattern.lastIndex = pos;
-							match = pattern.exec(text);
-							if (!match) {
-								break;
-							}
-
-							var from = match.index + (lookbehind ? match[1].length : 0),
-							    to = match.index + match[0].length,
-							    k = i,
-							    p = pos;
-
-							for (var len = strarr.length; k < len && p < to; ++k) {
-								p += strarr[k].length;
-								// Move the index i to the element in strarr that is closest to from
-								if (from >= p) {
-									++i;
-									pos = p;
-								}
-							}
-
-							/*
-        * If strarr[i] is a Token, then the match starts inside another Token, which is invalid
-        * If strarr[k - 1] is greedy we are in conflict with another greedy pattern
-        */
-							if (strarr[i] instanceof Token || strarr[k - 1].greedy) {
-								continue;
-							}
-
-							// Number of tokens to delete and replace with the new match
-							delNum = k - i;
-							str = text.slice(pos, p);
-							match.index -= pos;
-						}
-
-						if (!match) {
-							continue;
-						}
-
-						if (lookbehind) {
-							lookbehindLength = match[1].length;
-						}
-
-						var from = match.index + lookbehindLength,
-						    match = match[0].slice(lookbehindLength),
-						    to = from + match.length,
-						    before = str.slice(0, from),
-						    after = str.slice(to);
-
-						var args = [i, delNum];
-
-						if (before) {
-							args.push(before);
-						}
-
-						var wrapped = new Token(token, inside ? _.tokenize(match, inside) : match, alias, match, greedy);
-
-						args.push(wrapped);
-
-						if (after) {
-							args.push(after);
-						}
-
-						Array.prototype.splice.apply(strarr, args);
-					}
-				}
-			}
-
-			return strarr;
-		},
-
-		hooks: {
-			all: {},
-
-			add: function add(name, callback) {
-				var hooks = _.hooks.all;
-
-				hooks[name] = hooks[name] || [];
-
-				hooks[name].push(callback);
-			},
-
-			run: function run(name, env) {
-				var callbacks = _.hooks.all[name];
-
-				if (!callbacks || !callbacks.length) {
-					return;
-				}
-
-				for (var i = 0, callback; callback = callbacks[i++];) {
-					callback(env);
-				}
-			}
-		}
-	};
-
-	var Token = _.Token = function (type, content, alias, matchedStr, greedy) {
-		this.type = type;
-		this.content = content;
-		this.alias = alias;
-		// Copy of the full string this token was created from
-		this.length = (matchedStr || "").length | 0;
-		this.greedy = !!greedy;
-	};
-
-	Token.stringify = function (o, language, parent) {
-		if (typeof o == 'string') {
-			return o;
-		}
-
-		if (_.util.type(o) === 'Array') {
-			return o.map(function (element) {
-				return Token.stringify(element, language, o);
-			}).join('');
-		}
-
-		var env = {
-			type: o.type,
-			content: Token.stringify(o.content, language, parent),
-			tag: 'span',
-			classes: ['token', o.type],
-			attributes: {},
-			language: language,
-			parent: parent
-		};
-
-		if (env.type == 'comment') {
-			env.attributes['spellcheck'] = 'true';
-		}
-
-		if (o.alias) {
-			var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
-			Array.prototype.push.apply(env.classes, aliases);
-		}
-
-		_.hooks.run('wrap', env);
-
-		var attributes = Object.keys(env.attributes).map(function (name) {
-			return name + '="' + (env.attributes[name] || '').replace(/"/g, '&quot;') + '"';
-		}).join(' ');
-
-		return '<' + env.tag + ' class="' + env.classes.join(' ') + '"' + (attributes ? ' ' + attributes : '') + '>' + env.content + '</' + env.tag + '>';
-	};
-
-	if (!_self.document) {
-		if (!_self.addEventListener) {
-			// in Node.js
-			return _self.Prism;
-		}
-		// In worker
-		_self.addEventListener('message', function (evt) {
-			var message = JSON.parse(evt.data),
-			    lang = message.language,
-			    code = message.code,
-			    immediateClose = message.immediateClose;
-
-			_self.postMessage(_.highlight(code, _.languages[lang], lang));
-			if (immediateClose) {
-				_self.close();
-			}
-		}, false);
-
-		return _self.Prism;
-	}
-
-	//Get current script and highlight
-	var script = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
-
-	if (script) {
-		_.filename = script.src;
-
-		if (document.addEventListener && !script.hasAttribute('data-manual')) {
-			if (document.readyState !== "loading") {
-				if (window.requestAnimationFrame) {
-					window.requestAnimationFrame(_.highlightAll);
-				} else {
-					window.setTimeout(_.highlightAll, 16);
-				}
-			} else {
-				document.addEventListener('DOMContentLoaded', _.highlightAll);
-			}
-		}
-	}
-
-	return _self.Prism;
-}();
-
-if (typeof module !== 'undefined' && module.exports) {
-	module.exports = Prism;
-}
-
-// hack for components to work correctly in node.js
-if (typeof global !== 'undefined') {
-	global.Prism = Prism;
-}
-
-/* **********************************************
-     Begin prism-markup.js
-********************************************** */
-
-Prism.languages.markup = {
-	'comment': /<!--[\w\W]*?-->/,
-	'prolog': /<\?[\w\W]+?\?>/,
-	'doctype': /<!DOCTYPE[\w\W]+?>/i,
-	'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
-	'tag': {
-		pattern: /<\/?(?!\d)[^\s>\/=$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,
-		inside: {
-			'tag': {
-				pattern: /^<\/?[^\s>\/]+/i,
-				inside: {
-					'punctuation': /^<\/?/,
-					'namespace': /^[^\s>\/:]+:/
-				}
-			},
-			'attr-value': {
-				pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
-				inside: {
-					'punctuation': /[=>"']/
-				}
-			},
-			'punctuation': /\/?>/,
-			'attr-name': {
-				pattern: /[^\s>\/]+/,
-				inside: {
-					'namespace': /^[^\s>\/:]+:/
-				}
-			}
-
-		}
-	},
-	'entity': /&#?[\da-z]{1,8};/i
-};
-
-// Plugin to make entity title show the real entity, idea by Roman Komarov
-Prism.hooks.add('wrap', function (env) {
-
-	if (env.type === 'entity') {
-		env.attributes['title'] = env.content.replace(/&amp;/, '&');
-	}
-});
-
-Prism.languages.xml = Prism.languages.markup;
-Prism.languages.html = Prism.languages.markup;
-Prism.languages.mathml = Prism.languages.markup;
-Prism.languages.svg = Prism.languages.markup;
-
-/* **********************************************
-     Begin prism-css.js
-********************************************** */
-
-Prism.languages.css = {
-	'comment': /\/\*[\w\W]*?\*\//,
-	'atrule': {
-		pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
-		inside: {
-			'rule': /@[\w-]+/
-			// See rest below
-		}
-	},
-	'url': /url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
-	'selector': /[^\{\}\s][^\{\};]*?(?=\s*\{)/,
-	'string': {
-		pattern: /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,
-		greedy: true
-	},
-	'property': /(\b|\B)[\w-]+(?=\s*:)/i,
-	'important': /\B!important\b/i,
-	'function': /[-a-z0-9]+(?=\()/i,
-	'punctuation': /[(){};:]/
-};
-
-Prism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);
-
-if (Prism.languages.markup) {
-	Prism.languages.insertBefore('markup', 'tag', {
-		'style': {
-			pattern: /(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,
-			lookbehind: true,
-			inside: Prism.languages.css,
-			alias: 'language-css'
-		}
-	});
-
-	Prism.languages.insertBefore('inside', 'attr-value', {
-		'style-attr': {
-			pattern: /\s*style=("|').*?\1/i,
-			inside: {
-				'attr-name': {
-					pattern: /^\s*style/i,
-					inside: Prism.languages.markup.tag.inside
-				},
-				'punctuation': /^\s*=\s*['"]|['"]\s*$/,
-				'attr-value': {
-					pattern: /.+/i,
-					inside: Prism.languages.css
-				}
-			},
-			alias: 'language-css'
-		}
-	}, Prism.languages.markup.tag);
-}
-
-/* **********************************************
-     Begin prism-clike.js
-********************************************** */
-
-Prism.languages.clike = {
-	'comment': [{
-		pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
-		lookbehind: true
-	}, {
-		pattern: /(^|[^\\:])\/\/.*/,
-		lookbehind: true
-	}],
-	'string': {
-		pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-		greedy: true
-	},
-	'class-name': {
-		pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
-		lookbehind: true,
-		inside: {
-			punctuation: /(\.|\\)/
-		}
-	},
-	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
-	'boolean': /\b(true|false)\b/,
-	'function': /[a-z0-9_]+(?=\()/i,
-	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
-	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
-	'punctuation': /[{}[\];(),.:]/
-};
-
-/* **********************************************
-     Begin prism-javascript.js
-********************************************** */
-
-Prism.languages.javascript = Prism.languages.extend('clike', {
-	'keyword': /\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
-	'number': /\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,
-	// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
-	'function': /[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i,
-	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*\*?|\/|~|\^|%|\.{3}/
-});
-
-Prism.languages.insertBefore('javascript', 'keyword', {
-	'regex': {
-		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,
-		lookbehind: true,
-		greedy: true
-	}
-});
-
-Prism.languages.insertBefore('javascript', 'string', {
-	'template-string': {
-		pattern: /`(?:\\\\|\\?[^\\])*?`/,
-		greedy: true,
-		inside: {
-			'interpolation': {
-				pattern: /\$\{[^}]+\}/,
-				inside: {
-					'interpolation-punctuation': {
-						pattern: /^\$\{|\}$/,
-						alias: 'punctuation'
-					},
-					rest: Prism.languages.javascript
-				}
-			},
-			'string': /[\s\S]+/
-		}
-	}
-});
-
-if (Prism.languages.markup) {
-	Prism.languages.insertBefore('markup', 'tag', {
-		'script': {
-			pattern: /(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,
-			lookbehind: true,
-			inside: Prism.languages.javascript,
-			alias: 'language-javascript'
-		}
-	});
-}
-
-Prism.languages.js = Prism.languages.javascript;
-
-/* **********************************************
-     Begin prism-file-highlight.js
-********************************************** */
-
-(function () {
-	if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
-		return;
-	}
-
-	self.Prism.fileHighlight = function () {
-
-		var Extensions = {
-			'js': 'javascript',
-			'py': 'python',
-			'rb': 'ruby',
-			'ps1': 'powershell',
-			'psm1': 'powershell',
-			'sh': 'bash',
-			'bat': 'batch',
-			'h': 'c',
-			'tex': 'latex'
-		};
-
-		if (Array.prototype.forEach) {
-			// Check to prevent error in IE8
-			Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-				var src = pre.getAttribute('data-src');
-
-				var language,
-				    parent = pre;
-				var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
-				while (parent && !lang.test(parent.className)) {
-					parent = parent.parentNode;
-				}
-
-				if (parent) {
-					language = (pre.className.match(lang) || [, ''])[1];
-				}
-
-				if (!language) {
-					var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-					language = Extensions[extension] || extension;
-				}
-
-				var code = document.createElement('code');
-				code.className = 'language-' + language;
-
-				pre.textContent = '';
-
-				code.textContent = 'Loading…';
-
-				pre.appendChild(code);
-
-				var xhr = new XMLHttpRequest();
-
-				xhr.open('GET', src, true);
-
-				xhr.onreadystatechange = function () {
-					if (xhr.readyState == 4) {
-
-						if (xhr.status < 400 && xhr.responseText) {
-							code.textContent = xhr.responseText;
-
-							Prism.highlightElement(code);
-						} else if (xhr.status >= 400) {
-							code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-						} else {
-							code.textContent = '✖ Error: File does not exist or is empty';
-						}
-					}
-				};
-
-				xhr.send(null);
-			});
-		}
-	};
-
-	document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
-})();
-
-}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],2:[function(require,module,exports){
-'use strict';
-
-var _menu = require('./menu');
-
-var _search = require('./search');
-
-var _typeEffect = require('./type-effect');
-
-window.Prism = require('prismjs');
-
-
-window.addEventListener('load', function () {
-    (0, _menu.initMenu)();
-    (0, _search.initSearch)();
-    (0, _typeEffect.initTypeEffect)();
-});
-
-},{"./menu":3,"./search":4,"./type-effect":5,"prismjs":1}],3:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.initMenu = initMenu;
-var open = false;
-
-function initMenu() {
-    var container = document.querySelector('#nav-pane');
-    var toggleButton = document.querySelector('.mobile-menu-button');
-    var openButton = document.querySelector('.open-button');
-    var closeButton = document.querySelector('.close-button');
-
-    applyClasses();
-
-    toggleButton.addEventListener('click', function () {
-        open = !open;
-        applyClasses();
-    });
-
-    function applyClasses() {
-        if (open) {
-            openButton.classList.add('hidden');
-            closeButton.classList.remove('hidden');
-            container.classList.add('open');
-        } else {
-            openButton.classList.remove('hidden');
-            closeButton.classList.add('hidden');
-            container.classList.remove('open');
-        }
-    }
-}
-
-},{}],4:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.initSearch = initSearch;
-var DISPLAY_CLASS = 'display';
-var KeyCode = {
-    UP: 38,
-    DOWN: 40,
-    ENTER: 13,
-    ESCAPE: 27,
-    S: 83,
-    FORWARDSLASH: 191
-};
-
-function initSearch() {
-
-    var searchButton = document.querySelector('.search-button');
-    var searchModal = document.querySelector('.search-modal');
-    if (!searchModal) {
-        return;
-    }
-    var input = searchModal.querySelector('input[type="text"]');
-    var suggestionsList = getAllSuggestions();
-    var closing = false;
-    var suggestions = [];
-    var selectedIndex = -1;
-
-    renderSuggestions([]);
-
-    document.addEventListener('keydown', function (e) {
-        if (e.keyCode === KeyCode.S || e.keyCode === KeyCode.FORWARDSLASH) {
-            if (e.target.tagName !== 'INPUT') {
-                e.preventDefault();
-                openModal();
-            }
-        }
-    });
-    searchButton.addEventListener('click', openModal);
-    input.addEventListener('blur', closeModal);
-    input.addEventListener('input', function (e) {
-        suggestions = filterSuggestions(e.target.value, suggestionsList);
-        selectedIndex = -1;
-        renderSuggestions(suggestions, selectedIndex);
-    });
-    input.addEventListener('keydown', function (e) {
-        switch (e.keyCode) {
-            case KeyCode.UP:
-                selectedIndex = selectedIndex === 0 ? suggestions.length - 1 : selectedIndex - 1;
-                e.preventDefault();
-                break;
-            case KeyCode.DOWN:
-                selectedIndex = selectedIndex === suggestions.length - 1 ? 0 : selectedIndex + 1;
-                e.preventDefault();
-                break;
-            case KeyCode.ENTER:
-                var selected = document.querySelector('.search-suggestions li.selected a');
-                if (selected) {
-                    selected.click();
-                    reset();
-                    return;
-                }
-                break;
-            case KeyCode.ESCAPE:
-                input.blur();
-                break;
-        }
-        renderSuggestions(suggestions, selectedIndex);
-    });
-
-    function openModal() {
-        if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {
-            searchModal.classList.add(DISPLAY_CLASS);
-            input.focus();
-        }
-    }
-
-    function closeModal() {
-        searchModal.classList.remove(DISPLAY_CLASS);
-        closing = true;
-        setTimeout(function () {
-            return closing = false;
-        }, 500);
-        reset();
-    }
-
-    function reset() {
-        input.value = '';
-        suggestions = [];
-        selectedIndex = -1;
-        renderSuggestions(suggestions, selectedIndex);
-    }
-}
-
-/**
- * Returns a list of all suggestions.
- *
- * @returns {Array.<{title: string, url: string}>}
- */
-function getAllSuggestions() {
-    return Array.from(document.querySelectorAll('.suggestion')).map(function (el) {
-        return {
-            title: el.textContent,
-            url: el.dataset['url']
-        };
-    });
-}
-
-/**
- * Filter suggestions based on the query.
- *
- * @param {string} query
- * @param {string[]} allSuggestions
- * @return {Array.<{title: string, url: string}>}
- */
-function filterSuggestions(query, allSuggestions) {
-    var normalizedQuery = query.trim().toLowerCase();
-    if (normalizedQuery === '') {
-        return [];
-    }
-    var matches = function matches(s) {
-        return s.title.toLowerCase().indexOf(normalizedQuery) !== -1;
-    };
-    return allSuggestions.filter(matches).slice(0, 5);
-}
-
-/**
- *
- * @param {string} query
- * @param {string[]} suggestions
- */
-function renderSuggestions(suggestions, selectedIndex) {
-    var list = document.querySelector('.search-suggestions > ul');
-    removeAllChildren(list);
-    suggestions.map(createListItem).forEach(function (li, index) {
-        if (index === selectedIndex) {
-            li.classList.add('selected');
-        }
-        list.appendChild(li);
-    });
-}
-
-/**
- * Removes all children from a node
- * @param {HTMLElement} node
- */
-function removeAllChildren(node) {
-    while (node.hasChildNodes()) {
-        node.removeChild(node.lastChild);
-    }
-}
-
-/**
- * Returns an li element with the given text as innerText, and a link to the suggestion url.
- *
- * @param {string} suggestion.title
- * @param {string} suggestion.url
- * @returns {HTMLLIElement}
- */
-function createListItem(suggestion) {
-    var li = document.createElement('li');
-    var a = document.createElement('a');
-    a.href = suggestion.url;
-    a.innerText = suggestion.title;
-    li.appendChild(a);
-    return li;
-}
-
-},{}],5:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.initTypeEffect = initTypeEffect;
-var DELAY = 30;
-
-function initTypeEffect() {
-    var headers = Array.from(document.querySelectorAll('[data-type-effect]'));
-    headers.forEach(typeEffect);
-}
-
-function typeEffect(el) {
-    var chars = el.textContent.split('');
-
-    var _el$getBoundingClient = el.getBoundingClientRect(),
-        height = _el$getBoundingClient.height,
-        width = _el$getBoundingClient.width;
-
-    el.textContent = '';
-    el.style.height = height + 'px';
-    el.style.width = width + 'px';
-    el.style.visibility = 'visible';
-    var typeTarget = addTypeTarget(el);
-    var caret = addCaret(el);
-
-    function typeNextChar() {
-        var nextChar = chars.shift();
-        typeTarget.textContent = typeTarget.textContent + nextChar;
-        if (0 < chars.length) {
-            setTimeout(typeNextChar, DELAY);
-        } else {
-            removeCaret(caret);
-            el.style.height = 'initial';
-            el.style.width = 'initial';
-        }
-    }
-    typeNextChar();
-}
-
-function addTypeTarget(el) {
-    var typeTarget = document.createElement('span');
-    el.appendChild(typeTarget);
-    return typeTarget;
-}
-
-function addCaret(el) {
-    var height = parseInt(window.getComputedStyle(el)['font-size']);
-    height -= 4;
-    var backgroundColor = window.getComputedStyle(el)['color'];
-    var width = Math.ceil(height * 0.05);
-    var marginBottom = Math.ceil(height * -0.1);
-    var caret = document.createElement('span');
-    caret.classList.add('type-effect-caret');
-    caret.style.height = height + 'px';
-    caret.style.width = width + 'px';
-    caret.style.backgroundColor = backgroundColor;
-    caret.style.marginBottom = marginBottom + 'px';
-    el.appendChild(caret);
-    return caret;
-}
-
-function removeCaret(caret) {
-    if (caret) {
-        setTimeout(function () {
-            return caret.parentNode.removeChild(caret);
-        }, 2000);
-    }
-}
-
-},{}]},{},[2])//# sourceMappingURL=script.js.map
+/***/ })
+/******/ ]);

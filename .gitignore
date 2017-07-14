@@ -1,4 +1,4 @@
 .idea
 node_modules
-static/css
-static/js
+themes/terminal/static/css
+themes/terminal/static/js
