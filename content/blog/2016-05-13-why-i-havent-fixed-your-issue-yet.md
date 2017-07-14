@@ -26,7 +26,7 @@ Today, I am in full-time employment. The baby is now a toddler, and there is als
 Do you know what I like to do in that time? Unfortunately for you, the answer is not _&#8220;fire up my IDE, get the build pipeline going, start a local dev server, and try to recreate someone else&#8217;s issue&#8221;_. And I don&#8217;t mean to berate; I am simply stating fact. My weary evening mind is just not up to the task most days. Usually I like to sit on the couch for a bit, and just enjoy sitting.
 
 <div id="attachment_531" style="width: 560px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-531" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/05/couch.jpg" alt="A couch" width="550" height="542" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/05/couch.jpg 550w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/05/couch-300x296.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" />
+  <img class="size-full wp-image-531" src="/media/2016/05/couch.jpg" alt="A couch" width="550" height="542" srcset="/media/2016/05/couch.jpg 550w, /media/2016/05/couch-300x296.jpg 300w" sizes="(max-width: 550px) 100vw, 550px" />
   
   <p class="wp-caption-text">
     You are competing with this. Usually, you will lose.

@@ -15,7 +15,7 @@ tags:
 In software development, we often hear and speak of _abstractions_. When we use this term, we often mean some variation on concepts such as &#8220;hiding the implementation details&#8221;, &#8220;providing an interface&#8221;, &#8220;modelling a data type&#8221; or even &#8220;removing duplicate code&#8221;. But what is the essence of abstraction?
 
 <div id="attachment_566" style="width: 810px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-566" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract-etymology.jpg" alt="" width="800" height="219" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract-etymology.jpg 800w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract-etymology-300x82.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract-etymology-768x210.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" />
+  <img class="size-full wp-image-566" src="/media/2017/02/abstract-etymology.jpg" alt="" width="800" height="219" srcset="/media/2017/02/abstract-etymology.jpg 800w, /media/2017/02/abstract-etymology-300x82.jpg 300w, /media/2017/02/abstract-etymology-768x210.jpg 768w" sizes="(max-width: 800px) 100vw, 800px" />
   
   <p class="wp-caption-text">
     The origin of &#8220;abstract&#8221; in the Macmillan Dictionary for Students
@@ -103,7 +103,7 @@ What&#8217;s the upper limit, the _ne plus ultra_ of this increasing abstraction
 Between the ontological basement and the theological roof, we have a continuum of all objects and ideas, arranged in levels of ascending scope and complexity. To make this very clear, I have put together the following helpful diagram for your enjoyment:
 
 <div id="attachment_571" style="width: 662px" class="wp-caption aligncenter">
-  <img class="wp-image-571 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract_elevator.jpg" width="652" height="720" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract_elevator.jpg 652w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2017/02/abstract_elevator-272x300.jpg 272w" sizes="(max-width: 652px) 100vw, 652px" />
+  <img class="wp-image-571 size-full" src="/media/2017/02/abstract_elevator.jpg" width="652" height="720" srcset="/media/2017/02/abstract_elevator.jpg 652w, /media/2017/02/abstract_elevator-272x300.jpg 272w" sizes="(max-width: 652px) 100vw, 652px" />
   
   <p class="wp-caption-text">
     I trust this makes things clear.

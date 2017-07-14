@@ -16,7 +16,7 @@ I&#8217;ve not typed a semicolon for a couple of weeks now. I don&#8217;t mean t
 A week or two with a slow and expensive 3G internet connection has proven salutary. It has been more trouble than it&#8217;s worth to check my Twitter feed or GitHub issues; StackOverflow answers take so long to load that attempting to write more than a couple of lines of code has become prohibitively time-consuming. Consequently I&#8217;ve been forced to come up with other things to think about, namely that other major part of my life: family.
 
 <div id="attachment_341" style="width: 433px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/parent.jpg" target="_blank"><img class="wp-image-341 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/parent.jpg" alt="&quot;And what do you say if a stranger tries to make you use spaces instead of tabs?&quot; &quot;NO!&quot;" width="423" height="411" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/parent.jpg 423w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/parent-300x291.jpg 300w" sizes="(max-width: 423px) 100vw, 423px" /></a>
+  <a href="/media/2015/01/parent.jpg" target="_blank"><img class="wp-image-341 size-full" src="/media/2015/01/parent.jpg" alt="&quot;And what do you say if a stranger tries to make you use spaces instead of tabs?&quot; &quot;NO!&quot;" width="423" height="411" srcset="/media/2015/01/parent.jpg 423w, /media/2015/01/parent-300x291.jpg 300w" sizes="(max-width: 423px) 100vw, 423px" /></a>
   
   <p class="wp-caption-text">
     &#8220;And what do you say if a stranger tries to make you use spaces instead of tabs?&#8221;<br /> &#8220;NO!&#8221;

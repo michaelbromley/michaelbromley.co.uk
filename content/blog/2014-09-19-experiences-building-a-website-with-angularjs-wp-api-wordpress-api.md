@@ -18,7 +18,7 @@ I&#8217;ve just completed and launched a complete re-write of this website. Sinc
 
 <!--more-->
 
-[<img class="aligncenter wp-image-229 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/mockup-both.gif" alt="new site design" width="661" height="300" />][1]
+[<img class="aligncenter wp-image-229 size-full" src="/media/2014/09/mockup-both.gif" alt="new site design" width="661" height="300" />][1]
 
 ## This is Not a Tutorial
 
@@ -27,7 +27,7 @@ Attempting a tutorial on such a general topic would require a whole series of sp
 ## Design Goals
 
 <div id="attachment_234" style="width: 522px" class="wp-caption alignright">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/old-site-desktop.gif"><img class="size-full wp-image-234" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/old-site-desktop.gif" alt="The former design" width="512" height="300" /></a>
+  <a href="/media/2014/09/old-site-desktop.gif"><img class="size-full wp-image-234" src="/media/2014/09/old-site-desktop.gif" alt="The former design" width="512" height="300" /></a>
   
   <p class="wp-caption-text">
     The former design
@@ -105,7 +105,7 @@ With Gulp, I found it so fast that I was able to put together a build system tha
 ## Readability
 
 <div id="attachment_232" style="width: 569px" class="wp-caption alignright">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/old-site.gif"><img class="wp-image-232 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/old-site.gif" alt="Typography in the previous version" width="559" height="335" /></a>
+  <a href="/media/2014/09/old-site.gif"><img class="wp-image-232 size-full" src="/media/2014/09/old-site.gif" alt="Typography in the previous version" width="559" height="335" /></a>
   
   <p class="wp-caption-text">
     Typography in the previous version
@@ -138,5 +138,5 @@ Thanks for reading, and I hope you found some useful perspectives and informatio
 
 **Update 28/03/15** &#8211; After receiving many requests for more technical implementation details and even for the source code for this site, I put together a bare-bones example project based on the above: [angular-wordpress-seed: A complete example project with AngularJS and the WordPress JSON REST API][2]
 
- [1]: http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/mockup-both.gif
+ [1]: /media/2014/09/mockup-both.gif
  [2]: http://www.michaelbromley.co.uk/blog/418/angular-wordpress-seed-a-complete-example-project-with-angularjs-and-the-wordpress-json-rest-api

@@ -14,7 +14,7 @@ tags:
 When I moved to Vienna last October, I was pleased to find a very active and vibrant development community. Just this week alone, there have been at least 19 tech meetups in the city. A <a href="http://www.meetup.com/find/tech/?allMeetups=false&radius=2&userFreeform=Vienna%2C+Austria&mcName=Vienna%2C+AT&lat=48.22&lon=16.37&sort=recommended&eventFilter=mysugg" target="_blank">quick search on meetup.com</a> reveals 46 tech-related meetup groups at the time of this writing, and there&#8217;s even a <a href="http://www.devs-austria.org/" target="_blank">website dedicated to listing all the meetups</a> each week. During my time here so far, I&#8217;ve found the local tech meetups a great way to learn and improve as a developer, as well as a way to get involved in the community and get to know some cool people in a new city.
 
 <div style="text-align: center;">
-  <img class="aligncenter size-full wp-image-143" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/crowd.jpg" alt="Original image borrowed from https://lebowskifest.com/lebowski-fest-la-w-jeff-bridges-photos/" width="500" height="500" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/crowd.jpg 500w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/crowd-150x150.jpg 150w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/crowd-300x300.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />
+  <img class="aligncenter size-full wp-image-143" src="/media/2014/06/crowd.jpg" alt="Original image borrowed from https://lebowskifest.com/lebowski-fest-la-w-jeff-bridges-photos/" width="500" height="500" srcset="/media/2014/06/crowd.jpg 500w, /media/2014/06/crowd-150x150.jpg 150w, /media/2014/06/crowd-300x300.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />
 </div>
 
 &nbsp;
@@ -42,7 +42,7 @@ Following are several factors which can influence the two factors above, for bet
 
 ## Define The Problem, Provide A Context
 
-<img class="size-full wp-image-144" style="float: right; margin: 10px;" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/partridge_speaking.jpg" alt="partridge.js talk" width="300" height="215" />
+<img class="size-full wp-image-144" style="float: right; margin: 10px;" src="/media/2014/06/partridge_speaking.jpg" alt="partridge.js talk" width="300" height="215" />
 
 I have seen several talks in which the speaker almost immediately loses half of the audience by failing to provide any context for the topic he or she is discussing.
 
@@ -60,7 +60,7 @@ If there is some doubt whether the definition of a term you use will be underst
 
 ## Correct Levels of Abstraction
 
-<img class="alignright wp-image-140 size-full" style="float: right; margin: 10px;" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/cheese.jpg" alt="Cheese - original image from Wikipedia, used under the following licence: http://creativecommons.org/licenses/by-sa/3.0/" width="300" height="265" />
+<img class="alignright wp-image-140 size-full" style="float: right; margin: 10px;" src="/media/2014/06/cheese.jpg" alt="Cheese - original image from Wikipedia, used under the following licence: http://creativecommons.org/licenses/by-sa/3.0/" width="300" height="265" />
 
 As a software developer, you may well be familiar with the concept of differing levels of abstraction. Abstraction allows us to communicate about larger and more complex concepts in a manageable way. Indeed, _whenever_ we communicate we are operating at some level of abstraction or other, since language itself is just abstract symbols representing the real things about which we speak. Therefore, in a tech talk, the speaker must realize that at different times, differing levels of abstraction are called for.
 
@@ -82,7 +82,7 @@ Think back to your school creative writing classes, where you learned that a sto
 
 ## Balance of Substance, Style & Delivery
 
-<img class="alignright size-full wp-image-146" style="float: right; margin: 10px;" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/boring.jpg" alt="Delivery is lacking here" width="371" height="291" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/boring.jpg 371w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/boring-300x235.jpg 300w" sizes="(max-width: 371px) 100vw, 371px" />
+<img class="alignright size-full wp-image-146" style="float: right; margin: 10px;" src="/media/2014/06/boring.jpg" alt="Delivery is lacking here" width="371" height="291" srcset="/media/2014/06/boring.jpg 371w, /media/2014/06/boring-300x235.jpg 300w" sizes="(max-width: 371px) 100vw, 371px" />
 
 Tech talks at their best should be not only informative, but also entertaining. If we simply wanted to be informed, it is probably more efficient to read the docs or find a screencast or something like that. When you see an experienced speaker at an international conference, they usually strike a good balance of entertainment and information.
 

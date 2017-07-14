@@ -16,7 +16,7 @@ Earlier this week I set out to convert a few of my Angular 2 apps to use Ahead-o
 So I eagerly searched out[@ngtools/webpack on npm][2] and found this:
 
 <div id="attachment_552" style="width: 814px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-552" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/ngtools-webpack.png" alt="The @ngtools/webpack npm listing at the moment" width="804" height="708" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/ngtools-webpack.png 804w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/ngtools-webpack-300x264.png 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/ngtools-webpack-768x676.png 768w" sizes="(max-width: 804px) 100vw, 804px" />
+  <img class="size-full wp-image-552" src="/media/2016/10/ngtools-webpack.png" alt="The @ngtools/webpack npm listing at the moment" width="804" height="708" srcset="/media/2016/10/ngtools-webpack.png 804w, /media/2016/10/ngtools-webpack-300x264.png 300w, /media/2016/10/ngtools-webpack-768x676.png 768w" sizes="(max-width: 804px) 100vw, 804px" />
   
   <p class="wp-caption-text">
     The @ngtools/webpack npm listing at the moment
@@ -46,7 +46,7 @@ My ng2-pagination project now includes a demo app which is set up to run in JiT 
 &nbsp;
 
 <div id="attachment_554" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre.jpg" target="_blank"><img class="wp-image-554 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre-1024x414.jpg" alt="aot-pre" width="640" height="259" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre-1024x414.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre-300x121.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre-768x311.jpg 768w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-pre.jpg 1364w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2016/10/aot-pre.jpg" target="_blank"><img class="wp-image-554 size-large" src="/media/2016/10/aot-pre-1024x414.jpg" alt="aot-pre" width="640" height="259" srcset="/media/2016/10/aot-pre-1024x414.jpg 1024w, /media/2016/10/aot-pre-300x121.jpg 300w, /media/2016/10/aot-pre-768x311.jpg 768w, /media/2016/10/aot-pre.jpg 1364w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Chrome timeline for ng2-pagination demo app, JiT mode.
@@ -56,7 +56,7 @@ My ng2-pagination project now includes a demo app which is set up to run in JiT 
 &nbsp;
 
 <div id="attachment_555" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post.jpg" target="_blank"><img class="wp-image-555 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post-1024x444.jpg" alt="aot-post" width="640" height="278" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post-1024x444.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post-300x130.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post-768x333.jpg 768w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/10/aot-post.jpg 1272w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2016/10/aot-post.jpg" target="_blank"><img class="wp-image-555 size-large" src="/media/2016/10/aot-post-1024x444.jpg" alt="aot-post" width="640" height="278" srcset="/media/2016/10/aot-post-1024x444.jpg 1024w, /media/2016/10/aot-post-300x130.jpg 300w, /media/2016/10/aot-post-768x333.jpg 768w, /media/2016/10/aot-post.jpg 1272w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Chrome timeline for ng2-pagination demo app, AoT mode.

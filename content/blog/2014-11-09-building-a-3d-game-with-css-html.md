@@ -21,7 +21,7 @@ In searching around for examples, I came across the work of Keith Clark. In part
 Here is what the result looks like (click to open the actual game in a new tab) &#8211; **<a href="http://www.michaelbromley.co.uk/experiments/css-space-shooter/" target="_blank">CSS Space Shooter</a>**:
 
 <div id="attachment_294" style="width: 1010px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/experiments/css-space-shooter/" target="_blank"><img class="wp-image-294 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/11/screenshot-02.jpg" alt="Screenshot of CSS Space Shooter" width="1000" height="676" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/11/screenshot-02.jpg 1000w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/11/screenshot-02-300x202.jpg 300w" sizes="(max-width: 1000px) 100vw, 1000px" /></a>
+  <a href="http://www.michaelbromley.co.uk/experiments/css-space-shooter/" target="_blank"><img class="wp-image-294 size-full" src="/media/2014/11/screenshot-02.jpg" alt="Screenshot of CSS Space Shooter" width="1000" height="676" srcset="/media/2014/11/screenshot-02.jpg 1000w, /media/2014/11/screenshot-02-300x202.jpg 300w" sizes="(max-width: 1000px) 100vw, 1000px" /></a>
   
   <p class="wp-caption-text">
     Screenshot of CSS Space Shooter
@@ -65,7 +65,7 @@ First &#8211; the obvious one. HTML is for making web pages. CSS is for styling
 The very points I cited as advantages quickly turn into problems as you try to do anything reasonably complex. For example, if I wanted to draw anything other than a rectangle or an ellipse with CSS, I will have to start resorting to increasingly ugly hacks. So, you know, <a href="http://stackoverflow.com/questions/6100528/why-are-there-always-triangles-used-in-a-3d-engine" target="_blank">triangles can be pretty useful in 3D graphics</a>; yet in CSS the only &#8220;triangle&#8221; you will see is in fact <a href="http://css-tricks.com/snippets/css/css-triangle/" target="_blank">the space between two massive invisible borders</a>.
 
 <div id="attachment_303" style="width: 310px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/11/css-triangle.png"><img class="size-full wp-image-303" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/11/css-triangle.png" alt="Illustration of the CSS triangle hack as given in this StackOverflow answer." width="300" height="200" /></a>
+  <a href="/media/2014/11/css-triangle.png"><img class="size-full wp-image-303" src="/media/2014/11/css-triangle.png" alt="Illustration of the CSS triangle hack as given in this StackOverflow answer." width="300" height="200" /></a>
   
   <p class="wp-caption-text">
     Illustration of the CSS triangle hack as given in <a href="http://stackoverflow.com/a/18293319/772859" target="_blank">this StackOverflow answer</a>.

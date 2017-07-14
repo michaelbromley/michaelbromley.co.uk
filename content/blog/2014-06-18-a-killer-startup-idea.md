@@ -10,7 +10,7 @@ tags:
   - great ideas
 
 ---
-[<img class="aligncenter size-full wp-image-151" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/idlecycles_infographic.jpg" alt="idlecycles_infographic" width="800" height="1030" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/idlecycles_infographic.jpg 800w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/idlecycles_infographic-233x300.jpg 233w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/idlecycles_infographic-795x1024.jpg 795w" sizes="(max-width: 800px) 100vw, 800px" />][1]
+[<img class="aligncenter size-full wp-image-151" src="/media/2014/06/idlecycles_infographic.jpg" alt="idlecycles_infographic" width="800" height="1030" srcset="/media/2014/06/idlecycles_infographic.jpg 800w, /media/2014/06/idlecycles_infographic-233x300.jpg 233w, /media/2014/06/idlecycles_infographic-795x1024.jpg 795w" sizes="(max-width: 800px) 100vw, 800px" />][1]
 
 _**It was 2am**_, and I had been awake for about 30 minutes, bouncing my 7-month-old son to sleep. After the first few minutes of blurry-eyed swaying, I&#8217;d reached that familiar zone of high alertness and lucid thinking. Unable to go back to bed until my son was soundly asleep, yet physically unable to do anything productive with all this waking time, I started thinking about how these nightly hours could be better spent.
 
@@ -33,4 +33,4 @@ My killer idea is to apply this same principle to people. Mums and dads in parti
 
 &nbsp;
 
- [1]: http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/idlecycles_infographic.jpg
+ [1]: /media/2014/06/idlecycles_infographic.jpg

@@ -28,7 +28,7 @@ I had this use case and could not find any relevant documentation or tutorials, 
 ## Goal &#8211; SimpleTimer
 
 <div id="attachment_515" style="width: 584px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-515" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/02/timer.png" alt="Our finished timer component" width="574" height="255" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/02/timer.png 574w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/02/timer-300x133.png 300w" sizes="(max-width: 574px) 100vw, 574px" />
+  <img class="size-full wp-image-515" src="/media/2016/02/timer.png" alt="Our finished timer component" width="574" height="255" srcset="/media/2016/02/timer.png 574w, /media/2016/02/timer-300x133.png 300w" sizes="(max-width: 574px) 100vw, 574px" />
   
   <p class="wp-caption-text">
     Our finished timer component

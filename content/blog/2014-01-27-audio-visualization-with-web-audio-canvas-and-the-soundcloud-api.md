@@ -14,7 +14,7 @@ tags:
   - web audio api
 
 ---
-<a href="http://www.michaelbromley.co.uk/experiments/soundcloud-vis/#muse/undisclosed-desires" target="_blank"><img class="aligncenter size-full wp-image-55" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/Untitled-4.jpg" alt="Audio visualization" width="800" height="511" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/Untitled-4.jpg 800w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/Untitled-4-300x191.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+<a href="http://www.michaelbromley.co.uk/experiments/soundcloud-vis/#muse/undisclosed-desires" target="_blank"><img class="aligncenter size-full wp-image-55" src="/media/2014/01/Untitled-4.jpg" alt="Audio visualization" width="800" height="511" srcset="/media/2014/01/Untitled-4.jpg 800w, /media/2014/01/Untitled-4-300x191.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
 
 &nbsp;
 
@@ -43,7 +43,7 @@ This would be a simple example of an audio visualization. If this volume value w
 
 Now let&#8217;s take it one step further and imagine that, rather than getting a single value representing the volume of our audio source, we could somehow get an array of values, each one representing the volume of the sound across a whole range of frequencies. So, for example, a deep bass drum sound would give us larger values towards the lower end of the range, whereas a crash cymbal would give large values mainly at the upper end of the range. You have seen such data visualized many times before, I would guess (come on &#8211; who grew up with WinAmp?):
 
-<img class="aligncenter size-medium wp-image-45" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/89s84-300x200.jpg" alt="Example of a simple visualization" width="300" height="200" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/89s84-300x200.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/01/89s84.jpg 480w" sizes="(max-width: 300px) 100vw, 300px" />
+<img class="aligncenter size-medium wp-image-45" src="/media/2014/01/89s84-300x200.jpg" alt="Example of a simple visualization" width="300" height="200" srcset="/media/2014/01/89s84-300x200.jpg 300w, /media/2014/01/89s84.jpg 480w" sizes="(max-width: 300px) 100vw, 300px" />
 
 Helpfully, the web audio API has a built-in feature that allows us to extract just such a set of data from an audio source. It is known as an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode" target="_blank">Analyser Node</a>. This interface allows us to get a real-time snapshot of the audio data. I&#8217;ll not go into depth on how to implement it, but the important thing to know is that we can use it to get an array of integers from 0 &#8211; 255, each representing the relative volume of the sound at each frequency band, from low to high. <a href="http://webaudiodemos.appspot.com/slides/mediademo/" target="_blank">Here is a nice, simple example of the kind of thing you can do with this data</a>. Note that in learning about the web audio API, you will start to run into the term &#8220;fast Fourier transform&#8221; or FFT. Feel free to read up on it, but it can seem awfully complex to the uninitiated (like me). It&#8217;s enough to know that it is a name for a method used to get frequency data from a signal such as our audio source.
 

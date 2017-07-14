@@ -21,7 +21,7 @@ For those that don&#8217;t know, ngEurope is the first European conference dedic
 The conference was pretty huge. There were about 800 attendees altogether. You can get an idea of the scale from this photo that I took at the start of the first day:
 
 <div id="attachment_270" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_09_33_06_Pro.jpg" target="_blank"><img class="wp-image-270 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_09_33_06_Pro-1024x576.jpg" alt="ngEurope was pretty huge" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_09_33_06_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_09_33_06_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141022_09_33_06_Pro.jpg" target="_blank"><img class="wp-image-270 size-large" src="/media/2014/10/WP_20141022_09_33_06_Pro-1024x576.jpg" alt="ngEurope was pretty huge" width="640" height="360" srcset="/media/2014/10/WP_20141022_09_33_06_Pro-1024x576.jpg 1024w, /media/2014/10/WP_20141022_09_33_06_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     ngEurope was pretty huge
@@ -49,7 +49,7 @@ Angular 2.0 &#8211; the topic on every Angular dev&#8217;s mind during this conf
 You might have heard from recent talks or podcasts about how Angular 2.0 is being written in a way that incorporates extensions to the JavaScript language for typing and annotations. In his talk, Miško announced this as a superset of JavaScript known as **_AtScript_**. He was at pains to stress the fact that this is not a new language, rather it is more akin to something like TypeScript wherein additions to the native JavaScript syntax are optional, and everything gets transpiled to JavaScript. In fact, as you can see in the photo below, AtScript is actually a superset of TypeScript, and uses the exact same type and class syntax as TypeScript, but then adds additional annotations and introspection capabilities.
 
 <div id="attachment_271" style="width: 733px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko1.jpg" target="_blank"><img class="wp-image-271 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko1.jpg" alt="AtScript is a superset of TypeScript" width="723" height="445" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko1.jpg 723w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko1-300x184.jpg 300w" sizes="(max-width: 723px) 100vw, 723px" /></a>
+  <a href="/media/2014/10/misko1.jpg" target="_blank"><img class="wp-image-271 size-full" src="/media/2014/10/misko1.jpg" alt="AtScript is a superset of TypeScript" width="723" height="445" srcset="/media/2014/10/misko1.jpg 723w, /media/2014/10/misko1-300x184.jpg 300w" sizes="(max-width: 723px) 100vw, 723px" /></a>
   
   <p class="wp-caption-text">
     AtScript is a superset of TypeScript
@@ -77,7 +77,7 @@ The Angular team have a lot of respect for the TypeScript project, and from the 
 Here is a slide that shows what AtScript will look like in the context of an Angular 2.0 directive:
 
 <div id="attachment_273" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko2.jpg" target="_blank"><img class="wp-image-273 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko2-1024x558.jpg" alt="An Angular 2.0 directive written in AtScript" width="640" height="348" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko2-1024x558.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko2-300x163.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/misko2.jpg 1556w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/misko2.jpg" target="_blank"><img class="wp-image-273 size-large" src="/media/2014/10/misko2-1024x558.jpg" alt="An Angular 2.0 directive written in AtScript" width="640" height="348" srcset="/media/2014/10/misko2-1024x558.jpg 1024w, /media/2014/10/misko2-300x163.jpg 300w, /media/2014/10/misko2.jpg 1556w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     An Angular 2.0 directive written in AtScript
@@ -96,7 +96,7 @@ A few other points to note about AtScript
 Igor Minar and Tobias Bosch gave a talk ostensibly about &#8220;Templating in Angular 2.0&#8221;. In fact, the talk was more akin to the <a href="http://gameofthrones.wikia.com/wiki/Red_Wedding" target="_blank">&#8220;Red Wedding&#8221; episode of Game of Thrones</a>, only this time it was all your familiar APIs from Angular 1.x that were being massacred. Here&#8217;s what I mean:
 
 <div id="attachment_274" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/redweddingangular.jpg" target="_blank"><img class="wp-image-274 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/redweddingangular-1024x768.jpg" alt="Angular 2.0 Kills off many APIs from 1.x" width="640" height="480" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/redweddingangular-1024x768.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/redweddingangular-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/redweddingangular.jpg" target="_blank"><img class="wp-image-274 size-large" src="/media/2014/10/redweddingangular-1024x768.jpg" alt="Angular 2.0 Kills off many APIs from 1.x" width="640" height="480" srcset="/media/2014/10/redweddingangular-1024x768.jpg 1024w, /media/2014/10/redweddingangular-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Angular 2.0 Kills off many APIs from 1.x
@@ -118,7 +118,7 @@ It seems there has been a fundamental re-think of Angular from the ground up. Fo
 As for how Angular actually will work without these staple APIs, you&#8217;ll have to watch the video when available as I was still reeling from the shock and didn&#8217;t take it all in. What I can show you is a slide of a how a directive will look in Angular 2.0 (as with all of 2.0 currently, I guess this is subject to change):
 
 <div id="attachment_275" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/angular2directive.jpg" target="_blank"><img class="wp-image-275 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/angular2directive-1024x618.jpg" alt="A template in Angular 2.0" width="640" height="386" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/angular2directive-1024x618.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/angular2directive-300x181.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/angular2directive.jpg 1595w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/angular2directive.jpg" target="_blank"><img class="wp-image-275 size-large" src="/media/2014/10/angular2directive-1024x618.jpg" alt="A template in Angular 2.0" width="640" height="386" srcset="/media/2014/10/angular2directive-1024x618.jpg 1024w, /media/2014/10/angular2directive-300x181.jpg 300w, /media/2014/10/angular2directive.jpg 1595w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     A template in Angular 2.0
@@ -150,7 +150,7 @@ A week or so later I found out my proposal had been accepted. A little nervous, 
 Turns out I was wrong. We were in the main hall, at the end of the first day, in front of an audience of 700 or so, and being judged by Brad Green. Gulp. Here is a photo I took from the stage right after my talk (which was my equivalent of &#8220;Hi mum!&#8221;):
 
 <div id="attachment_269" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_17_54_23_Pro1.jpg" target="_blank"><img class="wp-image-269 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_17_54_23_Pro1-1024x576.jpg" alt="The view from the stage" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_17_54_23_Pro1-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_17_54_23_Pro1-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141022_17_54_23_Pro1.jpg" target="_blank"><img class="wp-image-269 size-large" src="/media/2014/10/WP_20141022_17_54_23_Pro1-1024x576.jpg" alt="The view from the stage" width="640" height="360" srcset="/media/2014/10/WP_20141022_17_54_23_Pro1-1024x576.jpg 1024w, /media/2014/10/WP_20141022_17_54_23_Pro1-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The view from the stage
@@ -174,7 +174,7 @@ Au revoir!
 &nbsp;
 
 <div id="attachment_281" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_11_25_39_Pro.jpg" target="_blank"><img class="wp-image-281 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_11_25_39_Pro-1024x576.jpg" alt="Vojta talks achitecture" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_11_25_39_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_11_25_39_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141022_11_25_39_Pro.jpg" target="_blank"><img class="wp-image-281 size-large" src="/media/2014/10/WP_20141022_11_25_39_Pro-1024x576.jpg" alt="Vojta talks achitecture" width="640" height="360" srcset="/media/2014/10/WP_20141022_11_25_39_Pro-1024x576.jpg 1024w, /media/2014/10/WP_20141022_11_25_39_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Vojta talks achitecture
@@ -182,7 +182,7 @@ Au revoir!
 </div>
 
 <div id="attachment_282" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_12_31_23_Pro.jpg" target="_blank"><img class="wp-image-282 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_12_31_23_Pro-1024x576.jpg" alt="Time for some intriguing foodstuffs" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_12_31_23_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_12_31_23_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141022_12_31_23_Pro.jpg" target="_blank"><img class="wp-image-282 size-large" src="/media/2014/10/WP_20141022_12_31_23_Pro-1024x576.jpg" alt="Time for some intriguing foodstuffs" width="640" height="360" srcset="/media/2014/10/WP_20141022_12_31_23_Pro-1024x576.jpg 1024w, /media/2014/10/WP_20141022_12_31_23_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Time for some intriguing foodstuffs
@@ -190,7 +190,7 @@ Au revoir!
 </div>
 
 <div id="attachment_283" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_06_32_Pro.jpg" target="_blank"><img class="wp-image-283 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_06_32_Pro-1024x576.jpg" alt="The Q & A session" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_06_32_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_06_32_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141023_19_06_32_Pro.jpg" target="_blank"><img class="wp-image-283 size-large" src="/media/2014/10/WP_20141023_19_06_32_Pro-1024x576.jpg" alt="The Q & A session" width="640" height="360" srcset="/media/2014/10/WP_20141023_19_06_32_Pro-1024x576.jpg 1024w, /media/2014/10/WP_20141023_19_06_32_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The Q & A session
@@ -198,7 +198,7 @@ Au revoir!
 </div>
 
 <div id="attachment_284" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_08_46_Pro.jpg" target="_blank"><img class="wp-image-284 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_08_46_Pro-1024x576.jpg" alt="The organizers and speakers" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_08_46_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141023_19_08_46_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/10/WP_20141023_19_08_46_Pro.jpg" target="_blank"><img class="wp-image-284 size-large" src="/media/2014/10/WP_20141023_19_08_46_Pro-1024x576.jpg" alt="The organizers and speakers" width="640" height="360" srcset="/media/2014/10/WP_20141023_19_08_46_Pro-1024x576.jpg 1024w, /media/2014/10/WP_20141023_19_08_46_Pro-300x168.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The organizers and speakers
@@ -206,7 +206,7 @@ Au revoir!
 </div>
 
 <div id="attachment_280" style="width: 586px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_22_29_00_Pro.jpg" target="_blank"><img class="wp-image-280 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_22_29_00_Pro-576x1024.jpg" alt="Au revoir Paris" width="576" height="1024" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_22_29_00_Pro-576x1024.jpg 576w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_22_29_00_Pro-168x300.jpg 168w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/10/WP_20141022_22_29_00_Pro.jpg 1080w" sizes="(max-width: 576px) 100vw, 576px" /></a>
+  <a href="/media/2014/10/WP_20141022_22_29_00_Pro.jpg" target="_blank"><img class="wp-image-280 size-large" src="/media/2014/10/WP_20141022_22_29_00_Pro-576x1024.jpg" alt="Au revoir Paris" width="576" height="1024" srcset="/media/2014/10/WP_20141022_22_29_00_Pro-576x1024.jpg 576w, /media/2014/10/WP_20141022_22_29_00_Pro-168x300.jpg 168w, /media/2014/10/WP_20141022_22_29_00_Pro.jpg 1080w" sizes="(max-width: 576px) 100vw, 576px" /></a>
   
   <p class="wp-caption-text">
     Au revoir Paris

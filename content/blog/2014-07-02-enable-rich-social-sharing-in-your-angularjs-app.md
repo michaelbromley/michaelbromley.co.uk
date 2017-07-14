@@ -17,7 +17,7 @@ tags:
 If you are building a public-facing app in AngularJS, you&#8217;ll want your users to be able to share it via social media. Indeed, for certain apps, this may be the most important channel of promotion. By &#8220;rich social sharing&#8221;, I mean something like this:
 
 <div id="attachment_172" style="width: 300px" class="wp-caption aligncenter">
-  <img class="wp-image-172 size-medium" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/facebook_rich_share_1-290x300.jpg" alt="Rich sharing on Facebook" width="290" height="300" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/facebook_rich_share_1-290x300.jpg 290w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/facebook_rich_share_1.jpg 514w" sizes="(max-width: 290px) 100vw, 290px" />
+  <img class="wp-image-172 size-medium" src="/media/2014/07/facebook_rich_share_1-290x300.jpg" alt="Rich sharing on Facebook" width="290" height="300" srcset="/media/2014/07/facebook_rich_share_1-290x300.jpg 290w, /media/2014/07/facebook_rich_share_1.jpg 514w" sizes="(max-width: 290px) 100vw, 290px" />
   
   <p class="wp-caption-text">
     Rich sharing on Facebook
@@ -25,7 +25,7 @@ If you are building a public-facing app in AngularJS, you&#8217;ll want your use
 </div>
 
 <div id="attachment_173" style="width: 310px" class="wp-caption aligncenter">
-  <img class="wp-image-173 size-medium" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/twitter_rich_share_1-300x214.jpg" alt="twitter_rich_share_1" width="300" height="214" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/twitter_rich_share_1-300x214.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/twitter_rich_share_1.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" />
+  <img class="wp-image-173 size-medium" src="/media/2014/07/twitter_rich_share_1-300x214.jpg" alt="twitter_rich_share_1" width="300" height="214" srcset="/media/2014/07/twitter_rich_share_1-300x214.jpg 300w, /media/2014/07/twitter_rich_share_1.jpg 524w" sizes="(max-width: 300px) 100vw, 300px" />
   
   <p class="wp-caption-text">
     Rich sharing on Twitter
@@ -51,7 +51,7 @@ When you share a URL on one of these sites, a crawler is dispatched to that URL 
 I have built <a href="http://www.michaelbromley.co.uk/experiments/angular-social-demo/home" target="_blank">a simple AngularJS app to show off my favourite albums</a>, and I&#8217;ll use it as the example for this article. If I wanted to share one of my favourite albums with my Facebook friends, I&#8217;d paste the link into the status update box and hope to see something like this:
 
 <div id="attachment_175" style="width: 519px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-175" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_good.jpg" alt="The desired sharing experience" width="509" height="328" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_good.jpg 509w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_good-300x193.jpg 300w" sizes="(max-width: 509px) 100vw, 509px" />
+  <img class="size-full wp-image-175" src="/media/2014/07/angular_share_good.jpg" alt="The desired sharing experience" width="509" height="328" srcset="/media/2014/07/angular_share_good.jpg 509w, /media/2014/07/angular_share_good-300x193.jpg 300w" sizes="(max-width: 509px) 100vw, 509px" />
   
   <p class="wp-caption-text">
     The desired sharing experience
@@ -61,7 +61,7 @@ I have built <a href="http://www.michaelbromley.co.uk/experiments/angular-social
 However, even though I have included all the necessary Open Graph meta tags, when I paste my link, I will be disappointed to see something more like this:
 
 <div id="attachment_174" style="width: 513px" class="wp-caption aligncenter">
-  <img class="wp-image-174 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_bad.jpg" alt="The ugly reality" width="503" height="269" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_bad.jpg 503w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/angular_share_bad-300x160.jpg 300w" sizes="(max-width: 503px) 100vw, 503px" />
+  <img class="wp-image-174 size-full" src="/media/2014/07/angular_share_bad.jpg" alt="The ugly reality" width="503" height="269" srcset="/media/2014/07/angular_share_bad.jpg 503w, /media/2014/07/angular_share_bad-300x160.jpg 300w" sizes="(max-width: 503px) 100vw, 503px" />
   
   <p class="wp-caption-text">
     The ugly reality
@@ -85,7 +85,7 @@ This problem would apply to _any_ client-side JavaScript framework. I&#8217;m ju
 The solution is basically to use some kind of server-side user-agent detection to pick up whenever a social media crawler arrives, and then instead of showing it the plain AngularJS template file, redirect it to a server-generated page that will contain the desired meta tags, all filled with the correct information. This is the basic idea in visual form:
 
 <div id="attachment_176" style="width: 457px" class="wp-caption aligncenter">
-  <img class="wp-image-176 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/workflow.png" alt="Workflow of server-side rendering" width="447" height="429" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/workflow.png 447w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/07/workflow-300x287.png 300w" sizes="(max-width: 447px) 100vw, 447px" />
+  <img class="wp-image-176 size-full" src="/media/2014/07/workflow.png" alt="Workflow of server-side rendering" width="447" height="429" srcset="/media/2014/07/workflow.png 447w, /media/2014/07/workflow-300x287.png 300w" sizes="(max-width: 447px) 100vw, 447px" />
   
   <p class="wp-caption-text">
     Workflow of server-side rendering

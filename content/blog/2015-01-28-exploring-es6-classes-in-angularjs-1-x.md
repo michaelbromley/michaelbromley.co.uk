@@ -18,7 +18,7 @@ tags:
 In this post I will describe a way of using ES6 classes today in your AngularJS 1.x applications. This is intended more as an exploration than a recommendation of best practice. I&#8217;ll go into quite some detail about the reasoning and process behind my solution, but if you&#8217;d prefer to fast forward to the finale rather than enjoy the adventure, see the last section where I [bring it all together][1], or go directly to the <a href="https://github.com/michaelbromley/angular-es6" target="_blank">demo app repo</a>.
 
 <div id="attachment_377" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/ng-es6.png"><img class="wp-image-377 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/ng-es6-1024x497.png" alt="AngularJS & ES6 logos" width="640" height="311" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/ng-es6-1024x497.png 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/ng-es6-300x146.png 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/01/ng-es6.png 1200w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/01/ng-es6.png"><img class="wp-image-377 size-large" src="/media/2015/01/ng-es6-1024x497.png" alt="AngularJS & ES6 logos" width="640" height="311" srcset="/media/2015/01/ng-es6-1024x497.png 1024w, /media/2015/01/ng-es6-300x146.png 300w, /media/2015/01/ng-es6.png 1200w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     AngularJS & ES6

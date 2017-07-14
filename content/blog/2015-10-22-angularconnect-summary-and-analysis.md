@@ -17,7 +17,7 @@ tags:
 Many of you just want a quick rundown on the key points, so the first section of this post is just that &#8211; &#8220;the meat&#8221;, albeit in bite-sized pieces (think pork scratchings or jerky). After that, if you like you can read my thoughts and analysis and then just a little more on the conference experience itself. Enjoy!
 
 <div id="attachment_490" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_16_47_23_Pro.jpg" target="_blank"><img class="wp-image-490 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_16_47_23_Pro-1024x575.jpg" alt="Angular team panel" width="640" height="359" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_16_47_23_Pro-1024x575.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_16_47_23_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151021_16_47_23_Pro.jpg" target="_blank"><img class="wp-image-490 size-large" src="/media/2015/10/WP_20151021_16_47_23_Pro-1024x575.jpg" alt="Angular team panel" width="640" height="359" srcset="/media/2015/10/WP_20151021_16_47_23_Pro-1024x575.jpg 1024w, /media/2015/10/WP_20151021_16_47_23_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The Angular team panel
@@ -66,7 +66,7 @@ I&#8217;ve tried to organise this section into topics, so you can find the item 
   * **Angular Material:** The first release candidate (RC1) for Angular Material 1.0 was just released. A Material Design library is also under very early development for Angular2. [[Angular Material website][34], [Angular Material talk video][35]]
 
 <div id="attachment_491" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_16_47_49_Pro.jpg" target="_blank"><img class="wp-image-491 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_16_47_49_Pro-1024x576.jpg" alt="Track 1 room" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_16_47_49_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_16_47_49_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151020_16_47_49_Pro.jpg" target="_blank"><img class="wp-image-491 size-large" src="/media/2015/10/WP_20151020_16_47_49_Pro-1024x576.jpg" alt="Track 1 room" width="640" height="360" srcset="/media/2015/10/WP_20151020_16_47_49_Pro-1024x576.jpg 1024w, /media/2015/10/WP_20151020_16_47_49_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The conference was huge &#8211; all 1000 tickets sold out.
@@ -84,7 +84,7 @@ The tombstone-induced mass hysteria that swept (parts of) the Angular community 
 TypeScript looks set to become huge. I use it with great success in my Angular 1.x projects, and would be extremely reluctant to even consider doing a large-scale JS project without it now. With JSX support just added, I think it&#8217;ll become the go-to language for large-scale front-end development.
 
 <div id="attachment_492" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_10_42_45_Pro.jpg" target="_blank"><img class="wp-image-492 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_10_42_45_Pro-1024x576.jpg" alt="Outside the session rooms" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_10_42_45_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_10_42_45_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151021_10_42_45_Pro.jpg" target="_blank"><img class="wp-image-492 size-large" src="/media/2015/10/WP_20151021_10_42_45_Pro-1024x576.jpg" alt="Outside the session rooms" width="640" height="360" srcset="/media/2015/10/WP_20151021_10_42_45_Pro-1024x576.jpg 1024w, /media/2015/10/WP_20151021_10_42_45_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     As one attendee noted: there&#8217;s never been so many people in one place who know what &#8220;transclusion&#8221; means.
@@ -98,7 +98,7 @@ Lastly, a few words on the conference itself. I had a chance to speak with Pete 
 The venue, the food, the meta-conf features (hack space, chill-out room, games room), the swag, and _especially_ the Back to the Future party were all a blast. A big thank you is due to all of you guys, to my friends old and new, and to [Gentics][36] for sending me.
 
 <div id="attachment_493" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_07_41_24_Pro.jpg" target="_blank"><img class="wp-image-493 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_07_41_24_Pro-1024x576.jpg" alt="Sunrise over London Docklands." width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_07_41_24_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_07_41_24_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151020_07_41_24_Pro.jpg" target="_blank"><img class="wp-image-493 size-large" src="/media/2015/10/WP_20151020_07_41_24_Pro-1024x576.jpg" alt="Sunrise over London Docklands." width="640" height="360" srcset="/media/2015/10/WP_20151020_07_41_24_Pro-1024x576.jpg 1024w, /media/2015/10/WP_20151020_07_41_24_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Sunrise over London Docklands.
@@ -108,7 +108,7 @@ The venue, the food, the meta-conf features (hack space, chill-out room, games r
 &nbsp;
 
 <div id="attachment_494" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_14_56_31_Pro.jpg" target="_blank"><img class="wp-image-494 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_14_56_31_Pro-1024x576.jpg" alt="Fixing meteor issues with Uri Goldshtein" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_14_56_31_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151021_14_56_31_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151021_14_56_31_Pro.jpg" target="_blank"><img class="wp-image-494 size-large" src="/media/2015/10/WP_20151021_14_56_31_Pro-1024x576.jpg" alt="Fixing meteor issues with Uri Goldshtein" width="640" height="360" srcset="/media/2015/10/WP_20151021_14_56_31_Pro-1024x576.jpg 1024w, /media/2015/10/WP_20151021_14_56_31_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Fixing meteor issues with Uri Goldshtein
@@ -118,7 +118,7 @@ The venue, the food, the meta-conf features (hack space, chill-out room, games r
 &nbsp;
 
 <div id="attachment_496" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_20_00_01_Pro.jpg" target="_blank"><img class="wp-image-496 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_20_00_01_Pro-1024x596.jpg" alt="A magician" width="640" height="373" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_20_00_01_Pro-1024x596.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_20_00_01_Pro-300x175.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_20_00_01_Pro.jpg 1391w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151020_20_00_01_Pro.jpg" target="_blank"><img class="wp-image-496 size-large" src="/media/2015/10/WP_20151020_20_00_01_Pro-1024x596.jpg" alt="A magician" width="640" height="373" srcset="/media/2015/10/WP_20151020_20_00_01_Pro-1024x596.jpg 1024w, /media/2015/10/WP_20151020_20_00_01_Pro-300x175.jpg 300w, /media/2015/10/WP_20151020_20_00_01_Pro.jpg 1391w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     There was a roving magician who was genuinely amazing. Presumably an homage to all the &#8220;magic&#8221; going on in the Angular framework itself.
@@ -128,7 +128,7 @@ The venue, the food, the meta-conf features (hack space, chill-out room, games r
 &nbsp;
 
 <div id="attachment_497" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_19_26_21_Pro.jpg" target="_blank"><img class="wp-image-497 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_19_26_21_Pro-1024x576.jpg" alt="Dancing" width="640" height="360" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_19_26_21_Pro-1024x576.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/WP_20151020_19_26_21_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/WP_20151020_19_26_21_Pro.jpg" target="_blank"><img class="wp-image-497 size-large" src="/media/2015/10/WP_20151020_19_26_21_Pro-1024x576.jpg" alt="Dancing" width="640" height="360" srcset="/media/2015/10/WP_20151020_19_26_21_Pro-1024x576.jpg 1024w, /media/2015/10/WP_20151020_19_26_21_Pro-300x169.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     The Enchantment Under the Sea dance. Amazing.
@@ -138,7 +138,7 @@ The venue, the food, the meta-conf features (hack space, chill-out room, games r
 &nbsp;
 
 <div id="attachment_498" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/fun.jpg" target="_blank"><img class="wp-image-498 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/fun-1024x768.jpg" alt="fun" width="640" height="480" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/fun-1024x768.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/10/fun-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/10/fun.jpg" target="_blank"><img class="wp-image-498 size-large" src="/media/2015/10/fun-1024x768.jpg" alt="fun" width="640" height="480" srcset="/media/2015/10/fun-1024x768.jpg 1024w, /media/2015/10/fun-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Connecting!

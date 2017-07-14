@@ -15,7 +15,7 @@ tags:
 Next week sees the close of my first year as an active participant on GitHub and in the open source community. I&#8217;d like to mark the occasion by collecting together a few thoughts on my experience thus far.
 
 <div id="attachment_324" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/pcb.jpg" target="_blank"><img class="wp-image-324 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/pcb-1024x746.jpg" alt="A close-up of a printed circuit board" width="640" height="466" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/pcb-1024x746.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/pcb-300x218.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/pcb.jpg 1273w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/12/pcb.jpg" target="_blank"><img class="wp-image-324 size-large" src="/media/2014/12/pcb-1024x746.jpg" alt="A close-up of a printed circuit board" width="640" height="466" srcset="/media/2014/12/pcb-1024x746.jpg 1024w, /media/2014/12/pcb-300x218.jpg 300w, /media/2014/12/pcb.jpg 1273w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Whoa, look at all those branches!<br /><small>Photo credit: https://www.flickr.com/photos/hinkelstone/2435823037</small>
@@ -59,7 +59,7 @@ In writing and maintaining software that is used by people other than myself, I&
 The experience has also brought home to me (once again) how automated testing is an utter necessity when it comes to fixing bugs or adding features whilst still being confident that I&#8217;m not breaking what already works well. Indeed, my most-used module has almost exactly double the number of lines of code dedicated to the unit tests than are used for the thing itself.
 
 <div id="attachment_330" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg" target="_blank"><img class="wp-image-330 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg" alt="This is what happens when you have no regression testing" width="640" height="426" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg 640w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/12/what_happens_when_you_repair_you_car_yourself_640_34-300x200.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg" target="_blank"><img class="wp-image-330 size-full" src="/media/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg" alt="This is what happens when you have no regression testing" width="640" height="426" srcset="/media/2014/12/what_happens_when_you_repair_you_car_yourself_640_34.jpg 640w, /media/2014/12/what_happens_when_you_repair_you_car_yourself_640_34-300x200.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     This is what happens when you have no regression testing

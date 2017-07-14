@@ -17,7 +17,7 @@ tags:
 I&#8217;ve recently been listening to the excellent podcast series <a href="http://www.revolutionspodcast.com/" target="_blank"><i>Revolutions</i></a> by Mike Duncan. Right now we are in the thick of the French Revolution. It&#8217;s really riveting stuff, and offers some fascinating insights into the interplay of **groups**, **ideology**, **virtue**, **violence** and **terror**. If that list sounds familiar, perhaps you frequent Twitter or Reddit or some other online community.
 
 <div id="attachment_451" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/execution-of-robespierre-color-print.jpg"><img class="wp-image-451 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/execution-of-robespierre-color-print-1024x604.jpg" alt="Detail from a painting of the execution of Robespierre" width="640" height="378" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/execution-of-robespierre-color-print-1024x604.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/execution-of-robespierre-color-print-300x177.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/execution-of-robespierre-color-print.jpg 1050w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/07/execution-of-robespierre-color-print.jpg"><img class="wp-image-451 size-large" src="/media/2015/07/execution-of-robespierre-color-print-1024x604.jpg" alt="Detail from a painting of the execution of Robespierre" width="640" height="378" srcset="/media/2015/07/execution-of-robespierre-color-print-1024x604.jpg 1024w, /media/2015/07/execution-of-robespierre-color-print-300x177.jpg 300w, /media/2015/07/execution-of-robespierre-color-print.jpg 1050w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Detail from a painting of the execution of Robespierre
@@ -53,7 +53,7 @@ Four years prior to the official sanction of terror as a tool of the state, the 
 Long story short (and for the long story, I urge you to <a href="http://www.revolutionspodcast.com/" target="_blank">check out the podcast</a>): what started as a bold struggle for liberty in the face of age-old aristocratic power ended up devouring itself in an orgy of violence, paranoia and injustice. The Revolution at length sought to bring _freedom of speech to all_ by arresting and executing those who _spoke against it_. The radical had become the new orthodox; justice and humanity were replaced with brutal ideology.
 
 <div id="attachment_447" style="width: 637px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Robespierre_exécutant_le_bourreau.jpg"><img class="wp-image-447 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Robespierre_exécutant_le_bourreau-627x1024.jpg" alt="Robespierre guillotining the executioner after having guillotined everyone else in France" width="627" height="1024" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Robespierre_exécutant_le_bourreau-627x1024.jpg 627w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Robespierre_exécutant_le_bourreau-184x300.jpg 184w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Robespierre_exécutant_le_bourreau.jpg 981w" sizes="(max-width: 627px) 100vw, 627px" /></a>
+  <a href="/media/2015/07/Robespierre_exécutant_le_bourreau.jpg"><img class="wp-image-447 size-large" src="/media/2015/07/Robespierre_exécutant_le_bourreau-627x1024.jpg" alt="Robespierre guillotining the executioner after having guillotined everyone else in France" width="627" height="1024" srcset="/media/2015/07/Robespierre_exécutant_le_bourreau-627x1024.jpg 627w, /media/2015/07/Robespierre_exécutant_le_bourreau-184x300.jpg 184w, /media/2015/07/Robespierre_exécutant_le_bourreau.jpg 981w" sizes="(max-width: 627px) 100vw, 627px" /></a>
   
   <p class="wp-caption-text">
     Robespierre guillotines the executioner, having guillotined everyone else in France
@@ -85,7 +85,7 @@ Celebrated French thinker Voltaire, a forerunner of the Revolution, is widely qu
 >  <cite>— not Voltaire</cite>
 
 <div id="attachment_460" style="width: 461px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Voltaire-Baquoy.gif"><img class="wp-image-460 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/Voltaire-Baquoy.gif" alt="Voltaire: &quot;Don't quote me on that&quot;" width="451" height="368" /></a>
+  <a href="/media/2015/07/Voltaire-Baquoy.gif"><img class="wp-image-460 size-full" src="/media/2015/07/Voltaire-Baquoy.gif" alt="Voltaire: &quot;Don't quote me on that&quot;" width="451" height="368" /></a>
   
   <p class="wp-caption-text">
     &#8220;Don&#8217;t quote me on that&#8221; &#8211; Voltaire
@@ -113,7 +113,7 @@ Group Polarization is a term used to describe the phenomenon whereby people plac
 The Wikipedia article states that the phenomenon &#8220;has shown that after **participating in a discussion group**, members tend to advocate more extreme positions and call for riskier courses of action than individuals who did not participate in any such discussion.&#8221; And moreover, &#8220;as long as the group of individuals begins with the same fundamental opinion on the topic and **a consistent dialogue is kept going**, group polarization can be observed.&#8221; (my emphasis added)
 
 <div id="attachment_449" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/arc105_jacobins_001f.jpg"><img class="wp-image-449 size-large" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/arc105_jacobins_001f-1024x739.jpg" alt="Revolutionary circle jerk: Meeting of the Jacobin Club, 1790." width="640" height="462" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/arc105_jacobins_001f-1024x739.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/arc105_jacobins_001f-300x217.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/arc105_jacobins_001f.jpg 1400w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/07/arc105_jacobins_001f.jpg"><img class="wp-image-449 size-large" src="/media/2015/07/arc105_jacobins_001f-1024x739.jpg" alt="Revolutionary circle jerk: Meeting of the Jacobin Club, 1790." width="640" height="462" srcset="/media/2015/07/arc105_jacobins_001f-1024x739.jpg 1024w, /media/2015/07/arc105_jacobins_001f-300x217.jpg 300w, /media/2015/07/arc105_jacobins_001f.jpg 1400w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     Revolutionary circle jerk: A meeting of the Jacobin Club, 1790.
@@ -133,7 +133,7 @@ From time to time a Robespierre or a Marat will arise &#8211; an incorruptible z
 One of the constant forces of the French Revolution was that of the common people of Paris &#8211; the _sans culottes_, or roughly &#8220;those without fancy pants&#8221;. The sans culottes were rightly angry at the years of injustice and abuse at the hands of the old order, and played a decisive role throughout much of the Revolution. Their righteous anger made them easily-mobilized mob which could be pressed into violent action by a skilful demagogue.
 
 <div id="attachment_450" style="width: 387px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/1790s-parisian-sans-culotte.jpg"><img class="wp-image-450 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/1790s-parisian-sans-culotte.jpg" alt="" width="377" height="600" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/1790s-parisian-sans-culotte.jpg 377w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/1790s-parisian-sans-culotte-189x300.jpg 189w" sizes="(max-width: 377px) 100vw, 377px" /></a>
+  <a href="/media/2015/07/1790s-parisian-sans-culotte.jpg"><img class="wp-image-450 size-full" src="/media/2015/07/1790s-parisian-sans-culotte.jpg" alt="" width="377" height="600" srcset="/media/2015/07/1790s-parisian-sans-culotte.jpg 377w, /media/2015/07/1790s-parisian-sans-culotte-189x300.jpg 189w" sizes="(max-width: 377px) 100vw, 377px" /></a>
   
   <p class="wp-caption-text">
     A Parisian sans culotte. Yep &#8211; definitely not fancy.
@@ -163,7 +163,7 @@ The keynote of cruelty is difference. During the Reign of Terror, suspected roy
 The end result of group polarization is a position so far from the middle ground, so different from the rest,  that it at last becomes impossible to identify at all with outsiders.
 
 <div id="attachment_469" style="width: 820px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/hydre1.jpg"><img class="wp-image-469 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/hydre1.jpg" alt="" width="810" height="550" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/hydre1.jpg 810w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/hydre1-300x204.jpg 300w" sizes="(max-width: 810px) 100vw, 810px" /></a>
+  <a href="/media/2015/07/hydre1.jpg"><img class="wp-image-469 size-full" src="/media/2015/07/hydre1.jpg" alt="" width="810" height="550" srcset="/media/2015/07/hydre1.jpg 810w, /media/2015/07/hydre1-300x204.jpg 300w" sizes="(max-width: 810px) 100vw, 810px" /></a>
   
   <p class="wp-caption-text">
     &#8220;The Aristocratic Hydra&#8221; &#8211; and you know what we do to hydras, right?
@@ -183,7 +183,7 @@ Here&#8217;s a thought experiment: Next time you feel like lashing out at somebo
 The question remains: with our new-found instant access to the whole gamut of the mankind&#8217;s ideas, beliefs and attitudes, are we heading towards Enlightenment 2.0, or a new Republic of Virtue? Will we collectively work to promote understanding or will we, to paraphrase Voltaire, continue to &#8220;cover the Internet with carnage?&#8221;
 
 <div id="attachment_461" style="width: 650px" class="wp-caption aligncenter">
-  <a href="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/frenchrevolutionarchive11.jpg"><img class="wp-image-461 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/frenchrevolutionarchive11.jpg" alt="From the French Revolution Digital Archive" width="640" height="520" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/frenchrevolutionarchive11.jpg 640w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2015/07/frenchrevolutionarchive11-300x244.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+  <a href="/media/2015/07/frenchrevolutionarchive11.jpg"><img class="wp-image-461 size-full" src="/media/2015/07/frenchrevolutionarchive11.jpg" alt="From the French Revolution Digital Archive" width="640" height="520" srcset="/media/2015/07/frenchrevolutionarchive11.jpg 640w, /media/2015/07/frenchrevolutionarchive11-300x244.jpg 300w" sizes="(max-width: 640px) 100vw, 640px" /></a>
   
   <p class="wp-caption-text">
     From the <a href="http://frda.stanford.edu/">French Revolution Digital Archive</a>

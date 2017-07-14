@@ -17,7 +17,7 @@ tags:
 ---
 SKQW (pronounced &#8220;skew&#8221;) is a native desktop audio visualization application written in TypeScript with Angular 2, and implemented on the Electron framework.
 
-
+{{< youtube OD636XmkRQ4 >}}
 
 It is **currently in alpha** and a compiled binary only exists for Windows, but I&#8217;m hoping that &#8211; if there is interest &#8211; I can push the project forward and improve stability, features and of course bring full support to Mac OS X and Linux.
 
@@ -31,13 +31,7 @@ Let me take you back to the late 1990s. With the help of Napster and Limewire, I
 
 The popularity of Winamp spawned a whole ecosystem of skins and plugins, including some incredible visualization plugins such as those made by [Ryan Geiss][2]: Geiss and Milkdrop. Whenever I had Winamp playing (which was most of the time), I had a visualization window open pumping out some crazy, trippy visuals. Since then I&#8217;ve had a fascination with audio visualizations and creative coding in general, but up until recently, I had no clue about how to create them myself.
 
-<div id="attachment_543" style="width: 650px" class="wp-caption aligncenter">
-  <img class="size-large wp-image-543" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-1024x640.jpg" alt="Screenshot from Geiss for Winamp" width="640" height="400" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-1024x640.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-300x188.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-768x480.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" />
-  
-  <p class="wp-caption-text">
-    Screenshot from Geiss for Winamp
-  </p>
-</div>
+{{< figure src="/media/2016/08/geiss-1024x640.jpg" title="Screenshot from Geiss for Winamp" >}}
 
 ## JavaScript and Canvas
 
@@ -52,56 +46,13 @@ My early experimentation involved a node-based server which would read raw sound
 
 ## Electron and Hackable Everything
 
-I ditched the project as nonviable until earlier this year when I started to investigate [Electron][5]. For those who don&#8217;t know, Electron is a project which bundles Node.js and Chromium (the browser engine behind Chrome) into a single package, which means we can now create native desktop applications using all our familiar web technologies! Electron has seen huge adoption, with major projects such as the [SKQW (pronounced &#8220;skew&#8221;) is a native desktop audio visualization application written in TypeScript with Angular 2, and implemented on the Electron framework.
-
-
-
-It is **currently in alpha** and a compiled binary only exists for Windows, but I&#8217;m hoping that &#8211; if there is interest &#8211; I can push the project forward and improve stability, features and of course bring full support to Mac OS X and Linux.
-
-If you want to check out the project itself, [go to the SKQW website][1]. If you are not using Windows and know how to, feel free to have a go at building from source and send me feedback so I can update the docs.
-
-If you are interested in my ramblings on the background and future direction of this project, read on…
-
-## Origins
-
-Let me take you back to the late 1990s. With the help of Napster and Limewire, I was building up my illicit mp3 collection. To enjoy the sweet sounds of Fatboy Slim, Beatie Boys and Eagle Eye Cherry, I of course used Winamp. For those of you who are not old enough to remember, Winamp was basically the perfect audio player. Small, simple, extensible and (at least in the beginning) without bloat. It&#8217;s changed since then, so I&#8217;m not if it is still any good.
-
-The popularity of Winamp spawned a whole ecosystem of skins and plugins, including some incredible visualization plugins such as those made by [Ryan Geiss][2]: Geiss and Milkdrop. Whenever I had Winamp playing (which was most of the time), I had a visualization window open pumping out some crazy, trippy visuals. Since then I&#8217;ve had a fascination with audio visualizations and creative coding in general, but up until recently, I had no clue about how to create them myself.
-
-<div id="attachment_543" style="width: 650px" class="wp-caption aligncenter">
-  <img class="size-large wp-image-543" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-1024x640.jpg" alt="Screenshot from Geiss for Winamp" width="640" height="400" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-1024x640.jpg 1024w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-300x188.jpg 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/geiss-768x480.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" />
-  
-  <p class="wp-caption-text">
-    Screenshot from Geiss for Winamp
-  </p>
-</div>
-
-## JavaScript and Canvas
-
-Fast forward to 2014. I&#8217;ve learned some JavaScript and discovered the HTML Canvas element! Previously I had never got into computer graphics because of the relatively high barrier to entry (perceived, at least). But I was already familiar with JavaScript, and nothing could be simpler than writing some code and then running it in a browser. I wrote a [browser-based audio visualizer][3] which hinted at some of the creative possibilities and simplicity of writing visualizations in JavaScript.
-
-While this was a nice experiment, it was rather limited. What I really wanted to build was a general audio visualizer which
-
-  1. was not tied to any particular player or platform
-  2. would be simple to create visualizations for.
-
-My early experimentation involved a node-based server which would read raw sound card data and then stream this data over a websocket to a browser. I built a [working prototype][4] this way, but it performed poorly with severe latency and heavy CPU usage; and was not at all user friendly.
-
-## Electron and Hackable Everything
-
-I ditched the project as nonviable until earlier this year when I started to investigate [Electron][5]. For those who don&#8217;t know, Electron is a project which bundles Node.js and Chromium (the browser engine behind Chrome) into a single package, which means we can now create native desktop applications using all our familiar web technologies! Electron has seen huge adoption, with major projects such as the][6] and [VS Code][7] editors being built on top of it.
+I ditched the project as nonviable until earlier this year when I started to investigate [Electron][5]. For those who don&#8217;t know, Electron is a project which bundles Node.js and Chromium (the browser engine behind Chrome) into a single package, which means we can now create native desktop applications using all our familiar web technologies! Electron has seen huge adoption, with major projects such as the [Atom][6] and [VS Code][7] editors being built on top of it.
 
 A huge draw for the Electron platform is the fact that, since apps are built with common web technologies &#8211; HTML, CSS, JavaScript &#8211; they become very easily &#8220;hackable&#8221; or user-extensible. Examples include themes and packages for the Atom editor and extensions for Hyperterm (seriously, just check out the [Hyperterm demo video][8]).
 
 I soon realized that Electron was the way forward. I resurrected the abandoned SKQW project and rewrote it on top of Electron. The results are exactly as I had envisioned: Fast, simple and easily extensible. If you know JavaScript, you can write a SKQW visualization.
 
-<div id="attachment_544" style="width: 796px" class="wp-caption aligncenter">
-  <img class="wp-image-544 size-full" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/skqw-screenshot-01.png" alt="skqw-screenshot-01" width="786" height="593" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/skqw-screenshot-01.png 786w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/skqw-screenshot-01-300x226.png 300w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2016/08/skqw-screenshot-01-768x579.png 768w" sizes="(max-width: 786px) 100vw, 786px" />
-  
-  <p class="wp-caption-text">
-    A simple visualization running in SKQW
-  </p>
-</div>
+{{< figure src="/media/2016/08/skqw-screenshot-01.png" title="A simple visualization running in SKQW" >}}
 
 ## Future Plans
 

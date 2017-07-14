@@ -17,7 +17,7 @@ I&#8217;ve recently been having lots of fun with CSS 3D transforms and animation
 
 _Note: The 3D effect is not currently supported by Internet Explorer. _
 
-<a title="CSS 3D Butteryfly Demo" href="http://www.michaelbromley.co.uk/experiments/css-3d-butterfly/" target="_blank"><img class="aligncenter size-full wp-image-251" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/css-butterfly.jpg" alt="CSS 3D Butterfly demo" width="865" height="546" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/css-butterfly.jpg 865w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/09/css-butterfly-300x189.jpg 300w" sizes="(max-width: 865px) 100vw, 865px" /></a>
+<a title="CSS 3D Butteryfly Demo" href="http://www.michaelbromley.co.uk/experiments/css-3d-butterfly/" target="_blank"><img class="aligncenter size-full wp-image-251" src="/media/2014/09/css-butterfly.jpg" alt="CSS 3D Butterfly demo" width="865" height="546" srcset="/media/2014/09/css-butterfly.jpg 865w, /media/2014/09/css-butterfly-300x189.jpg 300w" sizes="(max-width: 865px) 100vw, 865px" /></a>
   
 <a class="pure-button" href="http://www.michaelbromley.co.uk/experiments/css-3d-butterfly/" target="_blank">View The Demo</a>
 

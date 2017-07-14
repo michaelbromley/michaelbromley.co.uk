@@ -11,7 +11,7 @@ tags:
   - php
 
 ---
-## [<img class="aligncenter size-full wp-image-133" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/ga.png" alt="ga" width="783" height="450" srcset="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/ga.png 783w, http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/ga-300x172.png 300w" sizes="(max-width: 783px) 100vw, 783px" />][1]
+## [<img class="aligncenter size-full wp-image-133" src="/media/2014/06/ga.png" alt="ga" width="783" height="450" srcset="/media/2014/06/ga.png 783w, /media/2014/06/ga-300x172.png 300w" sizes="(max-width: 783px) 100vw, 783px" />][1]
 
 ## The Problem
 
@@ -31,7 +31,7 @@ In my case, the website I was working on is built with PHP, but the principle c
 
 The key when setting up the experiment is to use the &#8220;relative&#8221; option for your variation:
 
-[<img class="aligncenter size-full wp-image-130" src="http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/gce-1.gif" alt="Setting up the variation" width="784" height="507" />][2]
+[<img class="aligncenter size-full wp-image-130" src="/media/2014/06/gce-1.gif" alt="Setting up the variation" width="784" height="507" />][2]
 
 Since this experiment will be site-wide, the original page can be anything, but probably most sensible is to use the home page. The use of a relative URL via a query string for the variation will allow the experiment to fire on any page on the site in which the CE JavaScript snippet is found.
 
@@ -113,5 +113,5 @@ No, thankfully we do not need to care about this. The Content Experiment itself 
 
 The pattern described above is currently working well for me. It is quite possible that there are alternative and better ways to do this; but if that is so, I was not able to easily locate such solutions. That being the case, I hope that others facing this problem &#8211; which must be fairly common &#8211; find some value in the ideas I&#8217;ve outlined here.
 
- [1]: http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/ga.png
- [2]: http://www.michaelbromley.co.uk/api/wp-content/uploads/2014/06/gce-1.gif
+ [1]: /media/2014/06/ga.png
+ [2]: /media/2014/06/gce-1.gif
