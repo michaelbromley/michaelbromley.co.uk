@@ -1,3 +1,10 @@
+import {toArray} from './utils';
+
+interface Suggestion {
+    title: string;
+    url: string;
+}
+
 const DISPLAY_CLASS = 'display';
 const KeyCode = {
     UP: 38,
@@ -15,7 +22,7 @@ export function initSearch() {
     if (!searchModal) {
         return;
     }
-    const input = searchModal.querySelector('input[type="text"]');
+    const input = searchModal.querySelector('input[type="text"]') as HTMLInputElement;
     const suggestionsList = getAllSuggestions();
     let closing = false;
     let suggestions = [];
@@ -24,9 +31,9 @@ export function initSearch() {
 
     renderSuggestions([]);
 
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.keyCode === KeyCode.S || e.keyCode === KeyCode.FORWARDSLASH) {
-            if (e.target.tagName !== 'INPUT') {
+            if ((e.target as HTMLElement).tagName !== 'INPUT') {
                 e.preventDefault();
                 openModal();
             }
@@ -34,12 +41,12 @@ export function initSearch() {
     })
     searchButton.addEventListener('click', openModal);
     input.addEventListener('blur', closeModal);
-    input.addEventListener('input', e => {
-        suggestions = filterSuggestions(e.target.value, suggestionsList);
+    input.addEventListener('input', (e: KeyboardEvent) => {
+        suggestions = filterSuggestions((e.target as HTMLInputElement).value, suggestionsList);
         selectedIndex = -1;
         renderSuggestions(suggestions, selectedIndex);
     });
-    input.addEventListener('keydown', e => {
+    input.addEventListener('keydown', (e: KeyboardEvent) => {
         switch (e.keyCode) {
             case KeyCode.UP:
                 selectedIndex = selectedIndex === 0 ? suggestions.length - 1 : selectedIndex - 1;
@@ -50,7 +57,7 @@ export function initSearch() {
                 e.preventDefault();
                 break;
             case KeyCode.ENTER:
-                const selected = document.querySelector('.search-suggestions li.selected a');
+                const selected = document.querySelector('.search-suggestions li.selected a') as HTMLAnchorElement;
                 if (selected) {
                     selected.click();
                     reset();
@@ -88,12 +95,10 @@ export function initSearch() {
 
 /**
  * Returns a list of all suggestions.
- *
- * @returns {Array.<{title: string, url: string}>}
  */
-function getAllSuggestions() {
-    return Array.from(document.querySelectorAll('.suggestion'))
-        .map(el => {
+function getAllSuggestions(): Suggestion[] {
+    return toArray(document.querySelectorAll('.suggestion'))
+        .map((el: HTMLElement) => {
             return {
                 title: el.textContent,
                 url: el.dataset['url']
@@ -120,11 +125,9 @@ function filterSuggestions(query, allSuggestions) {
 }
 
 /**
- *
- * @param {string} query
- * @param {string[]} suggestions
+ * Renders the suggestions as a list.
  */
-function renderSuggestions(suggestions, selectedIndex) {
+function renderSuggestions(suggestions: Suggestion[], selectedIndex?: number): void {
     const list = document.querySelector('.search-suggestions > ul');
     removeAllChildren(list);
     suggestions
@@ -139,9 +142,8 @@ function renderSuggestions(suggestions, selectedIndex) {
 
 /**
  * Removes all children from a node
- * @param {HTMLElement} node
  */
-function removeAllChildren(node) {
+function removeAllChildren(node: Element): void {
     while(node.hasChildNodes()) {
         node.removeChild(node.lastChild);
     }
@@ -149,12 +151,8 @@ function removeAllChildren(node) {
 
 /**
  * Returns an li element with the given text as innerText, and a link to the suggestion url.
- *
- * @param {string} suggestion.title
- * @param {string} suggestion.url
- * @returns {HTMLLIElement}
  */
-function createListItem(suggestion) {
+function createListItem(suggestion: Suggestion): HTMLLIElement {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = suggestion.url;

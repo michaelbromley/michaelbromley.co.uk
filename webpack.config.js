@@ -5,10 +5,13 @@ const themeSrc = './themes/terminal/src';
 const themeDest = './themes/terminal/static';
 
 module.exports = {
-    entry: path.join(__dirname, themeSrc, 'scripts/main.js'),
+    entry: path.join(__dirname, themeSrc, 'scripts/main.ts'),
     output: {
         path: path.resolve(__dirname, themeDest, 'js'),
         filename: 'script.js'
+    },
+    resolve: {
+        extensions: ['.js', '.ts']
     },
     module: {
         rules: [

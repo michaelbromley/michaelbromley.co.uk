@@ -1,11 +1,13 @@
+import {toArray} from './utils';
+
 const DELAY = 30;
 
 export function initTypeEffect() {
-    const headers = Array.from(document.querySelectorAll('[data-type-effect]'));
+    const headers = toArray(document.querySelectorAll('[data-type-effect]'));
     headers.forEach(typeEffect)
 }
 
-function typeEffect(el) {
+function typeEffect(el: HTMLElement) {
     const chars = el.textContent.split('');
     const { height, width } = el.getBoundingClientRect();
     el.textContent = '';
@@ -29,13 +31,13 @@ function typeEffect(el) {
     typeNextChar();
 }
 
-function addTypeTarget(el) {
+function addTypeTarget(el: HTMLElement) {
     const typeTarget = document.createElement('span');
     el.appendChild(typeTarget);
     return typeTarget;
 }
 
-function addCaret(el) {
+function addCaret(el: HTMLElement) {
     let height = parseInt(window.getComputedStyle(el)['font-size']);
     height -= 4;
     const backgroundColor = window.getComputedStyle(el)['color'];
@@ -51,7 +53,7 @@ function addCaret(el) {
     return caret;
 }
 
-function removeCaret(caret) {
+function removeCaret(caret: HTMLElement) {
     if (caret) {
         setTimeout(() => caret.parentNode.removeChild(caret), 2000);
     }
