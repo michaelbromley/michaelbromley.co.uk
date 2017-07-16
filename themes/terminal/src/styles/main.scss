@@ -5,6 +5,7 @@
 @import "search";
 @import "icons";
 @import "type-effect";
+@import "pagination";
 
 body {
   background: $colour-main-view-bg;
@@ -21,12 +22,17 @@ body {
 
 #main {
   max-width: 100%;
+  @media (max-width: $screen-medium-below) {
+    margin-left: 50px;
+    margin-right: 5px;
+  }
   @media (min-width: $screen-medium) {
     flex-grow: 1;
     max-width: calc(100vw - 300px);
+    margin-right: 2vw;
   }
-  @media (max-width: $screen-medium-below) {
-    margin-left: 37px;
+  @media (min-width: $screen-large) {
+    margin-right: 8vw;
   }
   animation: fadeIn 0.6s;
 }

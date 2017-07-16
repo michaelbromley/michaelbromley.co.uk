@@ -1,5 +1,10 @@
+import {toArray} from './utils';
+
 let open = false;
 
+/**
+ * Code for the expandable version of the left nav menu when site is viewed on small screens.
+ */
 export function initMenu() {
     const container = document.querySelector('#nav-pane');
     const toggleButton = document.querySelector('.mobile-menu-button');
@@ -7,6 +12,7 @@ export function initMenu() {
     const closeButton = document.querySelector('.close-button');
 
     applyClasses();
+    selectBlogItemIfBlogPost();
 
     toggleButton.addEventListener('click', () => {
         open = !open;
@@ -23,6 +29,23 @@ export function initMenu() {
             closeButton.classList.add('hidden');
             container.classList.remove('open');
         }
+    }
+}
+
+/**
+ * AFAIK Hugo cannot automatically select a menu item for nested taxonimies. So it can auto-highlight
+ * the "blog" item when on the blog list page, but cannot also highlight it when drilling down into
+ * a blog entry itself. This function rectifies that with JavaScript.
+ */
+function selectBlogItemIfBlogPost() {
+    const blogEntryUrlRe = /^\/blog\/\d+\//;
+    const containsBlogText = el => -1 < el.textContent.toLowerCase().indexOf('blog');
+    const addSelectedClass = el => el.classList.add('selected');
+
+    if (blogEntryUrlRe.test(location.pathname)) {
+        toArray(document.querySelectorAll('.main-nav-link'))
+            .filter(containsBlogText)
+            .forEach(addSelectedClass);
     }
 }
 

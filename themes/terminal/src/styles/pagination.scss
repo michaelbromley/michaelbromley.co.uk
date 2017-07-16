@@ -1,0 +1,24 @@
+@import "variables";
+
+#page-nav {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+
+  > * {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  > .current {
+    border-bottom: 2px solid $colour-a-link;
+  }
+
+  @media screen and (max-width: $screen-medium-below) {
+    font-size: 1.2em;
+    > * {
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+}
