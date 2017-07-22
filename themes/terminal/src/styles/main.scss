@@ -1,11 +1,13 @@
 @import "variables";
 
+@import "home";
 @import "menu";
 @import "blog";
 @import "search";
 @import "icons";
 @import "type-effect";
 @import "pagination";
+@import "fade-in";
 
 body {
   background: $colour-main-view-bg;

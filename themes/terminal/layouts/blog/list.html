@@ -3,7 +3,6 @@
 <div id="container">
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
-        <section class="archives-wrap">
             <div class="title-wrap">
                 <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
                 {{ partial "blog-search.html" .Pages }}
@@ -13,7 +12,6 @@
                 {{ partial "blog-list-item.html" . }}
                 {{ end }}
             </ul>
-        </section>
         {{ partial "pagination.html" . }}
     </section>
 </div>

@@ -1,0 +1,58 @@
+@import "variables";
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.jumbotron {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.avatar-circle {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.me {
+  max-width: 100px;
+}
+
+.lead {
+  color: $colour-text-deemphasize;
+  margin-bottom: 40px;
+}
+
+.featured {
+  h3 {
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    list-style-type: none;
+    font-family: $console-font;
+    margin-bottom: 3px;
+    font-size: 18px;
+    &:before {
+      content: '›';
+      position: absolute;
+      top: -2px;
+      font-size: 22px;
+    }
+    a {
+      padding-left: 20px;
+    }
+  }
+}

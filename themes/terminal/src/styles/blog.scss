@@ -42,7 +42,8 @@ ul.post-list {
     font-size: 1.5em;
   }
   color: #999;
-  margin-top: 3px;
+  display: block;
+  margin-top: 4px;
 }
 
 ul.tags {
@@ -90,6 +91,9 @@ ul.tags {
 .article-entry {
   max-width: 800px;
   margin: auto;
+  padding-bottom: 50px;
+  margin-bottom: 150px;
+  border-bottom: 1px dotted $colour-text-deemphasize;
 
   p {
     color: $colour-text-content;

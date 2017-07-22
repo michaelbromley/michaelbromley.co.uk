@@ -19,6 +19,10 @@ $terminal-text-color: #aaa;
   text-align: right;
   font-family: $console-font;
   @include search-font-size();
+  height: 102px;
+  @media screen and (min-width: $screen-medium){
+    height: 116px;
+  }
   button {
     cursor: pointer;
     background: none;

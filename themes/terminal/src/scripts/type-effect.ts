@@ -1,13 +1,12 @@
 import {toArray} from './utils';
 
-const DELAY = 30;
-
 export function initTypeEffect() {
     const headers = toArray(document.querySelectorAll('[data-type-effect]'));
     headers.forEach(typeEffect)
 }
 
 function typeEffect(el: HTMLElement) {
+    const DELAY = el.dataset['typeEffect'] ? parseInt(el.dataset['typeEffect']) : 30;
     const chars = el.textContent.split('');
     const { height, width } = el.getBoundingClientRect();
     el.textContent = '';
