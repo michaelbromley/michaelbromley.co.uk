@@ -1,0 +1,40 @@
+@import "variables";
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.project-list-entry {
+  width: 45%;
+  min-width: 380px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #cbcbcb;
+  box-shadow: $box-shadow;
+}
+
+.project-summary {
+  text-align: left;
+  font-size: 14px;
+}
+
+.links {
+  text-align: right;
+
+  a.link-button {
+    padding: 3px 8px;
+    background-color: lighten($colour-a-link, 5%);
+    color: white;
+    border-radius: 2px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: $colour-a-hover;
+    }
+  }
+}

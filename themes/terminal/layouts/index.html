@@ -5,21 +5,41 @@
     <section id="main" class="outer">
         <script src="assets/chromata.min.js"></script>
         <script>
-            setTimeout(function() {
+            window.addEventListener('load', function() {
                 var img = document.querySelector('.me');
-                var chromata = new Chromata(img, {
-                    colorMode: 'greyscale',
-                    key: 'high',
-                    lineMode: 'square',
-                    lineWidth: 1,
-                    origin: ['20% 20%', '20% 99%', '69% 99%', '51% 43%', '73% 45%', '60% 60%'],
-                    pathFinderCount: 18,
-                    speed: 2,
-                    turningAngle: Math.PI/0.5,
-                    outputSize: 'container'
-                });
-                chromata.start();
-            }, 10);
+
+                function rand(arr) {
+                    return arr[Math.floor(Math.random()*arr.length)];
+                }
+
+                function initChromata(randomize) {
+                    var colorMode = randomize ? rand(['color', 'greyscale']) : 'greyscale';
+                    var key = randomize ? rand(['low', 'high']) : 'high';
+                    var line = randomize ? rand(['smooth', 'square', 'point']) : 'square';
+                    var demonimator = randomize ? rand([1.25, 0.5, 1, 0.2, 1.5, 4, 2]) : 0.5;
+                    var speed = randomize ? rand([1, 2, 3, 4, 5, 6, 7]) : 2;
+                    var chromata = new Chromata(img, {
+                        colorMode: colorMode,
+                        key: key,
+                        lineMode: line,
+                        lineWidth: 1,
+                        origin: ['20% 20%', '20% 99%', '69% 99%', '51% 43%', '73% 45%', '60% 60%'],
+                        pathFinderCount: 18,
+                        speed: speed,
+                        turningAngle: Math.PI / demonimator,
+                        outputSize: 'container'
+                    });
+                    chromata.start();
+                }
+
+                document.querySelector('.avatar-circle').addEventListener('click', function() {
+                    initChromata(true);
+                })
+
+                setTimeout(function () {
+                    initChromata(false);
+                }, 10);
+            });
         </script>
         <div class="container">
             <div class="jumbotron">
@@ -32,17 +52,17 @@
             <div class="featured" data-fade-in="200">
                 <h3>Featured Articles</h3>
                 {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-                    {{ if eq "categories" $taxonomyname }}
-                        {{ range $key, $value := $taxonomy }}
-                            {{ if eq $key "featured" }}
-                            <ul>
-                                {{ range $value.Pages }}
-                                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                                {{ end }}
-                            </ul>
-                            {{ end }}
-                        {{ end }}
+                {{ if eq "categories" $taxonomyname }}
+                {{ range $key, $value := $taxonomy }}
+                {{ if eq $key "featured" }}
+                <ul>
+                    {{ range $value.Pages }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                     {{ end }}
+                </ul>
+                {{ end }}
+                {{ end }}
+                {{ end }}
                 {{ end }}
             </div>
         </div>

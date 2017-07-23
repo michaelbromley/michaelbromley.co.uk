@@ -5,13 +5,13 @@
     <section id="main" class="outer">
             <div class="title-wrap">
                 <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
-                {{ partial "blog-search.html" .Pages }}
             </div>
-            <ul class="post-list">
-                {{ range .Paginator.Pages }}
-                {{ partial "blog-list-item.html" . }}
+            <p>{{ .Content }}</p>
+            <div class="project-list">
+                {{ range .Pages }}
+                {{ partial "projects-list-item.html" . }}
                 {{ end }}
-            </ul>
+            </div>
         {{ partial "pagination.html" . }}
     </section>
 </div>
