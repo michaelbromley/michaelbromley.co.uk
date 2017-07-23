@@ -27,10 +27,17 @@
 
 .lead {
   color: $colour-text-deemphasize;
+  font-family: $console-font;
   margin-bottom: 40px;
 }
 
 .featured {
+  display: inline-block;
+  text-align: left;
+
+  @media screen and (min-width: $screen-medium) {
+    padding-left: 50px;
+  }
   h3 {
     font-size: 20px;
     padding-left: 20px;

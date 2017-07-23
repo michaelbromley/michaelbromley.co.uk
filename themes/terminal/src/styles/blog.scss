@@ -41,7 +41,7 @@ ul.post-list {
   @media (min-width: $screen-medium) {
     font-size: 1.5em;
   }
-  color: #999;
+  color: #777;
   display: block;
   margin-top: 4px;
 }
@@ -53,16 +53,15 @@ ul.tags {
   li:nth-child(1) {
     margin-left: 0;
     padding-left: 0;
+    font-size: 12px;
   }
   li {
     font-family: $copy-font;
     color: #777;
     font-size: 14px;
     display: inline-block;
-    line-height: 18px;
     padding: 0 3px;
-    margin: 0 3px;
-    text-decoration: underline;
+    margin: 0 1px;
   }
   .tag-icon {
     text-decoration: none;

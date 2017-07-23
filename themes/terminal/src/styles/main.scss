@@ -21,6 +21,7 @@ body {
 
 #container {
   display: flex;
+  margin-bottom: 50px;
 }
 
 #main {
@@ -44,6 +45,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $console-font;
   font-weight: normal;
+  letter-spacing: -1px;
 }
 
 

@@ -6,9 +6,7 @@
         </header>
         {{ end }}
         <div class="article-meta">
-            <a href="{{ .RelPermalink }}" class="article-date">
-                <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished" class="date">{{ .Date.Format "01 Jan 2006" }}</time>
-            </a>
+            <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished" class="date">{{ .Date.Format "01 Jan 2006" }}</time>
             {{ partial "tag-list.html" .Params.tags }}
         </div>
         <div class="article-entry" itemprop="articleBody">

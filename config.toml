@@ -26,13 +26,3 @@ theme = "terminal"
   name       = "Projects"
   url        = "/project/"
   weight     = 3
-  [[menu.main]]
-  identifier = "about"
-  name       = "About"
-  url        = "/about/"
-  weight     = 4
-  [[menu.main]]
-  identifier = "contact"
-  name       = "Contact"
-  url        = "/contact/"
-  weight     = 5

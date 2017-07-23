@@ -72,18 +72,29 @@ $transition-time: 0.4s;
       line-height: 1.2em;
       display: block;
       padding: 0 5px;
+      letter-spacing: -2px;
       @media (min-width: $screen-medium) {
         padding: 0 30px;
       }
       box-sizing: border-box;
       a {
+        &:link, &:visited {
+          color: transparentize($colour-a-link, 0.3);
+        }
+        &:hover, &:active {
+          color: $colour-a-hover;
+        }
         &:before {
           transition: color 0.3s;
           color: #999;
           content: '#';
+          margin-right: 2px;
         }
         &.selected:before {
           color: #333;
+        }
+        &.selected {
+          color: $colour-a-link;
         }
       }
     }
@@ -96,11 +107,31 @@ $transition-time: 0.4s;
 
 .social-links {
   margin-left: 30px;
-  small {
-    color: $colour-text-deemphasize;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  svg {
+    fill: #aaa;
+    transition: fill 0.2s;
+    &:hover {
+      fill: $colour-a-hover;
+    }
+  }
+  a {
+    transition: color 0.2s;
+    &:link, &:visited {
+      color: #aaa;
+    },
+    &:hover, &:active {
+      color: $colour-a-hover;
+    }
+  }
+  i {
+    font-size: 24px;
   }
   @media (max-width: $screen-medium-below) {
     margin-left: 0;
     text-align: center;
   }
+  margin-bottom: 20px;
 }
