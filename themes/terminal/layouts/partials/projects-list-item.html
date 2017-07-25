@@ -1,6 +1,6 @@
 <div class="project-list-entry">
+    <h3 class="title">{{ .Title }}</h3>
     <img src="{{ .Params.image }}">
-    <h3>{{ .Title }}</h3>
     <div class="project-summary">{{ .Content }}</div>
     <div class="links">
         {{ range $label, $url := .Params.links }}

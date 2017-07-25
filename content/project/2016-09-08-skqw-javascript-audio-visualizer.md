@@ -5,17 +5,10 @@ type: project
 date: 2016-09-08T12:08:31+00:00
 url: /547/skqw-javascript-audio-visualizer
 categories:
-  - featured
   - project
-
+image: /media/2016/08/skqw-screenshot-01.png
+links: 
+  Website: http://michaelbromley.github.io/skqw/
+  GitHub: https://github.com/michaelbromley/skqw
 ---
-SKQW is an cross-platform audio visualizer built with Electron and Angular 2.
-
-<ul class="project-links">
-  <li>
-    <a class="pure-button" href="http://michaelbromley.github.io/skqw/" target="_blank">Website</a>
-  </li>
-  <li>
-    <a class="pure-button" href="https://github.com/michaelbromley/skqw" target="_blank">GitHub</a>
-  </li>
-</ul>
+SKQW is an cross-platform audio visualizer built with Electron and Angular. Read more about it [here](https://www.michaelbromley.co.uk/blog/541/an-early-look-at-skqw-javascript-audio-visualizer).
