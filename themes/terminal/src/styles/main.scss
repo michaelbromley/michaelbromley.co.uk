@@ -19,6 +19,14 @@ body {
   }
 }
 
+::selection {
+    background: transparentize(lighten($colour-a-link, 20%), 0.5);
+}
+
+::-moz-selection {
+    background: transparentize(lighten($colour-a-link, 20%), 0.5);
+}
+
 #container {
   display: flex;
   margin-bottom: 50px;

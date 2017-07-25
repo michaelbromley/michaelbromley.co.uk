@@ -143,3 +143,18 @@ figure {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.heading-anchor {
+  &:link, &:visited {
+    color: #111;
+  }
+  &:hover:after, &.selected:after {
+    content: '#';
+    margin-left: 7px;
+    display: inline-block;
+    color: $colour-a-link;
+  }
+  &.selected {
+    background-color: transparentize($colour-a-link, 0.8);
+  }
+}

@@ -1,3 +1,5 @@
+import {initAnchorLinks} from './anchor-links';
+
 declare const require: (path: string) => any;
 
 require('prismjs/themes/prism.css');
@@ -14,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     initTypeEffect();
     initFadeIn();
+    initAnchorLinks();
 });
