@@ -14,7 +14,7 @@ tags:
 ---
 This is a review of the book _Responsive Web Design with AngularJS_ by Sandeep Kumar Patel. Disclosure: I was asked to review this book by the publisher, Packt, and they provided me with a copy of the ebook free of charge. The book can be found for purchase [here](https://www.packtpub.com/web-development/responsive-web-design-angularjs).
 
-{{< figure src="/media/2015/02/cover-240x300.jpg" title="Responsive Web Design with AngularJS" >}}
+{{< figure src="/media/2015/02/cover.jpg" title="Responsive Web Design with AngularJS" >}}
 
 ### First Impressions
 

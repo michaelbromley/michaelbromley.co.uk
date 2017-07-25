@@ -78,7 +78,7 @@ Think back to your school creative writing classes, where you learned that a sto
 
 ## Balance of Substance, Style & Delivery
 
-<img class="alignright size-full wp-image-146" style="float: right; margin: 10px;" src="/media/2014/06/boring.jpg" alt="Delivery is lacking here" width="371" height="291" srcset="/media/2014/06/boring.jpg 371w, /media/2014/06/boring-300x235.jpg 300w" sizes="(max-width: 371px) 100vw, 371px" />
+<img class="alignright size-full wp-image-146" style="float: right; margin: 10px;" src="/media/2014/06/boring.jpg" alt="Delivery is lacking here" width="371" height="291" />
 
 Tech talks at their best should be not only informative, but also entertaining. If we simply wanted to be informed, it is probably more efficient to read the docs or find a screencast or something like that. When you see an experienced speaker at an international conference, they usually strike a good balance of entertainment and information.
 

@@ -17,9 +17,9 @@ tags:
 ---
 If you are building a public-facing app in AngularJS, you'll want your users to be able to share it via social media. Indeed, for certain apps, this may be the most important channel of promotion. By "rich social sharing", I mean something like this:
 
-{{< figure src="/media/2014/07/facebook_rich_share_1-290x300.jpg" title="Rich sharing on Facebook" >}}
+{{< figure src="/media/2014/07/facebook_rich_share_1.jpg" title="Rich sharing on Facebook" >}}
 
-{{< figure src="/media/2014/07/twitter_rich_share_1-300x214.jpg" title="Rich sharing on Twitter" >}}
+{{< figure src="/media/2014/07/twitter_rich_share_1.jpg" title="Rich sharing on Twitter" >}}
 
 As you can see, certain sites allow Facebook, Twitter et al. to fetch more than just the standard page title and image. This is achieved by using special meta tags in the HTML head. For example, Facebook and a bunch of other sites like Pinterest and Google Plus can read the [Open Graph protocol](http://ogp.me/), which looks something like this:
 
