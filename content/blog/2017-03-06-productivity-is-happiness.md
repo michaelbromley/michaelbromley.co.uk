@@ -13,7 +13,7 @@ tags:
 ---
 When we talk about productivity, it is usually in the context of our professional lives. Is this fair? Does productivity begin and end at the office door?
 
-I&#8217;d like to address this question indirectly, by backing up and taking a high-level look at the subject. No tips or &#8220;weird tricks&#8221; here; rather some brief thoughts on the scope of productivity.
+I'd like to address this question indirectly, by backing up and taking a high-level look at the subject. No tips or "weird tricks" here; rather some brief thoughts on the scope of productivity.
 
 Productivity is happiness.
 
@@ -25,17 +25,17 @@ It can be a little larger. Like hitting a quarterly or yearly target.
 
 It can span years. Like bringing up children from infancy to adulthood.
 
-It can consume the best part of a lifetime. Like Andrew Wiles searching for the solution to Fermat&#8217;s Last Theorem, or The Brain attempting to take over the world.
+It can consume the best part of a lifetime. Like Andrew Wiles searching for the solution to Fermat's Last Theorem, or The Brain attempting to take over the world.
 
 A goal can be deadly serious, frivolous, just, mundane, good or even evil (have you seen how much laughing Skeletor does?). The nature of the goal is secondary; the important thing is that you decide on something to do, and then decide to do it.
 
-Interestingly, the attainment of the goal is not where happiness lies. Ask any gamer: completion of a game is the point where boredom begins anew. Likewise, the successful entrepreneur rarely sits back and simply &#8220;enjoys life&#8221; after his or her company is acquired. The attainment of a goal requires new goals to be created, lest one descend into unhappiness.
+Interestingly, the attainment of the goal is not where happiness lies. Ask any gamer: completion of a game is the point where boredom begins anew. Likewise, the successful entrepreneur rarely sits back and simply "enjoys life" after his or her company is acquired. The attainment of a goal requires new goals to be created, lest one descend into unhappiness.
 
 Productivity is the measure of ones forward progress towards a given goal. Progress towards a goal results in happiness. Thus productivity is a proxy for happiness.
 
 Without forward progress, any sense of happiness is quickly supplanted by boredom or worse. Without a goal, there is no possibility of progress in the first place. Those who have no goals, or who do not make progress towards their goals, are rarely happy.
 
-To return to the question posed at the start: I would argue that such things as the correct work / life balance are dictated by the importance of one&#8217;s goals in each given area. If cultivating a close family environment or having a varied social life are not important goals for you, then by all means spend the weekends in the office. The resulting level of happiness will indicate whether you have correctly assessed the situation.
+To return to the question posed at the start: I would argue that such things as the correct work / life balance are dictated by the importance of one's goals in each given area. If cultivating a close family environment or having a varied social life are not important goals for you, then by all means spend the weekends in the office. The resulting level of happiness will indicate whether you have correctly assessed the situation.
 
 This is all a terrible simplification, of course. But I find it a useful way to make sense of the chaos of life, and maybe you will too.
 

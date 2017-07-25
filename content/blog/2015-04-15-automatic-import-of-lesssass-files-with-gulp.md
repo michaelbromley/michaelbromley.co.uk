@@ -14,9 +14,9 @@ tags:
   - Less
 
 ---
-This post describes a way to use <a href="http://gulpjs.com/" target="_blank">Gulp</a> to automatically `@import` <a href="http://lesscss.org/" target="_blank">Less</a> files from anywhere in your project&#8217;s folder structure. It is useful if you want to define self-contained components that put all HTML, JavaScript and LESS files together, yet you don&#8217;t want to maintain a list of imports in your main LESS file.
+This post describes a way to use [Gulp](http://gulpjs.com/) to automatically `@import` [Less](http://lesscss.org/) files from anywhere in your project's folder structure. It is useful if you want to define self-contained components that put all HTML, JavaScript and LESS files together, yet you don't want to maintain a list of imports in your main LESS file.
 
-The following method should also apply if you prefer Sass, since it uses the same kind of imports system. I&#8217;ve not tested this though, so if anyone runs into any problems with applying this to Sass files, do let me know.
+The following method should also apply if you prefer Sass, since it uses the same kind of imports system. I've not tested this though, so if anyone runs into any problems with applying this to Sass files, do let me know.
 
 ## The Problem
 
@@ -57,13 +57,13 @@ However, when the number of components in my app grows, this method becomes a pa
 // etc.
 ```
 
-The <a href="https://github.com/plus3network/gulp-less" target="_blank">gulp-less</a> plugin I use in my build does offer a &#8220;paths&#8221; option which allows me to specify where to look for imports, but that just shifts the housekeeping from the `main.less` into `gulpfile.js`.
+The [gulp-less](https://github.com/plus3network/gulp-less) plugin I use in my build does offer a "paths" option which allows me to specify where to look for imports, but that just shifts the housekeeping from the `main.less` into `gulpfile.js`.
 
 I wanted some way to use my Gulp build to scan the folder tree and automatically import all Less files for me. I searched around for a solution to this and could not find anything satisfactory, so I figured out the following, and note it here so that it may be of help to others with a similar aim.
 
 ## A Solution with gulp-inject
 
-<a href="https://github.com/klei/gulp-inject" target="_blank">Gulp-inject</a> is a plugin commonly used to auto-inject css and JavaScript files into an HTML document. However, it can also be used to inject anything into anything else. This means we can use it to inject `@import` statements into our `main.less`:
+[Gulp-inject](https://github.com/klei/gulp-inject) is a plugin commonly used to auto-inject css and JavaScript files into an HTML document. However, it can also be used to inject anything into anything else. This means we can use it to inject `@import` statements into our `main.less`:
 
 ```css
 // main.less
@@ -99,21 +99,21 @@ gulp.task('less', function() {
 });
 ```
 
-To explain what is happening above: We add some custom &#8220;inject&#8221; annotations to the top of our `main.less` file, which match up to the `starttag` and `endtag` definitions in the gulp task. The gulp task then pipes the `main.less` file to the gulp-inject plugin, which scans the entire `src/` folder recursively for any .less files, and injects any it finds, complete with correct path, into the `main.less` file. We then pipe the modified `main.less` to the gulp-less plugin, which is then able to pull in all the imported Less files and build our CSS file.
+To explain what is happening above: We add some custom "inject" annotations to the top of our `main.less` file, which match up to the `starttag` and `endtag` definitions in the gulp task. The gulp task then pipes the `main.less` file to the gulp-inject plugin, which scans the entire `src/` folder recursively for any .less files, and injects any it finds, complete with correct path, into the `main.less` file. We then pipe the modified `main.less` to the gulp-less plugin, which is then able to pull in all the imported Less files and build our CSS file.
 
 ## Summary
 
-This is a pretty simple technique, and I&#8217;m sure you can think of ways to extend the basic concept to fit your needs. The basic idea boils down to:
+This is a pretty simple technique, and I'm sure you can think of ways to extend the basic concept to fit your needs. The basic idea boils down to:
 
-  1. Less/Sass files are located arbitrarily throughout the project&#8217;s source folder tree.
+  1. Less/Sass files are located arbitrarily throughout the project's source folder tree.
   2. Gulp used as a build system
   3. Gulp-inject to automatically automatically handle the Less/Sass @imports.
 
-There is scope to make it more sophisticated (to support, for example, the various <a href="http://lesscss.org/features/#import-options" target="_blank">Less import options</a>) but for my current work it serves very well.
+There is scope to make it more sophisticated (to support, for example, the various [Less import options](http://lesscss.org/features/#import-options)) but for my current work it serves very well.
 
 ## Update: Another Solution
 
-In doing further research I came across this Less plugin: <a href="https://github.com/just-boris/less-plugin-glob" target="_blank">less-plugin-glob</a>. This allows you to use globs in your imports like so:
+In doing further research I came across this Less plugin: [less-plugin-glob](https://github.com/just-boris/less-plugin-glob). This allows you to use globs in your imports like so:
 
 ```css
 @import "common/**";

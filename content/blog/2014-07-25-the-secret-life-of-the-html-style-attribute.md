@@ -10,49 +10,57 @@ categories:
   - post
 
 ---
-The HTML style attribute is probably most commonly known to web devs as &#8220;that thing that you should not use&#8221;. True &#8211; inline styles are, in many cases, not the best way to style your content for a number of reasons. However, inline styles have at least one major application: dynamically setting styles via JavaScript.
+The HTML style attribute is probably most commonly known to web devs as "that thing that you should not use". True - inline styles are, in many cases, not the best way to style your content for a number of reasons. However, inline styles have at least one major application: dynamically setting styles via JavaScript.
 
-If you&#8217;ve ever used jQuery&#8217;s `$(element).css()` method, or any kind of JavaScript DOM animation technique, chances are it relied on altering the inline style of that element.
+If you've ever used jQuery's `$(element).css()` method, or any kind of JavaScript DOM animation technique, chances are it relied on altering the inline style of that element.
 
-I am currently working on a side project which is heavy on CSS- and DOM-manipulation. Part of it involves saving the current inline CSS state, doing some JavaScipt transformations on the element&#8217;s CSS style, and then later restoring the original state. Implementing this feature lead me down the CSS rabbit hole &#8211; an ever-present danger for the front-end web developer. This time, though, I actually got something constructive out of the experience, rather than the usual frustration and bewilderment which accompanies in-depth CSS hacking.
+I am currently working on a side project which is heavy on CSS- and DOM-manipulation. Part of it involves saving the current inline CSS state, doing some JavaScipt transformations on the element's CSS style, and then later restoring the original state. Implementing this feature lead me down the CSS rabbit hole - an ever-present danger for the front-end web developer. This time, though, I actually got something constructive out of the experience, rather than the usual frustration and bewilderment which accompanies in-depth CSS hacking.
 
 ## The Apparent Simplicity of the Style Attribute
 
-On the suface, the style attribute looks to be a very simple affair. Let&#8217;s say you want a div with a defined height and width:
+On the suface, the style attribute looks to be a very simple affair. Let's say you want a div with a defined height and width:
 
-<pre>&lt;div style="height: 100px; width: 100px;"&gt;&lt;/div&gt;</pre>
+```
+<div style="height: 100px; width: 100px;"></div>
+```
 
 Simple, right? Just add the definitions as a string, like when you write and external .css file.
 
 Mostly, yes.
 
-It is true that you can simply specify the textual content of the style attribute in order to set simple style attributes. We do this any time we are doing quick-and-dirty hacking and can&#8217;t be bothered to define a style in an external file, right?
+It is true that you can simply specify the textual content of the style attribute in order to set simple style attributes. We do this any time we are doing quick-and-dirty hacking and can't be bothered to define a style in an external file, right?
 
-Let&#8217;s say I want to change the width and height with JavaScript, I could do therefore logically do this:
+Let's say I want to change the width and height with JavaScript, I could do therefore logically do this:
 
-<pre>element.setAttribute('style', 'height: 50px; width: 50px;');</pre>
+```
+element.setAttribute('style', 'height: 50px; width: 50px;');
+```
 
-And that&#8217;s all okay (<a href="http://jsfiddle.net/yNsJT/4/" target="_blank">JSFiddle</a>). However, in certain cases, things can get a little weird&#8230;
+And that's all okay ([JSFiddle](http://jsfiddle.net/yNsJT/4/)). However, in certain cases, things can get a little weird...
 
-## Let&#8217;s Look At Some Weirdness
+## Let's Look At Some Weirdness
 
-For the following demo I will be using the `window.getComputedStyle()` method. From <a href="https://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle" target="_blank">MDN</a>:
+For the following demo I will be using the `window.getComputedStyle()` method. From [MDN](https://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle):
 
 > The Window.getComputedStyle() method gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain.
 
 So getComputedStyle will give the result of _all_ style rules that apply to that element, including external .css files, style declarations in the document, and inline styles in the style attribute. To view the computed style for a particular property, we just write `window.getComputedStyle().propertyName`
 
-Okay, with that established, let&#8217;s look at some weirdness:
+Okay, with that established, let's look at some weirdness:
 
-<pre>/* external .css file */
+```
+/* external .css file */
 .myElement {
     transition: background-color 0.5s;
 }
-</pre>
 
-<pre>&lt;!-- the HTML --&gt;
-&lt;div class="myElement"&gt;&lt;/div&gt;
-</pre>
+```
+
+```
+<!-- the HTML -->
+<div class="myElement"></div>
+
+```
 
 <pre>// JavaScript
 element = document.querySelector('.myElement');
@@ -83,13 +91,15 @@ The last example seems to indicate that there is more going on with an inline st
 
 In CSS, style rules are not internally represented by simple strings. Behind the scenes, these strings get converted to a 
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration" target="_blank">CSSStyleDeclaration</a>. This is the object that you interact with whenever you use the element.style property of a DOM element, or the $(element).css('propertyName') method in jQuery. It is the reason why the following things don't work as expected:
+[CSSStyleDeclaration](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration). This is the object that you interact with whenever you use the element.style property of a DOM element, or the $(element).css('propertyName') method in jQuery. It is the reason why the following things don't work as expected:
 
 
-<pre>var element = document.getElementById('myElement');
+```
+var element = document.getElementById('myElement');
 element.style = "width: 100px;" // nope - the style property is read-only and returns a CSSStyleDeclaration object
 element.style.width = "100px"; // works, since it uses the API provided by CSSStyleDeclaration
-</pre>
+
+```
 
 
 <p>
@@ -102,10 +112,12 @@ element.style.width = "100px"; // works, since it uses the API provided by CSSSt
 </p>
 
 
-<pre>var myDiv = document.getElementById('myDiv');
+```
+var myDiv = document.getElementById('myDiv');
 myDiv.style.transitionDelay = "1s"; 
-// result in Chrome 36: &lt;div id="myDiv" style="transition: 1s; -webkit-transition: 1s;"&gt;&lt;/div&gt;
-</pre>
+// result in Chrome 36: <div id="myDiv" style="transition: 1s; -webkit-transition: 1s;"></div>
+
+```
 
 
 <p>
@@ -113,7 +125,9 @@ myDiv.style.transitionDelay = "1s";
 </p>
 
 
-<pre>console.log(myDiv.style.transitionDelay); // result: "1s"</pre>
+```
+console.log(myDiv.style.transitionDelay); // result: "1s"
+```
 
 
 <p>
@@ -121,13 +135,15 @@ myDiv.style.transitionDelay = "1s";
 </p>
 
 
-<pre>myDiv.setAttribute('style', myDiv.style.cssText);
+```
+myDiv.setAttribute('style', myDiv.style.cssText);
 console.log(myDiv.style.transitionDelay); // result: "initial"
-</pre>
+
+```
 
 
 <p>
-  Here, the second value "<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" target="_blank">initial</a>" means that now no value is set for this CSS property, yet we have literally copied the exact CSS style text from the CSSStyleDeclaration object itself!
+  Here, the second value "[initial](https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value)" means that now no value is set for this CSS property, yet we have literally copied the exact CSS style text from the CSSStyleDeclaration object itself!
 </p>
 
 

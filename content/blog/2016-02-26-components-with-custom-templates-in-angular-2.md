@@ -15,39 +15,33 @@ tags:
 ---
 Want to create a reusable Angular 2 component which can be customized with a user-provided template?
 
-I had this use case and could not find any relevant documentation or tutorials, so after a few days digging around the internals on Angular 2, I am sharing the result of my research. **This is one way to do this &#8211; perhaps there are other, better ways. Feedback is welcome**!
+I had this use case and could not find any relevant documentation or tutorials, so after a few days digging around the internals on Angular 2, I am sharing the result of my research. **This is one way to do this - perhaps there are other, better ways. Feedback is welcome**!
 
-(**TL;DR** &#8211; [working demo on Plunker][1])
+(**TL;DR** - [working demo on Plunker][1])
 
-**UPDATE: 27/02/16** &#8211; A few hours after I posted this, inveterate experimenter Ben Nadel posted a follow-up where he provides a simplified way to implement custom templates: [Providing Custom View Templates For Components In Angular 2 Beta 6][2]
+**UPDATE: 27/02/16** - A few hours after I posted this, inveterate experimenter Ben Nadel posted a follow-up where he provides a simplified way to implement custom templates: [Providing Custom View Templates For Components In Angular 2 Beta 6][2]
 
-**UPDATE: 15/05/16** &#8211; Some of the APIs discussed in this post have changed in the recent releases of Angular 2. Therefore this code may not work as-is on recent versions, but the concept should still apply.
+**UPDATE: 15/05/16** - Some of the APIs discussed in this post have changed in the recent releases of Angular 2. Therefore this code may not work as-is on recent versions, but the concept should still apply.
 
 &nbsp;
 
-## Goal &#8211; SimpleTimer
+## Goal - SimpleTimer
 
-<div id="attachment_515" style="width: 584px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-515" src="/media/2016/02/timer.png" alt="Our finished timer component" width="574" height="255" srcset="/media/2016/02/timer.png 574w, /media/2016/02/timer-300x133.png 300w" sizes="(max-width: 574px) 100vw, 574px" />
-  
-  <p class="wp-caption-text">
-    Our finished timer component
-  </p>
-</div>
+{{< figure src="/media/2016/02/timer.png" title="Our finished timer component" >}}
 
 We are going to take a simple example: we want to build a timer which has a _start/stop_ and a _reset_ button. We want our `SimpleTimer` to encapsulate all the logic of incrementing and resetting the timer, but allow the consumer of the component to specify her own template.
 
 Here is what our SimpleTimer logic looks like:
 
 
-~~~JavaScript
+```JavaScript
 export class SimpleTimer {
  
   running: boolean = false;
   time: number = 0;
   
   getTime() {
-    let pad = n =&gt; n &lt;= 9 ? '0' + n : n; 
+    let pad = n => n <= 9 ? '0' + n : n; 
     let cs = Math.floor(this.time % 100);
     let s = Math.floor(this.time / 100) % 60); 
     let m = Math.floor(this.time / 6000) 
@@ -65,14 +59,14 @@ export class SimpleTimer {
     this.time = 0;
   }
  
-  tick = () =&gt; { 
+  tick = () => { 
     this.time += 1; 
     if (this.running) { 
       setTimeout(this.tick, 10); 
     } 
   };
 }
-~~~
+```
 
 ## How Not To Do It
 
@@ -80,22 +74,24 @@ In Angular 1.x, we are able to specify a function as the templateUrl, which has 
 
 In Angular 2, on the other hand, templates and templateUrls are specified via decorators and are parsed before the component life cycle even begins. This means they have no access to injectables. My first efforts involved code like this:
 
-<pre>@Component({
+```JavaScript
+@Component({
   selector: 'simple-timer',
   // fails - this code is not within the scope of the class
-  template: () =&gt; this.timerService.getTemplate()
+  template: () => this.timerService.getTemplate()
 })
 export class SimpleTimer {
 
   constructor(private timerService: TimerService) {}
   // ...
-}</pre>
+}
+```
 
-&#8230; and other similarly ineffective variations of this approach. With plans to turn [template compilation into a build step][4], it actually makes sense that run-time changes to a component&#8217;s template will no longer work like this. So how can we do it then?
+... and other similarly ineffective variations of this approach. With plans to turn [template compilation into a build step][4], it actually makes sense that run-time changes to a component's template will no longer work like this. So how can we do it then?
 
 ## NgFor and Template Directives
 
-My hours of fruitless tinkering eventually brought me to realize that the built-in [NgFor directive][5] does just what I want to do &#8211; it takes a user-specified template and even provides some local variables to that template &#8211; `index`, `last`, `even` & `odd`. So let us delve into how it achieves this magical feat.
+My hours of fruitless tinkering eventually brought me to realize that the built-in [NgFor directive][5] does just what I want to do - it takes a user-specified template and even provides some local variables to that template - `index`, `last`, `even` & `odd`. So let us delve into how it achieves this magical feat.
 
 First of all, from the NgFor docs, we can see that * syntax is sugar for the actual template markup:
 
@@ -109,72 +105,82 @@ First of all, from the NgFor docs, we can see that * syntax is sugar for the act
   
     `<template ngFor #item [ngForOf]="items" #i="index"><li>...</li></template>`
 
-Let&#8217;s work with the de-sugared version to start with. If we look at the NgFor source, we see that it [makes use of something called TemplateRef][6], which according to the [docs][7] &#8220;_Represents an Embedded Template that can be used to instantiate Embedded Views._&#8221; Sounds good &#8211; let&#8217;s start coding our SimpleTimer.
+Let's work with the de-sugared version to start with. If we look at the NgFor source, we see that it [makes use of something called TemplateRef][6], which according to the [docs][7] "_Represents an Embedded Template that can be used to instantiate Embedded Views._" Sounds good - let's start coding our SimpleTimer.
 
 ## Defining the Template
 
-Let&#8217;s assume we have imported the directive `SimpleTimer` and want to use it in our app like this:
+Let's assume we have imported the directive `SimpleTimer` and want to use it in our app like this:
 
-<pre>&lt;template simpleTimer&gt;
-  &lt;div class="time"&gt;&lt;!-- show time here --&gt;&lt;/div&gt;
-  &lt;div class="controls"&gt;
-    &lt;button&gt;Toggle&lt;/button&gt;
-    &lt;button&gt;Reset&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-</pre>
+```HTML
+<template simpleTimer>
+  <div class="time"><!-- show time here --></div>
+  <div class="controls">
+    <button>Toggle</button>
+    <button>Reset</button>
+  </div>
+</template>
+```
 
-We can get a reference to this template now simply by injecting TemplateRef into our constructor. We will also inject a [ViewContainerRef][8], since we&#8217;ll need this to embed the template into the view. Then once the directive has initialized, we can &#8220;stamp out&#8221; the template into the view:
+We can get a reference to this template now simply by injecting TemplateRef into our constructor. We will also inject a [ViewContainerRef][8], since we'll need this to embed the template into the view. Then once the directive has initialized, we can "stamp out" the template into the view:
 
-<pre>constructor(private templateRef: TemplateRef, 
+```JavaScript
+constructor(private templateRef: TemplateRef, 
             private viewContainer: ViewContainerRef) {}
 
 ngAfterViewInit() {
   this.viewContainer.createEmbeddedView(this.templateRef);
-}</pre>
+}
+```
 
-So we&#8217;ve got our template working, we&#8217;re half way there! Now the problem of giving our template access to the properties of our SimpleTimer class.
+So we've got our template working, we're half way there! Now the problem of giving our template access to the properties of our SimpleTimer class.
 
 ## Providing Local Variables
 
 In order for our template to be useful, we need access to the methods `getTime()`, `toggle()` and `tick()`. Looking through the NgFor source, I saw [they use the `setLocal()` method][9] of an `EmbeddedViewRef`, which in turn is what we get back from createEmbeddedView() above.
 
-We can provide the three members of our &#8220;API&#8221; as an object like this:
+We can provide the three members of our "API" as an object like this:
 
-<pre>&lt;template simpleTimer #timer="timerApi"&gt;...&lt;/template&gt;</pre>
+```HTML
+<template simpleTimer #timer="timerApi">...</template>
+```
 
-<pre>ngAfterViewInit() {
+```JavaScript
+ngAfterViewInit() {
   let view = this.viewContainer.createEmbeddedView(this.templateRef);
   let api = {
-    toggle: () =&gt; this.toggle(),
-    reset: () =&gt; this.reset(),
-    getTime: () =&gt; this.getTime()
+    toggle: () => this.toggle(),
+    reset: () => this.reset(),
+    getTime: () => this.getTime()
   }
   view.setLocal('timerApi', api);
-}</pre>
+}
+```
 
 This then allows us to hook up our template to the methods we need.
 
-<pre>&lt;template simpleTimer #timer="timerApi"&gt;
-  &lt;div class="time"&gt;{{ timer.getTime() }}&lt;/div&gt;
-  &lt;div class="controls"&gt;
-    &lt;button (click)="timer.toggle()"&gt;Toggle&lt;/button&gt;
-    &lt;button (click)="timer.reset()"&gt;Reset&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-</pre>
+```HTML
+<template simpleTimer #timer="timerApi">
+  <div class="time">{{ timer.getTime() }}</div>
+  <div class="controls">
+    <button (click)="timer.toggle()">Toggle</button>
+    <button (click)="timer.reset()">Reset</button>
+  </div>
+</template>
 
-Note that in the code above &#8211; `#timer="timerApi"` &#8211; `#timer` could be named anything we like, but `timerApi` must match the name used by the `setLocal()` call.
+```
+
+Note that in the code above - `#timer="timerApi"` - `#timer` could be named anything we like, but `timerApi` must match the name used by the `setLocal()` call.
 
 ## Fixing Change Detection Errors
 
-So far we can specify our own template, and bind local variables to it. So are we done? Not quite yet. Running our code with the changes made so far, the first thing we&#8217;ll notice is a big fat exception in the console:
+So far we can specify our own template, and bind local variables to it. So are we done? Not quite yet. Running our code with the changes made so far, the first thing we'll notice is a big fat exception in the console:
 
 `EXCEPTION: Expression '{{ timer.getTime() }} in App@3:20' has changed after it was checked. Previous value: '[object Object]'. Current value: '00:00:00' in [{{ timer.getTime() }} in App@3:20]`
 
 From what I understand, this is caused by the fact that our binding {{ timer.getTime() }} is being checked once before we provide the local API value, and then once again after the API is defined, which gives the new (correct) value. Luckily, Angular 2 allows us to manipulate the change detection on a per-component basis, giving us the control we need to mitigate this issue. We will inject a [ChangeDetectorRef][10] into our constructor so that we can temporarily disable change detection until our local API variable is properly hooked up:
 
-<pre>constructor(private templateRef: TemplateRef,
+```JavaScript
+constructor(private templateRef: TemplateRef,
               private viewContainer: ViewContainerRef,
               private cdr: ChangeDetectorRef) {}
               
@@ -187,9 +193,10 @@ ngOnInit() {
 ngAfterViewInit() {
   // ...
   view.setLocal('timerApi', api);
-  setTimeout(() =&gt; this.cdr.reattach());
+  setTimeout(() => this.cdr.reattach());
 }
-</pre>
+
+```
 
 In the code above, we detach the change detector when the directive initializes, and then re-attach it only after the local API has been provided. The `setTimeout()` seemed to be necessary so that the change detector only gets switched back on during the next tick of the event loop.
 
@@ -197,18 +204,19 @@ In the code above, we detach the change detector when the directive initializes,
 
 As mentioned in the NgFor example, Angular 2 provides some syntactic sugar with the `*` character, which makes the template syntax a little cleaner. With this addition, here is the final code:
 
-<pre>&lt;div *simpleTimer="#timer=timerApi"&gt;
-  &lt;div class="time"&gt;{{ timer.getTime() }}&lt;/div&gt;
-  &lt;div class="controls"&gt;
-    &lt;button (click)="timer.toggle()"&gt;Toggle&lt;/button&gt;
-    &lt;button (click)="timer.reset()"&gt;Reset&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```HTML
+<div *simpleTimer="#timer=timerApi">
+  <div class="time">{{ timer.getTime() }}</div>
+  <div class="controls">
+    <button (click)="timer.toggle()">Toggle</button>
+    <button (click)="timer.reset()">Reset</button>
+  </div>
+</div>
 
-&nbsp;
+```
 
-<pre>@Directive({
+```JavaScript
+@Directive({
   selector: '[simpleTimer]'
 })
 export class SimpleTimer {
@@ -229,24 +237,24 @@ export class SimpleTimer {
   ngAfterViewInit() {
     let view = this.viewContainer.createEmbeddedView(this.templateRef);
     let api = {
-      toggle: () =&gt; this.toggle(),
-      reset: () =&gt; this.reset(),
-      getTime: () =&gt; this.getTime()
+      toggle: () => this.toggle(),
+      reset: () => this.reset(),
+      getTime: () => this.getTime()
     }
     view.setLocal('timerApi', api);
     
-    setTimeout(() =&gt; this.cdr.reattach());
+    setTimeout(() => this.cdr.reattach());
   }
   
   getTime() {
-    let pad = n =&gt; n &lt;= 9 ? '0' + n : n;
+    let pad = n => n <= 9 ? '0' + n : n;
     let cs = Math.floor(this.time % 100);
     let s = Math.floor(this.time / 100) % 60); 
     let m = Math.floor(this.time / 6000);
     return `${pad(m)}:${pad(s)}:${pad(cs)}`; 
   } 
 
-  tick = () =&gt; {
+  tick = () => {
     this.time += 1;
     if (this.running) {
       setTimeout(this.tick, 10);
@@ -264,15 +272,15 @@ export class SimpleTimer {
     this.time = 0;
   }
 }
-</pre>
+```
 
 And [here is the working demo on Plunker][1].
 
 ## Conclusion
 
-If you are building apps right now with Angular 2, you have taken on the challenge of getting productive with a young and sparsely-documented technology. Figuring all this out took me a couple of days of wading through source code and scouring the web for any helpful information (of which there is very little at this time). It may be that there are issues with or improvements to be made with my approach &#8211; more knowledgeable Angular 2 devs please speak up!
+If you are building apps right now with Angular 2, you have taken on the challenge of getting productive with a young and sparsely-documented technology. Figuring all this out took me a couple of days of wading through source code and scouring the web for any helpful information (of which there is very little at this time). It may be that there are issues with or improvements to be made with my approach - more knowledgeable Angular 2 devs please speak up!
 
-To see this technique in &#8220;production&#8221;, take a look at my pagination module [ng2-pagination][11].
+To see this technique in "production", take a look at my pagination module [ng2-pagination][11].
 
 Here are some more resources on the topic of templates in Angular 2 which I found useful in my research:
 

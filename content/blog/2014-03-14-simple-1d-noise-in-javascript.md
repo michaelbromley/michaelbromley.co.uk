@@ -14,15 +14,15 @@ tags:
   - JavaScript
 
 ---
-I am working on a side project in which I needed to generate some &#8220;random&#8221;, or more accurately, unpredictable motion. At first I tried using the `Math.random()` method, and using those values to set the position of my moving element. This, of course, looks terrible because the element will simply jump around to various points, &#8220;teleporting&#8221; between them. After searching around for a bit (one of those slow search processes where you don&#8217;t really know what you are looking for) I figured out I needed some kind of noise function.
+I am working on a side project in which I needed to generate some "random", or more accurately, unpredictable motion. At first I tried using the `Math.random()` method, and using those values to set the position of my moving element. This, of course, looks terrible because the element will simply jump around to various points, "teleporting" between them. After searching around for a bit (one of those slow search processes where you don't really know what you are looking for) I figured out I needed some kind of noise function.
 
-I found <a href="http://www.scratchapixel.com/lessons/3d-advanced-lessons/noise-part-1/creating-a-simple-1d-noise/" target="_blank">this excellent article on scratchapixel.com</a>, and used it as a basis for my own implementation of simple one dimensional noise in JavaScript. Here is the result:
+I found [this excellent article on scratchapixel.com](http://www.scratchapixel.com/lessons/3d-advanced-lessons/noise-part-1/creating-a-simple-1d-noise/), and used it as a basis for my own implementation of simple one dimensional noise in JavaScript. Here is the result:
 
-
+{{< plunker id="SnCuRTG5Mkb0676ncYmH" height="850px" >}}
 
 ## The Code
 
-Here is the code. I can&#8217;t take credit for the algorithm, I pretty much just ported it from the article referenced above. To understand what the code is doing, read the article. It&#8217;s a good read.
+Here is the code. I can't take credit for the algorithm, I pretty much just ported it from the article referenced above. To understand what the code is doing, read the article. It's a good read.
 
 ```JavaScript
 var Simple1DNoise = function() {
@@ -33,7 +33,7 @@ var Simple1DNoise = function() {
 
     var r = [];
 
-    for ( var i = 0; i &lt; MAX_VERTICES; ++i ) {
+    for ( var i = 0; i < MAX_VERTICES; ++i ) {
         r.push(Math.random());
     }
 
@@ -78,13 +78,14 @@ var Simple1DNoise = function() {
 
 ## How to use it
 
-Check out some instructions on my <a href="https://github.com/michaelbromley/angularUtils/tree/master/src/services/noise" target="_blank">AngularUtils repo</a>.
+Check out some instructions on my [AngularUtils repo](https://github.com/michaelbromley/angularUtils/tree/master/src/services/noise).
 
 Since I am working a lot with AngularJS, and the side project I am making is using Angular, I wrapped the above function in an Angular service, which you can find at the above location. Using it outside of angular is as simple as copying the code listed above, and instantiating it like so:
 
-<pre>var generator = new Simple1DNoise();
+```JavaScript
+var generator = new Simple1DNoise();
 var x = 1;
 var y = generator.getVal(x);
-</pre>
+```
 
 I hope some of you find this useful, or at least interesting.
