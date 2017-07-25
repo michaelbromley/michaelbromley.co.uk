@@ -1,0 +1,17 @@
+{{/*
+
+    Embed a pen from Plunker
+*/}}
+
+
+{{/* DEFAULTS */}}
+{{ $height  := or (.Get "height") "480px" }}
+{{ $id := .Get "id" }}
+
+
+<iframe
+  src="https://embed.plnkr.co/plunk/{{ $id }}?show=preview"
+  frameborder="0"
+  width="100%"
+  height="{{ $height }}"
+></iframe>
