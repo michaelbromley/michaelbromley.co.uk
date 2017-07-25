@@ -36,6 +36,5 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('../css/style.css')
-    ],
-    devtool: "eval-source-map"
+    ]
 };
