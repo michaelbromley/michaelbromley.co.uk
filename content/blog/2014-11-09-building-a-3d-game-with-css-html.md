@@ -3,7 +3,8 @@ title: Building a 3D Game with CSS + HTML
 author: michael-bromley
 type: post
 date: 2014-11-09T21:06:16+00:00
-url: /298/building-a-3d-game-with-css-html
+aliases:
+  - blog/298/building-a-3d-game-with-css-html
 categories:
   - post
 tags:

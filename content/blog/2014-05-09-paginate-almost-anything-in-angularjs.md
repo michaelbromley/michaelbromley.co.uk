@@ -3,7 +3,8 @@ title: Paginate (almost) Anything in AngularJS
 author: michael-bromley
 type: post
 date: 2014-05-09T19:46:45+00:00
-url: /108/paginate-almost-anything-in-angularjs
+aliases:
+  - blog/108/paginate-almost-anything-in-angularjs
 categories:
   - post
 tags:

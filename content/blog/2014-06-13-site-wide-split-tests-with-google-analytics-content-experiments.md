@@ -3,7 +3,8 @@ title: Site-Wide Split Tests With Google Analytics Content Experiments
 author: michael-bromley
 type: post
 date: 2014-06-13T07:39:28+00:00
-url: /128/site-wide-split-tests-with-google-analytics-content-experiments
+aliases:
+  - blog/128/site-wide-split-tests-with-google-analytics-content-experiments
 categories:
   - post
 tags:

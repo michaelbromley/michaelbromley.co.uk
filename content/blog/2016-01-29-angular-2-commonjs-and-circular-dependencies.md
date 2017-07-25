@@ -3,7 +3,8 @@ title: Angular 2, CommonJS and Circular Dependencies
 author: michael-bromley
 type: post
 date: 2016-01-29T08:50:04+00:00
-url: /507/angular-2-commonjs-and-circular-dependencies
+aliases:
+  - blog/507/angular-2-commonjs-and-circular-dependencies
 categories:
   - post
 tags:

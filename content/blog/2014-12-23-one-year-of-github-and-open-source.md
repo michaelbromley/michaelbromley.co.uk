@@ -3,7 +3,8 @@ title: One Year of GitHub and Open Source
 author: michael-bromley
 type: post
 date: 2014-12-23T15:53:28+00:00
-url: /318/one-year-of-github-and-open-source
+aliases:
+  - blog/318/one-year-of-github-and-open-source
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Auto-breadcrumbs with angular-ui-router
 author: michael-bromley
 type: post
 date: 2014-04-04T13:19:51+00:00
-url: /100/auto-breadcrumbs-with-angular-ui-router
+aliases:
+  - blog/100/auto-breadcrumbs-with-angular-ui-router
 categories:
   - post
 tags:

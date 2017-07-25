@@ -3,7 +3,8 @@ title: A Note on Touch (Pointer) Events in Internet Explorer
 author: michael-bromley
 type: post
 date: 2014-08-07T08:08:29+00:00
-url: /193/a-note-on-touch-pointer-events-in-ie11
+aliases:
+  - blog/193/a-note-on-touch-pointer-events-in-ie11
 categories:
   - post
 tags:

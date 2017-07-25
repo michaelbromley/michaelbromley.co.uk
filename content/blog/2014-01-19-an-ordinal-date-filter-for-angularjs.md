@@ -3,7 +3,8 @@ title: An Ordinal Date Filter for AngularJS
 author: michael-bromley
 type: post
 date: 2014-01-19T15:29:46+00:00
-url: /13/an-ordinal-date-filter-for-angularjs
+aliases:
+  - blog/13/an-ordinal-date-filter-for-angularjs
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Writing Multi-Element Directives in AngularJS
 author: michael-bromley
 type: post
 date: 2014-10-14T09:52:55+00:00
-url: /260/writing-multi-element-directives-in-angularjs
+aliases:
+  - blog/260/writing-multi-element-directives-in-angularjs
 categories:
   - post
 tags:

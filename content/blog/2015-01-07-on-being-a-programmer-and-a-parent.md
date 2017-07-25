@@ -3,7 +3,8 @@ title: The Programmer Dad
 author: michael-bromley
 type: post
 date: 2015-01-07T09:52:06+00:00
-url: /338/on-being-a-programmer-and-a-parent
+aliases:
+  - blog/338/on-being-a-programmer-and-a-parent
 categories:
   - post
 tags:

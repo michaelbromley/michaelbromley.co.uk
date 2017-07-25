@@ -3,7 +3,8 @@ title: Why I Haven’t Fixed Your Issue Yet
 author: michael-bromley
 type: post
 date: 2016-05-13T14:22:02+00:00
-url: /529/why-i-havent-fixed-your-issue-yet
+aliases:
+  - blog/529/why-i-havent-fixed-your-issue-yet
 categories:
   - featured
   - post

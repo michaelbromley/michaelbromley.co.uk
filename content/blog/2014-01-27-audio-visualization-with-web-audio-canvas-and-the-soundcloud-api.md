@@ -3,7 +3,8 @@ title: Audio Visualization with Web Audio, Canvas and the Soundcloud API
 author: michael-bromley
 type: post
 date: 2014-01-27T13:54:41+00:00
-url: /42/audio-visualization-with-web-audio-canvas-and-the-soundcloud-api
+aliases:
+  - blog/42/audio-visualization-with-web-audio-canvas-and-the-soundcloud-api
 categories:
   - post
 tags:

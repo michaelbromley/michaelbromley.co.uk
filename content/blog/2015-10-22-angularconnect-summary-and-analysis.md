@@ -3,7 +3,8 @@ title: 'AngularConnect: Summary and Analysis'
 author: michael-bromley
 type: post
 date: 2015-10-22T19:36:00+00:00
-url: /483/angularconnect-summary-and-analysis
+aliases:
+  - blog/483/angularconnect-summary-and-analysis
 categories:
   - post
 tags:

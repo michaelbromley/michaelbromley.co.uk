@@ -3,7 +3,8 @@ title: My Thoughts on ngEurope 2014 and AngularJS 2.0
 author: michael-bromley
 type: post
 date: 2014-10-24T08:30:18+00:00
-url: /267/my-thoughts-on-ngeurope-2014-and-angularjs-2-0
+aliases:
+  - blog/267/my-thoughts-on-ngeurope-2014-and-angularjs-2-0
 categories:
   - post
 tags:

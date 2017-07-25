@@ -3,7 +3,8 @@ title: Simple 1D Noise in JavaScript
 author: michael-bromley
 type: post
 date: 2014-03-14T07:15:00+00:00
-url: /90/simple-1d-noise-in-javascript
+aliases:
+  - blog/90/simple-1d-noise-in-javascript
 categories:
   - post
 tags:

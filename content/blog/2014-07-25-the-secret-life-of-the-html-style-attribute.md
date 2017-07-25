@@ -5,7 +5,8 @@ type: post
 date: 2014-07-25T06:19:54+00:00
 draft: true
 private: true
-url: /183/the-secret-life-of-the-html-style-attribute
+aliases:
+  - blog/183/the-secret-life-of-the-html-style-attribute
 categories:
   - post
 

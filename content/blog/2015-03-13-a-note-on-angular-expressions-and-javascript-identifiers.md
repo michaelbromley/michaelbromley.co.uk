@@ -3,7 +3,8 @@ title: A Note on Angular Expressions And JavaScript Identifiers
 author: michael-bromley
 type: post
 date: 2015-03-13T09:39:41+00:00
-url: /410/a-note-on-angular-expressions-and-javascript-identifiers
+aliases:
+  - blog/410/a-note-on-angular-expressions-and-javascript-identifiers
 categories:
   - post
 tags:

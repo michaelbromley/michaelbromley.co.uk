@@ -3,7 +3,8 @@ title: 'Some notes on Angular 2 AoT mode with Webpack, Sass & ngtools'
 author: michael-bromley
 type: post
 date: 2016-10-09T07:18:10+00:00
-url: /551/some-notes-on-angular-2-aot-mode-with-webpack-sass-ngtools
+aliases:
+  - blog/551/some-notes-on-angular-2-aot-mode-with-webpack-sass-ngtools
 categories:
   - post
 tags:

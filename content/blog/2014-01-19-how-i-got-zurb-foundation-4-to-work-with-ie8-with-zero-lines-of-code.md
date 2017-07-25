@@ -3,7 +3,8 @@ title: How I got Zurb Foundation 4 to work with IE8 with zero lines of code
 author: michael-bromley
 type: post
 date: 2014-01-19T06:14:03+00:00
-url: /5/how-i-got-zurb-foundation-4-to-work-with-ie8-with-zero-lines-of-code
+aliases:
+  - blog/5/how-i-got-zurb-foundation-4-to-work-with-ie8-with-zero-lines-of-code
 categories:
   - post
 tags:

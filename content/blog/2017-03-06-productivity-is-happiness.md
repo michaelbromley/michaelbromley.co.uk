@@ -3,11 +3,12 @@ title: Productivity Is Happiness
 author: michael-bromley
 type: post
 date: 2017-03-06T19:45:31+00:00
-url: blog/582/productivity-is-happiness
+aliases:
+  - blog/582/productivity-is-happiness
 categories:
   - post
 tags:
-  - essay
+  - essay 
   - productivity
 
 ---

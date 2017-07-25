@@ -3,7 +3,8 @@ title: 'Book Review: Responsive Web Design with AngularJS; plus Musings on Techn
 author: michael-bromley
 type: post
 date: 2015-02-02T22:05:56+00:00
-url: /389/book-review-responsive-web-design-with-angularjs-packt
+aliases:
+  - blog/389/book-review-responsive-web-design-with-angularjs-packt
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Confessions of an Intermediate Programmer
 author: michael-bromley
 type: post
 date: 2014-02-18T18:14:52+00:00
-url: /65/confessions-of-an-intermediate-programmer
+aliases:
+  - blog/65/confessions-of-an-intermediate-programmer
 categories:
   - featured
   - post

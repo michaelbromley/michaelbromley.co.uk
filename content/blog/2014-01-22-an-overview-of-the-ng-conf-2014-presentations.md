@@ -3,7 +3,8 @@ title: An Overview of the ng-conf 2014 Presentations
 author: michael-bromley
 type: post
 date: 2014-01-22T19:10:39+00:00
-url: /15/an-overview-of-the-ng-conf-2014-presentations
+aliases:
+  - blog/15/an-overview-of-the-ng-conf-2014-presentations
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: A Killer Startup Idea
 author: michael-bromley
 type: post
 date: 2014-06-18T08:20:34+00:00
-url: /148/a-killer-startup-idea
+aliases:
+  - blog/148/a-killer-startup-idea
 categories:
   - post
 tags:

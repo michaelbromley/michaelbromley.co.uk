@@ -3,7 +3,8 @@ title: The Elevator of Infinite Abstraction
 author: michael-bromley
 type: post
 date: 2017-02-16T16:19:08+00:00
-url: /565/the-elevator-of-infinite-abstraction
+aliases:
+  - blog/565/the-elevator-of-infinite-abstraction
 categories:
   - featured
   - post

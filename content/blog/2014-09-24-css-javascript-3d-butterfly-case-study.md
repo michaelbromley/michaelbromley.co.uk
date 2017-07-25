@@ -3,7 +3,8 @@ title: 'CSS + JavaScript 3D Butterfly: A Case Study'
 author: michael-bromley
 type: post
 date: 2014-09-24T05:39:39+00:00
-url: /236/css-javascript-3d-butterfly-case-study
+aliases:
+  - blog/236/css-javascript-3d-butterfly-case-study
 categories:
   - post
 tags:

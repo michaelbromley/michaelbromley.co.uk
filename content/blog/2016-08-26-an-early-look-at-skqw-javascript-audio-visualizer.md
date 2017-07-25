@@ -3,7 +3,8 @@ title: 'An Early Look at SKQW: JavaScript Audio Visualizer'
 author: michael-bromley
 type: post
 date: 2016-08-26T08:25:07+00:00
-url: /541/an-early-look-at-skqw-javascript-audio-visualizer
+aliases:
+  - blog/541/an-early-look-at-skqw-javascript-audio-visualizer
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: 'The Republic of Virtue: Terror, Tolerance and the Internet'
 author: michael-bromley
 type: post
 date: 2015-07-18T04:58:22+00:00
-url: /446/the-republic-of-virtue-terror-tolerance-and-the-internet
+aliases:
+  - blog/446/the-republic-of-virtue-terror-tolerance-and-the-internet
 categories:
   - featured
   - post

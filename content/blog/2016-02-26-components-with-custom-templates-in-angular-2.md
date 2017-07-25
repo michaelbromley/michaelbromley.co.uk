@@ -3,7 +3,8 @@ title: Components with Custom Templates in Angular 2 (beta.7)
 author: michael-bromley
 type: post
 date: 2016-02-26T09:10:03+00:00
-url: /513/components-with-custom-templates-in-angular-2
+aliases:
+  - blog/513/components-with-custom-templates-in-angular-2
 categories:
   - post
 tags:

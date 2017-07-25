@@ -3,7 +3,8 @@ title: 'angular-wordpress-seed: A complete example project with AngularJS and th
 author: michael-bromley
 type: post
 date: 2015-03-28T10:16:33+00:00
-url: /418/angular-wordpress-seed-a-complete-example-project-with-angularjs-and-the-wordpress-json-rest-api
+aliases:
+  - blog/418/angular-wordpress-seed-a-complete-example-project-with-angularjs-and-the-wordpress-json-rest-api
 categories:
   - post
 tags:

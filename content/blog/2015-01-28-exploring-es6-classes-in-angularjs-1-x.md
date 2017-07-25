@@ -3,7 +3,8 @@ title: Exploring ES6 Classes In AngularJS 1.x
 author: michael-bromley
 type: post
 date: 2015-01-28T17:10:14+00:00
-url: /350/exploring-es6-classes-in-angularjs-1-x
+aliases:
+  - blog/350/exploring-es6-classes-in-angularjs-1-x
 categories:
   - post
 tags:

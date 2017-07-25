@@ -3,6 +3,9 @@ languageCode = "en-gb"
 title = "Blog v3"
 theme = "terminal"
 
+[permalinks]
+  blog = "/:section/:title/"
+
 [Params]
   Author = "Michael Bromley"
 

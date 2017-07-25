@@ -3,7 +3,8 @@ title: Automatic @import of Less/Sass files with Gulp
 author: michael-bromley
 type: post
 date: 2015-04-15T20:13:57+00:00
-url: /425/automatic-import-of-lesssass-files-with-gulp
+aliases:
+  - blog/425/automatic-import-of-lesssass-files-with-gulp
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Experiences Building a Website with AngularJS + WP-API (WordPress API)
 author: michael-bromley
 type: post
 date: 2014-09-19T15:26:15+00:00
-url: /228/experiences-building-a-website-with-angularjs-wp-api-wordpress-api
+aliases:
+  - blog/228/experiences-building-a-website-with-angularjs-wp-api-wordpress-api
 categories:
   - post
 tags:

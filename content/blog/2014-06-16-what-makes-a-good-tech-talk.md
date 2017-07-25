@@ -3,7 +3,8 @@ title: What Makes A Good Tech Talk?
 author: michael-bromley
 type: post
 date: 2014-06-16T14:25:34+00:00
-url: /105/what-makes-a-good-tech-talk
+aliases:
+  - blog/105/what-makes-a-good-tech-talk
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Enable Rich Social Sharing in Your AngularJS App
 author: michael-bromley
 type: post
 date: 2014-07-02T06:08:36+00:00
-url: /171/enable-rich-social-sharing-in-your-angularjs-app
+aliases:
+  - blog/171/enable-rich-social-sharing-in-your-angularjs-app
 categories:
   - post
 tags:

@@ -3,7 +3,8 @@ title: Using Disqus with AngularJS
 author: michael-bromley
 type: post
 date: 2014-01-24T16:41:37+00:00
-url: /34/using-disqus-with-angularjs
+aliases:
+  - blog/34/using-disqus-with-angularjs
 categories:
   - post
 tags:
