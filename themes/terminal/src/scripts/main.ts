@@ -9,7 +9,7 @@ import {initSearch} from './search';
 import {initTypeEffect} from './type-effect';
 import {initFadeIn} from './fade-in';
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initSearch();
     initTypeEffect();

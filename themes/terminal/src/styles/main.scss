@@ -57,13 +57,13 @@ h1 {
 
 h2 {
   @media (min-width: $screen-medium) {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 
 h3 {
   @media (min-width: $screen-medium) {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 }
 
@@ -72,8 +72,8 @@ img {
   height: auto;
 }
 
-code:not(.language-*) {
-  border: 1px solid #dfdfdf;
+code:not([class]) {
+  border: 1px solid #d1d1d1;
   padding: 1px 3px;
   background-color: #f0f0f0;
 }
@@ -103,8 +103,11 @@ a:hover {
 }
 
 .page-header {
-  font-size: 3em;
+  font-size: 2.4em;
   margin-top: 25px;
+  @media (min-width: $screen-medium) {
+    font-size: 3em;
+  }
 }
 
 p.lead {

@@ -91,15 +91,20 @@ ul.tags {
   max-width: 800px;
   margin: auto;
   padding-bottom: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+  font-size: 1.2em;
   border-bottom: 1px dotted $colour-text-deemphasize;
+
+  pre {
+    font-size: 0.8em;
+  }
 
   p {
     color: $colour-text-content;
-    font-size: 1.2em;
-    &:first-child {
-      font-size: 1.4em;
-    }
+  }
+
+  & > p:first-child {
+    font-size: 1.4em;
   }
 }
 
@@ -107,8 +112,20 @@ ul.tags {
   margin-top: -20px;
 }
 
+.article-footer {
+  color: $colour-text-deemphasize;
+  text-align: center;
+  line-height: 2em;
+  font-style: italic;
+  .smallprint {
+    font-size: 12px;
+    font-style: normal;
+  }
+}
+
 figure {
-  padding: 10px;
+  padding: 6px;
+  margin: 0;
   text-align: center;
   border-radius: 3px;
   border: 1px solid #cbcbcb;

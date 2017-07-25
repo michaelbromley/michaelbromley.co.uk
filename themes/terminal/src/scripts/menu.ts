@@ -38,7 +38,7 @@ export function initMenu() {
  * a blog entry itself. This function rectifies that with JavaScript.
  */
 function selectBlogItemIfBlogPost() {
-    const blogEntryUrlRe = /^\/blog\/\d+\//;
+    const blogEntryUrlRe = /^\/blog\/[\w-]+\//;
     const containsBlogText = el => -1 < el.textContent.toLowerCase().indexOf('blog');
     const addSelectedClass = el => el.classList.add('selected');
 
