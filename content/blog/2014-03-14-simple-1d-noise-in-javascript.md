@@ -9,9 +9,8 @@ categories:
   - post
 tags:
   - AngularJS
-  - canvas
+  - creative
   - code
-  - demo
   - JavaScript
 
 ---

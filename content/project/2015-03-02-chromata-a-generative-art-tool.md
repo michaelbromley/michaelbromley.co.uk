@@ -3,7 +3,6 @@ title: 'Chromata: A Generative Art Tool'
 author: michael-bromley
 type: project
 date: 2015-03-02T17:18:43+00:00
-url: /400/chromata-a-generative-art-tool
 categories:
   - project
 image: /media/2015/03/chromata.jpg

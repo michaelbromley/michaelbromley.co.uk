@@ -8,8 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - Angular 2
-  - ES6
+  - Angular
   - JavaScript
 
 ---

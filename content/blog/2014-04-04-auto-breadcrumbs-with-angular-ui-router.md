@@ -11,7 +11,6 @@ tags:
   - AngularJS
   - code
   - JavaScript
-  - ui-router
 
 ---
 For those that don't know, [angular-ui-router](https://github.com/angular-ui/ui-router) is a router for AngularJS that replaces the one that comes built-in, and adds a whole lot of  powerful features.

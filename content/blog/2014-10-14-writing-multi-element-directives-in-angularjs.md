@@ -10,8 +10,7 @@ categories:
 tags:
   - AngularJS
   - code
-  - demo
-
+  
 ---
 AngularJS 1.2 introduced a new feature for the ngRepeat directive which allows the directive to span multiple elements, as opposed to just the single element that it is attached to. This is done by appending `-start` and `-end` to the directive name in your view:
 

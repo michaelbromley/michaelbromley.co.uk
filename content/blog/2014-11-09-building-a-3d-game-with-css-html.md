@@ -8,11 +8,9 @@ aliases:
 categories:
   - post
 tags:
-  - css
-  - demo
-  - html
+  - creative
   - JavaScript
-  - web audio api
+  - code
 
 ---
 I have recently been exploring some of the lesser-used features of CSS - namely 3D transforms and animations. For a recent talk I gave at a local JavaScript user group, I put together [this demo](http://www.michaelbromley.co.uk/experiments/css-3d-butterfly/), and in doing so I became really curious about just how far the 3D capabilities of pure CSS could be pushed.

@@ -3,7 +3,6 @@ title: SoundCloud Visualizer
 author: michael-bromley
 type: project
 date: 2014-09-19T09:50:50+00:00
-url: /211/soundcloud-visualizer
 categories:
   - project
 image: /media/2014/01/Untitled-4.jpg

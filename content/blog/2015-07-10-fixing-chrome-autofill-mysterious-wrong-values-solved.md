@@ -9,7 +9,6 @@ categories:
   - post
 tags:
   - code
-  - html
 
 ---
 On an ecommerce website I maintain, we started running into a strange issue where we were getting orders coming in with the first line of the address being duplicated in the "delivery instructions" field. This was causing all sorts of confusion and mild distress at the office. Today I finally persisted enough to get to the bottom of it.

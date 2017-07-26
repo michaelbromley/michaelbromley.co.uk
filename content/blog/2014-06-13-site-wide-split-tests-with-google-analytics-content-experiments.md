@@ -8,8 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - analytics
-  - php
+  - code
 
 ---
 {{< figure src="/media/2014/06/ga.png" >}}

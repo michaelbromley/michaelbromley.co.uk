@@ -10,7 +10,6 @@ categories:
 tags:
   - AngularJS
   - code
-  - demo
   - JavaScript
 ---
 The `ng-repeat` is probably one of the most oft-used of all the core AngularJS directives, and with good reason. It offers amazing flexibility and is probably one of the first things to really "wow" you about the framework.

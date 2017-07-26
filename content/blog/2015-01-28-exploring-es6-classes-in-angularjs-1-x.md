@@ -10,10 +10,7 @@ categories:
 tags:
   - AngularJS
   - code
-  - demo
-  - ES6
   - JavaScript
-  - TypeScript
 
 ---
 In this post I will describe a way of using ES6 classes today in your AngularJS 1.x applications. This is intended more as an exploration than a recommendation of best practice. I'll go into quite some detail about the reasoning and process behind my solution, but if you'd prefer to fast forward to the finale rather than enjoy the adventure, see the last section where I [bring it all together][1], or go directly to the [demo app repo](https://github.com/michaelbromley/angular-es6).

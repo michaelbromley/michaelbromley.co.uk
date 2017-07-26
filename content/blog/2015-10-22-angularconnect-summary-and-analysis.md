@@ -8,9 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - AngularConnect
   - AngularJS
-  - JavaScript
 
 ---
 [AngularConnect][1], the largest Angular conference to date, has just taken place in London. Here is a summary based on what I learned and what I found most interesting. Since it was a two-track event, I only saw half the talks, so for the full picture, [watch the sessions yourself on YouTube][2].

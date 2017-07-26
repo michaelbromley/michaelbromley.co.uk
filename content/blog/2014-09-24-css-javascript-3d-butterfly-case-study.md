@@ -9,8 +9,7 @@ categories:
   - post
 tags:
   - code
-  - css
-  - demo
+  - creative
   - JavaScript
 ---
 I've recently been having lots of fun with CSS 3D transforms and animations. As part of a demo for a talk I am giving at the ViennaJS meetup group this month, I put together a demo that showcases how some fairly sophisticated 3D effects can be achieved with pure CSS, and made interactive with a little JavaScript.

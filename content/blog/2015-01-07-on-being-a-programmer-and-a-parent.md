@@ -9,7 +9,7 @@ categories:
   - post
 tags:
   - essay
-  - parenting
+  - programming
 
 ---
 I've not typed a semicolon for a couple of weeks now. I don't mean the look-at-me-I-know-fancy-punctuation kind (there will be plenty of those here). I am of course referring to `;`, the token that denotes the end of a statement. No, I've not ditched JavaScript for Python or Erlang; I'm on holiday. I'm getting back to (half of) my roots in beautiful Malaysia, and as a result I've not done any programming at all. I'm writing a blog post instead. Let nobody say I don't know how to kick back and relax.

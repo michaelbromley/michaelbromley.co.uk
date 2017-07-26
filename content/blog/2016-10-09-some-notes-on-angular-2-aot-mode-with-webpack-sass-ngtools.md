@@ -8,8 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - Angular 2
-  - Webpack
+  - Angular
 
 ---
 Earlier this week I set out to convert a few of my Angular 2 apps to use Ahead-of-time (AoT) compilation. I've just been to AngularConnect and heard about a project named "@ngtools/webpack" ([video here][1]) which supposedly allows you to use the same build tools that the angular-cli project uses, even if you don't use the cli (which is the case with my stuff right now).

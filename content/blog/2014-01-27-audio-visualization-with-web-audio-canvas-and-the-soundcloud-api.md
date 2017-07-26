@@ -8,11 +8,9 @@ aliases:
 categories:
   - post
 tags:
-  - canvas
+  - creative
   - code
   - JavaScript
-  - soundcloud
-  - web audio
 
 ---
 {{< figure src="/media/2014/01/Untitled-4.jpg" title="Audio visualization" link="http://www.michaelbromley.co.uk/experiments/soundcloud-vis/#muse/undisclosed-desires" >}}

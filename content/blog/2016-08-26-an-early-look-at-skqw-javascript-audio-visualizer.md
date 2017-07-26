@@ -8,11 +8,9 @@ aliases:
 categories:
   - post
 tags:
-  - Angular 2
-  - canvas
-  - creative coding
+  - Angular
+  - creative
   - JavaScript
-  - open source
   - TypeScript
 
 ---

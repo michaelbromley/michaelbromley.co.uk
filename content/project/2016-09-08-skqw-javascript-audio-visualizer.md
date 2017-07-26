@@ -3,7 +3,6 @@ title: 'SKQW: JavaScript Audio Visualizer'
 author: michael-bromley
 type: project
 date: 2016-09-08T12:08:31+00:00
-url: /547/skqw-javascript-audio-visualizer
 categories:
   - project
 image: /media/2016/08/skqw-screenshot-01.png

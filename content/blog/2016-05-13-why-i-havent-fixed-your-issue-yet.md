@@ -10,7 +10,6 @@ categories:
   - post
 tags:
   - essay
-  - open source
   - programming
 
 ---

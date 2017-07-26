@@ -8,9 +8,8 @@ aliases:
 categories:
   - post
 tags:
-  - Angular 2
+  - Angular
   - code
-  - demo
   - TypeScript
 
 ---

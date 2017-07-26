@@ -9,8 +9,6 @@ categories:
   - post
 tags:
   - JavaScript
-  - Respond.js
-  - Zurb Foundation
 
 ---
 I recently did a re-design of a medium-sized e-commerce website with version 4 of the excellent Foundation framework from Zurb.

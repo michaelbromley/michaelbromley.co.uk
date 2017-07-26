@@ -9,10 +9,7 @@ categories:
   - featured
   - post
 tags:
-  - culture
   - essay
-  - history
-  - internet
 
 ---
 I've recently been listening to the excellent podcast series <a href="http://www.revolutionspodcast.com/" target="_blank"><i>Revolutions</i></a> by Mike Duncan. Right now we are in the thick of the French Revolution. It's really riveting stuff, and offers some fascinating insights into the interplay of **groups**, **ideology**, **virtue**, **violence** and **terror**. If that list sounds familiar, perhaps you frequent Twitter or Reddit or some other online community.

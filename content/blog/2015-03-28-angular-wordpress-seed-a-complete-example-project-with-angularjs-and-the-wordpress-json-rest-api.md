@@ -10,7 +10,6 @@ categories:
 tags:
   - AngularJS
   - code
-  - gulp
   - Wordpress
 
 ---

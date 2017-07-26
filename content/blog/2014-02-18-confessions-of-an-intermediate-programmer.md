@@ -9,7 +9,6 @@ categories:
   - featured
   - post
 tags:
-  - ego
   - essay
   - programming
 

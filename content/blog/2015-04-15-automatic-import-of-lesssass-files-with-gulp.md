@@ -9,10 +9,7 @@ categories:
   - post
 tags:
   - code
-  - css
-  - gulp
   - JavaScript
-  - Less
 
 ---
 This post describes a way to use [Gulp](http://gulpjs.com/) to automatically `@import` [Less](http://lesscss.org/) files from anywhere in your project's folder structure. It is useful if you want to define self-contained components that put all HTML, JavaScript and LESS files together, yet you don't want to maintain a list of imports in your main LESS file.

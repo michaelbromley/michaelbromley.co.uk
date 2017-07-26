@@ -8,7 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - speaking
+  - programming
   - essay
 ---
 When I moved to Vienna last October, I was pleased to find a very active and vibrant development community. Just this week alone, there have been at least 19 tech meetups in the city. A [quick search on meetup.com](http://www.meetup.com/find/tech/?allMeetups=false&radius=2&userFreeform=Vienna%2C+Austria&mcName=Vienna%2C+AT&lat=48.22&lon=16.37&sort=recommended&eventFilter=mysugg) reveals 46 tech-related meetup groups at the time of this writing, and there's even a [website dedicated to listing all the meetups](http://www.devs-austria.org/) each week. During my time here so far, I've found the local tech meetups a great way to learn and improve as a developer, as well as a way to get involved in the community and get to know some cool people in a new city.

@@ -8,10 +8,9 @@ aliases:
 categories:
   - post
 tags:
-  - Angular 2
+  - Angular
   - AngularJS
-  - ngEurope
-
+  
 ---
 I write this from a tiny apartment in Paris, sitting up in bed on a sleepy Friday morning after a crazy couple of days at the ngEurope conference. I would like to share a few thoughts and experiences about what I've seen and learned over the past couple of days. This isn't going to be a purely technical blog post. I also won't try to be comprehensive in covering all the talks. I'll give you my impressions of the whole experience and make a few comments on some of the particular topics and announcements that really stood out for me. If you really want to find out the detailed content of these talks, check out the [videos on YouTube](https://www.youtube.com/channel/UCEGUP3TJJfMsEM_1y8iviSQ) as soon as they have been posted.
 

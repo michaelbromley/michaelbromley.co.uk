@@ -8,8 +8,7 @@ aliases:
 categories:
   - post
 tags:
-  - essay 
-  - productivity
+  - essay
 
 ---
 When we talk about productivity, it is usually in the context of our professional lives. Is this fair? Does productivity begin and end at the office door?

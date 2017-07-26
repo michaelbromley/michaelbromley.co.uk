@@ -8,9 +8,8 @@ aliases:
 categories:
   - post
 tags:
-  - css
-  - internet explorer
-  - mobile
+  - code
+  
 ---
 Using touch events in your JavaScript app is as simple as adding event listeners like this:
 

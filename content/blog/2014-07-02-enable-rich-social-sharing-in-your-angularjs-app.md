@@ -10,9 +10,7 @@ categories:
 tags:
   - AngularJS
   - code
-  - demo
   - JavaScript
-  - social media
  
 ---
 If you are building a public-facing app in AngularJS, you'll want your users to be able to share it via social media. Indeed, for certain apps, this may be the most important channel of promotion. By "rich social sharing", I mean something like this:

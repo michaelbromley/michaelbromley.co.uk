@@ -8,7 +8,6 @@ aliases:
 categories:
   - post
 tags:
-  - great ideas
 
 ---
 {{< figure src="/media/2014/06/idlecycles_infographic.jpg" >}}

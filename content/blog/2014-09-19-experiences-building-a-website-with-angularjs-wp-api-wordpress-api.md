@@ -9,10 +9,10 @@ categories:
   - post
 tags:
   - AngularJS
-  - css
-  - gulp
-  - html
+  - code
   - JavaScript
+  - Wordpress
+  
 ---
 I've just completed and launched a complete re-write of this website. Since the first iteration (started around nine months ago) and this new one, I've learned a lot about the fundamental technologies of the web: HTML, CSS and JavaScript; about AngularJS in particular; and about things like build systems and application architecture. Therefore I wanted to share a few thoughts and experiences I had building this site.
 
