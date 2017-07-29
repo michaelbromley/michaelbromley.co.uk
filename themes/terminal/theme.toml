@@ -3,19 +3,13 @@
 
 name = "Terminal"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/michaelbromley/michaelbromley.co.uk/blob/master/themes/terminal/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "https://www.michaelbromley.co.uk/"
 tags = []
 features = []
 min_version = "0.21"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Michael Bromley"
+  homepage = "https://www.michaelbromley.co.uk/"

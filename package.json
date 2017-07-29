@@ -8,7 +8,7 @@
     "build": "webpack -p"
   },
   "author": "Michael Bromley",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "devDependencies": {
     "css-loader": "^0.28.4",

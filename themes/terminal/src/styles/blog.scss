@@ -92,19 +92,24 @@ ul.tags {
   margin: auto;
   padding-bottom: 50px;
   margin-bottom: 50px;
-  font-size: 1.2em;
+  font-size: 1em;
   border-bottom: 1px dotted $colour-text-deemphasize;
+  color: $colour-text-content;
+
+  h2, h3, h4 {
+    margin-top: 1.5em;
+  }
 
   pre {
     font-size: 0.8em;
   }
 
-  p {
-    color: $colour-text-content;
+  & > p:first-child {
+    font-size: 1.25em;
   }
 
-  & > p:first-child {
-    font-size: 1.4em;
+  li {
+    margin-bottom: 5px;
   }
 }
 
@@ -147,7 +152,7 @@ figure {
 
 .heading-anchor {
   &:link, &:visited {
-    color: #111;
+    color: $colour-text-content;
   }
   &:hover:after, &.selected:after {
     content: '#';

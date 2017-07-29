@@ -1,9 +1,10 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.michaelbromley.co.uk/"
 languageCode = "en-gb"
-title = "Blog v3"
+title = "Michael Bromley: Web Developer"
 theme = "terminal"
 author = "Michael Bromley"
-description = "Michael Bromley"
+description = "The website and blog of Michael Bromley, a web developer and creative coder."
+metaDataFormat = "yaml"
 
 [permalinks]
   blog = "/:section/:title/"
