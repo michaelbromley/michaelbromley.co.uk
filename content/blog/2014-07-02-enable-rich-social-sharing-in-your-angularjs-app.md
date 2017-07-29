@@ -3,6 +3,7 @@ title: Enable Rich Social Sharing in Your AngularJS App
 author: michael-bromley
 type: post
 date: 2014-07-02T06:08:36+00:00
+lastmod: 2017-07-26T06:08:36+00:00
 aliases:
   - blog/171/enable-rich-social-sharing-in-your-angularjs-app
 categories:
@@ -177,3 +178,75 @@ Until that time, if you want your AngularJS app (or any client-side JavaScript a
 [Demo App](http://www.michaelbromley.co.uk/experiments/angular-social-demo/home) - Try sharing it. It should work!
 
 [GitHub Repo](https://github.com/michaelbromley/angular-social-demo) - Contains full code for the app so you can see in more detail how this solution works.
+
+----
+
+## Postscript - Readers' Notes
+
+When this post was written, I had a comments system on the blog. A few readers added some tips for other environments which may be of use.
+
+I include them here as-is, I cannot vouch for their correctness:
+
+### Nginx
+
+**Callum Hopkins writes:** Got it to work in Nginx:
+
+```Text
+rewrite /([A-Za-z]+)/ /static/static-page.php?id=$1 last;
+proxy_pass http://domain.com;
+```
+
+Have those lines inside the `$http_user_agent` condition block. The proxy means the js url shows the static url's content but keeps the js url and doesn't flag up errors on the social media cards. I tested this on FB's Open Graph Object Debugger and worked fine.
+
+**Tom McDevitt writes:** Michael, thank you so much for sharing. This was a big help for me. If it's any help, I used the following nginx configuration for my angular webapp https://dofunstuff.com. 
+The web application is behind a proxy server at /app/ and any requests from the facebook robot are sent to /app/robots/. The site has html 5 mode enabled and this config allowed me to perform page refreshes.
+
+```Text
+location / {
+  try_files $uri$args $uri$args/ /index.html;
+
+  if ($http_user_agent ~ facebookexternalhit|Facebot|Twitterbot|Pinterest|Google.*snippet) {
+    # Send request to robots api
+    proxy_pass http://localhost:8080/app/robots$uri$args; 
+  }
+}
+
+location /app {
+  proxy_pass http://localhost:8080;
+}
+```
+
+### Elastic Beanstalk / Tomcat
+
+**Captain Crunch writes:** This article was a life saver! I spent the last two days trying to learn to do this on Elastic Beanstalk running Tomcat, but instead of using .htaccess I had to modify the configuration for httpd directly. If anyone is looking to do this in Elastic Beanstalk/Tomcat, this is what I did to get it working:
+
+1) httpd in EB/EC2 uses virtual hosting, so you need to place Michael's RewriteRule within a VirtualHost block in one of the config files located at `/etc/httpd/conf.d/elasticbeanstalk`. You can do this by creating a .ebextensions directory in the root directory of your project and placing a .conf YAML file there that will create a temp file somewhere and then copy that file over to `/etc/httpd/conf.d/elasticbeanstalk` with a container command.
+2) As a shortcut to step 1), you can just create an `/httpd/conf.d/elasticbeanstalk` path in your .ebextensions directory and overriding Elastic Beanstalk's 00_application.conf file with your own 00_application.conf file:
+
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-tomcat-platform.html
+
+Just place the RewriteRule in your 00_application.conf file and when you upload your WAR, AWS will automatically extract your `.ebextensions/httpd/conf.d/elasticbeanstalk/00_application.conf` file and replace the 00_application.conf file in `/etc/httpd/conf.d/elasticbeanstalk` with it. Here's my 00_application.conf file that got redirect working for me. Instead of `<ifmodule mod_rewrite.c="">` I used the `LoadModule` to make sure mod_rewrite was running:
+
+```Text
+<virtualhost *:80="">
+
+LoadModule rewrite_module modules/mod_rewrite.so
+
+RewriteEngine On
+# allow social media crawlers to work by redirecting them to a server-rendered static version of the page
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|Google.*snippet)
+RewriteRule album/(\d*)$ http://www.michaelbromley.c... [P]
+
+<proxy *="">
+Order Allow,Deny
+Allow from all
+</proxy>
+ProxyPass / http://localhost:8080/ retry=0
+ProxyPassReverse / http://localhost:8080/
+ProxyPreserveHost on
+
+ErrorLog /var/log/httpd/elasticbeanstalk-error_log
+</virtualhost>
+```
+
+Hopefully this saves someone a lot of time trying to get this working in AWS.
