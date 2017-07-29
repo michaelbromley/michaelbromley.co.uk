@@ -14,7 +14,10 @@
         </div>
         <div class="article-footer">
             Comments and feedback are welcome. You can <a href="mailto:michael@michaelbromley.co.uk">email me</a> or contact me via <a href="https://twitter.com/michlbrmly">Twitter</a>.
-            <span class="smallprint">Last modified: {{ .Date.Format "02 Jan 2006" }} | © Michael Bromley {{ .Date.Format "2006" }}</span>
+            <span class="smallprint">
+                Last modified: {{ .Lastmod.Format "02 Jan 2006" }} | © Michael Bromley {{ .Date.Format "2006" }} |
+                <a href="https://github.com/michaelbromley/michaelbromley.co.uk/blob/master/content/blog/{{ .File.LogicalName }}">View the source of this page</a>
+            </span>
         </div>
     </div>
 </article>
