@@ -79,10 +79,13 @@ export function initSearch() {
     }
 
     function closeModal() {
-        searchModal.classList.remove(DISPLAY_CLASS);
-        closing = true;
-        setTimeout(() => closing = false, 500);
-        reset();
+        // setTimeout handles weird race conditions when clicking an item link
+        setTimeout(() => {
+            searchModal.classList.remove(DISPLAY_CLASS);
+            closing = true;
+            setTimeout(() => closing = false, 500);
+            reset();
+        }, 250);
     }
 
     function reset() {
