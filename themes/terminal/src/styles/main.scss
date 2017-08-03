@@ -35,8 +35,9 @@ body {
 #main {
   max-width: 100%;
   @media (max-width: $screen-medium-below) {
-    margin-left: 50px;
-    margin-right: 5px;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   @media (min-width: $screen-medium) {
     flex-grow: 1;
@@ -113,13 +114,11 @@ a:hover {
 .page-header {
   font-size: 2.4em;
   margin-top: 25px;
+  margin-left: 38px;
   @media (min-width: $screen-medium) {
     font-size: 3em;
+    margin-left: 0;
   }
-}
-
-p.lead {
-  font-size: 24px;
 }
 
 @keyframes fadeIn {

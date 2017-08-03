@@ -96,12 +96,19 @@ ul.tags {
   border-bottom: 1px dotted $colour-text-deemphasize;
   color: $colour-text-content;
 
+  @media screen and (max-width: $screen-medium-below) {
+    font-size: 1.15em;
+  }
+
   h2, h3, h4 {
     margin-top: 1.5em;
   }
 
   pre {
     font-size: 0.8em;
+    @media screen and (max-width: $screen-medium-below){
+      max-width: calc(100vw - 4em);
+    }
   }
 
   & > p:first-child {
@@ -111,9 +118,14 @@ ul.tags {
   li {
     margin-bottom: 5px;
   }
+
+  sup {
+    font-size: 12px;
+    line-height: 0;
+  }
 }
 
-.article-meta {
+.article-meta { 
   margin-top: -20px;
 }
 

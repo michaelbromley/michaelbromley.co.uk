@@ -25,10 +25,13 @@
   max-width: 100px;
 }
 
-.lead {
+p.lead {
   color: $colour-text-deemphasize;
   font-family: $console-font;
   margin-bottom: 40px;
+  @media screen and (max-width: $screen-medium-below) {
+    font-size: 1.3em;
+  }
 }
 
 .featured {
