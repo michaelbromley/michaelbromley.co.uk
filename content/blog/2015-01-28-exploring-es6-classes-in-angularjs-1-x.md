@@ -15,7 +15,7 @@ tags:
 ---
 In this post I will describe a way of using ES6 classes today in your AngularJS 1.x applications. This is intended more as an exploration than a recommendation of best practice. I'll go into quite some detail about the reasoning and process behind my solution, but if you'd prefer to fast forward to the finale rather than enjoy the adventure, see the last section where I [bring it all together][1], or go directly to the [demo app repo](https://github.com/michaelbromley/angular-es6).
 
-{{< figure src="/media/2015/01/ng-es6-1024x497.png" title="AngularJS & ES6" >}}
+{{< figure src="/media/2015/01/ng-es6.png" title="AngularJS & ES6" >}}
 
 If you are not familiar with ES6 - the latest version of JavaScript - here is an [overview of the new features](https://github.com/lukehoban/es6features), and here is an article specifically about the [ES6 class syntax](http://javascriptplayground.com/blog/2014/07/introduction-to-es6-classes-tutorial/).
 

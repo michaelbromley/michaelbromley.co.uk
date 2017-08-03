@@ -1,5 +1,5 @@
 ---
-date: 2017-07-26T20:52:59+02:00
+date: 2017-07-30T20:52:59+02:00
 title: Going Static with Hugo
 type: post
 categories:
@@ -76,7 +76,7 @@ before, so the prefix (rather than infix) boolean operators took a bit of gettin
 
 Part of the complexity comes from the fact that Go templates are significantly more powerful than Handlebars. I'm *sort of*
 getting the hang of things now, but anything beyond the most simple task inevitably leads me to the 
-[Hugo support forum](https://discourse.gohugo.io/search?q=template%20category%3A34); where new Hugo users go to 
+[Hugo support forum](https://discourse.gohugo.io/search?q=template%20category%3A34) - where new Hugo users go to 
 share in their mutual bewildered confusion.
 
 Here's an example of something that seemed like it should be simple: displaying a list of "featured" posts on the
@@ -131,7 +131,7 @@ provide useful feedback, but in general the comments fell into one of two catego
 I must be improving as a programmer, because I'm developing a spider-sense for over-engineered solutions
 to problems. A client-side JavaScript app backed by a REST API for a blog like mine is *too much*.
 
-I now deliver **6kb** of JavaScript per page as opposed to between **88 - 800kb**, with *improved* accessibility and
+I now deliver **18kb** of JavaScript per page (6kb + 12kb for analytics) as opposed to between **100 - 800kb**, with *improved* accessibility and
 usability.
 
 Search engines and crawlers can read my articles. So can people who browse with JavaScript disabled.
