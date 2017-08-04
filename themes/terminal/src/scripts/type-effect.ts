@@ -23,8 +23,8 @@ function typeEffect(el: HTMLElement) {
             setTimeout(typeNextChar, DELAY);
         } else {
             removeCaret(caret);
-            el.style.height = `initial`;
-            el.style.width = `initial`;
+            el.style.height = `auto`;
+            el.style.width = `auto`;
         }
     }
     typeNextChar();

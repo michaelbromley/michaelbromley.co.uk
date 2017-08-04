@@ -54,10 +54,23 @@ $transition-time: 0.4s;
 }
 
 .float-container {
-  position: fixed;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  @media (min-width: $screen-medium) {
+    position: fixed;
+  }
+}
+
+.mobile-title {
+  font-family: $console-font;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 32px;
+  color: $colour-text-deemphasize;
+  @media (min-width: $screen-medium) {
+      display: none;
+  }
 }
 
 #main-nav {
@@ -138,6 +151,7 @@ $transition-time: 0.4s;
   @media (max-width: $screen-medium-below) {
     margin-left: 0;
     text-align: center;
+    margin-bottom: 20vh;
   }
   margin-bottom: 20px;
 }

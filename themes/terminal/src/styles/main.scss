@@ -28,8 +28,10 @@ body {
 }
 
 #container {
-  display: flex;
   margin-bottom: 50px;
+  @media (min-width: $screen-medium) {
+    display: flex;
+  }
 }
 
 #main {
