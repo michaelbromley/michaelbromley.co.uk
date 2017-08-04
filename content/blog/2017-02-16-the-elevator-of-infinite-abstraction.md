@@ -6,7 +6,6 @@ date: 2017-02-16T16:19:08+00:00
 aliases:
   - blog/565/the-elevator-of-infinite-abstraction
 categories:
-  - featured
   - post
 tags:
   - essay

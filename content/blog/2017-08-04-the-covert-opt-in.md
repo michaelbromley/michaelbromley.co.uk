@@ -1,9 +1,10 @@
 ---
-date: 2017-08-01T20:52:59+02:00
+date: 2017-08-04T20:52:59+02:00
 title: The Covert Opt-In
 type: post
 categories:
   - post 
+  - featured
 tags:
   - essay
   - technology
@@ -89,7 +90,7 @@ Dom and a Lawyer who looks like Saul Goodman are sitting in a bar, sputtering th
 What is my point in relating this anecdote? Is is that salespeople are sometimes glib and clueless? Is it that ad- and martech has a distinctly shady side? That's nothing new.
 
 No. The point is that somebody like you or me wrote that code which secretly captures email addresses. Right now there are people thinking of better ways to fingerprint and track us around the web in ways that make an utter mockery of the 
-[EU's cookie directive](https://www.theregister.co.uk/2017/03/01/planned_cookie_law_update_expert/) and other such doomed legislation. An entire industry is pursuing an agenda which finally turns the internet into a never-ending
+[EU's cookie directive](https://www.theregister.co.uk/2017/03/01/planned_cookie_law_update_expert/) and other such doomed legislation. An entire industry is pursuing an agenda which finally turns the Internet into a never-ending
 assault on both our dignity and our senses.
 
 If companies like IntegriMart openly boast about such invasive practices, one can only imagine the things they *don't* talk about. 
