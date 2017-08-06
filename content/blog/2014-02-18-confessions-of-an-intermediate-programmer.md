@@ -3,6 +3,7 @@ title: Confessions of an Intermediate Programmer
 author: michael-bromley
 type: post
 date: 2014-02-18T18:14:52+00:00
+lastmod: 2017-08-06T18:35:36+00:00
 aliases:
   - blog/65/confessions-of-an-intermediate-programmer
 categories:
@@ -15,7 +16,7 @@ tags:
 ---
 I am an intermediate programmer.
 
-I have a pretty good grasp of the basics. I have made enough mistakes to have a good idea why they _were _mistakes. I am aware that there is a lot that I need to know more about. Crucially, I have some idea of what those things are, and I am actively and energetically working on improving.
+I have a pretty good grasp of the basics. I have made enough mistakes to have a good idea why they _were_ mistakes. I am aware that there is a lot that I need to know more about. Crucially, I have some idea of what those things are, and I am actively and energetically working on improving.
 
 It has taken a while for me to get to the point where I am confident enough to admit that I am only average in ability. I no longer feel the need to hold second-hand opinions that I don't really understand. I'm not so afraid of being found out when I don't know about something.
 
@@ -50,6 +51,8 @@ As simple as it was elegant, the Fuck Generator (fgen.exe) was a command-line pr
 A short while later, another edition of _PC Plus_ included a full version of Borland Delphi. With it, I upgraded the concept to include a Windows GUI and the ability to randomly generate colourful and sometimes surprising 4-part insults. While the other kids at school were passively playing PlayStation, I was engaged upon a far more meaningful and creative endeavour. _I was generating fucks_.
 
 By this point, it was quite clear that I was destined for big things. It was time to show the world what I could really do.
+
+{{< figure src="/media/2014/02/fgen.png" title="Approximate output of fgen.exe" >}}
 
 ## My Magnum Opus
 
