@@ -5,6 +5,9 @@ theme = "terminal"
 author = "Michael Bromley"
 description = "The website and blog of Michael Bromley, a web developer and creative coder."
 metaDataFormat = "yaml"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsStyle = "vs"
 
 [permalinks]
   blog = "/:section/:title/"

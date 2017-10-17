@@ -2,9 +2,7 @@ import {initAnchorLinks} from './anchor-links';
 
 declare const require: (path: string) => any;
 
-require('prismjs/themes/prism.css');
 require('../styles/main.scss');
-require('prismjs');
 
 import {initMenu} from './menu';
 import {initSearch} from './search';

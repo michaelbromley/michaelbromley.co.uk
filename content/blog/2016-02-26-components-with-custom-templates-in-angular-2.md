@@ -34,7 +34,7 @@ We are going to take a simple example: we want to build a timer which has a _sta
 Here is what our SimpleTimer logic looks like:
 
 
-```JavaScript
+```TypeScript
 export class SimpleTimer {
  
   running: boolean = false;
@@ -43,7 +43,7 @@ export class SimpleTimer {
   getTime() {
     let pad = n => n <= 9 ? '0' + n : n; 
     let cs = Math.floor(this.time % 100);
-    let s = Math.floor(this.time / 100) % 60); 
+    let s = Math.floor((this.time / 100) % 60); 
     let m = Math.floor(this.time / 6000) 
     return `${pad(m)}:${pad(s)}:${pad(cs)}`; 
   }
@@ -74,7 +74,7 @@ In Angular 1.x, we are able to specify a function as the templateUrl, which has 
 
 In Angular 2, on the other hand, templates and templateUrls are specified via decorators and are parsed before the component life cycle even begins. This means they have no access to injectables. My first efforts involved code like this:
 
-```JavaScript
+```TypeScript
 @Component({
   selector: 'simple-timer',
   // fails - this code is not within the scope of the class
@@ -123,7 +123,7 @@ Let's assume we have imported the directive `SimpleTimer` and want to use it in
 
 We can get a reference to this template now simply by injecting TemplateRef into our constructor. We will also inject a [ViewContainerRef][8], since we'll need this to embed the template into the view. Then once the directive has initialized, we can "stamp out" the template into the view:
 
-```JavaScript
+```TypeScript
 constructor(private templateRef: TemplateRef, 
             private viewContainer: ViewContainerRef) {}
 
@@ -144,7 +144,7 @@ We can provide the three members of our "API" as an object like this:
 <template simpleTimer #timer="timerApi">...</template>
 ```
 
-```JavaScript
+```TypeScript
 ngAfterViewInit() {
   let view = this.viewContainer.createEmbeddedView(this.templateRef);
   let api = {
@@ -179,7 +179,7 @@ So far we can specify our own template, and bind local variables to it. So are w
 
 From what I understand, this is caused by the fact that our binding {{ timer.getTime() }} is being checked once before we provide the local API value, and then once again after the API is defined, which gives the new (correct) value. Luckily, Angular 2 allows us to manipulate the change detection on a per-component basis, giving us the control we need to mitigate this issue. We will inject a [ChangeDetectorRef][10] into our constructor so that we can temporarily disable change detection until our local API variable is properly hooked up:
 
-```JavaScript
+```TypeScript
 constructor(private templateRef: TemplateRef,
               private viewContainer: ViewContainerRef,
               private cdr: ChangeDetectorRef) {}
@@ -215,7 +215,7 @@ As mentioned in the NgFor example, Angular 2 provides some syntactic sugar with 
 
 ```
 
-```JavaScript
+```TypeScript
 @Directive({
   selector: '[simpleTimer]'
 })
@@ -249,7 +249,7 @@ export class SimpleTimer {
   getTime() {
     let pad = n => n <= 9 ? '0' + n : n;
     let cs = Math.floor(this.time % 100);
-    let s = Math.floor(this.time / 100) % 60); 
+    let s = Math.floor((this.time / 100) % 60); 
     let m = Math.floor(this.time / 6000);
     return `${pad(m)}:${pad(s)}:${pad(cs)}`; 
   } 

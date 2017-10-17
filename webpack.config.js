@@ -24,13 +24,6 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader']
                 })
-            },
-            {
-                test: require.resolve('prismjs'),
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'Prism'
-                }]
             }
         ]
     },
