@@ -3,7 +3,7 @@ date = "2017-06-11T21:28:35+02:00"
 title = "About"
 layout = "about"
 [menu]
-  [[menu.main]]
+  [menu.main]
   identifier = "about"
   name       = "About"
   url        = "/about/"
