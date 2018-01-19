@@ -1,0 +1,29 @@
+{{/*
+    Simulate a GitHub-like issue entry
+*/}}
+
+{{/* DEFAULTS */}}
+{{ $user  := or (.Get "user") "username" }}
+{{ $type := cond (eq (.Get "type") "comment") "commented on" "closed this on"  }}
+{{ $date  := or (.Get "date") "date" }}
+
+{{ if (eq $type "commented on") }}
+<div class="avatar"></div>
+<div class="issue-entry">
+    <div class="issue-header-entry">
+        <div class="issue-user-name">{{ $user }}</div>
+        <div class="issue-type">{{ $type }}</div>
+        <div class="issue-date">{{ $date }}</div>
+    </div>
+    <div class="issue-body">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
+
+{{ else }}
+<div class="issue-close-entry">
+    <div class="issue-user-name">{{ $user }}</div>
+    <div class="issue-type">{{ $type }}</div>
+    <div class="issue-date">{{ $date }}</div>
+</div>
+{{ end }}
