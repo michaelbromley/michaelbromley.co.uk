@@ -11,7 +11,7 @@ categories:
 tags:
   - essay
   - programming
-
+ogimage: media/2016/05/couch.jpg
 ---
 Hi there. You opened an issue with my project on GitHub, and it's getting kind of stale by now.
 
