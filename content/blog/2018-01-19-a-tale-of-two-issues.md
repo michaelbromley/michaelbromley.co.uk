@@ -1,5 +1,5 @@
 ---
-date: 2018-01-19T20:52:59+02:00
+date: 2018-01-20T20:52:59+02:00
 title: A Tale of Two Issues
 type: post
 categories:
@@ -8,21 +8,25 @@ categories:
 tags:
   - open source
   - programming
+ogimage: media/2018/01/oliver-thomas-klein-207908.jpg
 ---
 
-*Zoid* is a JavaScript library for simple arithmetic operations. The project has been around for a couple of years and
+*Zoid* is a JavaScript library for simple arithmetic operations. The project has been around for a few years and
 has a sole maintainer, who works on it in her free time.
 
-Here are a couple of issues picked out of the issue tracker - one quite old and one very recent, presented without comment.
+{{< figure src="/media/2018/01/oliver-thomas-klein-207908.jpg" title="Photo by Oliver Thomas Klein on Unsplash" >}}
+
+Here are a couple of issues picked out of the issue tracker - one from a couple of years ago and one very recent, 
+presented without comment.
 
 ## Issue #37 - clicking button does not add 1
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 13, 2015" >}}
-Having trouble with using the add function when clicking a button. It doesn't work.
+Hey. Having trouble with using the add function when clicking a button. It doesn't work.
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 13, 2015" >}}
-  Hi, can you show me what you are trying to do? Paste some code?
+Hi, can you show me what you are trying to do? Paste some code?
 {{< /issue-entry >}}
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 13, 2015" >}}
@@ -38,14 +42,19 @@ I do that and then just nothing happens. The counter doesn't go up. Please help!
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 13, 2015" >}}
-Oh ok I think I see the issue. When you reference `this.current_count` inside the onclick handler, the value of `this`
+Oh ok I think I see the issue. When you reference `this.current_count` inside the onclick handler, the value of "this"
 will be bound to the element that was clicked, rather than the outer object.
 
-So you can either use an arrow function or bind the outer `this` to another name, e.g. `const that = this;`
+So you can either use an arrow function or bind the outer `this` to another name, e.g. 
+```JavaScript
+const that = this;
+```
+and then use `that.current_count` in your click handler.
 {{< /issue-entry >}}
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 14, 2015" >}}
-Okay so I am not sure if this is right but everything seems to be broken right now and I'm not sure what's up:
+Okay so I am not sure if this is right but I tried arrow functions and everything seems to be broken right now and 
+I'm not sure what's up:
 ```JavaScript
 add_handlers: function() => {
     document.getElementById('add_one').onclick = function() => {
@@ -56,7 +65,9 @@ add_handlers: function() => {
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 14, 2015" >}}
-You need to remove the `function` keyword if you are using arrow functions. That's a syntax error right now.
+You need to remove the `function` keyword if you are using arrow functions. That's a syntax error right now. See the
+[MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Syntax) for the 
+correct syntax.
 {{< /issue-entry >}}
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 14, 2015" >}}
@@ -66,7 +77,7 @@ now as in nothing works, just loads of errors all over the place!
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 14, 2015" >}}
 Just checking here - are you transpiling down your code with something like Babel? because those arrow functions are 
-part of a newer version of JavaScript which is not supported in IE.
+part of a newer version of JavaScript which is not supported in IE. See [caniuse.com for arrow functions](https://caniuse.com/#feat=arrow-functions).
 {{< /issue-entry >}}
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 15, 2015" >}}
@@ -74,7 +85,7 @@ Sorry I don't know what transpiling or Babel is, could you give me a pointer?
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 14, 2015" >}}
-Sure, sorry - [here's the Babel website](https://babeljs.io/) and "transpiling" here means taking modern JavaScript and
+Sure, sorry - [here's the Babel website](https://babeljs.io/), and "transpiling" here means taking modern JavaScript and
 transforming it into the older style which is compatible with IE for example.
 {{< /issue-entry >}}
 
@@ -96,7 +107,7 @@ transpile the script. Then you use the transpiled script in your website and you
 file into your website anymore. 
 
 To be honest this is kinda getting out of the scope of this issue tracker, which is really just for bugs relating
-to Zoid. Maybe you can try some forums or StackOverflow?
+to Zoid. Maybe you can try some forums or [StackOverflow](https://stackoverflow.com/)?
 {{< /issue-entry >}}
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 21, 2015" >}}
@@ -137,16 +148,22 @@ Is that right? How do I use git to upload the files?
 
 {{< issue-entry user="hecter88" type="comment" date="Jul 28, 2015" >}}
 Hey I know you are probably busy but can you advise on the git thing? I tried to look at the docs but it seems
-preeeetty advanced for just uploading my files!! haha.
+pretty confusing and there is no mention anywhere of how to upload to a website.
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="comment" date="Jul 30, 2015" >}}
 Sorry, I think at this stage you are better off getting help from a friend or a forum for all these issues
-you are running into. I'd love to help more but I've not really got the time.
+you are running into. I'd love to help more but I've not really got the time. Good luck! :)
+{{< /issue-entry >}}
+
+{{< issue-entry user="hecter88" type="comment" date="Aug 1, 2015" >}}
+I tried asking on stack overflow but my questions keep getting downvoted or closed??!!
 {{< /issue-entry >}}
 
 {{< issue-entry user="zoider (maintainer)" type="close" date="Nov 15, 2015" >}}
 {{< /issue-entry >}}
+
+<div style="margin-bottom: 100px;"></div>
 
 ## Issue #161 - factorial calculation not working
 
