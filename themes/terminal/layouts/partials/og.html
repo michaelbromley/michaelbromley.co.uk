@@ -4,11 +4,14 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ .Permalink }}" />
     {{ if .Params.ogimage }}
-    <meta property="og:image" content="{{ .Params.ogimage }}" />
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
     {{ end }}
 
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="@michlbrmly" />
-    <meta property="twitter:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta property="twitter:description" content="{{ .Summary }}" />
-    <meta property="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@michlbrmly" />
+    <meta name="twitter:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta name="twitter:description" content="{{ .Summary }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    {{ if .Params.ogimage }}
+        <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
+    {{ end }}
