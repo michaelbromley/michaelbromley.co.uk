@@ -10,7 +10,7 @@ layout = "about"
   weight     = 4
 +++
 
-### Hi! I'm am a software developer originally from Manchester, England and now based in Vienna, Austria.
+### Hi! I'm a software developer originally from Manchester, England and now based in Vienna, Austria.
 
 {{< figure src="/assets/speaking.jpg" title="Speaking about creative coding at WeAreDevs 2017" >}}
 
