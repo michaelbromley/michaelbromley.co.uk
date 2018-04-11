@@ -8,12 +8,12 @@ It is built with [Hugo](https://gohugo.io/).
 
 0. Install Hugo per the instructions in the Hugo docs.
 1. `npm install`
-2. `npm watch`
+2. `npm run watch`
 3. `hugo server`
 
 ## Prod Build
 
-1. `npm build`
+1. `npm run build`
 2. `hugo`
 
 ## License & Copyright

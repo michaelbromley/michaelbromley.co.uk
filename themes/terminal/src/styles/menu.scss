@@ -140,7 +140,7 @@ $transition-time: 0.4s;
     transition: color 0.2s;
     &:link, &:visited {
       color: #aaa;
-    },
+    }
     &:hover, &:active {
       color: $colour-a-hover;
     }
