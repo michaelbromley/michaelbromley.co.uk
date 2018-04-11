@@ -8,21 +8,22 @@ categories:
 tags:
   - essay  
   - technology
-ogimage: media/2018/04/philips-tcd128.jpg
+ogimage: media/2018/04/cassette.jpg
 ---
 
-If you, like me, were born in the 1980s, then you are a member of the final generation of *analog natives* - 
+If you, like me, were born in the 1980s, then you are a member of the generation of *analog natives* - 
 those who grew up during that period in which the Information Age reached the masses. Of course, all of humanity up until that point 
-could be considered "analog native"; but uniquely, our generation is the one which experienced first-hand the transition from
+lived fully analog lives; but uniquely, our generation is the one which experienced first-hand the transition from
 the analog to the digital world. So "analog native" is only meaningful in a world in which such thing as a "digital native"
 exists as a counterpart.
 
+{{< figure src="/media/2018/04/cassette.jpg" title="An audio cassette. Photo by Hugo Cardoso on Flickr: https://flic.kr/p/SbEgKw" >}} 
+
 Past generations lived their entire lives with no inkling of the endless parade of inconvenience and inefficiency under which
-they suffered. Analog natives, having transitioned to the new order of things, can now reflect with that strange mixture
+they suffered. Analog natives, having transitioned to the new order of things, can now reflect with a strange mixture
 of horror, nostalgia and disbelief on the way we - *we!* - used to live.
 
-The following is a collection of artefacts which capture snapshots of my life as an analog native as the world rapidly 
-digitised around me.
+The following is a collection of artefacts which capture snapshots of my life as an analog native.
 
 ## The Collection
 
@@ -43,7 +44,7 @@ Punctuality *really* mattered back then.
 {{< figure src="/media/2018/04/snow-informer.jpg" title="Cover artwork of the single 'Informer' by Snow, which was released in 1992" >}}
 
 As incredible as it may now seem, there existed a time in my youth where I might wonder about the lyrics to a song, yet I'd simply
-have to resign myself to just *never knowing*. Now I can not only access the lyrics in an instant, but I am also treated to
+have to resign myself to just *never knowing*. Now not only can I access the lyrics in an instant, but I am also treated to
 an [annotated version](https://genius.com/10803765) which places the lyrics in the context of Snow's jail time for attempted 
 murder, as well as the fact that "A licky boom-boom down" means “I’ll beat you down” or “I’ll gun you down” depending 
 on how you interpret the Jamaican Patois.
@@ -80,7 +81,7 @@ Sometimes the risk was richly rewarded. Sometimes you blew your savings on Deadl
 I remember when my sister got this walkman. Not only did it feature "auto-reverse" (you don't need to pop out 
 the tape and flip it to play the next side), but it also let you skip forwards by detecting the silence between tracks. 
 
-Music piracy back then was really a labour of love. You really had to *earn* your illicit collection through
+Music piracy back then was a labour of love. You really had to *earn* your illicit collection through
 hours spent kneeling in front of the tape deck, finger poised over the "stop" button as the track faded out. 
 
 Later on I got a minidisc player and then a portable CD player that could read mp3 CDs. The piracy process got a little easier
@@ -97,7 +98,7 @@ rare individual who is able to resist the siren call to discover exactly *who* i
 As little as 10 seconds without external stimuli is enough to trigger the reflex in many phone users. Before they know 
 what is going on they find themselves vacantly scrolling through photos of plates of food.
 
-On the toilet. A bus journey. A long queue at Tesco. Colleague slightly late to a meeting. All situations which, in the past, would
+On the toilet. A bus journey. A long queue at Tesco. Waiting for the coffee machine at work. All situations which, in the past, would
 require one to languish in one's own company without an immediate and clear target for the mind to focus on. Thankfully, the
 ever-caring engagement teams from our favourite social media companies have effectively colonised this downtime, saving us the torment
 of having to formulate thoughts of our own or reflect *for even a moment* on our present environment or circumstances.
@@ -111,13 +112,12 @@ all toiletries, and that "aqua" is usually the main ingredient.
 ## Postscript: Progress?
 
 Without question, many of the conveniences and new possibilities afforded by computers represent a positive change for
-humanity. I'm very happy that I can do Internet banking, online shopping, get a weather 
-forecast or travel directions whenever suits me. I am optimistic about technological solutions to certain pressing
-problems.
+humanity. I'm very happy that I can do Internet banking and online shopping or get a weather 
+forecast or travel directions whenever suits me. I take an interest in technology and I am optimistic about technological solutions to certain pressing problems.
 
 Yet there is a trade-off. I'm not *just* referring to the emerging surveillance dystopia which is currently making headlines. 
 
-I'm talking about the loss of skills; the withering of unused facilities; the removal of constraints which may have
+I'm talking about the loss of skills; the withering of unused faculties; the removal of constraints which may have
 been beneficial.
 
 Analog life, with all of its inefficiency and inconvenience, engendered a certain deliberate way of living. 
@@ -133,8 +133,7 @@ Now we have a third option which consists of connecting with *curated representa
 
 I'm no luddite. As a software developer I'm actively contributing to the further digitisation of our world. 
 But I also remember that, on the whole, we got by pretty well without most of this stuff. I'm glad that I finally know
-what "A licky boom-boom down" means, but in the grand scheme of things this is but a trifle.
+what "A licky boom-boom down" means, but at what cost?
 
-Technological advance is not an end in itself. It must always be justified. If it came down to a choice between a 
-divided, distracted, manipulated, surveilled digital dystopia and the analog world of my youth, I'd gladly take Deadly 
-Towers and sodium laureth sulphate.
+Technological advance is not an end in itself. It must always be justified. "Because we can" is 
+not good enough. We must know the costs. If it came down to a choice between a universally divided, distracted, manipulated, surveilled digital dystopia and the analog world of my youth, I'd gladly take Deadly Towers and sodium laureth sulphate.
