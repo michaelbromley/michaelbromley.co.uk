@@ -1,6 +1,6 @@
 ---
-date: 2018-04-10T22:15:59+01:00
-title: Museum of the Analog Native
+date: 2018-04-10T21:15:59+01:00
+title: Museum of the Analog Native 
 type: post
 categories:
   - post 
