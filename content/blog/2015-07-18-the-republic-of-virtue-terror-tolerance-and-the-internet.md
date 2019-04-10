@@ -27,7 +27,7 @@ Those familiar with Internet discussions will know that they readily devolve int
 
 ## The Scene
 
-Paris, 1794: The guillotine is sated daily by a steady stream of counter-revolutionary conspirators. Maximilien Robespierre, now the effective dictator of France, is guiding the Revolution down an exceedingly narrow and dangerous path towards his _Republic of Virtue_ - supposedly the embodiment of the ideals of the French Revolution: liberty, equality, fraternity.
+Paris, 1794: The guillotine is sated daily by a steady stream of counter-revolutionary conspirators. Maximilien Robespierre, now the effective dictator of France, is guiding the Revolution down an exceedingly narrow and dangerous path towards his *Republic of Virtue* - supposedly the embodiment of the ideals of the French Revolution: liberty, equality, fraternity.
 
 With Robespierre at the helm of the near omnipotent [Committee of Public Safety](https://en.wikipedia.org/wiki/Committee_of_Public_Safety) (which, contrary to the tame-sounding name, was not primarily interested in warning labels and slippery surfaces), France found itself under the de-facto dictatorship of a man who would publicly proclaim,
 
@@ -35,9 +35,9 @@ With Robespierre at the helm of the near omnipotent [Committee of Public Safety]
   
 > <cite>— Maximilien Robespierre, 1794<br /> </cite>
 
-That is to say, "be virtuous or die". It turned out that nobody except Robespierre himself really knew the precise definition of _virtue_ in this case; thus many people would have to die. This period is known today as the _Reign of Terror_.
+That is to say, "be virtuous or die". It turned out that nobody except Robespierre himself really knew the precise definition of *virtue* in this case; thus many people would have to die. This period is known today as the *Reign of Terror*.
 
-Four years prior to the official sanction of terror as a tool of the state, the nascent Revolution had produced _The Declaration of the Rights of Man and of the Citizen_, a document exemplifying Enlightenment thought which would leave a lasting imprint on the development of democracy in Europe and around the world. The second article of the _declaration_ states:
+Four years prior to the official sanction of terror as a tool of the state, the nascent Revolution had produced *The Declaration of the Rights of Man and of the Citizen*, a document exemplifying Enlightenment thought which would leave a lasting imprint on the development of democracy in Europe and around the world. The second article of the *declaration* states:
 
 > The goal of any political association is the conservation of the natural and imprescriptible rights of man. These rights are liberty, property, safety and resistance against oppression.
   
@@ -135,11 +135,11 @@ The end result of group polarization is a position so far from the middle ground
 
 ## Conclusion
 
-So if there is any point to this essay - my "_[Jerry's final thought](https://en.wikipedia.org/wiki/The_Jerry_Springer_Show#Format)_" - it is the following: beware those who seek to define others solely by their differences. When you address someone, address them as a fellow human _first_. No matter the argument, we each have vastly more _in common_ with any other human being than we could possibly have differences.
+So if there is any point to this essay - my "[*Jerry's final thought*](https://en.wikipedia.org/wiki/The_Jerry_Springer_Show#Format)" - it is the following: beware those who seek to define others solely by their differences. When you address someone, address them as a fellow human _first_. No matter the argument, we each have vastly more _in common_ with any other human being than we could possibly have differences.
 
 Furthermore, being extreme and radical is usually only a good idea in the context of sports like [extreme ironing](https://en.wikipedia.org/wiki/Extreme_ironing). As dull as it might sound, the measured middle is often closer to the truth than either extreme.
 
-None of this is to say that we should remain silent and passive to wrongs that we see online. This too would be a failure of Enlightenment 1.5.0. Rather, we should strive to challenge ideas with _rational discourse_ and without losing a sense of common humanity.
+None of this is to say that we should remain silent and passive to wrongs that we see online. This too would be a failure of Enlightenment 1.5.0. Rather, we should strive to challenge ideas with *rational discourse* and without losing a sense of common humanity.
 
 Here's a thought experiment: Next time you feel like lashing out at somebody online (and we must all feel that way from time to time), try to imagine that it was your mother or your best friend who just wrote that. Would you respond any differently?
 
