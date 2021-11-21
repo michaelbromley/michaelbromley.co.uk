@@ -2,8 +2,6 @@ import {initAnchorLinks} from './anchor-links';
 
 declare const require: (path: string) => any;
 
-require('../styles/main.scss');
-
 import {initMenu} from './menu';
 import {initSearch} from './search';
 import {initTypeEffect} from './type-effect';

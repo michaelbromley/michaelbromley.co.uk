@@ -49,6 +49,7 @@ body {
   }
   @media (min-width: $screen-large) {
     margin-right: 8vw;
+    max-width: calc(80vw - 300px);
   }
   animation: fadeIn 0.6s;
 }

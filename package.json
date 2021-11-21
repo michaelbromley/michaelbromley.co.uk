@@ -4,19 +4,20 @@
   "description": "Personal website of Michael Bromley",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch",
-    "build": "webpack -p"
+    "watch:ts": "esbuild themes/terminal/src/scripts/main.ts --bundle --watch --outfile=themes/terminal/static/js/script.js",
+    "watch:scss": "sass themes/terminal/src/styles/main.scss themes/terminal/static/css/style.css --watch ",
+    "watch": "concurrently \"npm run watch:ts\" \"npm run watch:scss\"",
+    "build:ts": "esbuild themes/terminal/src/scripts/main.ts --bundle --minify --sourcemap --outfile=themes/terminal/static/js/script.js",
+    "build:scss": "sass themes/terminal/src/styles/main.scss themes/terminal/static/css/style.css",
+    "build": "npm run build:ts && npm run build:scss"
   },
   "author": "Michael Bromley",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "ts-loader": "^2.2.2",
-    "typescript": "^2.4.1",
-    "webpack": "^3.2.0"
+    "concurrently": "^6.4.0",
+    "esbuild": "^0.13.15",
+    "sass": "^1.43.4",
+    "typescript": "^2.4.1"
   }
 }
