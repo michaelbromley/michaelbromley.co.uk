@@ -4,7 +4,6 @@ title: Welcome to the Twitterscape
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay
   - internet

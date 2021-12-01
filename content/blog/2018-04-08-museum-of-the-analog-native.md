@@ -4,7 +4,6 @@ title: Museum of the Analog Native
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay  
   - technology

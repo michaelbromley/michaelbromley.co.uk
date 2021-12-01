@@ -14,7 +14,7 @@ layout = "about"
 
 {{< figure src="/assets/speaking.jpg" title="Speaking about creative coding at WeAreDevs 2017" >}}
 
-I've been making computers do things since I was in my teens, with varying degrees of success. Currently I mostly do front-end web development and specialize in JavaScript, TypeScript and Angular.
+I've been making computers do things since I was in my teens, with varying degrees of success. Since 2018 I've been building the open-source e-commerce framework [Vendure](https://www.vendure.io/).
 
 In my free time - when not with my wonderful wife and two boys - I like to explore my other interests of art, music, writing and their interesection with code. You can see the result of some of my experimentation on the projects page.
 
