@@ -102,3 +102,7 @@ Ultimately, the bus factor is but one vital sign out of many. I think raising th
 But you can't wait for us to get there. 
 
 And neither can I. 
+
+---
+
+[Discuss on Hacker News](https://news.ycombinator.com/item?id=29416674)
