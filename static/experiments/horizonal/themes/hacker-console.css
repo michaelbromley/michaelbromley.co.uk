@@ -1,0 +1,129 @@
+
+
+#hrz-container {
+    background-color: #111;
+}
+
+.hrz-page {
+
+}
+
+.hrz-element {
+    -webkit-transition: opacity 0.1s;
+            transition: opacity 0.1s;
+    color: rgb(13, 186, 13) !important;
+    font-family: Consolas, monaco, monospace !important;
+    line-height: 0.8 !important;
+    line-height: 1.2 !important;
+    font-size: 0.9em;
+}
+
+.hrz-page.hrz-hidden > .hrz-element {
+    display: none;
+}
+
+.hrz-page.hrz-back > .hrz-element,
+.hrz-page.hrz-fore > .hrz-element
+{
+    opacity: 0;
+}
+
+img.hrz-element {
+    -webkit-transition: none !important;
+            transition: none !important;
+    -webkit-filter: url('themes/hacker-console.svg#green');
+            filter: url('themes/hacker-console.svg#green');
+}
+
+svg.hrz-element, img.hrz-element {
+    border: 1px solid rgb(13, 186, 13) !important;
+}
+
+.hrz-page img {
+    background-color: #fff !important;
+}
+
+.caret {
+    display: inline-block;
+    width: 3px;
+    margin-bottom: -2px;
+    margin-left: 3px;
+    height: 16px;
+    background-color: rgb(13, 186, 13);
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+    -webkit-animation-timing-function: steps(2, end);
+            animation-timing-function: steps(2, end);
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* custom styling of known page elements */
+.hrz-element.splash h1 {
+    background: transparent;
+    border: 5px solid rgb(13, 186, 13);
+    background-color: rgb(11, 54, 11);
+    color: rgb(13, 186, 13);
+    font-size: 15vw;
+}
+
+.hrz-element .cta {
+    padding: 10px;
+    border: 1px solid rgb(13, 186, 13);
+    color: rgb(13, 250, 13);
+    border-radius: 0;
+}
+
+.hrz-element code {
+    background-color: #111;
+    border: 1px solid rgb(13, 186, 13);
+    color: rgb(13, 186, 13);
+    border-radius: 0;
+}
+
+.hrz-element.thumbnail {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+p.hrz-element:before {
+    content: '> ';
+    margin-left: -21px;
+}
+
+h2.hrz-element {
+    font-size: 1.4em;
+}
+
+h2.hrz-element:before {
+    content: '#';
+    margin-left: -29px;
+    margin-right: 6px;
+}
+
+li.hrz-element {
+    list-style: none;
+}
+
+li.hrz-element:before {
+    content: '@';
+    font-size: 0.8em;
+    margin-left: -15px;
+    margin-right: 5px;
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Heavenly Glory: Instant Kung Fu Mastery</title>
+        <meta name="description" content="Ever wondered what it would be like to be Bruce Lee? Ever wished your every slightest limb movement would be accompanied by a cool swooshing air sound? Ever wanted your punches and kicks to make amazing wood-block-snapping noises? Martial artists train for years to acquire these skills. You can have them right now. Black belts hate it!">
+        <meta name="viewport" content="initial-scale=0.25">
+        <link href='https://fonts.googleapis.com/css?family=Carter+One|Six+Caps' rel='stylesheet' type='text/css'>
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@michlbrmly" />
+        <meta property="twitter:title" content="Heavenly Glory: Instant Kung Fu Mastery" />
+        <meta property="twitter:description" content="Ever wondered what it would be like to be Bruce Lee? Ever wished your every slightest limb movement would be accompanied by a cool swooshing air sound? Ever wanted your punches and kicks to make amazing wood-block-snapping noises? Martial artists train for years to acquire these skills. You can have them right now. Black belts hate it!" />
+        <meta property="twitter:image" content="http://www.michaelbromley.co.uk/experiments/heavenly-glory/assets/images/poster.jpg" />
+
+        <!-- open graph metadata. This won't work either! -->
+        <meta property="og:title" content="Heavenly Glory: Instant Kung Fu Mastery" />
+        <meta property="og:description" content="Ever wondered what it would be like to be Bruce Lee? Ever wished your every slightest limb movement would be accompanied by a cool swooshing air sound? Ever wanted your punches and kicks to make amazing wood-block-snapping noises? Martial artists train for years to acquire these skills. You can have them right now. Black belts hate it!" />
+        <meta property="og:image" content="https://www.michaelbromley.co.uk/experiments/heavenly-glory/assets/images/poster.jpg" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="dist/main.css">
+        <!-- endbuild -->
+
+        <link rel="canonical" href="https://www.michaelbromley.co.uk/experiments/heavenly-glory/">
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+        <div class="splash">
+            <div class="poster-text top">
+                <div class="detail">Heavenly Glory Productions <small>presents</small></div>
+                <div class="editable-container">
+                    <span class="edit-tooltip"><i class="icon-edit"></i>Edit</span>
+                    <span contenteditable="true" class="movie-name">Enter The Webcam</span>
+                </div>
+            </div>
+            <img src="assets/images/poster.jpg" class="poster">
+            <div class="poster-text bottom">
+                <div class="detail"><small>starring</small></div>
+
+                <div class="editable-container">
+                    <span class="edit-tooltip"><i class="icon-edit"></i>Edit</span>
+                    <span contenteditable="true" class="actor-name">This Person</span>
+                </div>
+            </div>
+            <a href="#" class="start">Start!</a>
+
+            <a href="https://github.com/michaelbromley/heavenly-glory"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+        </div>
+
+
+        <div class="no-support-warning hidden">
+            <h1>Uh oh!</h1>
+            <p>This application makes use of some cutting-edge technologies which this browser does not support.</p>
+            <p>Try a browser that supports both <a href="http://caniuse.com/#feat=stream">getUserMedia</a>
+            and <a href="http://caniuse.com/#feat=audio-api">Web Audio</a>.</p>
+            <p>
+                Currently that includes the latest versions of
+                <a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html">Chrome</a>,
+                <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> or
+                <a href="http://www.opera.com/download">Opera</a>.
+            </p>
+        </div>
+
+        <div class="loader hidden">
+            <div class="instructions volume">
+                <img src="assets/images/instructions-1.png">
+                <div class="text">Turn up the volume...</div>
+            </div>
+            <div class="instructions moves">
+                <img src="assets/images/instructions-2.png">
+                <div class="text">Get your best moves ready...</div>
+            </div>
+            <div class="instructions press">
+                <img src="assets/images/instructions-3.png">
+                <div class="text">And enable your webcam!</div>
+            </div>
+        </div>
+
+        <div class="output-container hidden">
+            <div class="letterbox top"></div>
+            <canvas id="output"></canvas>
+            <div class="letterbox bottom">
+            </div>
+        </div>
+
+        <div class="overlay hidden">
+            <div class="title title-hg hidden">
+                Heavenly Glory Productions Presents
+            </div>
+            <div class="title title-movie hidden">
+                <span class="movie-name-title"></span>
+            </div>
+            <div class="title title-actor hidden">
+                <small>Starring</small><div class="actor-name-title"></div>
+            </div>
+        </div>
+
+        <div class="credits">
+            <small>An experiment in</small> Web RTC <small>and</small> Web Audio <small>by</small> <a href="http://www.michaelbromley.co.uk">Michael Bromley</a><br>
+            <small>Based on a motion detection concept by </small> <a href="http://www.adobe.com/devnet/archive/html5/articles/javascript-motion-detection.html">Soundstep</a>
+            <small>and an implementation by</small> <a href="https://github.com/ReallyGood/js-motion-detection">Really Good</a><br>
+            <small>All code available on</small> <a href="https://github.com/michaelbromley/heavenly-glory">GitHub</a>
+        </div>
+
+        <div class="settings">
+            <div class="settings-panel hidden">
+                <label>
+                    <input type="checkbox" class="display-debug">
+                    Display motion detection canvas
+                </label>
+                <label>
+                    <input class="sensitivity-slider" type="range" min="1" max="100" value="50" step="1">
+                    Motion sensitivity: <strong><span class="sensitivity-label">50</span></strong>
+                </label>
+            </div>
+            <i class="icon-cogs settings-icon"></i>
+        </div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-38982996-2');ga('send','pageview');
+        </script>
+        <script src="dist/main.js"></script>
+</body>
+</html>

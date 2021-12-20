@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html ng-controller="AppController as vm">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chromata: A Generative Art Tool</title>
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@michlbrmly" />
+    <meta property="twitter:title" content="Chromata: A Generative Art Tool" />
+    <meta property="twitter:description" content="Turn any image into a unique, animated work of art." />
+    <meta property="twitter:image" content="http://www.michaelbromley.co.uk/experiments/chromata/assets/images/chromata.jpg" />
+    <meta property="twitter:url" content="http://www.michaelbromley.co.uk/experiments/chromata/" />
+
+    <meta property="og:title" content="Chromata: A Generative Art Tool" />
+    <meta property="og:site_name " content="Chromata: A Generative Art Tool" />
+    <meta property="og:url " content="http://www.michaelbromley.co.uk/experiments/chromata/" />
+    <meta property="og:description" content="Turn any image into a unique, animated work of art." />
+    <meta property="og:image" content="http://www.michaelbromley.co.uk/experiments/chromata/assets/images/chromata.jpg" />
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- endinject -->
+</head>
+<body>
+
+<div class="pure-menu pure-menu-open pure-menu-horizontal fixed-menu">
+    <a href="#" class="pure-menu-heading hide-for-sm">Chromata:</a>
+    <ul>
+        <li ng-class="{ 'pure-menu-selected' : vm.currentScrollTrigger === 'showcase' }"><a href="#showcase">Showcase</a></li>
+        <li ng-class="{ 'pure-menu-selected' : vm.currentScrollTrigger === 'playground' }"><a href="#playground">Playground</a></li>
+        <li ng-class="{ 'pure-menu-selected' : vm.currentScrollTrigger === 'about' }"><a href="#about">About & API</a></li>
+    </ul>
+</div>
+
+<div class="showcase-container" id="showcase" observe-scroll="showcase">
+    <showcase></showcase>
+</div>
+
+
+<div class="playground-container" id="playground" observe-scroll="playground">
+    <playground></playground>
+</div>
+
+<div class="about-container" id="about" observe-scroll="about">
+    <div class="logo">
+        <h1>Chromata</h1>
+        <h2>
+            Chromata is a generative digital art tool.
+        </h2>
+    </div>
+    <p>
+        Chromata is a small tool written in JavaScript which can turn any image into a unique, animated artwork.
+        Path finders are seeded on a canvas and independently trace their own path through the image, reading the colour data
+        of each pixel and altering their course based on a set of configurable rules.
+    </p>
+    <div class="pure-g text-center">
+        <div class="pure-u-1 pure-u-sm-1-2">
+            <a class="pure-button button-xlarge" href="https://raw.githubusercontent.com/michaelbromley/chromata/master/dist/chromata.min.js">Download chromata.min.js (13k)</a>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2">
+            <a class="pure-button button-xlarge" href="https://github.com/michaelbromley/chromata"><i class="icon-github"></i> View on GitHub</a>
+        </div>
+    </div>
+
+    <h2>Quick Start</h2>
+    <h3>1. Download the Chromata script</h3>
+    <p>
+        Download <a href="https://raw.githubusercontent.com/michaelbromley/chromata/master/dist/chromata.min.js">chromata.min.js</a>
+    </p>
+    <h3>2. Include it in your HTML document</h3>
+    <pre><code class="html">
+        &lt;script src="path/to/chromata.min.js"&gt;&lt;/script&gt;
+    </code></pre>
+    <h3>3. Create a new Chromata instance</h3>
+    <pre><code class="javascript">
+        var imageElement = document.querySelector('.my-image');
+        var chromata = new Chromata(imageElement);
+    </code></pre>
+    <h3>3. Start it</h3>
+    <pre><code class="javascript">
+        chromata.start();
+    </code></pre>
+
+    <h2>Compatibility</h2>
+    <p>
+        Chromata makes use of canvas blend modes, which are available in <a href="http://caniuse.com/#feat=canvas-blending">all major browsers except Internet Explorer</a>.
+        It will still run in IE, but won't look right.
+    </p>
+
+    <div class="api">
+        <h2>API</h2>
+        <h3><code>new Chromata(imageElement, [options])</code></h3>
+        <p>
+            Create a new Chromata instance. <code>imageElement</code> must be a reference to an <code>&lt;img&gt;</code> element.
+            <code>options</code> is an object containing configuration settings for the instance. See next section for a full explanation of the options available.
+        </p>
+        <h3><code>Chromata.start()</code></h3>
+        <p>
+            Start the animation, hiding the source image element and replacing it with a <code>canvas</code> element.
+        </p>
+        <h3><code>Chromata.stop()</code></h3>
+        <p>
+            Stop the animation. <strong>Returns</strong> the current iteration (frame) of the animation.
+        </p>
+        <h3><code>Chromata.toggle()</code></h3>
+        <p>
+            Toggle the play state animation.
+        </p>
+        <h3><code>Chromata.reset()</code></h3>
+        <p>
+            Stop the animation, restore the source image element and remove the canvas from the DOM.
+        </p>
+    </div>
+
+    <h2>Options</h2>
+    <pre><code class="javascript">
+        // default options
+        var defaults = {
+            colorMode: 'color',
+            compositeOperation: 'lighten',
+            iterationLimit: 0,
+            key: 'low',
+            lineWidth: 2,
+            lineMode: 'smooth',
+            origin: ['bottom'],
+            outputSize: 'original',
+            pathFinderCount: 30,
+            speed: 7,
+            turningAngle: Math.PI
+        };
+    </code></pre>
+    <ul class="options-key">
+        <li>
+            <span class="option-name">colorMode</span>
+            <span class="option-type">string</span>
+            <p>
+            Either <strong>color</strong> or <strong>greyscale</strong>.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">compositeOperation</span>
+            <span class="option-type">string</span>
+            <p>
+            Determines how colours interact when overlaid.
+                While you may use any <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">valid compositing operation</a>,
+                anything other than <strong>lighten</strong> will likely give unwanted results.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">iterationLimit</span>
+            <span class="option-type">number</span>
+            <p>
+            Stop the animation after this many iterations (frames). A value of 0 mean never stop. The current iteration count of a running animation can be discovered by the return value of
+                the <code>.stop()</code> method.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">key</span>
+            <span class="option-type">string</span>
+            <p>
+            Either <strong>low</strong> or <strong>high</strong>. Low key causes the path finders to seek out areas of bright colour; high key causes them to seek out darker areas.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">lineWidth</span>
+            <span class="option-type">number</span>
+            <p>
+            The width in pixels of the line drawn by the path finders, or the radius of the circle if <code>lineMode = 'point'</code>.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">lineMode</span>
+            <span class="option-type">string</span>
+            <p>
+            Either <strong>smooth</strong>, <strong>square</strong> or <strong>point</strong>. Square mode causes each point of the path to be joined by a straight line with square ends. Smooth uses quadratic curves to give
+                a more flowing effect. Point draws circles instead of lines.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">origin</span>
+            <span class="option-type">array(string [,...string])</span>
+            <p>
+            Specify the location(s) that the path finders are seeded on the canvas. Valid values are: <strong>bottom</strong>, <strong>top</strong>,
+                <strong>left</strong>, <strong>right</strong>, or <strong>x% y%</strong>, where x and y represent
+                positions from the left and top of the canvas respectively.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">outputSize</span>
+            <span class="option-type">string</span>
+            <p>
+            Either <strong>original</strong> or <strong>container</strong>. Original will cause the canvas to take on the same dimensions as the source image file. Container will cause the canvas to
+                attempt to fill its containing element.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">pathFinderCount</span>
+            <span class="option-type">number</span>
+            <p>
+            The number of path finders that are created.
+            </p>
+        </li>
+        <li>
+            <span class="option-name">speed</span>
+            <span class="option-type">number</span>
+            <p>
+            The speed of the path finders, equal to the distance (in pixels) travelled by each path finder per iteration (frame).
+            </p>
+        </li>
+        <li>
+            <span class="option-name">turningAngle</span>
+            <span class="option-type">number</span>
+            <p>
+                An angle in radians. At each iteration, each path finder surveys its surrounding pixels to decide where to move next.
+                The turningAngle determines how much it can look around. E.g. a value of 2*pi (equal to 360 degrees) allows the pathfinder to turn all the way around.
+            </p>
+        </li>
+    </ul>
+</div>
+
+<footer>
+    &copy;2015 <a href="http://www.michaelbromley.co.uk">Michael Bromley</a>
+</footer>
+
+<!-- inject:js -->
+<script src="script.js"></script>
+<!-- endinject -->
+<script>
+
+    hljs.initHighlightingOnLoad();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38982996-2', 'michaelbromley.co.uk');
+    if (window.location.hostname !== 'localhost') {
+        ga('send', 'pageview');
+    }
+
+
+</script>
+</body>
+</html>

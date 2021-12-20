@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS Space Shooter</title>
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@michlbrmly" />
+    <meta property="twitter:title" content="CSS Space Shooter" />
+    <meta property="twitter:description" content="An old-school arcade-style 3D shoot-em-up rendered entirely with CSS 3D transforms." />
+    <meta property="twitter:image" content="https://www.michaelbromley.co.uk/experiments/css-space-shooter/assets/images/screenshot-02.jpg" />
+    <meta property="og:title" content="CSS Space Shooter" />
+    <meta property="og:description" content="An old-school arcade-style 3D shoot-em-up rendered entirely with CSS 3D transforms." />
+    <meta property="og:image" content="https://www.michaelbromley.co.uk/experiments/css-space-shooter/assets/images/screenshot-02.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Michael Bromley - Experiments" />
+
+    <link href='https://fonts.googleapis.com/css?family=Exo:400,900italic' rel='stylesheet prefetch' type='text/css'>
+    <script src="vendor/prefixfree.min.js"></script>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/app.css">
+    <!-- endinject -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38982996-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-38982996-2');
+    </script>
+
+</head>
+<body>
+
+<div class="visualizer">
+    <div class="highs"></div>
+    <div class="lows"></div>
+</div>
+
+<div class="scene">
+    <div class="face background">
+        <div class="planet"></div>
+        <div class="stars"></div>
+    </div>
+
+    <div class="face midground">
+        <div class="track-container">
+            <div class="face track top"></div>
+            <div class="face track top"></div>
+            <div class="face track top"></div>
+            <div class="face track top"></div>
+            <div class="face track top"></div>
+        </div>
+        <div class="track-container">
+            <div class="face track bottom"></div>
+            <div class="face track bottom"></div>
+            <div class="face track bottom"></div>
+            <div class="face track bottom"></div>
+            <div class="face track bottom"></div>
+            <div class="face track bottom"></div>
+        </div>
+    </div>
+
+    <div class="face ship-container">
+        <div class="face ship hull top"></div>
+        <div class="face ship hull bottom"></div>
+        <div class="face ship hull back"></div>
+        <div class="face ship booster"></div>
+        <div class="face ship wing top"></div>
+        <div class="face ship wing bottom"></div>
+        <div class="face ship wing back"></div>
+        <div class="face ship gun left"></div>
+        <div class="face ship gun right"></div>
+    </div>
+
+    <div class="face shot"></div>
+
+    <div class="face alien-container">
+        <div class="face alien body"></div>
+        <div class="face alien eye left"></div>
+        <div class="face alien eye right"></div>
+        <div class="face alien mouth"></div>
+        <div class="face arm-container">
+            <div class="face alien arm left"></div>
+            <div class="face alien arm right"></div>
+            <div class="face alien arm bottom"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="overlay">
+    <div class="firepower-meter-container hidden">
+        <span class="firepower-meter"><span>Firepower</span></span>
+    </div>
+    <div class="announcement">
+        <div class="title"></div>
+        <div class="subtitle"></div>
+    </div>
+    <div class="score-container hidden">
+        <div class="score"></div>
+    </div>
+    <div class="lives-container hidden">
+        <div class="life">&#9734;</div>
+        <div class="life">&#9734;</div>
+        <div class="life">&#9734;</div>
+    </div>
+
+    <div class="title-screen-container">
+
+        <div class="gh-star-container">
+            <iframe src="https://ghbtns.com/github-btn.html?user=michaelbromley&repo=css-space-shooter&type=watch&count=true"
+                                                           allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        </div>
+        <div class="title-container">
+            <div class="line1">CSS</div>
+            <div class="line2">Space</div>
+            <div class="line3">Shooter</div>
+        </div>
+
+        <div class="instructions info-container">
+            <div class="open-instructions open-info-container">Instructions</div>
+            <div class="instructions-body info-body">
+                <p>Pilot your ship with the
+                    <span class="key">↑</span>, <span class="key">↓</span>, <span class="key">←</span> & <span class="key">→</span> keys</p>
+                <p>Shoot with <span class="key">space</span></p>
+                <p>Pause / resume with <span class="key">p</span></p>
+                <p>You have 3 lives.</p>
+                <p>Don't let the aliens get past you!</p>
+                <h3 class="close-instructions close-info-container">OKAY</h3>
+            </div>
+        </div>
+
+        <div class="about info-container">
+            <div class="open-about open-info-container">About</div>
+            <div class="about-body info-body">
+                <p>CSS Space Shooter is an experiment in 3D rendering using only the DOM and <a href="https://desandro.github.io/3dtransforms/" target="_blank">CSS transforms</a>.
+                    No canvas, webGL or images of any kind are used to render the game.</p>
+                <p>Sound effects, music and audio visualization is handled by the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank">Web Audio API</a>.</p>
+                <p>All code is available on <a href="https://github.com/michaelbromley/css-space-shooter" target="_blank">GitHub</a>.</p>
+                <p>You can read more about it in <a href="https://www.michaelbromley.co.uk/blog/298/on-building-a-3d-game-with-css">this article</a>.</p>
+                <p>&copy; 2014 - 2018 <a href="https://www.michaelbromley.co.uk" target="_blank">Michael Bromley</a>.</p>
+                <h3 class="close-about close-info-container">OKAY</h3>
+            </div>
+        </div>
+
+        <h3 class="start-sign">Press space to start!</h3>
+    </div>
+
+    <div class="game-over-container hidden">
+        <div class="game-won hidden">
+            <h1>Congratulations!</h1>
+            <h2>You Won!</h2>
+        </div>
+
+
+        <div class="game-lost hidden">
+            <h1>You Lost!</h1>
+            <h2>Better Luck Next Time</h2>
+        </div>
+
+        <div class="score-card">
+            <ul>
+                <li>
+                    Stage: <span class="stage-reached"></span><span class="new-record stage">New Record!</span><br>
+                    <div class="record">Record: <span class="best-stage"></span></div>
+                </li>
+                <li>
+                    Score: <span class="score-achieved"></span><span class="new-record score">New Record!</span>
+                    <div class="record">Record: <span class="best-score"></span></div>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="replay-sign">Press "R" to replay</h3>
+    </div>
+</div>
+
+<div class="loader">
+    <h1>Loading...</h1>
+</div>
+
+<div class="browser-warning">
+    This experiment might not work properly unless you run it in the latest versions of the <a href="https://www.google.com/chrome/browser/">Chrome browser</a>. Sorry!
+</div>
+
+<audio id="player" controls="" autoplay="" preload autobuffer></audio>
+
+<script>
+    if (isChrome()) {
+        document.querySelector('.browser-warning').style.display = 'none';
+    }
+    /**
+     * Currently only really works well in Chrome, so we need to show a warning if not Chrome.
+     * @returns {boolean}
+     */
+    function isChrome() {
+        return navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    }
+</script>
+<!-- inject:js -->
+<script src="assets/script.js"></script>
+<!-- endinject -->
+
+<!-- inject:analytics -->
+<!-- endinject -->
+</body>
+</html>

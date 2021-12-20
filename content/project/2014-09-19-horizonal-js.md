@@ -7,7 +7,7 @@ categories:
   - project
 image: /media/2014/09/horizonal-03.jpg
 links: 
-  Demo: http://www.michaelbromley.co.uk/horizonal/demo/
+  Demo: http://www.michaelbromley.co.uk/experiments/horizonal
   GitHub: https://github.com/michaelbromley/horizonal
  
 ---

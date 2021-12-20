@@ -1,0 +1,371 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icomoon.eot?i1tp09");
+  src: url("../assets/fonts/icomoon.eot?#iefixi1tp09") format("embedded-opentype"), url("../assets/fonts/icomoon.woff?i1tp09") format("woff"), url("../assets/fonts/icomoon.ttf?i1tp09") format("truetype"), url("../assets/fonts/icomoon.svg?i1tp09#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+  content: "\f044";
+}
+
+.icon-cogs:before {
+  content: "\f085";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  transition: background-color 1s;
+  overflow-x: hidden;
+}
+body.theater {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.no-support-warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ddd;
+  font-family: "Carter One", cursive;
+  text-align: center;
+  font-size: 2em;
+}
+.no-support-warning.hidden {
+  display: none;
+}
+
+.output-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
+.output-container.hidden {
+  display: none;
+}
+.output-container canvas#output {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.output-container .letterbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #000000;
+}
+.output-container .letterbox.top {
+  top: 0;
+}
+.output-container .letterbox.bottom {
+  bottom: 0;
+}
+
+.settings {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 10px;
+  z-index: 100;
+}
+.settings .settings-icon {
+  font-size: 32px;
+  color: #666;
+  cursor: pointer;
+}
+.settings .settings-icon:hover {
+  color: #aaa;
+}
+.settings .settings-panel {
+  position: absolute;
+  display: table-cell;
+  vertical-align: middle;
+  bottom: 10px;
+  left: 50px;
+  border: 1px solid #666;
+  background-color: #333;
+  color: #ddd;
+  width: 600px;
+  padding: 5px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+.settings .settings-panel.hidden {
+  display: none;
+}
+.settings .settings-panel:hover {
+  opacity: 1;
+}
+.settings .settings-panel label {
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.settings .settings-panel input[type=range] {
+  vertical-align: middle;
+}
+
+#canvas-blend {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 20;
+}
+
+.splash {
+  text-transform: uppercase;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+}
+.splash.hidden {
+  display: none;
+}
+.splash .editable-container {
+  position: relative;
+  display: inline-block;
+}
+.splash .editable-container:hover .edit-tooltip {
+  opacity: 1;
+}
+.splash .editable-container .edit-tooltip {
+  opacity: 0;
+  display: block;
+  transition: opacity 0.3s;
+  position: absolute;
+  left: -113px;
+  top: -10px;
+  width: 100px;
+  height: 80px;
+  padding: 0px;
+  background: darkred;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 0.7;
+  color: white;
+}
+.splash .editable-container .edit-tooltip i {
+  font-size: 48px;
+  display: block;
+}
+.splash .editable-container .edit-tooltip:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent darkred;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: -15px;
+  top: 26px;
+}
+.splash .editable-container span[contenteditable]:hover {
+  color: #ce0000;
+}
+.splash .poster-text {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  color: #940000;
+  font-family: "Carter One", cursive;
+  font-size: 64px;
+  line-height: 0.9em;
+}
+.splash .poster-text .movie-name, .splash .poster-text .actor-name {
+  text-shadow: 0px 4px 1px #2d2d2d;
+  min-width: 100px;
+}
+.splash .poster-text.top .detail {
+  color: #555;
+}
+.splash .poster-text.bottom {
+  margin-top: -300px;
+  margin-bottom: 42px;
+}
+.splash .poster-text .detail {
+  font-family: "Six Caps", sans-serif;
+  font-size: 48px;
+  color: white;
+}
+.splash a.start {
+  margin: 20px 0 50px 0;
+  font-family: "Carter One", cursive;
+  text-transform: uppercase;
+  font-size: 32px;
+  border: 1px solid darkred;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.splash a.start:link, .splash a.start:visited {
+  color: white;
+  background-color: darkred;
+  text-decoration: none;
+  border-color: darkred;
+}
+.splash a.start:hover {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+.loader {
+  padding-top: 50px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.loader.hidden {
+  display: none;
+}
+.loader.hidden .volume, .loader.hidden .moves, .loader.hidden .press {
+  opacity: 0;
+}
+.loader .instructions {
+  display: inline-block;
+  max-width: 300px;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  text-transform: uppercase;
+  color: #60080b;
+  font-size: 32px;
+}
+.loader .instructions.volume {
+  animation: 0.5s fadeIn;
+  animation-fill-mode: both;
+}
+.loader .instructions.moves {
+  animation: 0.5s fadeIn 1.5s;
+  animation-fill-mode: both;
+}
+.loader .instructions.press {
+  animation: 0.5s fadeIn 3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.overlay {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  color: darkred;
+  font-size: 24px;
+  text-align: center;
+  transition: opacity 0s, background-color 3s;
+}
+.overlay.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 3s, visibility 0s 3s;
+}
+.overlay.transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+.overlay .title {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  transition: opacity 1s;
+  font-family: "Carter One", cursive;
+  text-transform: uppercase;
+  color: darkred;
+  z-index: 50;
+  line-height: 0.85em;
+}
+.overlay .title.title-hg {
+  font-family: "Six Caps", sans-serif;
+  font-size: 64px;
+  top: 30vh;
+}
+.overlay .title.title-movie {
+  top: 30vh;
+  font-size: 96px;
+  color: black;
+  text-shadow: 0px 0px 10px darkred, -2px -2px 0 darkred, 2px -2px 0 darkred, -2px 2px 0 darkred, 2px 2px 0 darkred;
+}
+.overlay .title.title-actor {
+  top: 60vh;
+  font-size: 50px;
+}
+.overlay .title.title-actor small {
+  font-family: "Six Caps", sans-serif;
+  color: #999;
+}
+.overlay .title.hidden {
+  opacity: 0;
+}
+
+.credits {
+  position: relative;
+  width: 100vw;
+  z-index: 20;
+  text-align: center;
+  font-family: "Six Caps", sans-serif;
+  font-size: 40px;
+  color: #333;
+  line-height: 0.9em;
+}
+.credits.hidden {
+  display: none;
+}
+.credits a:link, .credits a:visited {
+  text-decoration: none;
+  color: #4b4b9a;
+}
+.credits a:hover, .credits a:active {
+  color: #566be3;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+.hrz-page > .hrz-element {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.2s 0.3s;
+            transition: transform 0.5s, opacity 0.2s 0.3s;
+    -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+}
+
+.hrz-page.hrz-back > .hrz-element {
+    opacity: 0;
+    -webkit-transform: translateZ(-3000px) rotate(30deg);
+            transform: translateZ(-3000px) rotate(30deg);
+}
+
+.hrz-page.hrz-fore > .hrz-element {
+    opacity: 0;
+    -webkit-transform: translateZ(1000px) rotate(-30deg);
+            transform: translateZ(1000px) rotate(-30deg);
+}
