@@ -156,6 +156,13 @@ figure {
   }
 }
 
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dotted #999;
+  margin: 48px 32px;
+}
+
 .article-nav {
   display: flex;
   justify-content: space-between;
