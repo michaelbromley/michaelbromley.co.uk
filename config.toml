@@ -1,6 +1,6 @@
 baseURL = "https://www.michaelbromley.co.uk/"
 languageCode = "en-gb"
-title = "Michael Bromley: Web Developer"
+title = "Michael Bromley"
 theme = "terminal"
 author = "Michael Bromley"
 description = "The website and blog of Michael Bromley, a web developer and creative coder."

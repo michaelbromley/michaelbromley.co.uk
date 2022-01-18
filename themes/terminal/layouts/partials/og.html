@@ -7,11 +7,14 @@
     <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
     {{ end }}
 
-    <meta name="twitter:card" content="summary" />
+
     <meta name="twitter:site" content="@michlbrmly" />
     <meta name="twitter:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
     <meta name="twitter:description" content="{{ .Summary }}" />
     <meta name="twitter:url" content="{{ .Permalink }}" />
     {{ if .Params.ogimage }}
         <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+    {{ else }}
+        <meta name="twitter:card" content="summary" />
     {{ end }}
