@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .container {
   max-width: 800px;
@@ -26,10 +26,10 @@
 }
 
 p.lead {
-  color: $colour-text-deemphasize;
-  font-family: $console-font;
+  color: variables.$colour-text-deemphasize;
+  font-family: variables.$console-font;
   margin-bottom: 40px;
-  @media screen and (max-width: $screen-medium-below) {
+  @media screen and (max-width: variables.$screen-medium-below) {
     font-size: 1.3em;
   }
 }
@@ -38,7 +38,7 @@ p.lead {
   display: inline-block;
   text-align: left;
 
-  @media screen and (min-width: $screen-medium) {
+  @media screen and (min-width: variables.$screen-medium) {
     padding-left: 50px;
   }
   h3 {
@@ -53,7 +53,7 @@ p.lead {
   li {
     position: relative;
     list-style-type: none;
-    font-family: $console-font;
+    font-family: variables.$console-font;
     margin-bottom: 3px;
     font-size: 18px;
     &:before {

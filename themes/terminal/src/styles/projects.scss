@@ -1,4 +1,5 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
 .project-list {
   display: flex;
@@ -15,7 +16,7 @@
   text-align: center;
   border-radius: 3px;
   border: 1px solid #cbcbcb;
-  box-shadow: $box-shadow;
+  box-shadow: variables.$box-shadow;
   display: flex;
   flex-direction: column;
 
@@ -23,7 +24,7 @@
     margin-top: 0;
   }
 
-  @media screen and (max-width: $screen-medium-below){
+  @media screen and (max-width: variables.$screen-medium-below){
     min-width: 96%;
   }
 }
@@ -39,13 +40,13 @@
 
   a.link-button {
     padding: 3px 8px;
-    background-color: lighten($colour-a-link, 5%);
+    background-color: color.adjust(variables.$colour-a-link, $lightness: 5%);
     color: white;
     border-radius: 2px;
     transition: background 0.3s;
 
     &:hover {
-      background-color: $colour-a-hover;
+      background-color: variables.$colour-a-hover;
     }
   }
 }
