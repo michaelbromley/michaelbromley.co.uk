@@ -12,6 +12,7 @@ metaDataFormat = "yaml"
     noClasses = false
     style = "vs"
   [markup.goldmark.renderer]
+    # blog posts embed raw HTML (iframes, embeds); goldmark strips it without this
     unsafe = true
 
 [permalinks]
