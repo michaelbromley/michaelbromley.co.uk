@@ -1,13 +1,19 @@
 baseURL = "https://www.michaelbromley.co.uk/"
-languageCode = "en-gb"
+locale = "en-gb"
 title = "Michael Bromley"
 theme = "terminal"
 author = "Michael Bromley"
 description = "The website and blog of Michael Bromley, a web developer and creative coder."
 metaDataFormat = "yaml"
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-pygmentsStyle = "vs"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = false
+    style = "vs"
+  [markup.goldmark.renderer]
+    # blog posts embed raw HTML (iframes, embeds); goldmark strips it without this
+    unsafe = true
 
 [permalinks]
   blog = "/:section/:title/"

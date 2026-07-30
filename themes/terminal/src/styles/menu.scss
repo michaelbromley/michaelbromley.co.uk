@@ -1,14 +1,15 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
 $transition-time: 0.4s;
 
 
 .mobile-menu-button {
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     display: none;
   }
 
-  background: transparentize($colour-main-view-bg, 0.25);
+  background: color.adjust(variables.$colour-main-view-bg, $alpha: -0.25);
   width: 44px;
   height: 44px;
   text-align: center;
@@ -18,7 +19,7 @@ $transition-time: 0.4s;
   z-index: 50;
   left: 2px;
   top: 22px;
-  color: $colour-a-link;
+  color: variables.$colour-a-link;
   cursor: pointer;
   text-shadow: 0px 2px 4px rgba(150, 150, 150, 0.5);
 
@@ -30,15 +31,15 @@ $transition-time: 0.4s;
 
 #nav-pane {
   display: flex;
-  background: transparentize($colour-main-view-bg, 0.05);
+  background: color.adjust(variables.$colour-main-view-bg, $alpha: -0.05);
   z-index: 1;
 
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     width: 25%;
     position: relative;
     height: auto;
   }
-  @media (max-width: $screen-medium-below) {
+  @media (max-width: variables.$screen-medium-below) {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,18 +58,18 @@ $transition-time: 0.4s;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     position: fixed;
   }
 }
 
 .mobile-title {
-  font-family: $console-font;
+  font-family: variables.$console-font;
   font-size: 18px;
   text-align: center;
   margin-top: 32px;
-  color: $colour-text-deemphasize;
-  @media (min-width: $screen-medium) {
+  color: variables.$colour-text-deemphasize;
+  @media (min-width: variables.$screen-medium) {
       display: none;
   }
 }
@@ -87,21 +88,21 @@ $transition-time: 0.4s;
     transition: font-size $transition-time;
     li {
       color: #999;
-      font-family: $console-font;
+      font-family: variables.$console-font;
       line-height: 1.2em;
       display: block;
       padding: 0 5px;
       letter-spacing: -2px;
-      @media (min-width: $screen-medium) {
+      @media (min-width: variables.$screen-medium) {
         padding: 0 30px;
       }
       box-sizing: border-box;
       a {
         &:link, &:visited {
-          color: transparentize($colour-a-link, 0.3);
+          color: color.adjust(variables.$colour-a-link, $alpha: -0.3);
         }
         &:hover, &:active {
-          color: $colour-a-hover;
+          color: variables.$colour-a-hover;
         }
         &:before {
           transition: color 0.3s;
@@ -113,7 +114,7 @@ $transition-time: 0.4s;
           color: #333;
         }
         &.selected {
-          color: $colour-a-link;
+          color: variables.$colour-a-link;
         }
       }
     }
@@ -133,7 +134,7 @@ $transition-time: 0.4s;
     fill: #aaa;
     transition: fill 0.2s;
     &:hover {
-      fill: $colour-a-hover;
+      fill: variables.$colour-a-hover;
     }
   }
   a {
@@ -142,13 +143,13 @@ $transition-time: 0.4s;
       color: #aaa;
     }
     &:hover, &:active {
-      color: $colour-a-hover;
+      color: variables.$colour-a-hover;
     }
   }
   i {
     font-size: 24px;
   }
-  @media (max-width: $screen-medium-below) {
+  @media (max-width: variables.$screen-medium-below) {
     margin-left: 0;
     text-align: center;
     margin-bottom: 20vh;

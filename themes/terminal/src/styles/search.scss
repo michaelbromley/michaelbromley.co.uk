@@ -1,11 +1,12 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
 $terminal-bg-color: rgba(20, 20, 20, 0.95);
 $terminal-text-color: #aaa;
 
 @mixin search-font-size() {
   font-size: 18px;
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     font-size: 26px;
   }
 }
@@ -17,10 +18,10 @@ $terminal-text-color: #aaa;
   margin-top: 0;
   margin-left: 10px;
   text-align: right;
-  font-family: $console-font;
+  font-family: variables.$console-font;
   @include search-font-size();
   height: 102px;
-  @media screen and (min-width: $screen-medium){
+  @media screen and (min-width: variables.$screen-medium){
     height: 116px;
   }
   button {
@@ -40,7 +41,7 @@ $terminal-text-color: #aaa;
     height: 80vh;
     left: 10vw;
     top: 5vh;
-    @media (min-width: $screen-medium) {
+    @media (min-width: variables.$screen-medium) {
       top: 25vh;
       height: 50vh;
     }
@@ -65,7 +66,7 @@ $terminal-text-color: #aaa;
       color: $terminal-text-color;
     }
     input {
-      font-family: $console-font;
+      font-family: variables.$console-font;
       position: relative;
       border: none;
       width: 100%;
@@ -94,22 +95,22 @@ $terminal-text-color: #aaa;
       color: $terminal-text-color;
       @include search-font-size();
       li {
-        font-family: $console-font;
+        font-family: variables.$console-font;
         a {
           color: $terminal-text-color;
         }
         &:before {
           content: '>';
           margin-right: 10px;
-          color: darken($terminal-text-color, 40%);
+          color: color.adjust($terminal-text-color, $lightness: -40%);
         }
         &.selected,
         &:hover {
           a {
-            color: lighten($terminal-text-color, 20%);
+            color: color.adjust($terminal-text-color, $lightness: 20%);
           }
           &:before {
-            color: $colour-a-link;
+            color: variables.$colour-a-link;
           }
         }
       }

@@ -1,53 +1,54 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
 
-@import "home";
-@import "menu";
-@import "blog";
-@import "projects";
-@import "search";
-@import "icons";
-@import "type-effect";
-@import "pagination";
-@import "fade-in";
-@import "syntax";
+@use "home";
+@use "menu";
+@use "blog";
+@use "projects";
+@use "search";
+@use "icons";
+@use "type-effect";
+@use "pagination";
+@use "fade-in";
+@use "syntax";
 
 body {
-  background: $colour-main-view-bg;
-  font-family: $copy-font;
+  background: variables.$colour-main-view-bg;
+  font-family: variables.$copy-font;
   margin: 0;
-  @media (max-width: $screen-medium-below) {
+  @media (max-width: variables.$screen-medium-below) {
     font-size: 0.85em;
   }
 }
 
 ::selection {
-    background: transparentize(lighten($colour-a-link, 20%), 0.5);
+    background: color.adjust(color.adjust(variables.$colour-a-link, $lightness: 20%), $alpha: -0.5);
 }
 
 ::-moz-selection {
-    background: transparentize(lighten($colour-a-link, 20%), 0.5);
+    background: color.adjust(color.adjust(variables.$colour-a-link, $lightness: 20%), $alpha: -0.5);
 }
 
 #container {
   margin-bottom: 50px;
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     display: flex;
   }
 }
 
 #main {
   max-width: 100%;
-  @media (max-width: $screen-medium-below) {
+  @media (max-width: variables.$screen-medium-below) {
     max-width: 100%;
     padding-right: 10px;
     padding-left: 10px;
   }
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     flex-grow: 1;
     max-width: calc(100vw - 300px);
     margin-right: 2vw;
   }
-  @media (min-width: $screen-large) {
+  @media (min-width: variables.$screen-large) {
     margin-right: 8vw;
     max-width: calc(80vw - 300px);
   }
@@ -56,26 +57,26 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $console-font;
+  font-family: variables.$console-font;
   font-weight: normal;
   letter-spacing: -1px;
 }
 
 
 h1 {
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     font-size: 2.2em;
   }
 }
 
 h2 {
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     font-size: 1.75em;
   }
 }
 
 h3 {
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     font-size: 1.5em;
   }
 }
@@ -94,7 +95,7 @@ code:not([class]) {
 
 p, li {
   line-height: 1.5em;
-  font-family: $copy-font;
+  font-family: variables.$copy-font;
 }
 
 blockquote {
@@ -109,17 +110,17 @@ blockquote {
 
 a:link, a:visited, a:active {
   text-decoration: none;
-  color: $colour-a-link;
+  color: variables.$colour-a-link;
 }
 a:hover {
-  color: $colour-a-hover;
+  color: variables.$colour-a-hover;
 }
 
 .page-header {
   font-size: 2.4em;
   margin-top: 25px;
   margin-left: 38px;
-  @media (min-width: $screen-medium) {
+  @media (min-width: variables.$screen-medium) {
     font-size: 3em;
     margin-left: 0;
   }
