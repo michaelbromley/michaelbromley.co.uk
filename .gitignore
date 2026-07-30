@@ -4,3 +4,4 @@ themes/terminal/static/css
 themes/terminal/static/js
 public
 deploy.sh
+.hugo_build.lock
