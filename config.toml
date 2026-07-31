@@ -3,8 +3,8 @@ locale = "en-gb"
 title = "Michael Bromley"
 theme = "terminal"
 author = "Michael Bromley"
-description = "The website and blog of Michael Bromley, a web developer and creative coder."
 metaDataFormat = "yaml"
+enableRobotsTXT = true
 
 [markup]
   [markup.highlight]
@@ -20,6 +20,44 @@ metaDataFormat = "yaml"
 
 [Params]
   Author = "Michael Bromley"
+  # The fallback for any page without a description of its own. Lives under Params rather
+  # than as a top-level `description` because Site exposes no Description of its own.
+  Description = "The website and blog of Michael Bromley, a web developer and creative coder."
+  # Printed across the top of every social card. Pinned here rather than derived from
+  # baseURL so that deploy previews are still branded with the real domain.
+  SiteBrand = "michaelbromley.co.uk"
+  # Used for twitter:site and twitter:creator, and as the sameAs link in the JSON-LD Person.
+  TwitterHandle = "michlbrmly"
+  GitHubUser = "michaelbromley"
+
+# Declaring any mount replaces the whole default set, so the defaults are repeated here.
+# The extra one exposes static/media to the asset pipeline so that images referenced by a
+# post's `ogimage` can be resized to the 1200x630 that social cards expect.
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/media"
+    target = "assets/media"
 
 [taxonomies]
   tag = "tags"

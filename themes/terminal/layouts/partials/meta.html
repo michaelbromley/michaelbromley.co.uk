@@ -1,6 +1,9 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ .Site.Params.Description }}">
-    <meta name="keywords" content="{{ range .Site.Params.Keywords }}{{ . }},{{ end }}">
-    <meta name="author" content="{{ .Site.Params.Author }}">
+    <meta name="description" content="{{ partial "seo/description.html" . }}">
+    {{ with .Params.tags }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+    <meta name="author" content="{{ site.Params.Author }}">
+    <meta name="theme-color" content="#14161a">
+    {{ if eq .Kind "404" }}<meta name="robots" content="noindex, follow">
+    {{ else }}<link rel="canonical" href="{{ partial "seo/canonical.html" . }}">{{ end }}

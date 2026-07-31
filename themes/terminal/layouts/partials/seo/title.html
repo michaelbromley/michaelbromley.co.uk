@@ -1,0 +1,14 @@
+{{- /*
+  Returns the headline a link preview should show, which is not always the same as the
+  page's own <title>: a tag page is titled "Essay" on the site but needs to say what it
+  actually is once it is pulled out of context and into a feed.
+*/ -}}
+{{- $title := "" -}}
+{{- if .Params.ogtitle -}}
+  {{- $title = .Params.ogtitle -}}
+{{- else if eq .Kind "term" -}}
+  {{- $title = printf "Posts tagged “%s”" .Title -}}
+{{- else -}}
+  {{- $title = .Title | default site.Title -}}
+{{- end -}}
+{{- return $title -}}

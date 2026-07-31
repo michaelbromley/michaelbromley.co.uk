@@ -1,0 +1,137 @@
+{{- /*
+  Returns the 1200x630 social card resource for a page, or an empty string if the theme
+  assets it needs are missing.
+
+  Every page gets the same card: the site name, the headline, the description and, for a
+  post, its byline. Where the page has a picture of its own that picture sits behind the
+  text under a scrim, and otherwise the drawn backdrop does. Sharing any URL therefore
+  produces something deliberate and recognisably from this site.
+*/ -}}
+
+{{- $card := "" -}}
+{{- $regular := resources.Get "fonts/FiraMono-Regular.ttf" -}}
+{{- $bold := resources.Get "fonts/FiraMono-Bold.ttf" -}}
+{{- $backdrop := resources.Get "og/card-bg.png" -}}
+{{- $scrim := resources.Get "og/card-scrim.png" -}}
+
+{{- $photo := "" -}}
+{{- with .Params.ogimage -}}
+  {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+    {{- $photo = . -}}
+  {{- else -}}
+    {{- errorf "ogimage %q was not found under static/" . -}}
+  {{- end -}}
+{{- else -}}
+  {{- /* A project carries a screenshot that makes a better backdrop than the drawn one,
+         but only where it is large enough not to look soft blown up to card size. */ -}}
+  {{- with .Params.image -}}
+    {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+      {{- if ge .Width 800 -}}
+        {{- $photo = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $photo -}}
+  {{- $backdrop = (.Process "fill 1200x630 Smart jpg q88").Filter (images.Overlay $scrim 0 0) -}}
+{{- end -}}
+
+{{- if and $backdrop $regular $bold -}}
+  {{- $accent := "#3fbfd6" -}}
+  {{- $headline := "#f2f5f9" -}}
+  {{- $body := "#b3bdcb" -}}
+  {{- $muted := "#8a94a4" -}}
+
+  {{- /* Fira Mono advances 0.6em per glyph, which turns a text width into a line length. */ -}}
+  {{- $padX := 76 -}}
+  {{- $textWidth := 1048 -}}
+  {{- $charRatio := 0.6 -}}
+
+  {{- $title := partial "seo/title.html" . -}}
+  {{- $titleLen := strings.RuneCount $title -}}
+  {{- $titleSize := cond (le $titleLen 30) 62 (cond (le $titleLen 68) 54 (cond (le $titleLen 110) 46 40)) -}}
+  {{- $titleCols := int (math.Floor (div $textWidth (mul $charRatio $titleSize))) -}}
+  {{- $titleLines := partial "og/wrap.html" (dict "text" $title "maxChars" $titleCols "maxLines" 4) -}}
+  {{- $titleLead := int (math.Round (mul $titleSize 1.32)) -}}
+
+  {{- /* Only a post has a byline worth showing; a date on an evergreen page like /about/
+         says nothing useful about it. */ -}}
+  {{- $footer := slice -}}
+  {{- if and .IsPage (eq .Section "blog") -}}
+    {{- if not .Date.IsZero -}}
+      {{- $footer = $footer | append (.Date.Format "02 Jan 2006") -}}
+    {{- end -}}
+    {{- if gt .ReadingTime 0 -}}
+      {{- $footer = $footer | append (printf "%d min read" .ReadingTime) -}}
+    {{- end -}}
+    {{- with .Params.tags -}}
+      {{- $tags := slice -}}
+      {{- range first 3 . -}}{{- $tags = $tags | append (printf "#%s" .) -}}{{- end -}}
+      {{- $footer = $footer | append (delimit $tags " ") -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $descSize := 26 -}}
+  {{- $descLead := 38 -}}
+  {{- $descGap := 26 -}}
+  {{- $footerTop := 520 -}}
+  {{- $titleTop := 168 -}}
+  {{- $titleHeight := mul (len $titleLines) $titleLead -}}
+  {{- $descRoom := int (math.Floor (div (sub (sub $footerTop 28) (add $titleTop (add $titleHeight $descGap))) $descLead)) -}}
+  {{- $descLines := slice -}}
+  {{- if ge $descRoom 1 -}}
+    {{- $descCols := int (math.Floor (div $textWidth (mul $charRatio $descSize))) -}}
+    {{- $descLines = partial "og/wrap.html" (dict
+          "text" (partial "seo/description.html" .)
+          "maxChars" $descCols
+          "maxLines" (cond (gt $descRoom 3) 3 $descRoom)) -}}
+  {{- end -}}
+
+  {{- /* With no footer to weight the bottom of the card, a top-aligned block leaves a
+         conspicuous void; centre it instead. */ -}}
+  {{- if not $footer -}}
+    {{- $blockHeight := $titleHeight -}}
+    {{- if $descLines -}}
+      {{- $blockHeight = add $blockHeight (add $descGap (mul (len $descLines) $descLead)) -}}
+    {{- end -}}
+    {{- $centred := add (int (math.Floor (div (sub 630 $blockHeight) 2))) 12 -}}
+    {{- $titleTop = cond (lt $centred $titleTop) $titleTop $centred -}}
+  {{- end -}}
+  {{- $descTop := add $titleTop (add $titleHeight $descGap) -}}
+
+  {{- $filters := slice -}}
+
+  {{- $brand := site.Params.SiteBrand | default (strings.TrimPrefix "www." (urls.Parse site.BaseURL).Host) -}}
+  {{- $filters = $filters | append (images.Text $brand (dict
+        "font" $bold "size" 28 "color" $accent "x" $padX "y" 64)) -}}
+
+  {{- if $titleLines -}}
+    {{- $filters = $filters | append (images.Text (delimit $titleLines "\n") (dict
+          "font" $bold
+          "size" $titleSize
+          "color" $headline
+          "linespacing" (sub $titleLead $titleSize)
+          "x" $padX
+          "y" $titleTop)) -}}
+  {{- end -}}
+
+  {{- if $descLines -}}
+    {{- $filters = $filters | append (images.Text (delimit $descLines "\n") (dict
+          "font" $regular
+          "size" $descSize
+          "color" $body
+          "linespacing" (sub $descLead $descSize)
+          "x" $padX
+          "y" $descTop)) -}}
+  {{- end -}}
+
+  {{- if $footer -}}
+    {{- $filters = $filters | append (images.Text (delimit $footer "  ·  ") (dict
+          "font" $regular "size" 24 "color" $muted "x" $padX "y" $footerTop)) -}}
+  {{- end -}}
+
+  {{- $card = $backdrop.Filter $filters -}}
+{{- end -}}
+
+{{- return $card -}}

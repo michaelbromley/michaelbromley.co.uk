@@ -1,0 +1,14 @@
+{{- /*
+  Returns the absolute URL a page should point at as its canonical and og:url.
+
+  Every page of a paginated list is rendered from the same Page object, so .Permalink
+  alone would give /blog/ for /blog/page/3/ and tell crawlers and social scrapers that
+  the two are the same document. Only section and term lists paginate here.
+*/ -}}
+{{- $canonical := .Permalink -}}
+{{- if or (eq .Kind "section") (eq .Kind "term") -}}
+  {{- with .Paginator -}}
+    {{- $canonical = .URL | absURL -}}
+  {{- end -}}
+{{- end -}}
+{{- return $canonical -}}

@@ -5,3 +5,5 @@ themes/terminal/static/js
 public
 deploy.sh
 .hugo_build.lock
+# Hugo's cache of processed images, rebuilt in about a second
+resources

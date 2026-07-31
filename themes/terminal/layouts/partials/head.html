@@ -5,11 +5,16 @@
 
     {{ partial "meta.html" . }}
     {{ partial "og.html" . }}
+    {{ partial "seo/schema.html" . }}
 
     {{ with .OutputFormats.Get "rss" -}}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{- end }}
-    <link rel="shortcut icon" href="/favicon.png">
+
+    {{/* Slack, Discord and browser tabs all reach for a different one of these. */}}
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+    <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

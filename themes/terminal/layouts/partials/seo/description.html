@@ -1,0 +1,28 @@
+{{- /*
+  Returns a single-line plain-text description for a page, shared by the meta description,
+  the Open Graph tags, the JSON-LD and the social card so that they cannot drift apart.
+
+  Preference order: an explicit `description` in front matter, then the generated summary
+  for a post, then the site description.
+*/ -}}
+{{- $description := .Description -}}
+
+{{- if not $description -}}
+  {{- if eq .Kind "term" -}}
+    {{- $count := len .Pages -}}
+    {{- $description = printf "%d %s on %s tagged “%s”." $count (cond (eq $count 1) "post" "posts") site.Title .Title -}}
+  {{- else if .IsPage -}}
+    {{- $description = .Summary -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $description -}}
+  {{- $description = site.Params.Description -}}
+{{- end -}}
+
+{{- return ($description
+      | plainify
+      | htmlUnescape
+      | replaceRE `\s+` " "
+      | strings.TrimSpace
+      | truncate 200) -}}
