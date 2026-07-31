@@ -51,19 +51,19 @@ p.lead {
     padding: 0;
   }
   li {
-    position: relative;
     list-style-type: none;
     font-family: variables.$console-font;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
     font-size: 18px;
+    // hanging indent so wrapped titles line up rather than running back under the marker
+    padding-left: 20px;
+    text-indent: -20px;
     &:before {
       content: '›';
-      position: absolute;
-      top: -2px;
+      display: inline-block;
+      width: 20px;
+      text-indent: 0;
       font-size: 22px;
-    }
-    a {
-      padding-left: 20px;
     }
   }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} // {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
     {{ partial "meta.html" . }}
     {{ partial "og.html" . }}
@@ -11,13 +11,14 @@
     {{- end }}
     <link rel="shortcut icon" href="/favicon.png">
 
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <script src="{{ .Site.BaseURL }}js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Fira+Mono&display=swap" rel="stylesheet">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
-
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    {{/* relURL, not BaseURL: assets must come from whichever host is serving the page,
+         otherwise deploy previews load production's CSS and JS instead of their own. */}}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <script defer src="{{ "js/script.js" | relURL }}"></script>
 
     {{ hugo.Generator }}
 </head>

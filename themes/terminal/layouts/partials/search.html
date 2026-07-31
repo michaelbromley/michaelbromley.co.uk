@@ -1,0 +1,21 @@
+{{/* Kept outside #nav-pane: that element is transformed on small screens, which would
+     re-anchor the modal's fixed positioning and push it off-screen. */}}
+<div class="search-container">
+    <div class="search-backdrop"></div>
+    <div class="search-modal" role="dialog" aria-label="Search">
+        <div class="search-input">
+            <span class="dollar">$</span>
+            <input type="text" placeholder="search posts and projects" aria-label="Search query">
+        </div>
+        <div class="search-suggestions">
+            <ul>
+                {{ range .Site.RegularPages }}
+                <li class="suggestion" data-url="{{ .RelPermalink }}">{{ .Title }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="search-hint">
+            <span class="search-hint-keys"><kbd>&uarr;</kbd><kbd>&darr;</kbd> to move &middot; </span><kbd>enter</kbd> to open &middot; <kbd>esc</kbd> to close
+        </div>
+    </div>
+</div>

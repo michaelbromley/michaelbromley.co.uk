@@ -3,14 +3,13 @@
 <div id="container">
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
-        <section class="archives-wrap">
-            <h1 class="page-header" data-type-effect>Posts tagged with "{{ .Title }}"</h1>
-            <ul class="post-list">
-                {{ range .Paginator.Pages }}
-                    {{ partial "blog-list-item.html" . }}
-                {{ end }}
-            </ul>
-        </section>
+        <h1 class="page-header" data-type-effect>Posts tagged "{{ .Title }}"</h1>
+        <a class="term-back" href="{{ "/tags/" | relURL }}">&lsaquo; all tags</a>
+        <ul class="post-list">
+            {{ range .Paginator.Pages }}
+            {{ partial "blog-list-item.html" . }}
+            {{ end }}
+        </ul>
         {{ partial "pagination.html" . }}
     </section>
 </div>

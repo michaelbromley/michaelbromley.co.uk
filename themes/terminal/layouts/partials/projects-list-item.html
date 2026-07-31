@@ -1,6 +1,6 @@
 <div class="project-list-entry">
     <h3 class="title">{{ .Title }}</h3>
-    <img src="{{ .Params.image }}">
+    <img src="{{ .Params.image }}" alt="Screenshot of {{ .Title }}" loading="lazy">
     <div class="project-summary">{{ .Content }}</div>
     <div class="links">
         {{ range $label, $url := .Params.links }}

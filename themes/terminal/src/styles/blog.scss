@@ -1,95 +1,105 @@
 @use "sass:color";
 @use "variables";
 
-.title-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
 ul.post-list {
-  position: relative;
   padding: 0;
+  margin: 0;
+  // keeps excerpt lines at a readable measure on wide screens
+  max-width: calc(175px + #{variables.$content-width});
 }
 
 .post-list-row {
   list-style-type: none;
-  transition: opacity 0.5s;
+  padding-bottom: 40px;
+
+  @media (min-width: variables.$screen-medium) {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    column-gap: 15px;
+  }
 }
 
 .post-list-entry {
-  padding-top: 12px;
-  @media (min-width: variables.$screen-medium) {
-    padding-left: 175px;
-    padding-top: 0;
-  }
-  display: block;
-  padding-bottom: 20px;
-
   h2 {
-    margin-bottom: 0;
-    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.1em;
   }
 
   .post-list-excerpt {
-    margin-top: 5px;
+    margin-top: 10px;
     color: variables.$colour-text-deemphasize;
   }
+}
+
+.post-list-more {
+  font-family: variables.$console-font;
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 
 .date {
   font-family: variables.$console-font;
   font-size: 1.2em;
   @media (min-width: variables.$screen-medium) {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
-  color: #777;
+  color: #6d6d6d;
   display: block;
-  margin-top: 4px;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.reading-time {
+  font-family: variables.$console-font;
+  font-size: 12px;
+  color: variables.$colour-text-muted;
 }
 
 ul.tags {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  li:nth-child(1) {
-    margin-left: 0;
-    padding-left: 0;
-    font-size: 12px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
   li {
-    font-family: variables.$copy-font;
-    color: #777;
-    font-size: 14px;
-    display: inline-block;
-    padding: 0 3px;
-    margin: 0 1px;
+    font-family: variables.$console-font;
+    font-size: 12px;
+    a {
+      display: inline-block;
+      padding: 1px 7px;
+      border: 1px solid variables.$colour-border;
+      border-radius: 10px;
+      background-color: variables.$colour-surface;
+      transition: border-color 0.2s, background-color 0.2s;
+      &:hover {
+        border-color: variables.$colour-a-hover;
+        background-color: white;
+      }
+    }
   }
+
   .tag-icon {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
+    color: variables.$colour-text-muted;
+    line-height: 1;
   }
-
 }
-
-.post-list-title {
-}
-
-.post-list-excerpt {
-}
-
-.post-list-meta {
-  position: absolute;
-  left: 0;
-}
-
 
 .list-pagination {
   text-align: center;
 }
 
 .article-entry {
-  max-width: 800px;
+  max-width: variables.$content-width;
   margin: auto;
   padding-bottom: 50px;
   margin-bottom: 50px;
@@ -105,12 +115,27 @@ ul.tags {
     margin-top: 1.5em;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   pre {
-    padding: 10px;
+    background-color: variables.$colour-terminal-bg;
+    color: variables.$colour-terminal-text;
+    border-radius: 4px;
+    padding: 16px;
     overflow: auto;
+    font-size: 0.85em;
+    line-height: 1.5;
+    box-shadow: 0 2px 10px -4px rgba(0, 0, 0, 0.5);
     @media screen and (max-width: variables.$screen-medium-below){
       max-width: calc(100vw - 4em);
     }
+  }
+
+  // keeps chroma's own background in step with the search modal's surface
+  .chroma {
+    background-color: variables.$colour-terminal-bg;
   }
 
   & > p:first-child {
@@ -127,11 +152,14 @@ ul.tags {
   }
 }
 
-.article-meta { 
-  margin-top: -20px;
+.article-meta {
+  max-width: variables.$content-width;
+  margin: 0 auto 30px;
 }
 
 .article-footer {
+  max-width: variables.$content-width;
+  margin: 0 auto;
   color: variables.$colour-text-deemphasize;
   text-align: center;
   line-height: 2em;
@@ -148,7 +176,8 @@ figure {
   margin: 0;
   text-align: center;
   border-radius: 3px;
-  border: 1px solid #cbcbcb;
+  background-color: variables.$colour-surface;
+  border: 1px solid variables.$colour-border;
   box-shadow: variables.$box-shadow;
   h4 {
     margin: 5px;
@@ -164,11 +193,44 @@ hr {
   margin: 48px 32px;
 }
 
-.article-nav {
+#article-nav {
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: variables.$content-width;
+  margin: 0 auto 50px;
+}
+
+.article-nav-link {
+  flex: 1 1 250px;
+  padding: 12px 15px;
+  border: 1px solid variables.$colour-border;
+  border-radius: 3px;
+  background-color: variables.$colour-surface;
+  transition: border-color 0.2s, background-color 0.2s;
+
+  &:hover {
+    border-color: variables.$colour-a-hover;
+    background-color: white;
+  }
+
+  &.newer {
+    text-align: right;
+  }
+}
+
+.article-nav-label {
+  display: block;
+  font-family: variables.$console-font;
+  font-size: 12px;
+  color: variables.$colour-text-muted;
+  margin-bottom: 4px;
+}
+
+.article-nav-title {
+  display: block;
+  font-family: variables.$console-font;
+  line-height: 1.3em;
 }
 
 .heading-anchor {

@@ -1,52 +1,55 @@
 @use "sass:color";
 @use "variables";
 
-$terminal-bg-color: rgba(20, 20, 20, 0.95);
-$terminal-text-color: #aaa;
+$terminal-bg-color: color.adjust(variables.$colour-terminal-bg, $alpha: -0.03);
+$terminal-text-color: variables.$colour-terminal-text;
 
 @mixin search-font-size() {
   font-size: 18px;
   @media (min-width: variables.$screen-medium) {
-    font-size: 26px;
+    font-size: 24px;
+  }
+}
+
+// the sidebar trigger; on small screens the one in the top bar is used instead
+.sidebar-search-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-family: variables.$console-font;
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  color: variables.$colour-a-link;
+  transition: color 0.2s;
+
+  &:before {
+    content: '$';
+    color: variables.$colour-text-muted;
+    margin-right: 6px;
+  }
+  &:hover {
+    color: variables.$colour-a-hover;
+  }
+
+  @media (max-width: variables.$screen-medium-below) {
+    display: none;
   }
 }
 
 .search-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0;
-  margin-left: 10px;
-  text-align: right;
   font-family: variables.$console-font;
-  @include search-font-size();
-  height: 102px;
-  @media screen and (min-width: variables.$screen-medium){
-    height: 116px;
-  }
-  button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 32px;
-    &:focus {
-      outline: none;
-    }
-  }
-  .search-modal {
+
+  .search-backdrop {
     position: fixed;
-    background-color: $terminal-bg-color;
-    overflow: hidden;
-    width: 80vw;
-    height: 80vh;
-    left: 10vw;
-    top: 5vh;
-    @media (min-width: variables.$screen-medium) {
-      top: 25vh;
-      height: 50vh;
-    }
-    z-index: 100;
-    box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.55);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0.4s 0s;
@@ -56,14 +59,47 @@ $terminal-text-color: #aaa;
       transition: opacity 0.4s, visibility 0s;
     }
   }
+
+  .search-modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $terminal-bg-color;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 90vw;
+    left: 5vw;
+    top: 8vh;
+    max-height: 80vh;
+    @media (min-width: variables.$screen-medium) {
+      width: 70vw;
+      max-width: 900px;
+      left: 15vw;
+      top: 18vh;
+      max-height: 60vh;
+    }
+    z-index: 100;
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s 0s;
+    &.display {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s, visibility 0s;
+    }
+  }
+
   .search-input {
-    flex-grow: 1;
     padding: 16px;
     background-color: transparent;
     display: flex;
+    align-items: baseline;
     overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     .dollar {
-      color: $terminal-text-color;
+      color: color.adjust($terminal-text-color, $lightness: -25%);
+      @include search-font-size();
     }
     input {
       font-family: variables.$console-font;
@@ -78,30 +114,38 @@ $terminal-text-color: #aaa;
       &:focus {
         outline: none;
       }
+      &::placeholder {
+        color: color.adjust($terminal-text-color, $lightness: -30%);
+      }
     }
   }
 
-  transition: opacity 1.5s;
-  opacity: 1;
-
   .search-suggestions {
-    position: absolute;
+    flex-grow: 1;
+    overflow-y: auto;
     text-align: left;
     ul {
       margin: 0;
-      padding-right: 20px;
-      padding-left: 16px;
+      padding: 12px 20px 12px 16px;
       list-style-type: none;
       color: $terminal-text-color;
       @include search-font-size();
       li {
         font-family: variables.$console-font;
+        line-height: 1.6em;
+        // hanging indent so wrapped titles line up rather than running back under the marker
+        padding-left: 26px;
+        text-indent: -26px;
         a {
-          color: $terminal-text-color;
+          &:link, &:visited {
+            color: $terminal-text-color;
+          }
         }
         &:before {
           content: '>';
-          margin-right: 10px;
+          display: inline-block;
+          width: 26px;
+          text-indent: 0;
           color: color.adjust($terminal-text-color, $lightness: -40%);
         }
         &.selected,
@@ -110,11 +154,30 @@ $terminal-text-color: #aaa;
             color: color.adjust($terminal-text-color, $lightness: 20%);
           }
           &:before {
-            color: variables.$colour-a-link;
+            color: variables.$colour-a-hover;
           }
         }
       }
     }
-    //display: none;
+  }
+
+  .search-hint {
+    padding: 10px 16px;
+    font-size: 12px;
+    color: color.adjust($terminal-text-color, $lightness: -25%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    white-space: nowrap;
+    kbd {
+      font-family: variables.$console-font;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+    .search-hint-keys {
+      @media (max-width: variables.$screen-medium-below) {
+        display: none;
+      }
+    }
   }
 }

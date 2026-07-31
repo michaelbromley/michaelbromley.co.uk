@@ -3,25 +3,36 @@
 
 $transition-time: 0.4s;
 
+// Fixed bar across the top on small screens. It sits above the nav overlay so the
+// close button stays reachable while the menu is open.
+.mobile-bar {
+  display: none;
+
+  @media (max-width: variables.$screen-medium-below) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    height: variables.$mobile-bar-height;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0 6px;
+    background: variables.$colour-main-view-bg;
+    border-bottom: 1px solid variables.$colour-border;
+  }
+}
 
 .mobile-menu-button {
-  @media (min-width: variables.$screen-medium) {
-    display: none;
-  }
-
-  background: color.adjust(variables.$colour-main-view-bg, $alpha: -0.25);
   width: 44px;
   height: 44px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 32px;
-  position: fixed;
-  z-index: 50;
-  left: 2px;
-  top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
   color: variables.$colour-a-link;
   cursor: pointer;
-  text-shadow: 0px 2px 4px rgba(150, 150, 150, 0.5);
 
   .open-button.hidden,
   .close-button.hidden {
@@ -29,9 +40,30 @@ $transition-time: 0.4s;
   }
 }
 
+.mobile-bar-title {
+  flex-grow: 1;
+  font-family: variables.$console-font;
+  font-size: 16px;
+  text-align: center;
+  &:link, &:visited {
+    color: variables.$colour-text-deemphasize;
+  }
+}
+
+.mobile-search-button {
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 22px;
+  color: variables.$colour-a-link;
+  cursor: pointer;
+}
+
 #nav-pane {
   display: flex;
-  background: color.adjust(variables.$colour-main-view-bg, $alpha: -0.05);
+  background: variables.$colour-main-view-bg;
   z-index: 1;
 
   @media (min-width: variables.$screen-medium) {
@@ -61,16 +93,9 @@ $transition-time: 0.4s;
   @media (min-width: variables.$screen-medium) {
     position: fixed;
   }
-}
-
-.mobile-title {
-  font-family: variables.$console-font;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 32px;
-  color: variables.$colour-text-deemphasize;
-  @media (min-width: variables.$screen-medium) {
-      display: none;
+  @media (max-width: variables.$screen-medium-below) {
+    padding-top: variables.$mobile-bar-height;
+    box-sizing: border-box;
   }
 }
 
@@ -81,13 +106,11 @@ $transition-time: 0.4s;
   ul {
     font-size: 2rem;
     list-style-type: none;
-    height: 50px;
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding: 0;
     transition: font-size $transition-time;
     li {
-      color: #999;
       font-family: variables.$console-font;
       line-height: 1.2em;
       display: block;
@@ -99,14 +122,14 @@ $transition-time: 0.4s;
       box-sizing: border-box;
       a {
         &:link, &:visited {
-          color: color.adjust(variables.$colour-a-link, $alpha: -0.3);
+          color: variables.$colour-a-link;
         }
         &:hover, &:active {
           color: variables.$colour-a-hover;
         }
         &:before {
           transition: color 0.3s;
-          color: #999;
+          color: variables.$colour-text-muted;
           content: '#';
           margin-right: 2px;
         }
@@ -130,17 +153,20 @@ $transition-time: 0.4s;
   margin-right: 10px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   svg {
-    fill: #aaa;
+    fill: variables.$colour-text-muted;
     transition: fill 0.2s;
+    display: block;
     &:hover {
       fill: variables.$colour-a-hover;
     }
   }
   a {
     transition: color 0.2s;
+    display: flex;
     &:link, &:visited {
-      color: #aaa;
+      color: variables.$colour-text-muted;
     }
     &:hover, &:active {
       color: variables.$colour-a-hover;
@@ -149,10 +175,10 @@ $transition-time: 0.4s;
   i {
     font-size: 24px;
   }
+  margin-bottom: 20px;
   @media (max-width: variables.$screen-medium-below) {
     margin-left: 0;
     text-align: center;
     margin-bottom: 20vh;
   }
-  margin-bottom: 20px;
 }

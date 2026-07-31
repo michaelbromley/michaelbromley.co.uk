@@ -14,10 +14,18 @@ export function initMenu() {
     applyClasses();
     selectBlogItemIfBlogPost();
 
-    toggleButton.addEventListener('click', () => {
+    toggleButton.addEventListener('click', toggle);
+    toggleButton.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+        }
+    });
+
+    function toggle() {
         open = !open;
         applyClasses();
-    });
+    }
 
     function applyClasses() {
         if (open) {

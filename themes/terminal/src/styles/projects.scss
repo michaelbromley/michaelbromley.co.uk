@@ -2,30 +2,36 @@
 @use "variables";
 
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
   margin: 50px 0;
+  max-width: calc(#{variables.$content-width} + 300px);
 }
 
 .project-list-entry {
-  width: 45%;
-  min-width: 380px;
-  padding: 10px;
-  margin-bottom: 50px;
+  padding: 15px;
   text-align: center;
   border-radius: 3px;
-  border: 1px solid #cbcbcb;
+  background-color: variables.$colour-surface;
+  border: 1px solid variables.$colour-border;
   box-shadow: variables.$box-shadow;
   display: flex;
   flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: color.adjust(variables.$colour-a-hover, $alpha: -0.5);
+    box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.4);
+  }
 
   .title {
     margin-top: 0;
+    font-size: 1.2em;
   }
 
-  @media screen and (max-width: variables.$screen-medium-below){
-    min-width: 96%;
+  img {
+    border-radius: 2px;
   }
 }
 
@@ -39,12 +45,16 @@
   text-align: right;
 
   a.link-button {
-    padding: 3px 8px;
-    background-color: color.adjust(variables.$colour-a-link, $lightness: 5%);
-    color: white;
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 4px;
+    background-color: variables.$colour-a-link;
     border-radius: 2px;
     transition: background 0.3s;
 
+    &:link, &:visited {
+      color: white;
+    }
     &:hover {
       background-color: variables.$colour-a-hover;
     }

@@ -6,6 +6,7 @@ import {initMenu} from './menu';
 import {initSearch} from './search';
 import {initTypeEffect} from './type-effect';
 import {initFadeIn} from './fade-in';
+import {showCurrentPath} from './current-path';
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypeEffect();
     initFadeIn();
     initAnchorLinks();
+    showCurrentPath();
 });

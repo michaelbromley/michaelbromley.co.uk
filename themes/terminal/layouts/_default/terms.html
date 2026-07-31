@@ -3,23 +3,14 @@
 <div id="container">
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
-        <section class="layout-wrap">
-            <div class="layout-title">
-                <span>{{ .Title }}</span>
-            </div>
-            <div class="layout-wrap-inner tag-cloud">
-                {{ $site := .Site }}
-                {{ $data := .Data }}
-                <ul>
-                {{ range $key, $value := .Data.Terms.Alphabetical }}
-                <li>
-                    <a href="{{ $site.LanguagePrefix }}/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>({{ $value.Count }})
-                </li>
-                {{ end }}
-                </ul>
-            </div>
-
-        </section>
+        <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
+        <ul class="term-cloud">
+            {{ range .Data.Terms.Alphabetical }}
+            <li>
+                <a href="{{ .Page.RelPermalink }}" aria-label="{{ .Page.LinkTitle }}, {{ .Count }} {{ cond (eq .Count 1) "post" "posts" }}">{{ .Page.LinkTitle }}<span class="term-count" aria-hidden="true">{{ .Count }}</span></a>
+            </li>
+            {{ end }}
+        </ul>
     </section>
 </div>
 {{ partial "ga.html" }}
