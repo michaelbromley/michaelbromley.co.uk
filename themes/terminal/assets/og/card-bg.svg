@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable source for card-bg.png, the backdrop that og-image.html draws page text onto.
+  Deliberately contains no text: the raster is generated on a developer machine, so any
+  font it referenced would have to exist there too. Regenerate after editing with:
+      rsvg-convert -w 1200 -h 630 card-bg.svg -o card-bg.png
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a6ba8"/>
+      <stop offset="0.55" stop-color="#39b3c9"/>
+      <stop offset="1" stop-color="#1a6ba8"/>
+    </linearGradient>
+    <radialGradient id="glow-top" cx="0.18" cy="0.05" r="0.75">
+      <stop offset="0" stop-color="#1a6ba8" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#1a6ba8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-bottom" cx="0.92" cy="1" r="0.7">
+      <stop offset="0" stop-color="#0f7186" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#0f7186" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity="0.028" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#14161a"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow-top)"/>
+  <rect width="1200" height="630" fill="url(#glow-bottom)"/>
+
+  <!-- oversized prompt glyph, echoing the terminal motif without competing with the title -->
+  <g stroke="#39b3c9" stroke-opacity="0.09" stroke-width="16" fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <polyline points="1000,410 1064,474 1000,538"/>
+    <line x1="1094" y1="538" x2="1166" y2="538"/>
+  </g>
+
+  <rect x="28" y="28" width="1144" height="574" rx="4" fill="none" stroke="#ffffff" stroke-opacity="0.07"/>
+  <rect width="1200" height="6" fill="url(#accent)"/>
+</svg>

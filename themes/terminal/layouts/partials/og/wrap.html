@@ -1,0 +1,38 @@
+{{- /*
+  Greedy word wrap for the social card, which has to be done here because images.Text
+  draws whatever string it is given without measuring it. Fira Mono is monospaced, so a
+  character count stands in for a pixel width.
+
+  Takes a dict of `text`, `maxChars` and `maxLines`; returns a slice of lines, with the
+  last one ellipsised if the text did not fit.
+*/ -}}
+{{- $maxChars := .maxChars -}}
+{{- $maxLines := .maxLines -}}
+{{- $lines := slice -}}
+{{- $current := "" -}}
+{{- range (split (.text | plainify | htmlUnescape | strings.TrimSpace) " ") -}}
+  {{- $word := strings.TrimSpace . -}}
+  {{- if ne $word "" -}}
+    {{- /* break a word that can never fit on a line of its own, e.g. a bare URL */ -}}
+    {{- range seq 0 (div (sub (strings.RuneCount $word) 1) $maxChars) -}}
+      {{- $chunk := substr $word (mul . $maxChars) $maxChars -}}
+      {{- $candidate := cond (eq $current "") $chunk (printf "%s %s" $current $chunk) -}}
+      {{- if le (strings.RuneCount $candidate) $maxChars -}}
+        {{- $current = $candidate -}}
+      {{- else -}}
+        {{- $lines = $lines | append $current -}}
+        {{- $current = $chunk -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if ne $current "" -}}{{- $lines = $lines | append $current -}}{{- end -}}
+
+{{- if gt (len $lines) $maxLines -}}
+  {{- $kept := first $maxLines $lines -}}
+  {{- $last := index $kept (sub $maxLines 1) -}}
+  {{- $last = printf "%s…" (strings.TrimRight " ,.;:-" (substr $last 0 (sub $maxChars 1))) -}}
+  {{- $lines = (first (sub $maxLines 1) $kept) | append $last -}}
+{{- end -}}
+
+{{- return $lines -}}

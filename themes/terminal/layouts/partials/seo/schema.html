@@ -1,0 +1,97 @@
+{{- /*
+  Emits schema.org JSON-LD. Slack, Discord and search engines all read it, and it is what
+  lets a shared post show an author and a date rather than just a title and a picture.
+*/ -}}
+{{- $home := site.Home.Permalink -}}
+{{- $url := partial "seo/canonical.html" . -}}
+{{- $title := partial "seo/title.html" . -}}
+{{- $description := partial "seo/description.html" . -}}
+{{- $card := partialCached "og/image.html" . .RelPermalink -}}
+
+{{- $sameAs := slice -}}
+{{- with site.Params.TwitterHandle -}}
+  {{- $sameAs = $sameAs | append (printf "https://twitter.com/%s" .) -}}
+{{- end -}}
+{{- with site.Params.GitHubUser -}}
+  {{- $sameAs = $sameAs | append (printf "https://github.com/%s" .) -}}
+{{- end -}}
+
+{{- $personId := printf "%s#person" $home -}}
+{{- $siteId := printf "%s#website" $home -}}
+
+{{- $person := dict
+      "@type" "Person"
+      "@id" $personId
+      "name" site.Params.Author
+      "url" $home
+      "sameAs" $sameAs -}}
+
+{{- $website := dict
+      "@type" "WebSite"
+      "@id" $siteId
+      "url" $home
+      "name" site.Title
+      "description" site.Params.Description
+      "inLanguage" "en-GB"
+      "publisher" (dict "@id" $personId) -}}
+
+{{- $graph := slice $person $website -}}
+
+{{- if and .IsPage (eq .Section "blog") -}}
+  {{- $article := dict
+        "@type" "BlogPosting"
+        "@id" (printf "%s#article" $url)
+        "isPartOf" (dict "@id" $siteId)
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" $url)
+        "url" $url
+        "headline" (truncate 110 $title)
+        "description" $description
+        "inLanguage" "en-GB"
+        "author" (dict "@id" $personId)
+        "publisher" (dict "@id" $personId)
+        "wordCount" .WordCount -}}
+  {{- with $card -}}
+    {{- $article = merge $article (dict "image" (dict
+          "@type" "ImageObject"
+          "url" .Permalink
+          "width" .Width
+          "height" .Height)) -}}
+  {{- end -}}
+  {{- if not .Date.IsZero -}}
+    {{- $article = merge $article (dict "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- if not .Lastmod.IsZero -}}
+    {{- $article = merge $article (dict "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- $article = merge $article (dict "keywords" .) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $article -}}
+
+  {{- $crumbs := slice
+        (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $home)
+        (dict "@type" "ListItem" "position" 2 "name" "Blog" "item" (printf "%sblog/" $home))
+        (dict "@type" "ListItem" "position" 3 "name" .Title) -}}
+  {{- $graph = $graph | append (dict
+        "@type" "BreadcrumbList"
+        "@id" (printf "%s#breadcrumb" $url)
+        "itemListElement" $crumbs) -}}
+{{- else -}}
+  {{- $page := dict
+        "@type" "WebPage"
+        "@id" $url
+        "isPartOf" (dict "@id" $siteId)
+        "url" $url
+        "name" $title
+        "description" $description
+        "inLanguage" "en-GB"
+        "about" (dict "@id" $personId) -}}
+  {{- with $card -}}
+    {{- $page = merge $page (dict "primaryImageOfPage" (dict "@type" "ImageObject" "url" .Permalink)) -}}
+  {{- end -}}
+  {{- $graph = $graph | append $page -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ jsonify (dict "indent" "  ") (dict "@context" "https://schema.org" "@graph" $graph) | safeJS }}
+</script>

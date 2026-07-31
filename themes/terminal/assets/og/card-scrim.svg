@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable source for card-scrim.png, laid over a post's own `ogimage` so that the card
+  text stays legible whatever the photo underneath happens to be. Darkest at the bottom
+  left, where the title and byline sit, and clearest at the top right.
+
+  Regenerate after editing with:
+      rsvg-convert -w 1200 -h 630 card-scrim.svg -o card-scrim.png
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a6ba8"/>
+      <stop offset="0.55" stop-color="#39b3c9"/>
+      <stop offset="1" stop-color="#1a6ba8"/>
+    </linearGradient>
+    <linearGradient id="vertical" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0d11" stop-opacity="0.34"/>
+      <stop offset="0.45" stop-color="#0b0d11" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#0b0d11" stop-opacity="0.94"/>
+    </linearGradient>
+    <linearGradient id="horizontal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b0d11" stop-opacity="0.72"/>
+      <stop offset="0.88" stop-color="#0b0d11" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#vertical)"/>
+  <rect width="1200" height="630" fill="url(#horizontal)"/>
+  <rect x="28" y="28" width="1144" height="574" rx="4" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+  <rect width="1200" height="6" fill="url(#accent)"/>
+</svg>

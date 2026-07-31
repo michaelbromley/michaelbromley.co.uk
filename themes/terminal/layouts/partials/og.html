@@ -1,20 +1,47 @@
-    <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:description" content="{{ .Summary | plainify | truncate 200 }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    {{ if .Params.ogimage }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
-    {{ end }}
+{{- $title := partial "seo/title.html" . -}}
+{{- $description := partial "seo/description.html" . -}}
+{{- $url := partial "seo/canonical.html" . -}}
+{{- $card := partialCached "og/image.html" . .RelPermalink -}}
+{{- $alt := .Params.ogimagealt | default (printf "%s — %s" $title site.Title) -}}
+{{- $isArticle := and .IsPage (eq .Section "blog") -}}
+    <meta property="og:site_name" content="{{ site.Title }}" />
+    <meta property="og:title" content="{{ $title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:type" content="{{ cond $isArticle "article" "website" }}" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="{{ $url }}" />
+{{- with $card }}
+    <meta property="og:image" content="{{ .Permalink }}" />
+    <meta property="og:image:type" content="{{ .MediaType.Type }}" />
+    <meta property="og:image:width" content="{{ .Width }}" />
+    <meta property="og:image:height" content="{{ .Height }}" />
+    <meta property="og:image:alt" content="{{ $alt }}" />
+{{- end }}
+{{- if $isArticle }}
+    <meta property="article:author" content="{{ site.Params.Author }}" />
+    {{- /* Written as a whole attribute so that the timezone offset stays "+01:00": the
+           attribute escaper would otherwise render the plus as an entity. */}}
+    {{- if not .Date.IsZero }}
+    <meta property="article:published_time" {{ printf "content=%q" (.Date.Format "2006-01-02T15:04:05-07:00") | safeHTMLAttr }} />
+    {{- end }}
+    {{- if not .Lastmod.IsZero }}
+    <meta property="article:modified_time" {{ printf "content=%q" (.Lastmod.Format "2006-01-02T15:04:05-07:00") | safeHTMLAttr }} />
+    {{- end }}
+    {{- range .Params.tags }}
+    <meta property="article:tag" content="{{ . }}" />
+    {{- end }}
+{{- end }}
 
-
-    <meta name="twitter:site" content="@michlbrmly" />
-    <meta name="twitter:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta name="twitter:description" content="{{ .Summary | plainify | truncate 200 }}" />
-    <meta name="twitter:url" content="{{ .Permalink }}" />
-    {{ if .Params.ogimage }}
-        <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.ogimage }}" />
-        <meta name="twitter:card" content="summary_large_image" />
-    {{ else }}
-        <meta name="twitter:card" content="summary" />
-    {{ end }}
+    {{/* Twitter falls back to the og:* tags, but LinkedIn and Slack read whichever they
+         find first, so the duplicated title and description keep every scraper agreed. */}}
+    <meta name="twitter:card" content="summary_large_image" />
+{{- with site.Params.TwitterHandle }}
+    <meta name="twitter:site" content="@{{ . }}" />
+    <meta name="twitter:creator" content="@{{ . }}" />
+{{- end }}
+    <meta name="twitter:title" content="{{ $title }}" />
+    <meta name="twitter:description" content="{{ $description }}" />
+{{- with $card }}
+    <meta name="twitter:image" content="{{ .Permalink }}" />
+    <meta name="twitter:image:alt" content="{{ $alt }}" />
+{{- end }}
