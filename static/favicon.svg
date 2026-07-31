@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Also the source for the two rasters beside it. Regenerate both after editing:
+      rsvg-convert -w 180 -h 180 favicon.svg -o apple-touch-icon.png
+      for s in 16 32 48; do rsvg-convert -w $s -h $s favicon.svg -o /tmp/icon-$s.png; done
+      magick /tmp/icon-16.png /tmp/icon-32.png /tmp/icon-48.png favicon.ico
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <!-- userSpaceOnUse because the underscore has a zero-height bounding box, which an
+         objectBoundingBox gradient cannot be resolved against. -->
+    <linearGradient id="prompt" gradientUnits="userSpaceOnUse" x1="12" y1="12" x2="52" y2="52">
+      <stop offset="0" stop-color="#5fd0e4"/>
+      <stop offset="1" stop-color="#1a6ba8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#14161a"/>
+  <g stroke="url(#prompt)" stroke-width="6" fill="none" stroke-linecap="square">
+    <polyline points="17,20 30,32 17,44"/>
+    <line x1="36" y1="45" x2="49" y2="45"/>
+  </g>
+</svg>
