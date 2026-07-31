@@ -1,6 +1,7 @@
 +++
 date = "2017-06-11T21:28:35+02:00"
 title = "About"
+description = "Michael Bromley is a software developer from Manchester, now based in Vienna, building the open-source e-commerce framework Vendure."
 layout = "about"
 [menu]
   [menu.main]
