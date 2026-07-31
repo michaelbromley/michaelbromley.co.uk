@@ -7,7 +7,7 @@
         <ul class="term-cloud">
             {{ range .Data.Terms.Alphabetical }}
             <li>
-                <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}<span class="term-count">{{ .Count }}</span></a>
+                <a href="{{ .Page.RelPermalink }}" aria-label="{{ .Page.LinkTitle }}, {{ .Count }} {{ cond (eq .Count 1) "post" "posts" }}">{{ .Page.LinkTitle }}<span class="term-count" aria-hidden="true">{{ .Count }}</span></a>
             </li>
             {{ end }}
         </ul>
