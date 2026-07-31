@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+<body>
+<div id="container">
+    {{ partial "main-nav.html" . }}
+    <section id="main" class="outer">
+        <div class="not-found">
+            <h1 class="page-header not-found-code" data-type-effect="60">404</h1>
+            <p class="not-found-command"><span data-current-path>that page</span>: no such file or directory</p>
+            <p>Whatever you were after isn't here. It may have moved, or it may never have existed in the first place.</p>
+            <ul class="not-found-links">
+                <li><a href="{{ "/blog/" | relURL }}">Read the blog</a></li>
+                <li><a href="{{ "/project/" | relURL }}">Look at some projects</a></li>
+                <li><a href="{{ "/about/" | relURL }}">Find out who I am</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+{{ partial "ga.html" }}
+</body>
+</html>

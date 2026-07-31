@@ -11,6 +11,7 @@
 @use "pagination";
 @use "fade-in";
 @use "syntax";
+@use "archive";
 
 body {
   background: variables.$colour-main-view-bg;
@@ -42,6 +43,7 @@ body {
     max-width: 100%;
     padding-right: 10px;
     padding-left: 10px;
+    padding-top: variables.$mobile-bar-height;
   }
   @media (min-width: variables.$screen-medium) {
     flex-grow: 1;
@@ -86,10 +88,14 @@ img {
   height: auto;
 }
 
-code:not([class]) {
-  border: 1px solid #d1d1d1;
-  padding: 1px 3px;
-  background-color: #f0f0f0;
+:not(pre) > code:not([class]) {
+  font-family: variables.$console-font;
+  font-size: 0.9em;
+  border: 1px solid variables.$colour-border;
+  border-radius: 3px;
+  padding: 1px 5px;
+  background-color: #fbfbfb;
+  color: #b3245c;
 }
 
 
@@ -99,8 +105,11 @@ p, li {
 }
 
 blockquote {
-  border-left: 3px solid #ddd;
-  padding-left: 10px;
+  border-left: 3px solid color.adjust(variables.$colour-a-link, $alpha: -0.6);
+  padding: 2px 0 2px 20px;
+  margin-left: 0;
+  color: variables.$colour-text-deemphasize;
+  font-style: italic;
 }
 
 .no-bullet {
@@ -116,13 +125,16 @@ a:hover {
   color: variables.$colour-a-hover;
 }
 
+:focus-visible {
+  outline: 2px solid variables.$colour-a-hover;
+  outline-offset: 2px;
+}
+
 .page-header {
   font-size: 2.4em;
   margin-top: 25px;
-  margin-left: 38px;
   @media (min-width: variables.$screen-medium) {
     font-size: 3em;
-    margin-left: 0;
   }
 }
 

@@ -3,15 +3,12 @@
 <div id="container">
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
-        <section class="archives-wrap">
-            <div class="archive-category-wrap">
-                <span class="archive-category">{{ .Title }}</span>
-            </div>
-            <div class="archives">
-                {{ range .Paginator.Pages }}
-                    {{ partial "li.html" . }}
-                {{ end }}
-        </div></section>
+        <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
+        <ul class="post-list">
+            {{ range .Paginator.Pages }}
+            {{ partial "blog-list-item.html" . }}
+            {{ end }}
+        </ul>
         {{ partial "pagination.html" . }}
     </section>
 </div>

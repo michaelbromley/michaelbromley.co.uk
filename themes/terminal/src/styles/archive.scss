@@ -1,0 +1,92 @@
+@use "variables";
+
+// The list of all terms in a taxonomy, e.g. /tags/
+.term-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style-type: none;
+  padding: 0;
+  margin: 30px 0 60px;
+  max-width: variables.$content-width;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    font-family: variables.$console-font;
+    padding: 5px 12px;
+    border: 1px solid variables.$colour-border;
+    border-radius: 14px;
+    background-color: variables.$colour-surface;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:hover {
+      border-color: variables.$colour-a-hover;
+      background-color: white;
+    }
+  }
+
+  .term-count {
+    color: variables.$colour-text-muted;
+    margin-left: 6px;
+    font-size: 0.85em;
+  }
+}
+
+.term-back {
+  font-family: variables.$console-font;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.empty-state {
+  max-width: variables.$content-width;
+  color: variables.$colour-text-deemphasize;
+}
+
+// 404
+.not-found {
+  max-width: variables.$content-width;
+
+  .not-found-code {
+    font-family: variables.$console-font;
+    font-size: 6em;
+    line-height: 1.1;
+    margin: 25px 0 0;
+    color: variables.$colour-text-muted;
+  }
+
+  .not-found-command {
+    font-family: variables.$console-font;
+    color: variables.$colour-text-deemphasize;
+    margin: 10px 0 40px;
+    word-break: break-all;
+
+    &:before {
+      content: '$';
+      margin-right: 8px;
+      color: variables.$colour-text-muted;
+    }
+  }
+
+  .not-found-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    font-family: variables.$console-font;
+    font-size: 18px;
+
+    li {
+      margin-bottom: 8px;
+      &:before {
+        content: '›';
+        display: inline-block;
+        width: 20px;
+        font-size: 22px;
+      }
+    }
+  }
+}
