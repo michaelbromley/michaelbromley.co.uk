@@ -3,10 +3,7 @@
 <div id="container">
     {{ partial "main-nav.html" . }}
     <section id="main" class="outer">
-            <div class="title-wrap">
-                <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
-                {{ partial "blog-search.html" .Pages }}
-            </div>
+            <h1 class="page-header" data-type-effect>{{ .Title }}</h1>
             <ul class="post-list">
                 {{ range .Paginator.Pages }}
                 {{ partial "blog-list-item.html" . }}

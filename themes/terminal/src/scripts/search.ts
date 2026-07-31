@@ -17,8 +17,9 @@ const KeyCode = {
 
 export function initSearch() {
 
-    const searchButton = document.querySelector('.search-button');
+    const searchButtons = toArray(document.querySelectorAll('.search-button')) as HTMLElement[];
     const searchModal = document.querySelector('.search-modal');
+    const searchBackdrop = document.querySelector('.search-backdrop');
     if (!searchModal) {
         return;
     }
@@ -39,7 +40,7 @@ export function initSearch() {
             }
         }
     })
-    searchButton.addEventListener('click', openModal);
+    searchButtons.forEach(button => button.addEventListener('click', openModal));
     input.addEventListener('blur', closeModal);
     input.addEventListener('input', (e: KeyboardEvent) => {
         suggestions = filterSuggestions((e.target as HTMLInputElement).value, suggestionsList);
@@ -74,6 +75,7 @@ export function initSearch() {
     function openModal() {
         if (!searchModal.classList.contains(DISPLAY_CLASS) && !closing) {
             searchModal.classList.add(DISPLAY_CLASS);
+            searchBackdrop.classList.add(DISPLAY_CLASS);
             input.focus();
         }
     }
@@ -82,6 +84,7 @@ export function initSearch() {
         // setTimeout handles weird race conditions when clicking an item link
         setTimeout(() => {
             searchModal.classList.remove(DISPLAY_CLASS);
+            searchBackdrop.classList.remove(DISPLAY_CLASS);
             closing = true;
             setTimeout(() => closing = false, 500);
             reset();
