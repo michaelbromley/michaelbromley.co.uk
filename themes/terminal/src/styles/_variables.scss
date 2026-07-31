@@ -1,15 +1,29 @@
 // colours
-$colour-a-link: #1973ba;
-$colour-a-hover: #1da6c1;
+// link colours are chosen to clear WCAG AA (4.5:1) against $colour-main-view-bg
+$colour-a-link: #1a6ba8;
+$colour-a-hover: #0f7186;
 $colour-text-deemphasize: #666;
+$colour-text-muted: #6f6f6f;
 $colour-text-content: #444;
 $colour-main-view-bg: #eee;
+$colour-surface: #f8f8f8;
+$colour-border: #d4d4d4;
+
+// the dark surface shared by code blocks and the search modal
+$colour-terminal-bg: #14161a;
+$colour-terminal-text: #b8c0cc;
 
 $box-shadow: 0px 4px 8px -5px rgba(0, 0, 0, 0.54);
 
 // fonts
 $console-font: 'Fira Mono', Consolas, monaco, monospace, courier;
 $copy-font: 'Open Sans', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
+
+// the reading measure shared by article bodies and post lists
+$content-width: 800px;
+
+// height of the fixed bar that holds the menu button on small screens
+$mobile-bar-height: 52px;
 
 $screen-large: 1200px;
 $screen-medium: 780px;
