@@ -1,14 +1,16 @@
+{{ if or .PrevInSection .NextInSection }}
 <nav id="article-nav">
-    {{ if .Prev }}
-    <a href="{{ .Prev.RelPermalink }}" id="article-nav-newer" class="article-nav-link-wrap">
-        <div class="article-nav-title"><span>&lt;</span>&nbsp;
-            {{ .Prev.Title }}
-        </div>
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="article-nav-link older" rel="prev">
+        <span class="article-nav-label">&lt; Older post</span>
+        <span class="article-nav-title">{{ .Title }}</span>
     </a>
     {{ end }}
-    {{ if .Next }}
-    <a href="{{ .Next.RelPermalink }}" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">{{ .Next.Title  }}&nbsp;<span>&gt;</span></div>
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="article-nav-link newer" rel="next">
+        <span class="article-nav-label">Newer post &gt;</span>
+        <span class="article-nav-title">{{ .Title }}</span>
     </a>
     {{ end }}
 </nav>
+{{ end }}

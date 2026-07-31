@@ -1,11 +1,11 @@
 {{ if . }}
 <ul class="tags">
     <li class="tag-icon">
-        <i class="icon-tags"></i>
+        <i class="icon-tags" aria-hidden="true"></i>
     </li>
     {{ range . }}
     <li>
-        <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+        <a href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>
     </li>
     {{ end }}
 </ul>
