@@ -15,8 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Fira+Mono&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <script defer src="{{ .Site.BaseURL }}js/script.js"></script>
+    {{/* relURL, not BaseURL: assets must come from whichever host is serving the page,
+         otherwise deploy previews load production's CSS and JS instead of their own. */}}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <script defer src="{{ "js/script.js" | relURL }}"></script>
 
     {{ hugo.Generator }}
 </head>
