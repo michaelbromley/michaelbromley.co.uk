@@ -66,4 +66,10 @@ p.lead {
       font-size: 22px;
     }
   }
+  .featured-date {
+    color: variables.$colour-text-muted;
+    font-size: 14px;
+    // keeps the date attached to the last word of the title when it wraps
+    white-space: nowrap;
+  }
 }

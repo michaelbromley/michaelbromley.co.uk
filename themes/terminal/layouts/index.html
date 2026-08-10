@@ -62,7 +62,7 @@
                     {{ if eq $key "featured" }}
                     <ul>
                         {{ range $value.Pages }}
-                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time class="featured-date" datetime='{{ .Date.Format "2006-01" }}'>{{ .Date.Format "Jan 2006" }}</time></li>
                         {{ end }}
                     </ul>
                     {{ end }}
