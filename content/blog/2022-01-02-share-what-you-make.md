@@ -4,7 +4,6 @@ title: What Might Happen If You Share It
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay
   - open source

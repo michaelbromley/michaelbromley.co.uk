@@ -4,7 +4,6 @@ title: High Modernism & Software Design
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay
 ogimage: media/2022/01/ramon-bucard-qL4tAM6uLvc-unsplash.jpg

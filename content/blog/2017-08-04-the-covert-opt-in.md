@@ -4,7 +4,6 @@ title: The Covert Opt-In
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay
   - technology

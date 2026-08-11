@@ -4,7 +4,6 @@ title: On Working Alone
 type: post
 categories:
   - post 
-  - featured
 tags:
   - essay
   - programming
