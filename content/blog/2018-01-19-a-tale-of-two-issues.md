@@ -4,6 +4,7 @@ title: A Tale of Two Issues
 type: post
 categories:
   - post 
+  - featured
 tags:
   - open source
   - programming
